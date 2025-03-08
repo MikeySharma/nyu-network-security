@@ -1,0 +1,1136 @@
+Hello, welcome to Cs. 6, 8, 2, 3, network security. My name is Professor Philip Mack. Today is March 3, rd 2025, and this is week number 6 for network security.
+1st of all, logistics, please note that you have a midterm exam coming up next Saturday, so not this Saturday, but next Saturday, on the March 15.th
+The topics includes everything up to today's class, and also the review class for next week as well.
+So next week, please make sure you get as much of the work done as possible, so you'll be prepared for asking questions and discussing the Midterm exam at the Midterm review class. The midterm is open book, open Internet. But there's no collaboration and no usage of AI Chatgpt Gemini, etc.
+So right now, what you should be doing
+so. We have lab 2 lab 2 was due yesterday, I believe, and if you haven't done it yet, please go ahead and make sure you do that asap.
+There's also Lesson number 3, which we're going to continue and finish today.
+But there's also a supplemental area video. So please go ahead and watch that also.
+please note that Lesson 5 has been released. Lesson 5 is an asynchronous video. So it's a pre-recorded video on cryptography. And also it is related to
+is related to
+homework number 2 as well. Homework number 2 is due next Thursday. I'm sorry. This is next Thursday, which is 14 March. I believe. 14 March.
+Let me double check that.
+So next Tuesday next, 1414 March.
+So homework 2 has been released. It's on cryptography.
+So
+our next lesson on cryptography is completely asynchronous. So the video has been released, the reading materials released, and the homework number 2 has been released as well. So they all go together. So sometime this week, please go ahead and go through Lesson number 5, the video, the homework, and such. It shouldn't take you that long. But you should budget maybe 3 h, 2 to 3 h to do it all together.
+although you have 2 weeks to do it. I recommend that you get it done this week because we're going to have a Midterm Review class next Monday. So if you can go through all the materials by Monday, you'll be prepared, and you can ask questions during our Midterm Review class and the Midterm Review class would be significantly more useful for you if you're able to get your assignments and homework. Number 2 and Lesson Number 5 done by that time.
+So so far right now everything for the midterm exam has been posted. The midterm exam includes all the videos, all the weekly videos, including this week and next week. That's the review lessons. No new materials is
+will be discussed next week. But we're going to review all the stuff that we already talked about. So next week's the review class
+so so far on the midterm exam. It's lesson 1, 2, 3, 4 and 5. So 4. We're covering today and 5, we're covering on the pre-recorded video.
+homeworks number one and 2, number 2 was released today
+and Labs one and Lab 2, which are already due
+ta office hours. We're gonna try to have one on Tuesday. So tomorrow, I think it's either 6 Pm. Or 8 Pm. Depending on the availability of the ta, and we're gonna try to have one later in the week as well stay tuned for that we'll send out announcements.
+So what we're doing today today, we're going to continue on Lesson Number 3, and then we're going to move on to Lesson number 4,
+and in Lesson number 3 we finished at the Dos. Attack, distributed, distributed dos attack, and
+Ddos. Attack is probably one of the most common attacks
+right now on the Internet, Ddos. Attacks have been breaking records
+pretty much every year for the last 10 years, about the size and volume of the detox attacks
+one moment while I get my windows set up.
+and this this slide over here shows what a normal Ddos will not like.
+So an attacker gets some bots, attacks, bots.
+and these bots are controlled by the attacker, and the attacker will instruct the bots to attack the victim.
+Where where do these bots come from
+like. So this attacker can control here this picture says 4 bots. But really these are 10,000 or 100,000 bots.
+and so attack controls these spots and tell these 10 to a hundred 1,000 computers to
+attack this particular victim.
+They usually do it for hire or such, where duties.
+botnets come from like, how how do they become a part of the botnet?
+Yeah, they are typically malware infested computers.
+So are we talking about computers like windows and Macs.
+or we're talking about other types of computers
+like, IoT devices. Yeah, Internet of things. IoT devices gets attacked a lot like, how does that occur?
+How about routers? Can routers be part of a botnet?
+Right? So all these things can be a part of partners. So Malware infested computers
+definitely, you have a windows. And Mac and you don't do your routine updates. Potentially, the computer can get compromised through various means.
+IoT devices. This is our home smart thermostat, your garage controllers, your wireless devices, your security cameras, baby monitors. These things
+typically have very weak security. So IoT devices. They are generally made by hardware manufacturers trying to write software rather than software companies trying to make hardware. And so generally, they have very, very poor security like default passwords, firmware that doesn't get updated or doesn't get updated easily. So lots of these devices.
+lots of these botnets are IoT devices. What about mobile phones?
+I'm talking about Android and Ios? Could they be part of a botnet as well?
+Yeah, yeah, so definitely, android phones typically has a lot more vulnerabilities than Ios. So they can be exploited. And some application can run on it and turn into a botnet.
+But even a web browser or an ad
+can be a part of a Ddos attack. So, for example, let's say they're playing some sort of game, and this game has this ad that loads on it. This ad can be.
+you know, in in some cases
+turned into a Ddos attack, that is, the ad can be used to like attack a particular host at that particular time as well, or websites.
+right? Some websites can be loaded onto the phone and the phone can then
+be used to attack a particular site. So the possibilities are unfortunately, really, really wide.
+Yeah, so essentially as one of our colleagues mentioned, any device connected to the Internet can be a botnet
+like printers like these silly, dumb printers
+are a part of a botnet.
+or I believe there was one case in which a bittorrent client
+with malware running on it became a part of a botnet.
+So certainly there are.
+There are a lot of possibilities
+on devices becoming a part of a botnet.
+Now, we haven't had any in this case right now we haven't had in this semester we haven't had. But in digitalocean
+some hosts do get compromised.
+and they become a part of a botnet, especially when you're running the seed labs and they have a default username, password, and potentially, if you did not set up a private key for Ssh or for logging in, or if you had a very weak admin password, then potentially, it can be a part of a botnet as well. In one semester. One of the students's seed labs.
+Bm was taken over and turned into a part of a bot cool.
+Now they don't have to be just to be Internet devices.
+It can be services running on the Internet as well. Here. In this example
+I just erased off botnet and changed it into Dns server.
+So A. Dns server can be used as a part of a botnet as well
+by doing a technique called Dns. Reflection attack the Ns amplification, reflection attack.
+And here's how it works. Well. 1st of all, let's talk about how Dns works. Dns domain name system is a service used for getting a IP address when you give a domain name. So let's say, you type in engineering.
+you need a Dns server to get an a record for the IP address for Engineeringnyuedu. We did that a couple of weeks ago, where we typed in the domain name into a website and then got the IP address.
+Well, Dns does other things as well. So, aside from an a record.
+there are other record types that you can get from Dns as well.
+Does anyone recall any other record types for Dns? Aside from an a record which is an Ipv. 4. IP. Address
+aaa that's the Ipv, 6, address Mx. Mail exchange server,
+NS.
+Which is name server.
+Oh, txt, what's that?
+What's txt record?
+A txt record is a Dns record type that can contain plain text.
+It can contain up to 512 Byte of plain text information.
+Txt right now, today is used for Spf, that's send. What does Spf stand for? It's
+Spf, Spf is a type of email security feature. So when you get email and the spam detector tries to detect whether it's spam or not, the txt field is used to put in the Spf. Information in order to help determine whether it's Spam mail or not. Spf is a feature that tells you which domain is allowed to send emails on your behalf.
+So, for example, nyu.edu nyu dot Edu
+about who can send emails from Nyu for Nyu Edu.
+One of them is probably Gmail. So Nyu puts into their record. Well.
+Google's Gmail servers are allowed to send emails on behalf of Nyu.
+I believe I'm discussing here.
+and that's what Spf says, Spf says, who is allowed to send email on your behalf.
+And so this tries to reduce the amount of spoofing that's going on, because if some random, some random
+server.
+like random.com tries to send an email. Pmac at Nyuedu. Spf is one of the features that checks. Wait a minute. Is this randomserver.com supposed to be sending emails from Nyuedu, for example, that's Spf
+and Spf is stored in a txt record, and the txt record is up to 512 Byte in size.
+So what I'm trying to say here is, let me. This is so important that I'm gonna put this in a note slide
+one moment. So I'm copying over to Notes Slide. And by the way, these note slides are posted weekly on the content, so you can always see these these notes that I write, you can always find them on Brightspace. So
+let's say, let's say the attacker here makes a request.
+The attacker makes a request for a txt record for some domain.
+and remember a txt record can be up to 512 Byte in size. So then, this reply that comes back from Dns server
+can be up to 512 Byte.
+Response size can be up to 512 Byte.
+and what the attacker does here. So this attacker, this Trudy, or whatever the attacker.
+has a fake source. IP address, and this fake source IP address sends a
+txt record, requested Dns server asking for whatever the txt field and the response size can be up to 512 Byte in size.
+and it responds back to a fake. IP address or the victim IP address. So attackers pretending to be the victim. Source. IP address sends a request to Dns server, the Dns server sends a response back to the victim up to 512 Byte.
+Okay? Well, whatever. It's only 512 Byte right? It's not a big deal.
+But but
+how many Dns servers are there out there?
+How many Dns servers out there? So a lot a lot.
+hundreds, thousands, tens of thousands. So the attacker sends this request for a txt record
+to the Dns servers, but they do it to hundreds and thousands of Dns servers. So these Dns responses back to the victim is not just 1 512 Byte. It's
+thousands and tens of thousands of
+this type of attack is called a Dns is called a Dns. Amplification, reflection, attack.
+Dn is amplification attack. Yes. Dn is amplification, reflection, attack. So I talked about the reflection part of it. So the attacker
+sends a request to a Dns server in the Dns. Servers are attacking the victim
+on behalf of the attacker.
+So it's a reflection attack, as in the attack, is being reflected off the Dns servers.
+But it's also this attack is also called a amplification attack.
+Any idea why, it's called an amplification attack.
+Any ideas like, why would this be called a amplification attack?
+Yeah, a single request.
+Well, not a single request turns into multiple requests. But a small request turns into a big request.
+So this attacker here is sending a
+sending a Dns request for a txt record.
+How big is this request like, how big do you think it is?
+How big is a Dns request?
+So let's say, let's say I'm requesting the txt record for injuring dot Nyuedu, how big is that request?
+40 Byte, 40 Byte is a really good guess.
+But I would say, maybe you're thinking it's 80 Byte, because there's the IP header, which is 20 Byte.
+There's the
+Yeah. The IP header is 20 Byte.
+and then you add in engineering.nyu.edu.
+and then the txt record. So maybe 60 Byte in size, right? 60 Byte.
+So this Dns request is something like 60 to 80 Byte in size, but the response
+can be up to 512 Byte.
+So it's
+it's almost a 10 x increase in size. So this attacker is sending small requests 60 to 80 Byte, depending on the size of domain
+to the Dns servers, and it's sending it to thousands of Dns servers at a time.
+And then these Dns servers are responding back to the victim.
+These responses are amplified
+9, 8, 9 times in size, so 60 Byte request turns into a 512 Byte response.
+And of course the victims get overwhelmed.
+Dns. Attacks are the number one or number 2
+biggest types of Ddos attacks out there.
+Generally it's number one or number 2. I believe this year was something else, but last year it was Dns attacks, and the Dns attack exactly as we described on the slides over here was the number one. I think it's number 2 now, after this latest Microsoft attack from this year from like 2 months ago.
+so it's probably one of the biggest attacks out there.
+Well.
+it's pretty bad, and it's easy to do, too. It's easy to do, because the Dns servers. Don't many Dns servers just respond back to anyone.
+so it can be very hard to stop.
+Well, what can you do about it? So let's say you're running this website.
+What would you do to stop these types of attacks?
+How can you stop these type of attacks?
+Any ideas on how to prevent such attacks.
+is it? Is it even possible to prevent these attacks?
+That's a good answer. So the 1st
+prevent IP spoofing by Ips, by isps. Yes, that's really good.
+That's a really good solution preventing IP spoofing, which is what we were talking about right before this slide here. If that were so possible, that would be the best solution.
+But what we have learned, or what I hope that you took out of last week's lesson is that it's very, very hard to do. So. Currently, in today, we're not able to prevent spoofing, for IP addresses right now.
+We're not able to do that.
+So that would be ideal. But we can't prevent spoofing
+the second thing, firewall rules. Okay.
+so what if this victim over here?
+What if?
+What if they have firewall and this firewall blocks. Dns responses.
+Is that possible?
+Would that stop this attack?
+It won't. Why not?
+It's not gonna work.
+but the victim will need Dns. But no, you can get stateful firewalls and stateful firewalls can only allow in just the correct Dns response
+which we're going to talk about later in the semester.
+So that's possible.
+Just adding a firewall by itself.
+It in many cases doesn't work.
+If you're running your own server.
+So, for example, let's say, let's say bad example. But
+you're running your own website at home at your house.
+and you're afraid of a Dns
+amplification, reflection, attack just like this.
+and you put a firewall on your computer.
+Well, your firewall blocks the Dns responses, but
+the packets already went through your wire
+and got to your house already before your firewall blocks it.
+So this type of attack is a bandwidth Ddos attack.
+meaning it takes up the whole bandwidth of the wire
+such that if you're still blocking it. It doesn't even matter, because it just takes up all the bandwidth
+so clearly.
+If you were at home.
+your bandwidth can't handle this at all, no matter what impossible. Even you have the superior firewall
+that can selectively block the right things. So that's definitely not possible.
+How about rate limits for particular users. Yeah, what if you prevent
+prevent? You put limits for each of the specific IP addresses?
+Yes, that could be possible.
+But but this attack.
+the data, the packets are already went through your wire, and that at your home computer already by the time it gets blocked.
+So that does not work, because this is a bandwidth attack it took up.
+It works by taking up
+all the bandwidth on the computer. Excuse me on the network, on the wire, on your network wire on your Internet wire.
+Whatever bandwidth you purchase from Comcast, this will far exceed it.
+That doesn't matter what you block.
+It will stuff your wire with so much traffic that any legitimate traffic won't even go through.
+What about a load, balancer, would it?
+Would the load balancer work?
+Maybe it depends on where it is.
+So if you put the load balancer, and
+so a load balancer, just for everyone's knowledge, a load balancer is a server that tries to split the data into multiple paths. So the service doesn't get overwhelmed. So Amazon will use something like this. So Amazon will have like 100 web servers and a load balancer will take this incoming traffic and split them up to a different server. So no server gets overwhelmed. That's a load balancer.
+So let's say you put this low bouncer at your home
+that again, just like the same reason as discussed. It doesn't work because the traffic already went to your house. It went through your wire already before it went to a low bouncer.
+But there's, of course, other techniques like, let's say you put the load balancer in azure. For example.
+you put the load balancer in azure, and then the load balancer can direct the traffic before it gets to the server.
+Well, maybe that would work, maybe, but
+you might be paying a huge cost in bandwidth cost in the cloud, because cloud services
+you pay for the bandwidth
+and well, not digitalocean, but like azure, you would pay for the bandwidth, and it will cost
+a huge amount of money.
+If you get attacked
+potentially, you can reach out to Dns servers and tell them to try to stop the attack.
+Yes, definitely.
+But who owns these Dns? Servers
+like these Dns servers are owned by everybody. Like every company.
+every ISP, like almost everyone, has their own Dns servers out there on the Internet. So it's really, really challenging to reach out to every owner of the Dns servers and try to ask them to stop.
+Well, unfortunately, I hope it's clear that
+there's really, unfortunately, only one way to do it.
+and that is to get a Ddos Protection Service. There's a couple of companies that do it like Akamai. Cloudflare is probably one of the most famous ones. Cloudfront
+azure Aws has their own version of it.
+So essentially, you have to subscribe to one of these Ddos services that can stop the traffic.
+and how this works, and how all of them works essentially is that
+all the traffic to your server
+1st go through cloudflare. Let's say I'm just picking cloudflare, but they all work the same. So all the traffic
+to your server will 1st go through cloudflare
+and cloudfare will be the one that's blocking the traffic looking at the traffic. And such. And cloudfare has all of these nodes on the Internet, on the backbone of the Internet. So these pipes are really wide and really big, that can handle lots and lots of Ddos traffic.
+And from there, because they're on the Internet, on already, on the back, on the Internet. If they get attacked, they get to able to handle this type of traffic, filter the traffic and then send to your house or to your server
+the legitimate traffic.
+So unfortunately, today, if you want to protect a server from this type of attack.
+this is probably one of the only ways to do it because of the type of attack it is. It's a bandwidth
+attack, no matter what size of Internet connection that you get.
+This attack is going to blow it out of proportions.
+and if you're running it yourself
+like a low balance on azure aws.
+you're going to pay lots of bandwidth fees, so instead.
+you would pay Cloudfront or Aws or Akamai to be a front
+for your traffic for your website. And so it'll take the blunt of any Ddos attacks and then filter the traffic
+all the way while you're still in the cloud.
+and then send the legitimate traffic back to you.
+And of course these services also have other capabilities as well. I don't know whether you use machine language or AI in order to assist, but they do.
+but they also provide security services as well. They detect attacks from a network base, really interesting stuff like, so normally in computer security, you talk about detecting attacks when you're on the computer like antivirus Edrs and such. But you can also detect attacks on the network as well. So on the network, it detect these attacks before and stop them while they're going through the network. So very, very interesting stuff.
+Well, anyway, this is the Dns amplification, reflection, attack.
+Don't forget the really important thing. The 2 things that are very important. Here is, first, st amplification.
+that is, the attacker is sending a small packet is being amplified significantly to the victim.
+2.
+Reflection, that is, the attacker is sending the message to some other server on the Internet.
+and this other server is bouncing the reply back to the victim.
+Now, Dns is a Udp protocol, and of course you would not be surprised
+to hear that most of these type of attacks they're pretty much all Udp.
+They're pretty much all Udp, because
+because it's a connectionless protocol, there's usually no authentication. It's pretty much all Udp.
+here's another one. Here's another one. I'm not going to explain exactly how this works. You can review it yourself. But
+Ntp Ntp. Stands for network Time protocol. It's on Udp. Port 123, and
+without going to the specific details, it has a very similar problem here.
+and the similar problem is that at excuse me, an Ntp request is very small, and the reply can be very big.
+About 2 or 3 years ago
+Ntp. Was responsible for a Ddos attack of 350 gigabits per second, which
+well, now, it's not that much, but a couple of years ago it broke records, basically Ddos attacks, breaks records every single year about how big they are.
+and this
+there's a description of what Ntp. Does. Please take a moment and take a look at this yourself
+and some things that you can do about it. So for Ntp. Just a quick summary. The request, size for Ntp. Packet is 48 Byte 48 to 234 Byte.
+while the response size is 48 kB. So note the
+the the big difference here is from 48 Byte
+to 48 kB, like 48,000 Byte.
+So it's a very, very similar type of attack.
+So in summary, these type of Ddos attacks.
+what can you do about it?
+Well, unfortunately, if it's a bandwidth type of attack, then you need some sort of
+protection service that can handle that cloudflare aws, etc.
+Now, bandwidth attacks is not the only type of attack. There are other attacks like vulnerability attacks. There's Http, 2 attacks, and these goes on like different types of protocols on the Internet, and those can be stopped in different ways.
+Interlude, interlude.
+How Dns works in detail
+how Dns works in detail? This is a very important topic. Please please make sure that
+if this is not fully understood, then you take some time to review this topic.
+How Dns works?
+So here is a map of
+Dns servers on the Internet. You have the root servers you have. Like your local server, you have the different namespaces and such. And let's say, let's say you're at home.
+and if you're at home, this is you over here on the bottom.
+You're at home, and you're a Verizon files subscriber.
+So that means that Verizon files
+is your local Dns server. So whenever by default, by default, whenever you make a request, Dns request.
+the Dns request will automatically go to the Verizon Dns servers by default.
+You can change this, and you should probably change it.
+But by default.
+So 99.9% of people
+will go to Verizon files, Dns servers. And here's how it works. Here's how it works.
+Let's say the user wants to go to the website Engineeringnyuedu
+and the user types in engineering Nyuedu on the web browser. Firefox.
+Firefox would then make a Dns request for Engineeringnyuedu.
+so Firefox sends the Dns request over
+to its local default. Dns server.
+which is probably Verizon files. If you're a Verizon files subscriber, and then
+the revise and files Dns server will do all the work of getting that Dns address. And here's how it typically works.
+The Ryzen File server will send a request to the root servers.
+and I asked the root servers, Hello, root servers.
+What is the IP address of Engineeringnyuedu, and of which services
+you should ask the.edu namespace.
+so it will send the response back.
+And the response. Max says, go to the Edu namespace.
+So okay, then Verizon files Dns server would then send the request to the Edu namespace.
+and it'll ask the same query again.
+what is the IP address of engineering dot Nyuedu in the Edu namespaces?
+Well, you should ask Nyuedu.
+So it sends the information back to the Verizon files Dns server and says, Here is the
+here is the Ips for Nyu Edu. Why don't you ask them instead?
+So then the Verizon file server.
+Send the query over to Nyu Edu.
+and it says, Hello, Nyu Edu!
+Do you know the IP address of engineering dot nyuedu
+and Nyuedu says, yes, of course I know. So it sends this information back
+to the Verizon files, Dns server
+and then revise and files to the Ns server. Sends it back
+to your computer, and then your computer will navigate over to engineering. So it's a tough process.
+It's a tough process, because this Verizon file server
+does all the work on behalf of the user you ever notice. Sometimes rarely, rarely. Sometimes you type in a URL or you click a bookmark.
+and then the page doesn't load the 1st time.
+and then you click it again.
+and the second time it loads immediately
+you ever recognize something like that before.
+Well, it happens because of this process, it happens because of this.
+So happens exactly like this.
+And this method of Dns retrieval is called recursive. And this is the most common way that it's done.
+So. This is the typical way when you make a Dns request is for this to occur.
+and the reason that let's say, sometimes you click a bookmark and then it doesn't load. The 1st time is because your computer, your Firefox, sends a query over to Verizon files Dns server, and it has to do all this work to get the response. Sometimes it can take up to 2 seconds for a response which is just forever in Internet time. So this whole process can take up to 2 seconds.
+So that's why they cache that information as well. So let's go over again.
+So your computer requests the IP address for engineering. Idu sends the Verizon files to the end server. Then recursively, it'll do all the work for you.
+sends a request to the root servers. The root server says, Go to.edu. Namespace sends this information back.
+So then it caches this information.
+It caches this information. It remembers it for some period of time. So next time it doesn't have to make the same query.
+So then
+it makes another request to that Edu namespace, and that Edu Namespace says I don't have it. Why don't you ask and write that Edu sends this information back to your Verizon file server?
+The Verizon file server will just cache this information, too, because
+well, next time someone asks for the same information, it doesn't need to query again.
+Same thing again. It will now send a query to Nyuedu, and it says, Hello, Nyu Edu!
+Do you know the IP address for engineering dot Nyuedu and Nyuedu says, yes. Well, of course I do.
+Here is the IP address for engineering, Nyu Edu.
+And so this Dn server caches this information as well. So it saves that information in its cache for some set period of time.
+and then it'll send that information back to your computer and your computer will cache that information as well, and then it will go to engineering.
+So this is why, like sometimes, the 1st time you go to a website, it doesn't work.
+because it's still waiting to do all this stuff
+but the second time it already cached that information. So the response back is instant.
+Right? So sometimes the second time you go to the same website. It's instant because of this caching.
+Now I it took out a little bit.
+It took out a little bit of complexity here.
+and the reason for that is most of you have a home router as well. So, and that wasn't in the picture here one moment. This is also important slides, and let me put it into your note slides here.
+So at home sometimes you have a router, so you could pretend that there's a router here that does the work for you as well, and if you have a router at home, then your computer will send a query to
+the router, and then the router will be doing the rest of this work
+with Verizon files Dns server, and then Verizon files. Dns server will send a query here.
+So this. This is not important, but this part on the bottom is called into iterative.
+and on the top part it's called recursive. But it doesn't matter.
+All you need to know is that
+this is the way it normally works on the Internet. 90% of the time, 99% of the time it works like this?
+Well, I have a silly question.
+Have a silly question here.
+And the question has to do with, why are we talking about this in this class.
+Why are we talking about this? So I want you to guess.
+Does Dns
+have any security like? Is there any authentication? Is there any integrity. Is there any way to validate request? I just want you to guess.
+I just want you to guess like, what do you think?
+No, no, not at all. So Dns is plain text.
+There is no security in dns whatsoever at all at all.
+There is like technologies that try to add security on top of it.
+But it's currently not widely used on the Internet. Not yet. So Dnsec, for example, Dnssec tries to use public and private keys with Dns. It's not widely used at all, not on the Internet.
+There is also other technologies called Dns over Https or Dns over Tls. Those are starting to become wide stream.
+and they're probably going to be used in the next few years.
+and I hope that will become
+true one day. That's using Dns. But sending the Dns through a Http or Https. Excuse me
+sending Dns through a Tls tunnel
+to the Dns server, so it will be more secure also, not widely used today as well.
+So anyway, let's say, let's say, let's say you're at home.
+Alright, let's say you're at home.
+And this cloud says your home.
+and you have someone coming over to your house.
+Let's name this person coming to your house as Trudy.
+Right? So you invite Trudy over to your house.
+and and Trudy comes and says, Can I borrow your Internet like you don't even have to give me the password. You can just type in the password, so she doesn't see the password. Or let's take another example. Let's take another example.
+Let's say you're at Starbucks.
+Let's say you're at Starbucks, and you're using the Starbucks, Wi-fi
+and Trudy is also at Starbucks using our Starbucks Wi-fi, and
+we're not going to talk about why yet we're going to talk about later. But I'm just telling you as a fact right now that when you're at Starbucks
+everyone on the same Wi-fi network can see all your traffic.
+Just just take that as a fact, right now.
+everyone on the Wi-fi network can see all of your traffic
+without fail. So when you go to Starbucks, you log into Wi-fi, or let's say you're at the hotel
+that you're at the hotel, and you log into the Hotel Wi-fi
+anyone else on the hotel Wi-fi on the same hotel. Wi-fi can see all of your traffic now
+many times. That doesn't matter, because your traffic's encrypted. So you're going to amazon.com. It's encrypted with Tls, so it
+like it. It's encrypted. So it doesn't really matter.
+But but do you know what's not encrypted?
+Dns, right? So so your traffic to amazon.com, or whatever is encrypted, but not dns, not dns.
+So here's what happens. All right. So here's what happens.
+Let's say you want to go to engineering dot nyu edu.
+And so you send this request over
+to the Verizon files, or whatever primary Dns server
+and revision files is doing its thing trying to get your response back to it.
+But Trudy is on your network
+right now through this on your network.
+And so Trudy will see your Dns request. Oh, you want to go to Nyuedu. Oh, dns, response
+Dns response, with, here's the IP address for Nyu Edu.
+The IP address is 6 dot 6 dot 6 dot 6.
+Actually, that's a bad number, because 6 dot 6 dot 6 dot 6 is a Dns server. So
+so maybe that's not a good example. But so Trudy goes and gives a fake. IP address. Oh, it doesn't matter. Trudy gives
+the wrong IP address to the user.
+Would the user accept this fake? IP address.
+would the user accept this IP address?
+Yeah, it will. There's no protections. There's no integrity. It's all in plain text.
+So Firefox made a Dns request it got a DNA's response.
+All good, easy, it's all good done.
+And so then Judy gives this fake IP address to this fake server. Let's say, this is Fakenyuedu fake engineering
+dot. nyu.edu. So you have a fake one.
+And so the user, it gets a fake IP address. And so the user.
+then we'll make a request over and load the web page for this fakeengineeringnyuedu website
+on the user's URL bar with, say, engineering Nyuedu.
+or would it say something else
+on top in the URL bar?
+Yeah, it will say, engineering. Nyu Edu.
+Why?
+Because for what? All Firefox knows, it's the fake IP address, because
+the only way that Firefox knows that engineering@ny.edu
+is related to whatever IP address is by the Dns response.
+So you type in engineering dot nyu edu to Firefox.
+Firefox makes a Dns request Trudy. He has sense of victory in his response. Back to your computer.
+Your computer goes to that IP address.
+and it thinks it's engineering at Nyuedu.
+and it will load the web page and the URL bar will say Engineeringnyuedu.
+because it doesn't know any better.
+So that's the DNA. That's a Dns attack.
+Judy, on your home network is able to respond back to your Dns request faster than
+then the real Dns server can respond back to it.
+So 2D. Because it's on your home network, it's always faster.
+It's always faster than your computer than the real response.
+So 3D. Is always faster. So whatever website you go to, let's say you go to amazon.com.
+Judy will respond faster.
+Here's this fake IP address, and your computer will go to this page thinking that it's amazon.com.
+And Trudy has made a copy of amazon.com.
+and it'll load, and it'll look like a normal amazon.com.
+What can you do about it?
+What can you do about it?
+Does anyone use the Nyu Nyu VPN the Nyu VPN.
+It's the Cisco. It's a Cisco VPN, so it's it's really great right. And
+when you use the Nyu VPN you have a choice of 2 options.
+The 2 options are nyu traffic only, or all traffic.
+so the option one or option 2. Whatever it is, it's nyuedu traffic only. So this is, for if you're accessing like the specialized Nyu sites, then you need to use the Nyu only option. This would include something like payroll right. So if you go to Nyu, and you need to access the Nyu payroll, you must do it via Nyu via the Nyu VPN. Of course, right.
+and all other traffic will go out locally on your computer.
+So all the Dns traffic and whatever will go out locally on your own computer, on your own local network Starbucks.
+And then Nyu, or actually, the Cisco
+VPN. Client, has a second option. The second option is called all traffic.
+and what all traffic means is that no matter what
+all your traffic will go outside directly to Nyuedu before it does any processing.
+So in this case, for example, so you have a VPN to Nyu Edu, and let's say this is Nyu.
+Network. Your computer will make a tunnel to Nyuedu.
+All traffic, including Dns traffic will get piped out through the VPN.
+Into Nyu before it will make any Dns request
+this can increase latency, but it's certainly more more secure, more secure, specific to this attack.
+to this specific attack and this type of attack, this Dns attack is the primary reason
+that a VPN is recommended. This is the primary reason, because Dns
+is unencrypted with no security measures whatsoever.
+So you go to your corporate website. So you go to your like. Let's say you're checking your webmail, and you go to webmail at corporatewebsite.com
+with Trudy here on Starbucks.
+Trudy could intercept this Dns request. And suddenly you're at the wrong website.
+So that's why many corporate corporations have a VPN. Installed on their laptops, and they require VPN. To access any of the stuff.
+Because you know that some users won't be able to tell difference, because it looks because it looks the same.
+So yes, a VPN.
+Is able to stop this type of attack
+if it's properly configured to do so, that is, if it's properly configured to take all traffic
+and send it over the VPN. Tunnel.
+Some companies do it.
+Some companies don't remember. There's like 2 main options when there's a VPN
+corporate traffic only, and this is an example where, if I go to the Nyu registers. I have to do it via VPN.
+And then all traffic depends on your company
+like, why would a company have these 2 different options even Nyu? Why do they have these 2 different options
+here like, why don't they just make everyone just use the VPN all the time?
+Yeah, it's bandwidth bandwidth and money.
+So if you're sending all of your traffic through Nyu Edu
+Nyu essentially is paying for all your traffic.
+while if if they set it for Nyu traffic, only then they're only paying for traffic that has to go to Nyu
+already. But luckily Nyu is a great VPN.
+I hope they keep it forever where all your traffic can go to go to Nyu, and as long as you're a student you have
+free access to it.
+So that is a that is a Dns attack. There are other attacks as well, the other attacks as well. So
+what attack here?
+What we just discussed is that Trudy Trudy, the attacker
+is able to replace this step. 8 over here of this attack of this Dns process. So Trudy here.
+when the when the user sends a request
+here to a Verizon Dns server, Trudy actually replaces, step 8 over here and replies back.
+So truly, replace, step 8 over here. And this user's computer is able to
+cached this information, and now went to the fake website.
+But I have another. I have another scenario here.
+What if?
+What if
+so, let's say the user over here sends a request to the Verizon files Dns server. It goes to the root server. It comes back.
+Then it goes to the.com namespace. Then it comes back. It goes to Nyu namespace. It comes back.
+But actually it doesn't come back.
+Let's say, Trudy, replace step 7 over here of the response rather than step 8.
+What is the difference here?
+What is the difference here like? Why would truly do this like? What's the purpose of even doing this.
+and what would really gain from replacing this step? 7 of this process over here.
+I'll give you a hint it has to do with caching has to do with caching.
+right? So it will affect multiple clients.
+So remember that
+this Verizon Dns server is caching this information. So when 3D. Sends this information to the Dns server. It caches this information so that next time that someone requests this information, the same Dns the domain name, it can give a response instantly.
+So if you have, like some other like innocent bystander over here, say.
+innocent, let's say another another victim
+over here, and this another victim is making a Dns request over to the Verizon file server.
+and is also requesting engineering at Nyuedu.
+Then the Verizon file server will say, Oh, I already have this information.
+and it sends back the information back to the victim.
+But it's the fake information.
+So here, if Trudy was able to change, step 7 like they poison the cache, and
+I forgot to use the technical name here. So the technical term of what happening here is dns cache poisoning, and if Trudy is able to do, perform a Dns cache poisoning off the Verizon file server.
+then any Verizon files customer that wants to go to engineering at Nyu Edu.
+Well, go to the fakeengineering Nyuedu website.
+So it was able to poison the cash for multiple customers at the same time.
+So if they're trying to do
+like. If they poison step 8,
+then it only affects one user.
+If they poison step 7, then they affect
+all Verizon files. Customers for engineeringnyuedu
+have another scenario have another scenario. What if?
+What if Trudy was able to poison? Step 5 over here?
+Step 5.
+So let's take this scenario over here.
+So the user is requesting engineering the Nyda deal.
+The Ryzen file server sends it to the root servers. The root servers respond back.
+No. Why don't you ask Theedu namespace. So you send a request to du Namespace. It says, what is the IP address for engineering.
+and then that that Edu new Namespace
+doesn't respond fast enough as Trudy. So Trudy responds back, and it says, Oh.
+you want to talk to the nyu.edu Dns servers.
+Actually, here's the fake information.
+So then, instead of going to the Nwariedu servers, they'll go to the fake Nwaedu servers fakenyu.edu
+Dns servers, and then it will go to the fake.
+Nyu Edu servers.
+What?
+What advantages do you get if they poison? Step 5 over here, then step 7.
+Yeah. See if Trudy's able to poison. Step 5.
+Then they control the whole.
+Anything dot nyu Edu namespace. So they they're basically running a fake. Nyu Edu domain name server over here.
+And so anytime you go to Www. Dot Nyuedu, you go to Brightspace, dot Nyuedu, you go to register dot Nyuedu. They're all affected. They're all affected.
+so if they're able to poison. Step 5, you have a a bigger, bigger impact.
+So another question here is what happens if you get multiple responses, if you get multiple responses.
+So here, let's take this example over here. This is what I showed before you're at Starbucks.
+and the user's PC makes a request for Engineeringmy Edu.
+and eventually it makes its way across the Internet.
+And the information eventually comes back to the user.
+But the user got a second response from Trudy.
+So the user.
+The user got 2 responses, one from Trudy
+and one from the real Verizon File's Dns server.
+which one or take.
+Yeah, it uses the 1st one and ignores everything else.
+It takes the 1st one ignores everything else.
+So Trudy is able to send this response back faster than the real response.
+and Firefox will just accept the 1st one
+and then close its ports. It doesn't even see the second one
+right? Because when you make a Dns request the port is open, waiting for a response.
+Once the response is received, it closes the port. It doesn't even get the other ones.
+It just it doesn't even get it.
+The other ones are lost. Doesn't even know that I came so
+for Trudy to be able to perform this attack
+for duty, to perform a dns cache poisoning for the attacker
+to perform a dns cache poisoning
+the attacker must.
+The attacker must do the following things.
+The 1st thing it does is that the attacker must respond back faster than the real Dns server.
+So that's the 1st thing.
+It must respond back faster.
+So the 1st one wins. That's it.
+This is going to be a theme throughout this class.
+This could be a theme throughout the class. Second thing, second thing, it must spoof the real Dns servers.
+IP. Address 3.
+It must use the same transaction
+Id and port number from the Dns packet.
+So it needs to do these 3 things in order to be successful.
+it needs to do these 3 things.
+So let's go through them again.
+1, st 1 1st thing to do, dns, cache poisoning
+the attacker must respond back faster than the real Dns server.
+How hard is that to do?
+How hard is that to do?
+Is that very difficult, or is it very easy to do.
+Well, I guess it depends right? So it could be difficult or easy
+depending, depending. So both answers were correct.
+So let's say, Trudy is in the Starbucks network.
+a traditional Starbucks network insanely easy, insanely easy.
+We, we even used to have a lab
+in this class where you have to do that. It's we don't use that lab anymore. But it's insanely easy. It's so easy that
+you can do it in a couple of hours. Very easy using Scapi. It's very easy to do
+if you're on the same network, very easy to do
+so on the same network is very, very easy to do.
+But if you're not on the same network.
+so we have these other examples here, we're truly trying to spoof step 7 or step 5 over here.
+And for these cases Trudy is not on the same network. So in those cases it's very, very
+hard to do very hard to really impossible to do
+so. It's very challenging to do. But
+despite that, it has happened in the past multiple times.
+there was one time, I think the newyorktimes.com Dns server was taken over like the whole Dns server was taken over.
+So it depends. It's very easy. If you're on the Starbucks network.
+it's very hard if you're not 2
+Spoof, the real Dns server's IP address.
+Is this easy?
+Or is it hard to do?
+Yeah, it's easy, this, yeah, very easy. This this one's just no matter what it is, it's very easy.
+And then, the 3rd thing you need to use the same transaction Id and
+port number from the Dns packet.
+You need to ask the Dns packet.
+So
+when the user is making a request, this Dns request has a random transaction Id and a random port number.
+and the attacker must match this transaction. Id and the port number from the Dns packet.
+Is it very easy or very hard?
+Cool?
+Well, I see half the answer. There, see half the answer.
+Well, I guess this one. It depends also. So
+if you had Starbucks, it's very easy, because, as we will discuss later in the class.
+When you're on the same Wi-fi network, you can see everyone's traffic very, very easily.
+So if you're in Starbucks, it's very easy.
+If you're not on the same network.
+then it's very hard like. So we had an example where Trudy was proofing. Step 5 over here
+hopefully, 2D. Isn't on the same network as this between the Dns server and the Edu namespace. So it should be very hard.
+because they can't see the packet.
+So hopefully, it's very hard.
+So it depends. Right? So, for a fresh one must respond faster, very easy, if on the same network.
+hard, if hard.
+hard, if not on the same network. Spoofing. The real Dns server's IP address is easy, no matter what
+3 using the same transaction. Id as the Dns server.
+Easy. If you can read the packets
+easy, if you can read or intercept the packets
+hard, if you cannot read the packets
+so essentially, if Trudy's on the same network as a user Starbucks.
+and they can read the packets insanely easy to do, just like what you do in Lab one and lab 2 extremely easy to do.
+But if you're not on the same network.
+then it's very hard, because you'd be guessing numbers. It's like trying to guess sequence and act numbers without being able to see them like, I guess the analogy is, if you try to do which lab, did you have to guess sequence and act numbers lab one like, let's say, you're trying to do lab one
+by guessing the numbers by guessing the sequence and act numbers.
+Is it possible?
+Yeah, yeah, it's possible, but it's very hard.
+But I guess since we're talking about Lab one.
+what happens if, let's say, Trudy is trying to spoof like step 5 or step 7 over here.
+and let's say Trudy got the wrong transaction, Id, or got the wrong port number.
+What will happen if she got the wrong
+transaction Id or the wrong port number.
+like, what is the what will happen
+to it? Are there any consequences of that?
+Or would the Dns server just ignore it.
+Yeah, yeah, it'll just ignore it.
+It will just ignore it.
+So if the Dns response has to match the transaction Id and the port number
+doesn't match properly, it'll just get ignored.
+very similar to your lab one where you guessed the wrong sequence and act number. If you mess it up
+they'll just get ignored.
+So when the attacker in real life.
+when the attackers are trying to spoof step 5 and step 7 over here.
+they're not just guessing one time. They're guessing millions of times, because, remember.
+there's no penalty for a wrong response. It just gets dropped so
+the attacker will force the Dns request like the attacker, will make its own Dns request.
+and then try to attack its own Dns. Request response by sending millions of guesses.
+Anytime it will send millions of guesses at a time, and
+eventually one of them will work.
+It's very hard. No question about it. It's very hard, but it's possible.
+by just guessing billions and millions of times.
+because the way that the and the way that Udp works
+is that if you don't have the proper information, it gets ignored.
+So it's just guesses guesses and guesses.
+and with enough guesses with enough time.
+It'll work.
+Dns. Attacks are pretty much one of the biggest Ddos attacks in the world
+we talked about this. This is a different slide to explain the same thing. This is Dns cache poisoning explained in a different picture. So I suggest to go through this by yourself at a different time.
+Yes, we went through us. So that's the end of Lesson 3 right now. Lesson 3 has a second part.
+The second part of it is a pre-posted video that talks about vulnerability, scanning that is, using Nessus.
+And then it talks about middlesploit. So at this point, please go ahead and complete the lesson. 3
+additional video part for those of you who are watching this video right now and not live. Please go ahead. And I suggest you pause the video here
+and go review the already posted videos for lesson 3 on Nessus and Metalsploit. Finish that and then come back to this video from there.
+So now we're going to move over. We're going to move over to Lesson Number 4 right now. But before we get there. Exercises
+exercise one a exercise money.
+What are the steps for the user
+to make a Dns request for Www. Dot new yorktimes.com.
+presuming that no host has ever been on the Internet. So far no hosts have been on the Internet so far.
+So let me set a timer here for 2 min.
+and then I don't know if you want to give your response or not, but
+at least go through it. Go through the response in your head. At least
+let me set a timer here for 2 min
+another 20 seconds.
+So in this case.
+maybe I it's a lot to type out. So let me just speak it verbally. It's a lot to type out. Yeah. So what happens when you make a request is that step one. You make the request to your Verizon files, Dns server.
+and if you've not been on the Internet before the Verizon files, Dns server will make a query to the dot root servers. The root servers will respond back with Thecom namespace, and this information is cached by the Dns server, so it won't have to make the same request to root servers, for
+whatever the time period is, I don't know what time period it is.
+It's something between minutes and days.
+Then
+the Verizon file. DNA server will make a requester.com namespace, and it'll ask, what is the IP address for? Www. Dot New York times.com
+the dot-com namespace will say, we don't know. Why don't you ask? newyorktimes.com.
+So send a response back, saying, Here are the Dns servers for newyorktimes.com.
+and it'll cache that information over here.
+And maybe I used the wrong terminology over here. But Firefox, on the user's computer makes the request to the Verizon files Dns server. The Verizon files Dns server over here
+will be doing the request on behalf of Firefox.
+So
+the Verizon files. Dns server is making the request for the root servers, and the root server is responding back to the Verizon files, Dns servers.
+Verizon files. Nano server is making a request to a.com namespace gets response back.
+and the Verizon file stay in. A server is caching the response.
+Then the Verizon file snare server will make a request for
+to newyorktimes.com asking them, do you know the IP address for Www. Dot New yorktimes.com?
+It says, yes, I do send a response back
+to the Verizon files. Dnr server.
+The information gets cached and it gets sent back to the user's computer exercise one B exercise one B.
+Wait.
+Wait. The answer is on the slide, so don't look. Don't look
+exercise one B.
+Suppose the attack is on the user's home network.
+and in this case the attacker is an IoT device that has been compromised. So this is a IoT device.
+It's just a picture I found on Internet. I'm not saying this company is compromised, or anything like that.
+Let's say there's an IoT on your home. Wi-fi that was compromised in your home.
+How hard is it to poison your dns, cache, and what steps are required.
+Let me set a timer here for 1 min. I'm going to think about it, and you can give me your response.
+Okay? So the compromised IoT devices at your home network.
+How hard is it to compromise your to poison your Dns cache?
+Is it easy, or is it hard?
+Yeah, it's very easy, very easy.
+what steps are required to do. So we had 3 steps, 3 steps over 3 steps that were acquired.
+Step. One respond faster.
+It respond faster than a real Dns server.
+Step 2, Spoof, the correct IP addresses.
+So it is Spoof, the IP address of the Dns server, step 3, match your transaction. Id.
+and the port number the source port number the IP. Excuse me, the Udp port number.
+So with these 3 steps, they're able to poison the cache.
+And for these 3 steps it's very, very easy to do
+when you're on the home network. Basically, when you can see the packets. It's insanely easy to do.
+and of course Dns is unencrypted. It's plain text has no security mechanisms.
+One C.
+Suppose an attacker wants to poison a dns cache for all users on Verizon files.
+and make all the users go who want to go to newyorktimes.com
+go to IP address 6 dot 6 dot 6 dot 6.
+How should they do that?
+And how hard is it to do so?
+Let me set a timer here for 1 min. And then
+I want to hear your responses on this.
+Okay, so what do you think?
+How hard is it to do?
+I mean, how would she do it. And how hard is it to do?
+Yeah, they was pushed at 5.
+So if Trudy Spoofs step 5 over here.
+step 5, is a response back, saying, the Dns server for newyorktimes.com
+if studio was able to spoof step 5 and say, Oh.
+Dns server for newyorktimes.com.
+It's actually something else.
+So Judy will Spoof step 5
+and then tell the Dns server
+to go to some other fake Dns server. That's not the real one.
+How hard is it to do?
+How hard is it to do
+so for this attack?
+It can also be step 7.
+So if the if the if Trudy goes in the text of 7.
+It's the same thing as well.
+So for step 7, then the
+it will poison the Dns cache for justnewyorktimes.com.
+but if they do step 5 it'll poison it for anything.newyorktimes.com. So step 5 is anything dot new yorktimes.com
+step 7 is the whole domain. Www, dot New yorktimes.com.
+It's not easy. It's not easy.
+because, although you can respond faster, or you can spoof the IP address
+getting the transaction. Id is not easy, because the transaction id is in the packet, so you had to be able to read the packet to get the transaction. Id
+question, doesn't the router prevent unregistered devices to spoof an IP address?
+Do routers with a typical normal router stop IP spoofing.
+and unfortunately not a normal router does not stop IP spoofing.
+especially one on the Internet, because these IP addresses can come from anywhere.
+And so spoofing IP addresses is very challenging from the Internet.
+It's very challenging from the Internet.
+because you don't know where these Ips are coming from. They come from different routes. They don't always come the same way, so it's very, very difficult to do
+so. Unfortunately, spoofing this IP address is
+not as easy as it used to be.
+but it's still fairly easy to do.
+but the hard part here it's hard to do
+when trying to spoof step 5 or step 7 is to get the transaction Id by reading the packet
+in the previous example. It's very easy to do, because the attacker is on the same network
+and on. If you're on the same network like your home network.
+You can read all the traffic
+if you're not on the same network.
+You can't read the traffic.
+And when I mean, read all your traffic. I'm including hotel. You're the airport Wi-fi airplane, Wi-fi
+Starbucks, or whatever
+back to the cyber kill chain.
+So
+today's lesson Lesson number 4, we're going to complete the cyber, kill chain and talk about steps 5, 6, and 7, which is installation, command and control and action on objectives.
+We're going to talk about persistence, persistence is maintaining access onto a particular target.
+And so when attackers attack into a host, usually they try to maintain some sort of access to the server.
+So let's say, for example, we're talking about your lab. Lab one right lab, one task 4.
+You had to attack a server and then get a reverse shell.
+Well, an attacker would normally, after that, once they get the reverse shell, they'll try to
+maintain a presence on the server.
+and they can do this in a number of ways. One way they can do it is like they will install
+registry keys to it for startup services. They might install some sort of malware so they can get access to it.
+Exercise number 2, exercise number 2.
+I'm not expecting you to be an expert on Nmap.
+But I would like you to know this.
+What does this command stand for? It's nmap dash s capital s dash! O,
+10 dot 10 dot 10 dot 1 0. Specifically, is it scanning for Tcp or Udp ports.
+and which ports are being scanned?
+Let me set a timer here for 1 min for this question. If you don't know, you can try to Google? The answer.
+okay, what do you think?
+1st question, is this scanning for Tcp or Udp ports.
+Yeah, the dash Ss stands for Syncscan.
+So it's the it's doing a Tcp scan.
+Which ports was it scanning for
+which puts.
+yeah. It's the top 1,000 most common ports, not port one to 1,000. It's the 1,000 most common ports based on the survey they did 50 years ago.
+So it's not very common.
+and the dash O, what is the dash? O for operating system?
+Scan or determine what operating system? OS deduction, right OS deduction!
+The most important part here is that
+when you don't specify to port numbers.
+you don't know what it scans for, so whenever you're running a scan of any sort.
+You have to specify the ports that you want to scan.
+You have to put it there. You can't presume anything, because, like for this example, you don't know what ports it's scanning for. You don't know what a top 1,000 ports is because they did this survey so long ago. It's not the same as today.
+So Nmap has this top. 1,000 ports, I don't think has ever been updated since the 1st time it was it was put in there
+persistence.
+Persistence is staying on the system.
+so on all operating systems there are way
+for malware to be put into the startup service. So, for example, in windows you can use a registry key to add a program to the startup on Mac OS. X. They have similar things to add to startup services. Same thing for Linux inti
+Trojan horses. Trojan horses is a type of malware that does something that it does not expect it to do. So. An example of a Trojan horse is, let's say you download a game, and you like to play Bejude, or something like that, and you don't want to pay for or whatever. And you download a fake bejued. And you're playing Bejude on your computer. And while you're playing it, it's on the background, it's like stealing information or doing something else in the background of it.
+So that's a Trojan horse. A Trojan horse is something that does something that you don't expect it to be.
+But generally we use the term malware. Malware is the generic term that we use for everything. So today.
+we like to use the word we like. We don't want to use things like Trojan horses, viruses, worms. We try not to use any of those terms. We use the word malware.
+Unfortunately, even, I still use the word virus, because when I speak to end users, and I'm trying to explain what happened to the end user, like, Oh, yeah, if you do this, there's a risk of malware like sometimes end users don't understand this, sometimes use the word like virus.
+so generally, sometimes they use the word virus to mean malware. Even Microsoft, right? The Microsoft Edr. Sometimes it uses the word virus as well instead of malware, but malware is generally the term we use for all malicious things.
+Here are common Tcp and Udp ports used by some malware. You see this like 3, 1, 3, 3, 7 that stands for elite. This program, called Deep Throat uses these ports. Netbus uses 1, 2, 3, 4, 5, and 1, 2, 3, 4, 5, 6. But these are all configurable like all these things are configurable. So it doesn't matter.
+It doesn't matter what port they use.
+When you're on a computer, you can see what ports the computer is listening to using Netstat command. You did this on Lab one by checking whether your sync flood attack is working so by doing netstat on any operating system. You can see the list of open ports and ports that it's listening to on your computer.
+Last week we had a discussion on vulnerability scanners. And we talked about why
+an agent-based scanning that is scanning from
+using an agent installed on the computer is superior to scanning from outside of the computer and the agent-based scanning is better because it has this information from inside the computer, like, you can see
+what ports are open from inside the computer better than from outside the computer
+proxy server, Trojans is a piece of malware that pivots
+it turns a computer into a proxy for an attack.
+So there are some hosts that are being compromised on the Internet for the sole purpose of having the attack jump to another host. So, for example.
+for example.
+let's say, country A. Wants to hack something in country B. But doesn't want, doesn't want people to know where it came from.
+So the country a will pick some other countries and hack some computers there
+and then it will jump from one host to another host, so it makes it very hard to trace back where the original IP is coming from.
+so they'll hack. These computers, install a piece of malware, which is what we call a proxy server, Trojan, and this piece of malware essentially, just turns the computer into a proxy.
+and it'll relay attacks through it.
+This is done essentially by everyone. So it's very, very difficult to trace back where an attack came from. It's extremely difficult, because the IP is obfuscated by jumping through multiple proxies.
+Netbus, this is just for history. Net bus is one of the original Trojan horses. If you know what this is, then we know how old you are.
+It's 1 of the very original Trojan horses. It wasn't even classified as a Trojan horse. It wasn't even initially, a piece of malware.
+I remember this as a kid.
+and if you wanted to control your computer remotely, you would install Netbus
+to your computer. So I remember installing this on my mom's computer when I was a kid. So I can control the computer and help troubleshoot it. When I wasn't home.
+it essentially just takes over a computer and do some basic, very, very basic functions.
+Eventually, when computers became more important.
+Netbus became a Trojan horse and not a Trojan horse, but a piece of malware where it can steal information and
+steal information and control the computer remotely.
+Rootkits rootkits is a term
+for a piece of malware that is designed to evade forensics. That is the definition of a rootkit. It is a piece of software that evades
+forensics.
+Rootkits come in 2 main types, user mode and kernel mode. And
+it's essentially how much access it has. A kernel mode. Rootkit has more access to the operating system
+than a user mode.
+Cricket exercise number 3.
+How could malware survive an operating system?
+How could malware survive an operating system. Wipe.
+please let me know what you think whether this is possible or not. Let me set a timer here for 1 min.
+Okay, let's say, I guess the scenario here is.
+you have a friend that called you up. And your friend says, Oh, I got a virus on my computer.
+And you tell your friend, oh, just wipe the computer.
+and then the malware will be gone.
+Is that does that really work?
+Does that?
+Can malware come back after being wiped by an operating system.
+Yeah, yeah, it could.
+Because, let's say, Malware installed itself into the into Bios, right? Because the Bios is just a piece of memory now.
+And so if the mouse was able to write to the Bios.
+then it can come back after the operating system reinstall.
+How about anything else?
+How about a hidden partition? Yeah. So if the malware wrote itself to a hidden partition, then the malware is still there after you wipe the operating system.
+They can compromise another network device
+and then try to jump back in. Yeah, infect another computer and then have the other computer infect back.
+How about Mbr, can malware infect the Mbr.
+yeah, the Mbr is the master boot record.
+So for any of you who have installed more than one operating system in your computer, like when you when you put up, you get the screen that says, Oh, you want to choose windows. You want to choose Linux ubuntu, or whatever
+that's called the master boot record.
+and the master boot record is a fancy way of saying operating system.
+So when that menu comes up that says, Oh, select a select 1, 2 and 3.
+That's in whole operating system by itself.
+It's software.
+It's a piece of software.
+So malware can infect that, or just replace it completely, and then infect your other partitions.
+That bootloader
+is not just the bootloader, the Mbr. It's a full operating system, I mean. Full, as in it is an operating system. It runs arbitrary code
+that can do anything. It just happens to just
+boots up another operating system. But essentially, it can do anything you can do anything.
+The malware can also hide on external devices like USB, drive or external hard drives.
+Can malware overwrite firmware.
+Yeah, yeah, absolutely.
+About 10 years ago, on Defcon or Blackhead, there was a demonstration where the the white hats or
+the researchers were able to infect a USB stick
+to be able to turn it into a mouse and keyboard. So the USB stick.
+when it plugged into your computer, identified itself as a keyboard.
+And then from there ran a terminal command and installed malware onto the computer
+when someone plugged in the USB dumb drive.
+So, yeah, absolutely.
+Absolutely.
+So, unfortunately, today, simply by wiping the operating system may not be enough to
+wipe the malware. So today it's important that the malware that infects the computer gets identified awesome.
+Because if it's you have to intensify the malware to know what it could do
+before, simply just wiping the operating system, because there's a chance that you might need to do more than that
+netcat netcat is a program that you used in Lab Lab one. I believe
+Netcat is just a it's another communication protocol, but also does a number of things as well. We're going to skip Netcat over here. We're not going to have an exam, but you should know where it is. It's
+is a communication protocol that does a lot of things. Netcat essentially turns
+a file on Linux into a network connection.
+And you can write to that file, and it writes into a network connection. It's very cool.
+and you used it on that one rapper.
+A wrapper is a way that you can obsfuscate a piece of malware into something else.
+It kind of takes a piece of malware
+and changes the signature of the malware by combining it with another program.
+So, for example, you can take a piece of malware
+and then combine it with a game like with bejued
+or something like that and combine it into one, and then its signature will be different, and then that can evade the malware detectors.
+This is why, when you download illegal software from bittorrent or whatever
+it's basically always dangerous. It's always dangerous to do, because there are programs that just takes
+a piece of malware in a game
+and combines it together, and then they make it available on bittorrent.
+So I would highly recommend that you never download software of bittorrent.
+Right? It's it's worth the money to just buy it legally.
+because the risk of a piece of malware on the software that you download illegally
+is extremely high. It's extremely high, because it's very, very easy to do.
+It's very, very easy to do.
+And a previous version of this class, the students would just take
+take a piece of malware and combine it with something else with metasploit. So it's very, very easy to do.
+Exercise 4.
+What are some reasons that attacker will stay on the host, after it's been compromised.
+What are some of the reasons why an attacker will stay on the host after it has been compromised?
+Let me set a timer here for 1 min for this question.
+Okay, what do you think?
+What are some reasons that attacker will stay on the host after it has been compromised.
+Yeah, they could use it as part of a botnet.
+They can use this to spy on the user some malicious activity that they can use as a proxy to attack something else.
+Oh, but most of the time, really.
+when they hack into a computer, it's really the target
+that they want to hack into.
+So do you hack into your computer.
+But this computer is like the front most computer of the corporate network.
+And they're not really in the network yet. So they usually they hack into one computer
+and then they try to pivot to another computer to try to get further into the network.
+So they try to attack other hosts on the network and try to jump their way into the network from there
+data exfiltration. So once you get your data from the target. They need to try to get the data out of the network.
+Sometimes it can be difficult to do because of Dlp policy data loss prevention.
+So the attackers they're able to find some really nice information.
+Then they want to get it out of the network without them knowing they have to try to get it, sneak it out of the network, using some sort of techniques.
+Psychography is the art and science of trying to send hidden messages on it through a network.
+We also call it a covert channel. A covert channel is a channel within another channel.
+An example of a Covid channel would be Tls like Tls is really Http traffic over Tls connection. So really, it's kind of like a covert channel.
+But a covert channel also includes that
+other people don't know that it's a Covid channel
+as a programming note today. I'll need about an extra 10 min to try to finish the course. So 1015 min will be 10 to 15 min behind schedule on the course today. But since today is the last, like
+course, last lesson for new materials, I'd like to finish up today. So thank you for your understanding.
+Okay.
+Networks like geography is trying to find hidden messages within a communication channel.
+Some examples of covert channels or hidden channels will include tunneling protocols, such as Ssh, for example, Ssh, really is a tunneling protocol. You just happen to run telnet over Ssh, so. Ssh, you kind of think of it as a
+Ssh to a Linux server and such. But really, Ssh. Can run other stuff through it. You can run. For example, Http over Ssh as well. But normally we run something like telnet.
+Gre. Gre is a tunneling protocol. Gres basically block everywhere, because gre purpose
+is for tumbling, so it's it's blocked everywhere. Ipsec.
+Ipsec is Ipsec support you to consider a tunneling protocol as well. Ipsec
+is a form of IP security somewhat can be considered a VPN.
+Somewhat can be considered. VPN. Where the traffic
+inside Ipsec is can be encrypted. So because of that, you can see the IP traffic, but you don't see what's inside the IP traffic, and so that can be considered a tunnel or a VPN.
+Here is a Tcp. Header.
+I know it's Dcp 100, because it's a source and destination port number sequence numbers. And there's flags.
+Covert, Tcp covert, Tcp is a program that can send hidden data through IP and Tcp packets.
+Covert, Tcp has 3 ways that can hide data.
+The 1st way is called the IP Id method.
+The second way is called the Tcp. Sequence number method, and the 3rd method is called the Tcp actnumber method. Let's go over each of these methods.
+I'm going to use my notes slide over here because I want you to have a copy of these slides.
+So core Tcp is a program used for hiding data.
+The 1st method they use to hide data is called the IP sequence.
+IP id method
+IP id method. And do you remember what IP id method is an IP Id is a random number
+16 bit number in the IP header used for reassembling fragmented packets.
+So the IP Id benefit is when you have 2 computers.
+and let's call this computer the sender and the recipient
+and the other computer I call the recipient.
+We'll send the packets to each other, and when they send packets to each other, they'll transcode.
+They'll put their secret message in the ipid field
+of the packet. So inside the IP Id. Field they'll have the secret message.
+And remember, the ipid field is a sixteen-bit number.
+So with that, how much information can they send with a sixteen-bit number?
+How much information can you fit in 16 bits.
+Well, let's say they're sending messages, let's say descending
+English letters. Then maybe they can fit. I don't know 26 characters.
+Maybe you can fit it in
+5 bits of information, one character, 4 bits of information.
+Maybe.
+So with 16 bits, you can probably say, like, if you're trying to say Hello, you can say like.
+Hello like that.
+Maybe right?
+16 bits of information.
+So they stuff it in the IP Id
+part of the IP packet, and remember the IP Id is supposed to be a random sixteen-bit number.
+But
+what if you don't make it random like the sender? Someone that chooses the IP id number, so maybe they can just choose
+some message that translates it into Hello. And so if you use some sort of Ascii or Ascii like conversion. You can send it, like HELO. To stand for. Hello.
+So that's the 1st method, right? The 1st method is called the ipid method.
+So, and this is on the IP header.
+The second method, the second method
+is called the sequence number, method.
+sequence number method.
+And does anyone remember how, how big is the sequence number
+like, how many bits is it?
+Someone remember how many bits a sequence number is?
+It's 32 bits story, 2 bits of information.
+So with 32 bits you can send like a lot more information
+here with 32 bits, maybe you can say like twice as much information. So in the Tcp sequence number.
+maybe you can say, Hello, Hello, world.
+I don't know. Hello, world, or Hello, world, or something like that.
+And so this is on the Tcp header.
+So every time the sender can open a Tcp. Packet, open a Tcp. Connection with the recipient, it chooses
+the it chooses the sequence number so it can try to encode information into a sequence number.
+So on. The method number one here.
+Every
+on method number one, every IP packet has a IP.
+Id. Number.
+The sender can choose a new IP id per packet.
+and then for the number 2 method, every new Tcp connection has a sequence number chosen initially
+called a initial sequence number.
+So when they start a new Tcp connection, they can send a dirty 2 bit number there
+and then, and then the 3rd method for covert Tcp.
+The 3rd method would go for Tcp
+is called the act number method, so the 3rd benefit
+is called the act number method. And this is the reason that we even talk about this, because the act number method is very, very interesting. The act. Number method works a little bit differently.
+So for the act number method.
+there are 3 hosts involved. You have a sender
+in a recipient, and then we have someone called a innocent bystander.
+Let me name this dot innocent bystander
+and the innocent bystander over here the sender.
+We'll send a packet to instant bystander, and then
+the innocent bystander will reflect the information. Back
+the recipient. And here's how it works.
+The sender over here.
+The sender over here will send a Tcp Sync packet
+and this Tcp Sync packet.
+We'll have a sequence number.
+And this sequence number would be like Hello, or something like that in Ascii.
+and the sequence number. This Tcp sync packet will have a source IP address of the recipient.
+So it's spoofing its source. IP address
+when the user, when the sender sends this packet to the instant bystander. Like a Tcp sync packet.
+the innocent bystander will respond back to the Tcp sync packet with a Tcp Sync act.
+So the instant bystander responds back with a Tcp sync act
+in the syng we'll have a sequence number and an act number.
+The sequence number will be some random number which we call initial sequence number B,
+and this act number will be, oh, can someone tell me.
+what is this act number over here.
+Where is the act? Number.
+Yeah, yeah, you're right. It's hello plus one.
+So this recipient over here gets a response back.
+saying, Aha, act number. It's hello plus one. And so the recipient, upon receiving Hello, plus one
+knows that the original message was, Hello, knows that the original message was Hello!
+So that's the act number method. So let me go over the 3 methods again. The covert Tcp has these 3 methods for sending data hidden in IP and Tcp packets.
+The 1st method is called the IP Id method.
+and it's such a random sixteen-bit number
+in the IP Id. Field. Inside the IP header.
+The second method is called the sequence number method, and essentially the sender when it's opening a new Tcp connection
+was toughest secret message up to 32 bits of information in the sequence number.
+and the 3rd method, which is the most interesting one, is called the act number method, and this is where the sender
+will send the packet spoofing the source IP address as recipient.
+and put the secret message in the sequence number.
+Then the innocent bystander will respond back with a
+respond back to a Tcp sync with a Tcp Sync act
+and put the message in the
+act number in the act number.
+And so this is called the act number method.
+So that's covert. Tcp.
+okay, so this is what the program looks like. You can take a look at this yourself.
+Here's a Tcp header, which you're already familiar with.
+This doesn't only work for Tcp in Icmp. You can add arbitrary data into it as well.
+This is what you did in Lab 2. So you notice that in Lab 2, when you wrote a Ping packet, you needed to put the original payload or the raw data
+back into the Icmp echo reply.
+But Icmp, his Icmp editor on the bottom over here basically has a unlimited amount of
+space for data. That's what Ping does. Ping has space for data. So you can actually just stuff data
+into the data field over here. And there's programs that do that block E 2, for example.
+exercise number 5.
+Please explain the 3 functions of Covert, Tcp, and then tell me what are 3 places aside from covert Tcp, where you can hide data
+while still allowing Tcp to work correctly. Let me set a timer here for 1 min for this question.
+So a. What are the 3 functions of covert. Tcp.
+well, the 1st one is the sequence number method. Excuse me, IP id method, then the sequence number method, and then the Agg number method
+B.
+What are other 3 places aside from core Tcp, where you can hide data
+in the Tcp header while still allowing the Tcp header to work correctly?
+Does anyone have any suggestions on where you can hide data in the Gcp head.
+like, for example, can you use this checksum over here?
+Does do programs check for checksum today.
+Actually, many programs don't check the checksum of the Tcp header anymore.
+The reason they don't do that is because most home computers have natting
+and natting essentially means that you have to change the port numbers, and you have to change the
+port numbers and IP numbers, and it makes the check some kind of invalid most of the time.
+So the checksum is not really actually checked most of the time anymore. But it's other fields like this is reserved. These are 3 bits over here.
+Yeah, you can use that source port as someone mentioned, and you're choosing the 16 bit source port.
+And therefore you can just add some information in it.
+Can use the window size field. I I don't think you can. I don't think so. I think it'll break
+the Tcp. Header, if you do that.
+So there are many places to hide information in, pretty much all protocols where it stole could potentially work as well.
+Reverse www, shell. Reverse shell is
+what you did in your lab.
+One task 4. Where you had a computer phone home. That's a reverse. Shell
+and reverse shell are very popular to be used because
+a reverse shell looks exactly like a normal Http request.
+So most networks allow computers to leave the computers to make Http connections out of the network.
+And so that's why reverse shells are very popular for attackers, because reverse shell essentially allows the
+allows the connections web traffic out on the network
+and then advanced exfiltration. We're not going to go over details in this. But certainly you can hide information. Dns, packets, Http packets. You can email information out.
+you can upload it to websites such as Pastebin or Dropbox or Google drive and such.
+Well, we are going to end the lesson here.
+and this will be end of the topics for the exam. So after this slide, like anything else, I'm going to make a note. Excuse me, I'm gonna send out a note saying that anything after this will not be on the exam.
+only up to what we covered here, which is slide.
+Well, this slide number is wrong. But whatever slide number is, here is the end of the materials for the midterm exam.
+So this is the end of our class today. Thank you for joining me. Just some reminders. Your midterm exam is next Saturday. That's not this Saturday, but the following Saturday, on March 15, th
+the topics include everything up to including today's class. And then next week we're going to do a return review.
+For today's exercise for question 6. Please just ignore. Question 6. Just you don't need to fill it in at all.
+Next week we have a Midterm review class. The midterm will be open book open Internet. However, there's no collaboration and no usage of AI or Chatgpt. So you can use the Internet. You can do searches for anything. You can have your own notes.
+and you can have the slides available. But you cannot collaborate with other students, and you cannot have any AI or Chat Gpt or Gemini, or whatever
+what you need to do to prepare for class.
+Well, next week next Monday we're going to have a Midterm Review class ideally, you want to finish everything that you need to do for the class by Monday. So you can benefit from the review class. So what that means? Finish. Lap one lab 2.
+You should do homework number one up to Lesson number 5,
+Homework number 2 was released today. Please go ahead and do homework number 2. That's based on lesson number 5, the cryptography video that was already posted.
+Go do that, plus homework number 2.
+If you haven't done Lab one lab 2, please go ahead and do that as well.
+Watch the lesson. 3 supplemental video that's on nesses and Meta's ploit.
+And then you have any questions, of course, slack. And there's office hours tomorrow at it's either 6 or 8 Pm. At night.
+Cryptography is included on the midterm exam. That's the video that's posted today.
+Lesson 5, which is just posted today is a video and associated with homework number 2,
+the Midterm Exam. I will also send out some sample midterm exams for you to review tomorrow. The sample midterm exam has a inclusion of
+multiple choice small answers, and also includes long answers as well. So paragraph types of questions.
+I'll send out a sample midterms, so you can take a look at it tomorrow.
+Need to make some adjustments, because I changed some of the materials on it.
+Thank you very much for joining me today. I wish you a wonderful and productive week.
+Take care everyone.

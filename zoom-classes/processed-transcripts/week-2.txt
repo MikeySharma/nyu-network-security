@@ -1,0 +1,1013 @@
+Hello! Welcome to Cs. 6,823 network security. My name is Professor Philip Mack. Today is Monday, February 3, rd 2025.
+And this was our second class for network security. Today we are continuing with lesson number one. And also we're going to continue talking about lab number one.
+1st of all, some logistics what you should be doing as part of the class. So you have 2 assignments out right now. 1, st one is Lab number one. We'll go over it a little bit today, but it's due on February 16, th which is about 2 weeks from now. Now, I put do
+in quotes, because we have a varying due date in this class. So the official due date is February 16.th But don't forget that you can submit it. You can submit the assignment up to 5 days early for 5 percentage points in addition to your lab assignment. So you submit it 5 days early, you get 5% points, just 5 points added to the top just like that.
+Or you might end up submitting it up to 10 days late, in which up to 10 points would be deducted 1 point per day for up to 10 points.
+If you haven't yet, please make sure you get your C lab set up that can take some time to get set up. If you're not really familiar, or you run into some technical difficulties, please note that if you decide to use the cloud version, just a reminder that
+you should use. You should sign up for the Github student pack, which gives a $200 credit for your ocean making the lab assignments completely free to you. Otherwise it's like $12 a month. So $48 for the semester. So it's not.
+It's not a deal breaker there. But when you're signing up for the Github student pack, make sure you use the Nyu VPN, so you can get a Nyu IP address. What they do check is that they make sure that you're in some sort of
+Nyu location before you're allowed to sign up for it, so I don't know exactly how they work, but, for example, Nyu has a Shanghai office. So if you come with a Shanghai IP address.
+I don't know what, whether they'll take care or not, but if you're not sure, use the Nyu VPN Nyu VPN. It's probably one of the safest vpns out there, and it's also free.
+Another assignment out is homework number one, homework number one, fairly straightforward. It just takes time, fairly straightforward assignments. It's using the immersive lab assignments. You go on the website. You open a Vm. And you can do some assignments there, and you can try to do as many times as you want unlimited number of times. So you're expected to get a 100% on homework number one.
+Rta office hours are still being scheduled right now, but I believe that it will be on Tuesdays at 6 to 7 Pm. Every week. So every week on Tuesdays, from 6 to 7 Pm. Once I get that confirmed, I'll send out email and let everyone know about it.
+The Ta office hours are not being recorded. No, and the reason for that is that we want the students to be able to feel comfortable. Speaking about their problems and issues they're having. If you're not able to join the ta office hours. It's that.
+you know, at 6 PM. Please always feel free to use slack.
+Today I want to talk about this
+infamous story that happened to the wired magazine writer in 2012
+over 10 years ago. But it's a really relevant attack that could potentially happen today.
+So this wire magazine writer, Matt Honan. He had something that was really really cool, or really really cool.
+for very, very OP. For 2012 he had a very short twitter handle.
+So the handle was.at MAT.
+And so it was. It was so amazing that it's a thing that
+hacker groups do at that time is that they try to take over short twitter handles. It was the thing that happened a lot. So people with really really short twitter handles got attacked a lot.
+It was something that happens then, and in some occasions that happens today as well.
+And so the attackers can attack Twitter directly, but they don't.
+But instead the attackers went and found the attack, the target's homepage.
+And on this home page they found that he has a website.
+and on his website, they were able to find his Gmail address on his website.
+They also did a whois lookup on his domain name.
+do you know who is the cup is
+a who is lookup is a lookup on the registration information of the user's information.
+the user's information, who registered the domain. So by doing a who is? Look up. They're able to find his address, his phone number, his email address and such.
+If you registered a domain name more than a year ago.
+If you register Domain name
+and you didn't pay for the privacy service that cost an extra couple of bucks a year.
+you would have gotten phone calls text messages like snail mail, like paper mail offering you services and and such right? Anyone do that. You get lots and lots of spam for years
+after you register a domain name.
+So anyway, the attacker used the who is and was able to find not only his email, address, his phone number, his home address, his name and such.
+So the attacker took his Gmail address and went to the Google Account recovery page to reset his password. When they tried to reset the password.
+Google said that there is a me.com address. It didn't give the whole me.com address. This is the old Icloud address. It didn't give the whole email me.com address, but it gave like the 1st letter Xxx last letter@me.com. So the attacker didn't know what the me.com address was, but the attacker knew that he had a me.appleme.com address.
+So the attacker had this loophole that they knew would work with Apple.
+What the attacker did was that he called up Apple.
+and you say that he lost his access to his account. But if you have
+the last 4 digits of the credit card number for itunes, the Itunes credit card number and the billing address, you can reset the password.
+Now, the thing is, the attacker didn't have the credit card numbers. So
+to get that information, the attacker went to Amazon.
+and what he did with Amazon is that he called up Amazon.
+He added a new credit card number to amazon.com hanged up the phone, call them again
+and said
+I lost access to my account, but I have all my information. So he called up Amazon the second time and gave the name
+phone number email address, home address
+full 16 digit of the credit card number.
+because he just he just gave. He just put that in a minute ago.
+and from there he was able to reset the amazon.com account.
+Once he logged into amazon.com account, he was able to see the last 4 digits of all his credit card numbers the victim's credit card numbers. Then the attacker took this information and then called Apple.
+and he called Apple and told Apple he lost his access to this me.com account. And he was able to give his name, phone number, billing address, and
+last 4 digits of the Itunes credit card number as well.
+So apple reset his account.
+He got access to his me.com account.
+From there he was able to reset the google.com account.
+and then he was able to reset the Twitter account, and then
+he was able to steal the app mapped address.
+Did you get all that?
+Do you get? How many systems were compromise? Here.
+let me go over again. Let me go over it once again. So Attacker wants you to get attack Twitter.
+and in order to attack Twitter, he found the user's personal information using whowiz and his
+using social engineering or not social engineering, but using open source intelligence information
+sources, who is? And so on.
+went to Google and found on the Google account recovery page found that he had a b.com account account. Then he went to Amazon.
+called up Amazon, add a new credit card number hanged up, called Amazon again, got them to reset his password by giving the same 16 digit credit card number that he just gave in to Amazon.
+got into his Amazon account, took all his 4 digits of the credit card numbers called up apple
+gave Apple the information to attack, to reset his itunes account, or itunesbe.com account.
+Use that reset the gmail account, then use that reset the Twitter account, and then he was able to get steal the account.
+and then, while he's at it, he used, find my friends, or excuse me find my on Ios devices and erased all his devices, including his Ios devices, his ipad and his Mac OS
+computer.
+So he erased all the devices while he was at it as well.
+So this was a pretty complex attack. But
+here's the thing. You you notice that
+not every one of these were heart attacks. These were like
+a chaining of multiple things. There's at least 4 different things that he exploited
+in order to try to hack into twitter and get into this account.
+So
+each week I have a number of weekly bonus exercises. This week is week number 2. So if you go to gradescope now, you'll be able to see that we have the weekly bonus exercise number 2,
+and in the weekly bonus exercise number 2, we have the 1st question. And so the 1st question I want to ask you is.
+who do you think is responsible for Matt Holland's Nos of everything.
+and I mean loss of everything, as in not only his Twitter account, he also lost
+access to all of his Ios devices, as well because he had access to that to the Apple icloud account, or whatever they call it, back then, and it was able to erase all his devices.
+So I guess this is actually 2 questions. The 1st question is.
+who are all the parties involved here, like? Who are all the entities involved in this attack?
+And second, out of all the entities?
+Who do you think was responsible.
+or who do you? Which ones do you think are responsible?
+So let me set a timer here for 2 min.
+Let me set a timer here for 2 min, and then I want to hear your thoughts about this.
+So I set time here for 2 min. So 2 questions, 2 min for 2 questions. Who are the parties.
+and which one do you think is responsible here?
+One more minute. So in the last minute, tell me.
+who do you think is responsible? Maybe multiple parties. And why, I guess I didn't ask, why
+do you think they're responsible?
+And also, please note that this story is from 2,012.
+So 1st question, who are the parties here?
+Can we list out?
+Who are all the entities here?
+Mfa, I'm not even sure Mfa was available in 2012, maybe not in all, and definitely not mandatory
+in 2012.
+So we have what entities are are here. Google, Apple, Amazon.
+Anyone else.
+the attacker.
+Twitter the user, anything else?
+Think there's at least one more.
+There's at least one more.
+Anyone can think of what I'm thinking about
+the email server, maybe Gmail, Google, I would just say, that's Google Google's Gmail.
+who is yes, I would also say, who is
+who is also involved as well.
+even though who is, is really just a public database. Okay, so then, my second question is of these parties.
+which ones do you believe
+or responsible. One moment let me pull out a poll. Here, let me see if I can pull out a poll.
+For this one moment.
+Okay, so you should see a poll come up on your screen right now.
+Okay, so I have. Most of you have already responded. Let's see how many 80% have responded.
+let me give another few seconds left.
+Okay.
+all right.
+Okay. I'm going to end the poll, and we're going to see the results and then let me know if you think
+what you thought agrees with everyone else in this class. All right, all right. I'm gonna end the poll now.
+and you should be able to see the results
+on your screen. Actually, let me take a
+let me take a screenshot of this and share it again, just in case you don't see it
+right? So just in case you don't see the results. Here they are.
+So are these results. What you expected. So it seems like.
+I would say, the top voting is Amazon, so Amazon is the
+most people felt were responsible in this case.
+and then the second one is the attacker.
+So so by popular opinion, Amazon is more at
+thought here than the attacker who actually performed the attack.
+and then I see that maybe the 3rd or 4th is the user right? The user.
+And perhaps I see some comments that.
+could the user be responsible for not buying the privacy option in this case.
+does anyone have any strong opinions here?
+And so I see that pretty high up here? It's also Google Google Apple, me.com twitter there.
+who is, is near the bottom of it, because it really is just a data information source.
+Does anyone have any strong opinions? Would anyone like to speak up?
+So I think the 1st thing is that
+probably the most responsibility should fall on the attacker.
+because the attacker is the one that perform the the attack.
+The attacker
+is the one that actually stole the information with the intent of doing something that is illegal and if not illegal, it's unethical, right so Attacker. Not only did he perform, he or she performed these tasks. The attacker intended to do these things.
+so I think the fault, of course, lies for the attacker. There's no question there.
+Right? 100% is the attacker.
+Now, what about the user?
+Right? So the user seems to be like top number 4 or Number 5
+in in the ranking right? How much responsibility that does the user have with this attack.
+And I want to point out that this was 2012, and Mfa. Was not the default at that time.
+Actually, Matt Honan, he was the technology writer for
+some really big magazine there. I think it's Macworld or PC. World, or one of those really big magazines. I I don't remember which one it is, and he was extremely cutting edge like Matt Honan.
+The only reason that he had everything there was because he kept.
+He had a RAM disk on his devices where he used to kept his actual data, and it was a encrypted disk. So imagine working on a disk image on your computer because you care about security and privacy so much that you don't even think the operating system is secure enough that they create a disk image on your computer
+and then encrypted that image, and the only reason that he was able to save his information at all. After all, his devices was wiped was because he made routine backups, and he had a backup of his data.
+and his disk was encrypted with a randomly generated, extremely long key, that he only put in his safe deposit box, and therefore, when he lost all his devices. He had to go to Safe Deposit box and manually type in his key from his backup in order to get this information back. So Matt Honan was probably more security conscious than 99.9% of all the users at that time.
+So now, of course, the user has some responsibility, right? There's some responsibility like, like, for example.
+have you ever had a friend? Call you up and says, Look, I have a virus on my computer.
+Could you help me fix it right. I've done that like many times in my life, many, many times.
+and you find out oh, wait! You know the person actually, just really know how to use a computer. There's a pop up that says you have a virus, and then he or she end up entering the credit card number into this like fake website, right? You ever seen that happen?
+This is why there's all these pop-ups right? Because they actually work.
+Yeah, there. So the user has some responsibility. But the thing is, most users who fall for these scams are.
+they are like, not tech literate. And so they're not aware of these things. So they do have some responsibility. Like as a user, you have some responsibility that you're using like a good shopping website, right? That you don't buy from a completely shady website.
+But at the same time
+most normal users. They don't have the ability to do research on the company to know whether it's good or not. So you go on this like, fly by night website and just enter your credit card number and it gets stolen.
+This has happened. This has probably happened to most, if not all of you, at least once
+in your lives.
+and it happens to some users more so. There is some responsibility for the user. But this user is the victim
+here, and it did not perpetrate this attack, and this attack would not have occurred if the attacker didn't perform these tasks.
+So the attacker, the user has maybe some responsibility, but
+extremely small, extremely small, and in this case probably none.
+And then these other big companies like Amazon, Gmail, Apple, Twitter, and such.
+The day like. Do you think that these companies
+perform the risk assessment, like analysis of the security procedures.
+And do do you think they found it adequate
+like Amazon? Like so Amazon was the place where he got the credit card numbers from?
+Did they analyze their security protocols.
+And do you think that they were satisfied with it like they were okay with it?
+So I think that Amazon is aware of their processes.
+or they should be because they're a ginormous tech company.
+And they were okay with it.
+Right? They were okay with the procedures, because, like, what is Amazon? What what do they care about? Right? Do you think Amazon expects
+a small percentage of their accounts to be hacked every day
+like, like, do you think like? Oh, they have, like!
+How many accounts does Amazon have? I think Amazon probably has an account for every person on this planet?
+Right?
+I would not be surprised if they have a billion accounts on Amazon, right? At least like 300 million Us. People and all around the world. So I won't be surprised if it's in the
+hundreds, or maybe 500 million, or even a billion users.
+So Amazon
+accepts the risk as one of our colleagues in the chat said of a small number of the accounts being hacked
+right, and and they accept that, because to have 0 accounts hacked is too costly for them.
+It's it's just too costly for them to have 0 accounts hacked, so they will accept that, you know. Sometimes they as just rephrasing some one something from our colleague in the chat that
+the operating cost they built in lawyers, settlements, some account recovery fees. They expect some of this cost from just being in business, that there will be some sort of fraud in their account hacking their accounts, and that small percentage of them will be hacked every day.
+and they're okay with it.
+How about Apple
+Apple is a very similar situation, even in 2,012, like, almost everyone has an iphone
+and a lot of these people using iphones are not tech literate.
+So I can imagine.
+I can imagine. For example, my mother.
+who also uses an iphone if she lost her account password, and I was not there to help her out, or no one was there to help her out
+right. I can imagine that if she calls up Apple, she can only give basic information anyway. So with Apple saying, Oh, you need the 4 digits of your itunes credit card plus your home address, plus your
+plus your name. Phone number, you know. Is that
+acceptable to Apple like Apple did the same thing right. They did a risk assessment. They have all these users who some of them are not literate in in technology who loses access to the account.
+I mean, they probably have thousands, tens of thousands of people losing access to account every day.
+and they expect they have expectation also that a small number of them would be compromised.
+Right? That's that's their expectation, I'm sure, because otherwise
+it costs too much to have 0 hacked accounts.
+But but the thing is, Amazon finds it acceptable.
+Apple finds it acceptable, and probably Google and Twitter as well. Right? They find that
+a very, very small number of hacked accounts is susceptible to them.
+And they're probably right? Because cybersecurity or security is an engineering trade-off. You only have so much money, right? It takes resources to implement cybersecurity.
+It takes resources, time, project, management.
+and you probably have to. You have limited amount of money, time, schedule, and therefore, if you prioritize security, you probably have to take away features.
+Of course, today, you know, most of the time products are shipped with more features and less security. But that's a different discussion there.
+So each of these individual companies find it acceptable
+that they have a small number of hacked accounts.
+and then, at the end of the day
+attack, was able to utilize this and hack into 3 different companies
+in order to hack into Twitter. So he hacked into 4 companies here.
+So there's no question right. There's no question here. That attack was at fault.
+and even for ethical hackers you're not supposed to be exploiting someone else's account.
+Right? So, for example, no, you find a flaw, let's say you find a flaw in in Gmail
+right? And as an ethical hacker
+you're supposed you're not supposed to be going to hack someone's account.
+So at the end of the day. It is clearly the attacker's fault.
+and the user is definitely a victim here.
+So in this class, and in all cybersecurity courses, we have a cast of characters. Generally. We use the term Alice and Bob, Alice and Bob are the group guys
+that is like A and B, they're like the bank, the user, and so on. And then we will use Trudy as the bad guy intruder. So Trudy stands for intruder. And essentially, from this point on. I want you to think of. Truly the intruder is always around, and Trudy is always listening, always trying to find a vulnerability. So for the rest of this class. Everything we talked about
+Trudy is there. Imagine there is a Trudy there, and Trudy is listening in and trying to exploit any vulnerabilities that she can find for fun, profit, games, or such.
+CIA CIA stands for confidentiality and integrity and variability. If you're not familiar with this, please make yourself familiar with this by looking at Wikipedia and other resources. And then I'll also add
+authenticity and non-repediation.
+Authenticity
+is a type of integrity. Authenticity is, how do you know that the data you're getting really came from where it came from. So for example, email, you get an email, how do you know that email really came from
+whoever the sender is.
+and non-repeiation non-repeiation is proving that the email
+actually came from that particular person as an example. So
+an example of non-repredation would be.
+I send. I send you an email.
+And my email says, Come to my office.
+We're going to have free pizza in my office.
+So I send you an email to the whole class. And I say, there's free pizza in my office. 6 pm. Today
+and you come.
+You come to my office and you say, where's the pizza? I said, I didn't send that email.
+Prove to me that I sent this email.
+Prove to me that I sent this email that says that there's pizza at my office
+and you take a printout or you show an email and says, Look, it says it's from Professor Mack says, Wait a minute. That's email. There's no security in email. The sender field in an email can be faked by anybody
+really easily, just like that.
+So you can't prove that I actually sent the email.
+So I am repudiating my email.
+I repudiate that I sent that email. You cannot prove it like you literally cannot prove that that email was sent because email
+in most cases have no security. And that sender address that says from Professor Mack.
+you cannot prove that it actually came from Professor Mack.
+So that's non-repeiation. Non-repeiation is a way to ensure that someone cannot repudiate that they sent a message or did something
+we use digital signatures usually for non-repeiation, right, too. So someone can.
+So we can say for sure that they actually signed it or or such.
+So if you're not familiar with CIA a n CIA plus authenticity and non-viation. Please make sure you're familiar with it.
+There's some examples about what CIA is for, but if you're not familiar, please go do this yourself. But CIA, and some examples of what CIA is
+king.
+Now, CIA
+is the absolute basics of information, security, or cyber security. It's like the 1st thing that anyone would learn. But then.
+beyond that.
+we talk about authenticity. We'll talk about cryptography. We will talk a little bit about password security. But that's really a
+that's really a topic for your previous class information, security, and privacy. So we talked about there
+and then, alternative to passwords, multi-factor identification, biometrics, location, information, fingerprints as alternative to passwords passkeys.
+So when someone says the network is secure.
+what does that? What does that mean, what does it mean when someone says a network secure? So an example of this is, let's say you work. You work at a large company, and you're the Cyber Security officer for a large company.
+and let's say you are deploying a new web server that does whatever.
+And your CIO CEO comes to you and say.
+I want this server to be completely secure.
+I don't want any chance of anyone hacking into this server.
+This server is really important. It has
+personal, identifiable information, social security, number, birth dates, and everything like that.
+I want it to be secure.
+Is that possible to do?
+Is it possible to completely, and 100% secure a system.
+You could just not use the system right? You don't turn it on.
+And if you, if you don't even turn it on, then it would be secure.
+Yeah, it's it's just not possible to have a system
+that is completely and fully secure.
+So we don't use words like, we want it to be completely secure. We have no risk of hacking into it. No, no, no, we never! We never say
+these words. What we say, is, the system has been designed
+as to maintain a acceptable level of risk
+that a risk assessment was performed.
+You have an acceptable level of risk
+based on the money, time and effort that you're willing to put into it.
+So it's all about finding the amount of resources in order to protect a system.
+So, for example, example, having multi-factor authentication turned on.
+it increases security. It doesn't make it 100% proof, but it increases security.
+and Nyu forced it to be turned on last year.
+So if you were with Nyu for more than a year, you may have started at Nyu without Mfa enabled, and then eventually they forced Mfa. To be enabled for everyone.
+I don't know if you have gone through that transition.
+but anyone have an Amazon account. For example, amazon.com supports mfa, do you have mfa enabled
+for amazon.com?
+But it's not mandatory right? So if you
+have mfa enabled on amazon.com. You had to manually go in and enable it amazon.com does not have mandatory Mfa.
+But Apple does. For example, apple has mandatory Mfa.
+Why do you think Amazon doesn't enforce Mfa on their accounts?
+Right? Oh.
+yeah. So our colleagues in the chat window has saying that they don't want people to click on more things
+before they buy something. That's a really good point. I didn't think about that, right? So the user experience, they want to have people be able to go to the site and hit that.
+Buy right now, button, buy now, or whatever they call it, one click, buy, or something like that
+where they don't have to log in, they don't have to do Mfa, and they just buy something. Yeah, that's a really good point, right? It's the user experience.
+So
+that's a really good point. Yeah, based on what we said. So they're willing to have the No. Mfa, the one click buying. And the trade-off is that some of the accounts would be hacked
+because of this, and they probably from a financial standpoint, made a really good trade-off there.
+But cybersecurity is, it's all about trade-offs. It's it's all 100% about trade-offs.
+So risk management is cybersecurity.
+Security is about risk assessment.
+Even even if you're talking about organizations with unlimited money
+for cybersecurity. Like, let's say, for example, the Department of Defense, the Department of Defense
+essentially has an almost unlimited amount of money for cybersecurity.
+But the reality is that there are other factors involved as well.
+You make a system too difficult to use. People will find ways around it
+because the Dod they're building systems for soldiers and soldiers are
+well, they they may not be all computer literate like they don't all get computer training in the advanced level like you are, they are generally. Sometimes it's just high school graduates
+or minimum degree. They sometimes don't. You know, English is not their native language. And now oftentimes they're in very stressful situations. So when you're in stressful situations, you're being shot out, and then your system that you're trying to log into requires multi-factor authentication.
+Right? So in the Dod today.
+everything is being essentially run as a computer today, everything right? So you can imagine the gun that someone is shooting like a tank has the main weapon that's controlled by computer. So to control it.
+they have to log into a computer and use the system.
+So stressful situation. Now, they have multi-factor authentication on the gun's computer, even driving a tank today.
+Right? It's computer controlled right? Completely computer controlled with computer screens you don't even have. You can't even see outside of a tank.
+So it's all computer control. And it runs a operating system that I can't mention. But you would know where it is.
+So it has multi-factor authentication.
+Do or do a factor authentication with a hardware token or something like that.
+And then stress frustrations. You can't. So even with unlimited money.
+there has to be some sort of trade-offs due to user experience.
+So everything about cybersecurity is
+is about risk assessments, risk management. You perform risk assessment to determine what level of risk
+your organization is willing to take. And this depends on culture as well. So some organizations might have a culture where security matters more
+and some organizations might have a culture where security doesn't matter in any way whatsoever. It's only about making money, or whatever convenience or such
+security doesn't matter. If if you lose a single dollar because of security, that's not happening
+right? That some organizations work like that.
+Wow!
+Other offices like the Dod.
+you know where profit is? Not not a thing at all. Security is the most important
+unless it makes a reduced user experience for soldiers who will like find a way around it. Like if you make them type in the password that's too long. Then they'll like tape it onto the screen.
+for example.
+and
+a question from the chat window question, from the chat, how about security? 1st organizations like Datadog or Palo alto just out of curiosity. Yeah, that's a really good point.
+Palo Alto, that we can discuss a little bit. Paro alto is a company that designs network devices.
+and Palo Alto also prides itself in the cybersecurity efforts that it makes within its own organization, and they give training
+on cybersecurity as well have they been hacked.
+Do they have any major vulnerabilities in their products?
+Absolutely. Yeah, yeah, very dangerous.
+very dangerous. So if you use any Palo alto devices, especially like the Vpns. You have to be very careful.
+not only Palo Alto, but all the similar companies to be very careful and make sure you patch very, very quickly whenever a security update comes out
+there.
+But it comes to show that they are indeed spending lots of money in security.
+yet at the same time they still have vulnerabilities, they still get compromised because security is hard
+and just jumping ahead from this today's lesson that
+there are as a as a defender, as a network defender.
+There are so many ways into the network.
+And we'll talk about that in a future class. But
+there are so many ways. There are hundreds of ways to get into a network.
+Wow!
+You have to be able to defend all of them.
+and if they find one way in, then they can compromise the system.
+So, for example, we talked about this last week and you got you guys, you folks gave some really really good answers. Last week
+we talked about this very, very simple example over here.
+where I asked a question about how can you hack into this database?
+And we listed
+dozens or 2 dozens of different ways. So of all these ways I was listed. Replay attacks, social engineering like default passwords, and so on.
+The attacker only needs to find 1 million.
+While you, the defender, you have to be able to stop all of these different techniques in order to stop the attacker from getting in.
+So this is why securing organization is so difficult, because
+Tacker only needs to find one way in
+so question question for everyone here.
+If if multi-factor authentication is enabled in an account.
+How can the attacker get into the network? Get in through to the user's account?
+Question for everyone if they don't have any experience in their field.
+So your Gmail account, yeah. Multi-factor authentication enabled. I believe it's force enabled by Gmail.
+The attackers still got in.
+How did that happen?
+Please go ahead.
+I'm not sure if this pertains to Miguel's Miguel's specific situation, but I do know that for a multi factor, authentication when it like, there are some
+methods of it where someone like would have a passcode sent to their phone. So like SIM, swapping is an example of
+a
+attack where a person would contact a mobile carrier for a person, and they would have, they would gain access to their phone number. So basically that passcode to unlock the account would be sent to another phone owned by the attacker.
+That's right. Thank you. That's a perfect example. So our colleague here just mentioned swim, SIM, swapping. SIM swapping, is where you call up your carrier and get them to send us different SIM hours. Tell them you have a new phone and transfer the SIM to another phone, and then you can get your text message codes for your banks and such
+very, very big attack.
+And there's a video that I want to show you. I can't find it now, but if anyone knows what I'm talking about, please post it for me.
+So, SIM, swapping, what's another way?
+They're all mentioned in the chat. But anyone want to speak up about it?
+I don't know if this is super naive, but
+Duo, for Nyu sends you a push to your phone.
+And I
+have clicked it so many times that every time that I see it now I just click, accept, and I don't think about it twice. So maybe user error could be a
+a situation.
+Yes, absolutely so. What our colleague just mentioned here is called Mfa fatigue.
+Right? There's a term for this. So Msa. Fatigue is when they get so many messages like they spam the system. And you get this dual authentication over and over and over again, and you just want it to stop. So every time they hit, reject, it comes out with another one.
+That is, the attacker is just spamming the mfa.
+so they go ahead and just hit. Accept one time, and then it stops.
+Well, then, the attacker is now in to the email.
+There's 1 more method that was mentioned in the chat.
+Someone mentioned it already.
+It's called, yeah. Please go ahead.
+You hijack the cookies from the device.
+Yeah, yes, absolutely. Session hijacking
+session hijacking is when you steal the cookie from the device using millions of different ways. So after you log in to a website, your web browser stores, a cookie that you have access to the website. This happens for anything. Facebook, Instagram Gmail and whatnot. So after you log in, you have this cookie.
+Let's say this cookie was lost.
+Okay, example, example.
+someone logs in on the public computer, the public computer stores, a cookie. The public computer is compromised already. Someone steals the cookie right from the browser
+and then uses it again someplace else.
+Now they have access to the Gmail account.
+That's it
+now, and Gmail doesn't even ask. Oh, you were in New York 1 min ago, and then, now you're in China. No problem. The cookie still works. You just jump from New York to China in a second. No problem. Cookie still works no problem.
+And and so someone just logs in just like that.
+You just flew over across the world and it works.
+And Gmail doesn't even care
+about that. So yeah, it's session hijacking or cookie hijacking or cookie stealing and such.
+So Mfa prevents 99%
+of account takeovers because Mfa prevents them when they have the password right? They lost their password.
+Mfa. Stops it.
+But then, so 99% of the attacks are already stopped with Mfa.
+But then
+people can still try to hack Mfa, and it works exactly as one of the methods that we just described.
+There are other techniques, too. It's called Mfa man-in-the-middle attacks.
+By the way, in our class, we don't use the term man in the middle. We're going to use the term attacker in the middle. So Aitm.
+But you read online, it says Mitm, which stands for man in the middle.
+But we're not using that. That's an old term. We're using attack in the middle. So there is a Mfa Aitm attacker in the middle in which you go to a website. So someone sets sets up a fake Gmail
+website.
+So not the real Gmail website, but a fake Gmail account. So like a disabled website that looks exactly like Gmail
+and a user logs in. And they get this code. Well, actually, the person in the middle
+C is actually sending the code to the user to get into Gmail. It's the attacker in the middle
+attack. And so if someone's able to set up something in the middle of your session, and they go to this fake Gmail site and they type in their username password and then the Mfa. Now the attacker has full access to the account.
+So if you work for a large organization, even with Mfa.
+Enabled you still get you still get some accounts hacked every day.
+you still get a contact on almost a routine basis.
+And one more thing for Mfa. Fatigue about the dual, about the dual authentication that comes up all the time.
+Did you know that you can change your Mfa. Method when you're signing in? So after you sign into Nyu, you can click a button at the bottom. It says.
+I don't have access to my phone. Please send me a something else.
+And one of the methods is a voice call
+right? You ever did that? A voice call to your phone.
+If you choose the Mfa. Option
+Duo will call you your phone number and it will say, press one to accept
+your login, something something along that lines right? So you get the call.
+You press one.
+And now the attacker got into your account.
+and the thing is like we've seen this happen all the time like they get these calls Mfa. Fatigue. They get like 10 different call, like the 10 calls over and over again, and they just say, press one, press, one, press one.
+The user did it.
+and then the attack got into the account. And then later, when we start investigating these situations and we go talk to the user, did you get this phone call? It says, I don't remember. I have no idea, like the users like the users who fall for these things aren't even aware in my experience that they did something they don't even understand what was going on. They got a phone call. It says, to press one, they press one, and then they hang up. And that's it.
+So those are, how many did we go with 4 or 5 different ways that you can attack Mfa.
+Now with that, said Mfa. Still already stops 99% of attacks already.
+So you need to have Mfa. Enabled.
+But Mfa is not foolproof. You just don't need it.
+Security is engineering trade-off. In other words, you don't have unlimited money. You need to make a decision on what you spend your security dollars on, so you make something more secure.
+It has some sort of trade-off. The trade-off is usually cost schedule.
+user accessibility or other factors as well. So security is an engineering trade-off, just like schedule time, resources.
+Security is always a process. It's not a product. So if a vendor
+and I like Palo Alto, so I'm not going to pick them Palo alto. So let's say there's a vendor that comes and says, I have a security appliance.
+I have this waf web application firewall. Just take our waf.
+put it on your network. It's even automatic. It has AI in it. It'll figure out your traffic. And then, after you do this, you don't even have to do anything. It'll just configure itself, and it'll block all the malicious traffic.
+Do you believe that?
+Is that possible?
+Well, we don't know how AI will change everything, but so far it's not possible.
+Yeah. Because right now an AI does not understand your traffic, not even people who work at the office understands their traffic. So I don't know how an AI will understand their traffic.
+so there is no such thing
+as a product that you can put on your network or on your system. There's no such thing as an antivirus that you put on your computer, or or some sort of Edr. Xdr.
+Which is a which is a term for a
+fancy antivirus that you put on your computer that will actually work. That will stop all attacks. You need people to ensure the system is tuned. Ensure that the system is working. So security is always a process. It's never like, Oh, you just buy a product and it'll be done. This also includes, like, if you get some contractors to come in to fix up your network and then leave.
+So, for example, some company says, Oh, we don't have a security team. But we have pen testers. They come in on a quarterly basis. Do an assessment on it. You fix the vulnerabilities, and they leave
+right? That's kind of like, you're buying a product. And there's no continuous improvement or continuous review or monitoring of the network. And that doesn't work either. So you need a actual team of cybersecurity, people
+ensuring that the network, the system, the product, is secure continuously, because even if the product doesn't change
+the world around, it will change as well.
+So, for example, for example, let's say you're building a piece of software, and your software is pretty secure.
+But
+I'm sure that software is built on some open source components, for example, maybe it has Apache in it, or whatever
+is in there, and those products
+will have vulnerabilities every once in a while
+right? Apache just got one. Apache has run a bridge all the time, so if you're using Apache.
+then you will have vulnerabilities, even if the product doesn't change. So you need continuous monitoring
+and all the time on your security products. And you have, as our colleague mentioned in the in the chat that security requires a defense in depth
+type of approach, where you have multiple security products
+working together like the email example that we were talking about how to secure your email. Well, not only do you make sure that you have a good password
+for your email account that you also have multi-factor authentication, and then, after that, what else do you need to do?
+How about monitoring continuous monitoring a security team that monitors the account to make sure that they're not being compromised. You have security features to make sure the person doesn't jump from one place to another place like someone can jump from New York to Los Angeles in a minute like, how does that happen? You know that could be a potential incident where an attacker is logging in
+remotely when they stole the cookies or stole their password, or something like that.
+So the person works in New York every day, and so needed logging in from a different country.
+Right? We see that all the time we see that all the time
+before we continue
+and the rest of this class today, we're going to talk about risk management. I want to jump back to Lab Number 2 last week
+and let me go. Excuse me. Lab number one. So lab number one, there are 4 tasks, just switching gears here. And last week we talked about Task one and Task 2. Just in a summary of review of the 4 tasks for Lab one. If you haven't started yet. Please make sure you get started on that lab. One. There are 4 tasks, and the tasks are.
+The tasks are to. 1st you do a sync flood attack. It's a type of Ddos attack.
+and you'll be running a Ddos attack, and then, seeing whether you can connect or not, and you turn on some protections, and then you can see whether you connect or not to the victim. Machine
+task 2 is to do a Tcp reset attack.
+A Tcp reset attack is trying to break a session
+between Host A and Host BI talked about this last week. So go ahead and check out the video from last week if you want to review on it. And then today, we're going to go and talk about task 3 and task 4.
+Task 3 is to hijack a session. So so task 3. You're not just breaking a session. You can hijack a session and take over it, and then task 4
+is the penultimate attack in which you not just hijack a session. You're going to make the victim connect back to your computer.
+and then you can give additional commands as well.
+So we're going to jump over to Task number 3, where we left off last week
+session hijacking.
+So over here
+in your lab.
+You have a couple of hosts you have Alice and Bob.
+and what you'll be doing in the lab assignment
+is that you're gonna take Alice or Dahmer, the host.
+and you're going to open a telnet connection over to Bob.
+and once the Townnet connection is open.
+you can now open wireshark, and you can take a look at the talent connection
+you log in and everything like that.
+And then you're going to take the attacker machine
+and you're going to send a malicious command
+and try to hijack the session.
+and in this malicious command I want you to do something malicious there, and
+probably the malicious thing you can do is create a file in the next, so you can create a new file and call it virustxt or something like that. So that's your. That's your malicious thing. There, you're gonna
+you're going to send a command through the telnet connection
+from the attacker and create a file. So you can just type in the command touch
+virus dot txt, or something like that
+touch is to create a file in Linux. So you're just creating a new file called Virustxt, or whatever you want to do. But the goal is to show something that you're able to take over the computer. And
+now you can install malware. You can like mine, Bitcoin. You can do whatever you want from here.
+And if you did task number 2, so task number 2
+from before is to perform a reset attack.
+If you're able to do task number 2,
+test number 3 is very easy. What you're going to do is that you're going to send a command from the attacker
+to the server, and all you need to do is use the correct sequence and act number from there.
+So you have to guess the next sequence and act number from the Tcp sequence.
+This is extremely easy to do so. I will give you a hint on how to do this. The hint.
+So the hint here on how to do this
+is that you take the last sequence and act number, and use the same sequence, or act.
+or use the opposite, which use the act as sequence. Where you, the sequence, equals, act
+and act equals sequence, so either one or the other.
+So that's the hint.
+So this attack is actually very straightforward, if you understand this. So you take a look at the Wiresha. You take a look at the talent, connection, and wireshark.
+You just examine the packets, you wait to the last packet, and then
+you either use the same sequence at act number.
+or you use the opposite sequence and act number, that is, you take the act number and put it in sequence, and you take the sequence number and put it in the act number, and then do your attack
+there. The gradescope has some skeleton code. You just essentially, it's fill in the blank on the correct answer. That's all you need to do.
+For this one, so you need to fill in the blank.
+So
+let me clarify that I said that only one of these ways will work. So you either use a sequence and act number.
+If that doesn't work, reverse it and use the opposite.
+So one of these methods will work generally it will work so try that out
+and try to understand in what cases that you need to use one or the other.
+If you're doing the next part, the automation part. So this task has a automation part in which you get a 5% bonus for automating the whole process.
+When you automate the whole process, you also have to not use any hard-coded values at all except the name of the interface, in which you can't easily figure out using code. So if you understand in what cases you need to use sequence and act to be the same, or in what case you need to reverse it. Then you're able to automate the code, and then you can get extra 5% credit for that.
+So that's session. That's Tcp session acting. It's very easy.
+You just need to guess the next sequence and act number
+and Telnet happens to be a very good protocol for doing this because Telnet is a very slow protocol like Telnet doesn't even send anything unless you type something into the telnet window.
+So you can use wireshark. And you can actually spend a long time trying to figure out what the correct answer is.
+The automation process. Please use python in order to do automation, because in Python uses the Scapi Library and the Scapi Library
+already has a sniffing library that you can use in order to perform this function. So please use the python using the sniff function
+that's already provided you've got extra credit. So you had to figure out yourself. But look up the manual page for sniffing.
+and pretty much all the code in order to do so, is already there already.
+So Alice and Bob Alice opened tenant connection to Bob.
+The attacker will send the Sequence Act number, the correct Sequence Act number to bob
+the command, touch virus and text, and you create the file virus and text question.
+what happens if you mess up like you made a mistake.
+You type in the wrong sequence and act number
+when you're attacking Bob like the attacker sends the wrong sequence and act number to Bob.
+What do you think will happen?
+Nothing.
+Yeah.
+So if you get the Sequence Act number wrong.
+the Tcp session will just ignore the packet because it doesn't have the correct sequence and act number.
+Yeah.
+So as an attacker, as the Trudy, the intruder, the bad guy back out.
+You have pretty much unlimited chance to do it.
+So you guessed the number incorrectly. Nothing happens.
+Nothing happens.
+So messed up, no problem, no problem.
+So it makes this attack very dangerous, because, you know, the attacker might mess up. You know, they might have an automated program. You might be writing an automated program and the program messes up.
+Well, what's the penalty for messing up?
+Nothing.
+Okay. Well, before I said that, you need to figure out whether using a sequence and act number, or you have to reverse it.
+Wow!
+Actually, I'm not advocating for this. But in your program.
+if you don't know, why do you use one or the other, send them both.
+you still get credit for it. Now I would like you to figure out why
+one works or the other one works, but there's no penalty for getting it wrong.
+There's no penalty.
+So if you just, you're not sure which one it is, just send them all crazy
+crazy. How Tcp works here.
+So there's no penalty for incorrect guess.
+So when you're doing this attack
+in your lab assignment, you're doing it the 1st time, for example.
+you know, maybe you don't understand, or you don't understand yet to which one to use.
+Just try it, just try it
+it, and it doesn't work, nothing will happen.
+Okay. Next question, what if it does work?
+Well, it does work when it does work.
+What's going to happen to a town of connection.
+Well.
+let's see what happens. Okay? So the attacker sends this malicious command to Bob. Bob accepts it. So the sequence and act number were correct
+10 bob. Will act.
+This message.
+Question, comment.
+go ahead and mute everyone.
+So
+when the attacker sends a command to Bob, Bob, accepts it. So touch virus attacks. Bob will act it back to Alice.
+Alice is. Gonna say, wait a minute.
+There's something wrong here. There's a transmission error. I didn't send this. So Alice goes and says, Let's do a resynchronization.
+Bob says, Okay, here's the last message I got from you.
+And Alice said, No, no, no, something is wrong. Let's try this again.
+and then Bob sends it again.
+and then Alice says something is wrong, something is wrong here, and so, after 3 times.
+Alice is going to send a Tcp reset
+back to Bob, saying, this session is completely broken.
+Let's just start over, and then the connection breaks.
+So what happens here is that once you, the attacker, is able to send a malicious command to Bob, and Bob accepts it.
+The whole connection just breaks like your tenant session might freeze, or it might just break you get a connection lost.
+The the whole connection just breaks after that.
+If you're on wireshark, you can see this very clearly on wireshark
+when you successfully make the attack. Suddenly there's a whole screen of black and red text to show that a resynchronization is occurring, and then the connection breaks.
+so you can very easily see whether your attack worked or not.
+If your attack didn't work, you send it. Nothing happens
+if you send it, and the attack works
+on Wireshark. You get all these commands, you get a flurry of black and red text, and then the connection drops.
+So you know very, very clearly
+whether your attack worked or not instantly.
+and if you got the secrets of act them wrong.
+nothing will happen. You just send a message, and it just gets ignored because it's the wrong sequence, and that number, and it just gets ignored.
+So that's test 3 test 3.
+I would say it's probably the hardest task in it. But
+we need not write. Test 2.
+You learn how to use sequence and act numbers. Then you get to Task 3, which is a little bit harder.
+and then the next step is Task 4, which is the closest real attack there is.
+Here's how task 4 works task 4
+works very similar. But in task 4, you are setting up a
+a listening thing on your computer called Netcat.
+If you don't know what Netcat is, please look it up. It's also in the book that talks about it as well. So you're sending up a neck cat
+listener, server on your computer.
+And this netcast server is used to accept input so what you do here in this case is that
+you set up a tenor session between Alice and Bob, and then you, the attacker.
+You're going to send a malicious command to Bob.
+This command to Bob, if successful, will tell Bob to open a new connection back to your computer
+over here.
+So Bob will open a new connection to your computer.
+And then, now you have a terminal window to Bob's computer.
+And after you have a terminal window to Bob's computer. Now, you can like install malware
+install malware. You can mine, Bitcoin. You can do whatever you want. But you have a interactive window
+over to Bob, that you can just give additional commands to.
+So this attack task 4.
+This is how most attacks work, how most attacks, work, most, most attacks.
+They hacked a computer
+and they make them call home to get more commands. That's exactly what you're doing here.
+You're telling.
+You're telling the victim machine to call back to your computer so you can now type in additional commands
+into the terminal window off Bop.
+And now you can tell Bob to do anything you want multiple times, because this is a is a
+connection to your computer that is persistent for more than one command over here.
+So that's task 4 and task 4 is the absolutely the most interesting one here, because it's closest to a real life attack here.
+So let's go with the 4 tasks again. The 4 tasks are first.st
+1st is a sync flood attack. So it's a type of Ddos attack, and you learn how Ddos attack works and how to protect against it.
+2 Tcp reset, attack, easy attack.
+You break the Tcp connection.
+Test 3 a little harder.
+What you would do. Here is hijack, the hijack, the connection, and send one command over to the victim machine to do something.
+create a file called malware, or whatever task. 4.
+You create a reverse shell like this time, same as task 3.
+You send a command to the victim to say, Connect back to your computer. So you can accept additional commands to the victim.
+So that's task 4.
+And this is Lab one.
+And don't forget that lab one.
+task 2 and task 3 have 5% each extra credit. And also you get 5% extra credit for submitting 5 days early as well. So if you can able, if you're able to submit it by February 11, th
+5 days before the due date, you can get up to 115% on the lab assignment.
+So if you're able to do that, please take advantage of that, get 115% on that one.
+So that's lab one.
+And so I'm switching gears back to our, to our current lesson here to lesson one.
+So switching back to lesson one in which we're going to start talking about what risk analysis and management is.
+we have some terms in this class. You've you've probably heard it before in information, security, and privacy, but if not, I'll go over it briefly over here. So
+risk analysis has some terminology. This terminology includes risk and threat, vulnerability and exploit.
+risk and threat is something that are closely related to each other. A risk is
+a risk is something, some asset that can lose value.
+So a risk is usually something that loses value, something that could lose value.
+A threat is something that can occur that makes something lose value.
+So example an example of a risk would be servers going down, due to flooding
+the risk. Is service going offline due to a flood.
+The dread would be a tsunami or a big storm.
+so a threat is a big storm.
+And one way to if you get confused about what a risk and a threat is.
+A threat is usually something that cannot be controlled by individuals.
+A threat is something that requires a government to fix. If they can even fix another example, a risk.
+a risk would be citibank being hacked
+and losing their clients. Social security numbers, a threat.
+the threat that causes the risk to occur. The threat could be. There are hacking groups out there that are actively hacking banks.
+or maybe today, healthcare.
+So the threat is, there are hacking groups out there
+that try to hack into banks.
+And you the way that you can tell that this is considered a threat is that
+rarely can an individual, or even citibank do something about it?
+The only possibility of anyone doing something about. That is, maybe a government
+to be able to stop these attackers, arrest them.
+work through interpol, and try to get them like off the network, take off, take away their websites, take away their ability to conduct business, and so on.
+So that's kind of how you see the tradition of risk and the threat.
+and then next is vulnerability and exploit vulnerabilities and exploit. They go together as well. A vulnerability is a flaw, that of a system that can be exploited and an exploit.
+An exploit is something that exploits a vulnerability. So it's like a circular type of logic. A vulnerability is a characteristics
+that allows it to be exploited and exploit something that takes advantage of a vulnerability. So risk, threat, vulnerability and exploit
+exercise number 2 exercise number 2. I'd like to give an example of a threat, risk, vulnerability, and exploit, that is, they don't have to be related to each other, but usually a risk and threat are related to each other, and vulnerability exploit is related to each other. So please go ahead and give me an example
+of risk, vulnerability, threat, and exploits. Let me set a timer here for 2 min, and then, if you'd like, I would like to see if we have any anyone like to share some of their opinions or thoughts on this.
+So let me set a timer here for 2 min.
+and then I'd like to hear your answers to this question.
+One more minute.
+Would anyone like to share an example?
+So please make sure to put your answer in the on gradescope and submit it. So one example for my colleague would be a threat. Attackers or attacker gang looking to intercept
+Ci. What does that stand for? Confidential information?
+Corporate information by trying to steal sensitive information risk
+the risk. Is the attackers gaining access to those documents from printer memory facts, unsecured memory. Exactly so. A threat is attackers trying to intercept sensitive information.
+The risk is, attackers would actually gain some of this information absolutely.
+Vulnerability and vulnerability is an office printer with
+not updated patches or insecure configuration. The exploit is that attacker can access the printer based on a open, unsecured port.
+Perfect example there.
+Thank you for sharing.
+So here's an example in terms of risk
+management. So risk management is the method in order to analyze, risk and try to reduce the risk and risk management
+has of has 4. There's 4 things that you can do
+in order to manage the risk.
+the definitions. I think we skipped the definitions. But let's go through an example here.
+Example driving.
+If
+for driving. There are risks to the car, the people in the car, the people in property outside the car, and such, and
+the risk of an accident.
+You can try to manage the risk of having an accident
+by doing 4 things right. 4 things.
+The 4 things we can do in risk management is one
+avoid the risk. So if you don't drive.
+there is no risk of driving right. You don't drive.
+You don't have the risk of driving.
+That's 1 you can't get into a car accident if you don't drive.
+Yes, I know that's not true. You can be a pedestrian and be hit by a car. But let's just this is an example. So you don't drive.
+You can't get in a car accident 2.
+You do risk mitigation or risk treatment
+risk mitigation is when you do things to minimize the
+extent of an accident, so you can have seatbelt airbags, crumple zones following the Wi Doi laws do defensive driving, having heavier car, a car with all the safety features. New tires don't
+don't drive when it's snowing. Use snow chains when you're driving, or winter tires when you're driving and such.
+And that's to risk mitigation or treatment.
+3 risk transfer
+risk transfer is making it someone else's fault problem making it someone else's problem. So for driving, you can transfer the risk
+to some to another organization. You get Geico car insurance.
+you get car insurance. And when you get an accident.
+80% of the cost is paid by Geico or whatever it is these days.
+So that's risk transfer insurance risk assessments.
+Risk acceptance is okay.
+After everything you've done. You're not going to do any more to reduce the risk of driving. You still need to drive. You need to go to work. You need to buy groceries. So after everything you've done.
+you're still gonna drive, and you get the residual risk after your
+your mitigations. That is, there's still some risk of getting a car accident, but it's lower because of
+the things that you've done.
+So these are the 4 things that you need to do for risk management.
+Let's take another example.
+Just take another example.
+Let's say, your company is creating a new website.
+And this website has personal, identifiable information user credit, card social security numbers.
+So you're having a website with the sensor information on it.
+risk avoidance risk avoidance is don't launch the website.
+If you don't launch a website with sensitive information on it.
+Then you don't have the risk of losing information.
+2 risk medication.
+That is.
+you're going to carry a website with personal, identifiable information. You do some mitigations like multi-factor identification data encryption, maybe even
+reducing the amount of information that you store. You don't store. The full credit card numbers don't store the social security numbers. You do user monitoring, you make sure. Only authorized users have access to it. You secure backups and so on risk, mitigation or risk treatment.
+3.
+Wish transfer.
+How can you transfer the risk
+like, how do you transfer the risk off funding a website with confidential information.
+You can have a 3rd party vendor.
+Carry your information for you. My colleague just mentioned. You stripe. So you need to purchase something. You have a e-commerce website.
+The purchasing is all done using this 3rd party vendor like stripe, for example, that
+has expertise to handle this thing, and they'll charge you a modest fee to do it.
+That's excellent idea.
+Another way to do it is you transfer to someone else in your department.
+So let's say, let's say your department. You're just the application developers. You develop the applications.
+And then you have another team called operations. So you develop it.
+And after you're done developing, you transfer
+the risk or and the whole application to the different team.
+And you say, Oh, operations! This is your responsibility now to run it properly and keep it, patch and everything like that. It's your responsibility.
+After you accept our software or product. It's no longer developing teams problem.
+Anyone seen that happen before.
+or it could be something else
+like, Oh, this is not in our lane.
+Right? Yeah. If you work in a big corporation, right? Oh, yeah, this type of software, this type product, not in our lane. That's that's in your lane. So you have to make this. It's not in our lane. We don't make this type of product. We don't do. We stay in our lane? We we do, we do our little thing.
+you. It's your team that does this kind of stuff.
+So that's risk transfer. Aside from insurance. That's also risk transfer like making it. Someone else's problem
+happens in corporations a lot. So the thing is.
+it's not a good solution, because at the end of the day the organization, the office.
+the company still has the same risk, except
+the teams within it, are transferring the risk from one team to another team, from development to operations. And the development team
+don't care as much, because as soon as the user accepts it. It just it leaves their portfolio and they don't have the risk anymore. And then it gets hacked a year later. Oh, that's operations fault. That's not team's fault
+right? We they signed off on it. It's they didn't. They didn't patch, or they didn't do whatever
+happens all the time. But the company is still liable for this
+information security risk concept. This slide is trying to show what we discussed earlier, which is, the attacker has lots of ways to get into the system.
+and as defenders
+you have to be able to defend against everything, while the attacker only needs to find one hole to get into the system.
+Here's another example about the risk analysis where you can read this yourself.
+Asset owner versus it at risk owner.
+So in cybersecurity there is a difference between the owner of the asset
+and the owner of the It asset.
+And this happens that this is becoming more prevalent today
+when cloud services are being used
+today. So for example, you take an application
+and you develop an application and you decide to host it on a different data center.
+And, for example, maybe you put it on a cloud or you put it on another server.
+Then it becomes that the owner of the underlying hardware, like the data center
+may not care about your data as much as you do. So you're hosting it in some other data center. But the data center is
+well, they don't know what's on your system.
+And they don't actually care about your system very much.
+So if, for example, a data center gets hacked and someone access the data, they'll say, well, you should have the data at rest encryption. You should have encrypted your disk. Otherwise that's why they got access to it.
+So
+when you're taking something, and you're hosting it someplace else, which is generally what everyone does today. You have to make sure that you understand who has the risk between the asset
+and the It asset. I took this slide from Microsoft over here, and Microsoft, and many cloud providers delineate who is responsible for which parts of the system.
+So here, for example.
+Microsoft is saying that if you do an on-prem system that is hosted on your own
+premises, you handle all the responsibilities.
+and if you decide to do something like hosting your infrastructure, the I stands for infrastructure as a service over here with Microsoft.
+then Microsoft will be responsible for physical host, physical network and physical data center. So Microsoft is giving their guarantee when you pay for the service is that the attackers won't hack
+through their infrastructure to you.
+Glyphs are in conditions, of course, but you, the
+the asset owner, are still responsible for patching the operating system, patching the network, patching the applications, and so on.
+So this is the deal that you're making with for a cloud provider, Microsoft, in this case, that if you use their infrastructure as a service product, this 3rd column over here. Then you're responsible for these things.
+and then they're also saying that.
+Well, actually, if you don't want to patch your operating system, either.
+Then get the Sas product.
+the Sas product. They're gonna handle patching the application, making sure network access controls are done correctly, patching the operating system. The physical host network and data center is all their responsibility. But you're paying for that service over here.
+So what this slide is
+trying to for you to take out of it is that when you are hosting anything anywhere, even yourself.
+make sure you know who is responsible for what parts of the system.
+risk assessment
+in risk assessment. There are generally, from a high standpoint, 2 ways to perform risk assessment and risk assessment is trying to identify what your risks are. And there's 2 main ways to perform risk assessment.
+The main ways are qualm.
+qualitative and quantitative or quantitative and qualitative. Quantitative is an objective method that is trying to get numbers and trying to figure out exactly what your risks are and qualitative is when
+you can't put actual numbers to something we take an example of both. So you know what we're talking about here.
+We talked about this already.
+We're gonna do an example of
+quantitative risk assessment in quantitative risk assessment. You need to get actual numbers 4, what you're assessing
+here, definitions of what we're going to talk about. But I'm just going to jump right into an example
+instead.
+Let's say, let's say you're trying to assess the risk
+of fire damage to a building.
+We're trying to assist the fire damage to the building.
+And let's say the value of the building is $7,500,
+and let's say each time there's a fire
+$2,500 is lost.
+How do I know that?
+Well, Geico. Geico. Will know that.
+So Geico knows how much it takes to rebuild a house after a fire.
+so I don't know but Geico definitely knows what it is.
+So the value of the building is $7,500,
+and every time that there's a fire
+you'd lose $250,000. That is, the insurance used to pay out $250,000 to fix the house that's called the single loss
+expectancy.
+The single loss. Expectancy is the amount that you lose per incident right? Refresher from ISP,
+the annualized rate of occurrence. Aro is how often something occurs per year.
+So let's say, there's a 5% chance that there's a fire.
+Then the Aro is 0 point 0 5% 0 point 0 5, which translates to 5%,
+and therefore the annual life loss expectancy. That is how much is lost per year is
+12,500.
+In other words, they're expecting there's a fire every 20 years.
+So the expectation is that there's a fire with the house every 20 years.
+How do I know that Geico knows that based on risk?
+So there's a fire in the house every 20 years, and therefore
+each time there was a fire, you'd lose $250,000, and therefore every year
+you're essentially paying $12,500. Whether you have a fire or not or not.
+you're essentially paying 12,500. So Geico.
+to make sure that they are making a profit every year, has to charge at least $12,500 per year
+to ensure that they make the profit just to break even alright. Then let me ask.
+what if there's a fire alarm
+that costs $5,000 per year to install and maintain.
+Would that be worth it?
+And yeah, the answer is, yes.
+So if you have fire alarm. It costs $5,000 per year to maintain.
+And after you have this you're guaranteed to never have fires again.
+Absolutely. The fire alarm is worth $5,000.
+This is why, when you have homeowners insurance, you get a discount for having fire, alarms, and such.
+So in my house, for example, I have a fire alarm that connects directly
+an automated fire alarm that contacts fire department when it detects the fire.
+for example, and having that installed at my house
+with a battery backup and a cellular backup on it allows a reduction on my homeowner's insurance.
+because, having a system that automatically calls a fire department is great in many cases, and reduces and reduces insurance costs.
+Here's another example.
+So please go ahead and go do this by yourself.
+This example.
+these types of problems is very likely to be on the midterm exam. So running through these calculations like this is easy for me to give and easy for you to to do so.
+Please make sure that you understand how to do this calculations. Here's a second example for you to go over, and I'll give you more examples to do later on.
+So quantitative assessments are useful in cases where you have the numbers for fire insurance.
+Geico's have teams of actuaries. They can calculate the risk of all these factors. Very well in cybersecurity. However.
+we, it's not mature enough to to do so in a really good way. Now, now.
+cybersecurity insurance has matured significantly and pretty much. Any company can get cyber security insurance today. Pretty much.
+However, however.
+it's still not as not as clear, or it's not as statistically clear as fire insurance. Not yet. But I think we're getting very, very close right. Have anyone gone through
+getting cybersecurity insurance for the company.
+Before, do you know how the process works?
+So if you know about getting a
+going through this cybersecurity, D framework or 2727 k. 1. For example.
+there's a list of controls that they check your company to do so. For example, they'll check.
+Oh, do you? Do you have a governance process. Do you use multi-factor authentication? Do you require, you know, strong passwords? Do you have monitoring of the network? And so on. And they were like
+3,000 of these controls. And so what a Cybersecurity Insurance Company would do is that
+they'll go through this 3,000 item checklist with you
+and based on your answers, will charge you the amount for your insurance. So the more controls that you do, the lower that your insurance will be.
+But it's not an exact science here. So because it's not exact science, we use a qualitative approach and qualitative approach generally means
+we're trying to do the best guess we possibly can, based on the experience.
+So here's how a qualitative approach will work.
+I took this risk risk matrix from the Department of Defense. This is the official department of Defense risk cube or risk square.
+and it's a 5 by 5 matrix over here. One side here is likelihood. And the other side. Here is consequence, and green means good. Yellow means medium, and red means
+over here.
+And I'm just gonna take some example over here.
+Example number one.
+The software is really buggy and would likely have a buffer overflow attack vulnerability.
+This vulnerability is rated at this risk is rated at 4 5, so it's rated at
+likelihood. 4 consequence. 5.
+Right? So it's rated 4, 5,
+example 2.
+There's a 70% chance. That website will be hacked and 1 million credit card numbers will be lost.
+This risk is rated at 4 4.
+We are 4.
+And according to Dod, the way that you're supposed to get this assessment
+like, get this rating of 4, 5, or 4 4
+is by using the Delphi technique.
+The Delphi technique requires you to ask
+3 people, 3 experts in the field in the company
+and try to get the consensus on what the risk of this?
+What's the risk of this item is
+so what they do, for example, is, let's say, number one here, the software, the software is really buggy, or like they have overflow vulnerabilities. They'll ask 3 software security experts in the company.
+You tell them about the situation, and ask, How would you rate this risk?
+And if all 3 people come up with something around 4 or 5, likelihood 4 and consequence 5. Then they say, Okay, this must be it. That's 4 or 5. That's how they do it. That's the defite technique.
+The Delphi technique is also done anonymously as well. So you get 3 anonymous people in order to give the answers, and then they try to figure out
+whether that's correct or not.
+And if for some reason they don't match up very closely.
+then you have to ask them like, Why don't they match up? Because, like, why do you think so? They'll say your answer is very different from someone else like, why do you think that is this something that you know that we don't know. They try to like. Figure that out
+and then try to figure out and then try to reassess the risk again.
+Let's take an example.
+Oh, before you take example, I will talk about mitigating risk.
+So example one, the software is really buggy and would likely have buffer overflow vulnerabilities.
+Okay? So it's rated at 4 5.
+Reduce the likelihood of this risk
+by spending more resources to reduce defects.
+That's a fancy way of saying, fix the bugs. So now you went from likelihood 4, 5
+to likelihood. Consequence, 1, 5.
+So the likelihood our finding of vulnerability has decreased from 4 to one.
+But if they find a vulnerability, then the consequences still very high.
+Example 2.
+Reduce the consequence by not storing the full credit card numbers, likelihood reduced by adding a web firewall.
+Okay? So
+you don't store the full credit card numbers and you add a web application web, application, firewall or waf, and you go from 4 4 to 3, 2,
+all right. So that's mitigating risk.
+Let's take an example.
+Exercise number 3, exercise number 3.
+What would you put as the risk and residual risk, or the following.
+oh, I already have marks here, let me get rid of these marks.
+What would you put as the risk and residual risk of the following employee loses a laptop
+with customer data at the airport.
+What would you put as the risk and residual risk of this?
+Let me set a timer for, let's say, 30 seconds, and you tell me what you think of this one.
+What would you put
+as the employee loses laptop of customer data at the airport. What would you rate this risk?
+Okay, please tell me what you think.
+Please tell me what you think.
+Let's see, I got.
+I got a 2, 5, 2,
+2, 5. I got 2, 5. I got 3, 3.
+I have a 5, 4, I have a (243) 343-5342,
+5, 3, 5, 3, 4.
+Okay, 2, 4,
+all right.
+They're pretty far. Well, they're pretty far apart, right? They're pretty far apart here.
+like there's some some people have rated as 2 4, which is 2, 5, which is over here. So it's the yellow Zone.
+No one thinks it's the green zone.
+and there's some people who think it's in the Red Zone over here.
+So if I was doing the Delphi tactic
+I would say something is wrong here. Something is wrong here like, why do you think?
+Why do you think those scores are so
+wide from each other over here?
+And why do you think
+the results are so different from each other like we don't have a single answer
+of what this risk is
+right?
+Absolutely absolutely so.
+Our colleagues in the chat window are saying that there's not enough information. There's too many variables. There's too many assumptions that are being made here.
+That's exactly it. And what kind of information is on the laptop.
+So there's a lack of information about
+this. So this risk doesn't have enough information
+for you experts to make a decision on it.
+and whether there's some sort of way to wipe the disk.
+what information's on it? Yeah, you're right, absolutely. This information is not there.
+So exercise 4.
+So exercise 4. I updated this a little bit. So now it says.
+what would you put as the risk and residual risk, or the following, an employee loses a laptop of customer data. The customer data is name full social security number, birthday and address. At the airport.
+The laptop uses a full disk, encryption, a bios password, and requires an Rsa token to unlock it.
+How would you mitigate it, or is the residual risk?
+So now
+tell me, please update your answer for 3. This is exercise 4. Please update your answer for 3 and say.
+what would you put as the risk for this one.
+I set a timer for 30 seconds, but we're not going to go over it because we're running out of time. So please
+take a moment to put this answer on gradescope, and then I'll look at the answer, and from there and see what you come out with.
+Okay, well, thank you very much. We are coming to the end of our lesson today. There are one more question here. One more question. The last question is, exercise number 5,
+exercise number 5 is.
+how do you stay current with cybersecurity? News like? What do you use to keep yourself updated with cybersecurity news.
+please. I'd like you to share your resource with me, and then I'd like to collect it together and post it to the class and see
+what information sources that we have for the course.
+So exercise number 5 is what are good
+information, security, cybersecurity news sources that you use to stay updated.
+And then, lastly, we have exercise. A exercise a is the homework question. This is the one that you do by yourself.
+Exercise a is, explain the difference between qualitative and quantitative risk assessment, providing example of when you'll use each type.
+Please limit your response. I don't want an essay. I want just a very quick answer about what you think between the difference between qualitative and quantitative risk assessments.
+And then, lastly, muddle points. The model points is optional. The muddle points are.
+write down anything that you don't understand from today's lesson.
+So any topic from today that you don't understand, I want you to write it down.
+And then also the model points is a note to yourself about what you need to do
+by next week.
+So is it kind of like a note to yourself, but sharing with me what you need to do
+for next week, and that's all the exercises for today.
+Thank you for joining me for today's class question. Comment. Please go ahead.
+Hello, Professor, I have a question on the
+on the the lab, submission for the the second lab. So I for the 1st lab I was able to upload the
+Pg Png files for the second lab.
+it is saying, Okay, upload here like no files uploaded. But how do I do it. There's no button or anything to upload the files.
+Yeah, do you mean task 2.
+Yeah, for the task. 2. Yeah. Sorry for the task. 2.
+Okay, let me go. Check on that with a moment in a moment. And but before I do that I want to say, Thank you. Everyone here.
+Thank you.
+Of the class. I hope you have a wonderful week, and I'll see you next week. Thanks. Everyone.
+Are you still hanging around to ask some questions?

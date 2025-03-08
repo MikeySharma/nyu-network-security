@@ -1,0 +1,902 @@
+Oh.
+hello! Welcome to Cs. 6, 8, 2, 3, network security. My name is Professor Philip Mack. Today is Monday, February 10, th 2024, 2025.
+And this is our 3rd class for network security
+logistics. 1st of all, you have 2 assignments out right now. Lab, one is due next Sunday, this coming Sunday, 16 February.
+with a early submission bonus of submitting it 5 days early. So 5 percentage points for submitting it 5 days early, that's tomorrow. So if you're able to submit it by tomorrow, you get 5% points added just on top of the grade.
+Also, there's homework number one as well. That's immersive labs that's due at the end of semester. But please make sure that you're doing this on a weekly basis.
+Otherwise it will be too much work and the materials on the exam as well.
+Please note that we have weekly ta office hours. These are
+on Tuesdays, but on different times on Tuesdays. So the next office hours or next 2 office hours would be 8 to 9 Pm. Eastern time on zoom on Tuesdays. Whenever, if you want to see the upcoming schedule. Please just go ahead to go to zoom on Brightspace, and you can see the schedule for the upcoming ta office hours.
+Also, if you sync the calendar to your phone or to your Gmail calendar, you can see the upcoming schedule for the class as well.
+One big note next Monday is a holiday.
+It's President's day, so our class will actually be on Tuesday. So next Monday is a holiday at Nyu, and our class will be on Tuesday instead of actually all Nyu classes will be on Tuesday. So you have any other Monday classes that will be on Tuesday as well
+exercise number one.
+As you know, we have weekly bonus exercises for this class, and this is week number 3. So please go ahead and go to gradescope and
+look at bonus so weekly. Bonus exercise number 3,
+and the 1st question for the bonus is.
+please list 3 topics that we discussed last week. Let me set a timer here for a minute or 2 min while you think about
+while you think about some of the topics we talked about last week.
+No description, no necessary. Just what topics did we talk about last week?
+Here, let me set a timer. And I set the timer for 2 min.
+Okay, so what topics did we talk about last week?
+We talked a lot about risk? Yes, a lot about risk management, risk and vulnerabilities, exploits and vulnerability? Yeah, the whole lesson yesterday was about risk management, or last week was about risk management. We talked about qualitative and quantitative risk assessment.
+Quantitative is when you're able to use numbers. That's the Geico fire insurance or car insurance example, where the Geico is able to generate exact figures of
+the risk of a fire for an insured home. And then we talked about qualitative, which is more like this, the cybersecurity related type of
+risk management, because we aren't able to put exact numbers on what are your chances of being hacked in terms of money amount? What are the costs of recovery in terms of money amount? We don't have those figures. Exactly. So that's why we use a qualitative risk assessment process.
+We talked about the Delphi technique. The Delphi technique is a way
+the Delphi technique is a way to assess risk when you
+aren't able to get numbers out of it. So a Delphi technique is where you ask 3 experts in that field.
+What do you think about the particular assessment of the risk, and see if these 3 experts anonymously are able to give similar answers to each other? And if, for some reason one of these answers are way off from someone else, then you have to consider. Maybe he or she has some sort of information or knowledge or assumption that is not stated correctly in the risk
+assessment. So that's the Delphi technique and the Delphi technique. One big thing is that it's anonymous, or it's anonymous to each other. And the reason for that is that
+no, you're finding 3 experts
+of a particular subject. Sometimes it's really really hard, and these 3 experts might be on the same team. So they are anonymous because you don't want, let's say, the supervisor saying, Oh, I think it's this value. And then the supervisors direct reports will say, Yeah, yeah, I agree. No, no. So that's why it's anonymous, so that they don't get influenced by each other.
+I mean, that's the reason for that.
+I think that's most of what we covered last week.
+So in this class, you'll be learning how to exploit systems. In a couple of weeks you'll learn how to hack into systems. You'll learn how to hack into Wi-fi, you'll learn the tools and techniques to break into Wi-fi networks, you'll be able to find vulnerabilities, and soon you'll be able to just be able to exploit any known vulnerability.
+Oh, by the way, tomorrow is a very, very big day in our field.
+Does anyone know what that is? What is tomorrow?
+Why is tomorrow a big deal.
+Tomorrow. Tomorrow's the day. If we turn it in our lab early, we get 5%.
+That's correct, too. That's correct in cybersecurity world. What's what's another big thing that's happening tomorrow?
+It's Patch. Tuesday
+is Patch, Tuesday and Patch Tuesday is the day of the month. That's the second Tuesday of every month in which Microsoft releases its monthly patches, and the trend is that when Microsoft releases these patches. There are hundreds of vulnerabilities that are being patched by Microsoft.
+As soon as Microsoft releases those patches on Patch Tuesday.
+Then there is a game that happens in which those patches are reverse engineered in order for attackers to find how to exploit these vulnerabilities. See? So the thing is by patching these vulnerabilities. It gives the information and tools to the attackers to figure out what this vulnerability is patching.
+And well, I guess the next question is, why would they bother with that like this attacker? They see Patch Tuesday. The patch came out on tomorrow, and then they go and race to try to find as fast as possible how to exploit that vulnerability.
+And the reason for that is that lots of people don't patch in time
+who works in the enterprise environment
+without telling me where you work?
+How long does it take to patch your systems
+like, how long does it take?
+Is it 3 days, one week too weak.
+4 weeks did your organization patch last month's patches yet by now, or they haven't.
+So in most corporate environments in most corporate environments.
+the time it takes to patch a computer after patch. Tuesday is between 2 to 4 weeks.
+2 to 4 weeks.
+So it takes 2 to 4 weeks to patch all the computers on the enterprise, but
+maybe only 95% of them are patched
+in 2 to 4 weeks. There's still a remaining handful that doesn't get patched for whatever reason.
+And that happens a lot. It happens a lot like, for example.
+have anyone tried to patch a sharepoint server or a Microsoft, SQL. Server, or you know something of the like.
+you will know how difficult it is. It is so difficult to do that it would take
+the time to patch. It is measured in months that in weeks.
+because it's very challenging to do for various reasons, because of the database you need to take it offline. You need to make sure it's working fine. You need to schedule it. It's a big change. It could have downtime, etc. Etc. Etc. So it's challenging. There's no question about it.
+So Patch, Tuesday, tomorrow
+the attackers will be coming out and trying to reverse engineer and try to figure out how these exploits, how, how these vulnerability, what these vulnerabilities patch and then try to exploit it.
+And they usually figure out in a couple of weeks. So even if Microsoft doesn't really talk about it, because sometimes they don't. For this particular reason.
+in 1, 2, maybe 3 weeks.
+Attackers know how to exploit these vulnerabilities already.
+Example, last month there was this very, very big outlook, vulnerability, this outlook, vulnerability allowed someone to
+essentially exploit malicious code
+by simply having the email run in the preview panel like that is, the user doesn't even need to open the email or do anything. The
+by just opening the preview panel they're able to execute code. Very bad, very bad.
+right? And they've done it in like between. The attackers. Forgot how to do it. 2 to 3 weeks after the patch came out.
+and from there many organizations hasn't even patched
+their computer jet from this vulnerability.
+So there are many systems are now being exploited from because because Microsoft patches, vulnerability. They are now being exploited.
+Well, anyway.
+this class, you're not going to learn how to exploit. You're not going to learn how to find new vulnerabilities. But
+what happens after the attacker figures out how to do it? They're going to put it in metasploit. We're going to talk about metasploit later. But metasploit is a
+framework used for attacking known vulnerabilities so like, for example, now that this outlook preview, vulnerability has been attack, exploit has been released to the wild. You can download it into metasploit.
+and then they're able to use metals. You can use meta exploit scan for this vulnerability. Try to find vulnerabilities and then try to exploit this Vulne.
+So in this class you will learn how to do this.
+And wow!
+It's not that hard. It's oh, my God, it's it's extremely easy to compromise.
+attack vulnerabilities when someone has already done all the work of finding a vulnerability.
+And that's the thing.
+It's it's so easy to do. And you're going to learn how to do this yourself by just using some very simple tools.
+So even though we learned this in class, I say again that
+well, here's a big warning over here. Skills taught in this class are only to be used in confines of a controlled computer security research lab Uc. Labs, for example, or in some place where you are given permission to do so. If you do something stupid you'll end up in jail.
+So, for example, let's say you hack your own wi-fi
+like you. Go ahead and hack your own Wi-fi
+perfectly fine. No problem. You go hack the sea labs in which you built no problem. But you hack your neighbor's Wi-fi, for example, you hack the Wi-fi at Starbucks. That's illegal. Don't do it
+generally in the United States bypassing any type of protection is legal, no matter how silly the protection is.
+So that's very unfortunate. There's been cases where people have been sued for simply looking at the HTML code of a website, there have been more than one case
+in which a website did client-side filtering of personal, identifiable information data
+on the website. So I don't remember the exact case here. But there's been more than one in which a user is able to log in their website.
+and then they can use a search function to find information. However, the search function limits the information that the user can find that is limited to based on the access rights of the user, which is normal. But however, some websites, they download all the information, especially downloads all the information to the user's web browser and then filters and then displays it to the user based on the search criteria. And that
+reviews all the information the user. But and if the user decides to just view HTML, they can see all that data or just go to developer mode in their browser. They can see all that data.
+People have been sued overdoing that.
+So even something as simple, I definitely don't agree with it. But the way that our laws are.
+if you bypass any type of protection, including ridiculously simple protections.
+It can be illegal, and certainly someone can be sued over it
+in this class. In this lesson for the next 2 weeks we're going to talk about the 6 steps of the network reconnaissance methodology. We'll talk about methods in both technical and non-technical on how to collect information. We understand some basic open source intelligence methods, osint OS, INT. That includes who is dns dns, reconnaissance attacks such as Dns zone transfer dns brute forcing split Dns.
+we will understand the fields in a Tcp IP. Header. This includes IP, Tcp, Udp and Icmp, which is
+which is Iptcp.
+Then we'll talk about some types of attacks for Tcp and Udb. Packets.
+and then we'll also talk about Nmap, which is one of the most popular scanning tools how to do it flags, common flags, how to use it properly, and so on. So this is our objectives. For the next 2 weeks
+types of attacks and computer crimes. This slide really is to make sure that we have the proper definitions to make sure that we are talking the same language. So this is going to be slightly boring. But bear with me while I go over these definitions here.
+Okay, denial surface dos or Ddos destruction of information, destroying information, removing integrity of a system.
+Dumpster diving, dumpster diving is going through the dumpster and finding information about
+finding information about something on on paper that someone has thrown out one moment
+eavesdropping that is, looking at the radio waves coming from a device in order to pick up something from a device. This could be, for example, an old CRT monitor in which is emitting waves that you can see from farther away, or maybe listening for the keystrokes in order to figure out someone. What are they tapping into their keyboard embezzlement? Embezzlement is
+stealing money, espionage, espionage is finding information for another country. Fraud, fraud is lying, information warfare.
+Wow. Information warfare. Another term for information warfare is
+is fake news like giving wrong or bad information in order to change someone's decision.
+illegal content or material that's like pirating, bittorrent, malicious code, malware.
+masquerading, masquerading is pretending to be something you're not
+in Lab One. You did a lot of masquerading
+in order to perform your attack. You are pretending to be someone else in order to pull off your attack. That's called masquerading
+social engineering, social engineering. Oh, what is the definition of social engineering.
+social engineering is a method to
+trick people to review information or do actions in which they normally would not do
+software privacy, stealing software. IP address spoofing another way of saying masquerading terrorism
+actually put fear for political change.
+theft of passwords dealing with passwords, exploit scripts.
+using scripts to in order to
+attack a system. This is what you did in Lab one task number 4,
+and network intrusions breaking into a system.
+There's some definitions on the slide over here. If you want to take a look.
+why, just the why do people? Why do attackers hack into systems?
+Why do attackers attack systems?
+Is it because of fame, money, a football.
+What do you think?
+Does anyone have any strong opinions here?
+See? Reasons could be for politics who are political?
+Yeah, money fame
+for fame. I'm not sure it happens very often anymore. So I gave an example last week when we talked about Matt Honan, in which someone hacked a twitter account for the sole reason of gaining fame.
+I'm not sure that happens as often anymore today.
+but certainly for money, and for political reasons.
+Certainly, I think so.
+Certainly.
+US. Federal crime laws as part of
+as part of our Nsa certification designation.
+We are required to share some information about computer crime laws in the United States.
+However, although I'm sharing this information with you.
+this is just for discussion. You don't need to know these details, and we will not be testing anything about laws or or criminal laws in this class.
+So I'm just sharing some history over here of laws. But
+we would not be discussing this after this, and certainly it would not be on the exam for this class. So this is for your information only for your knowledge, and we can certainly discuss any of this.
+But please go ahead and take a look at these yourselves, but note that we are not.
+There will be no trust questions regarding Federal laws.
+The cyber kill chain, the cyber kill chain is a philosophy that talks about
+how an attacker, or rather what an attacker does in order to get into a system.
+The cyber kill chain is a
+methodology developed by Lockheed Martin and adopted by the Department of Homeland Security about the things that you need to do
+or the things an attacker does
+in order to get into network.
+So cyber security chain has these 7 steps. These 7 steps are things that an attacker would do to get into a network
+attacker will 1st perform reconnaissance, performing reconnaissance is getting information about the target getting email addresses. IP addresses the type of people working there, information about the security, the domain names, how they email, what software they use. And so on.
+After that step 2 is weaponization, that is getting a exploit
+that can finding or getting an exploit that can work on this particular target.
+So an example of this is, if they use. If they know they use, excel, they might use an excel macro in order to try to exploit the system.
+Delivery delivery is trying to get the exploit onto the system.
+Example of this would be emailing a malicious excel file
+to targets in the computer. In the company.
+4 exploitation exploitation is the actual exploitation of the malware
+step. 5 installation. This is where the malware gets itself onto the system, installs itself
+and tries to have a presence on the system.
+6. Command and control, command and control is usually creating some sort of backdoor to the system so that the hackers can get in afterwards
+command and control is similar to what you did in task 4 for lab, one, in which you create a reverse shell, and then, after you create the reverse shell. You now have access to computer to give further commands, install more malware, mine, Bitcoin, whatever.
+and then 7 is action on objectives, which is
+everything else the attacker would do after they got into the system.
+So the cyber kill chain is this philosophy that
+every attack requires these 7 steps in order to get into a network.
+And the reason that it's
+it's formally in such a way is because we have methods of detecting every part of this stage here. So there's methods for detecting attackers performing reconnaissance. We have methods for determining whether well, weaponization not really, but determining how attackers will deliver malware to a network. So, for example, email web browsers or Usbs, and these are things that there are tools that we can use in order to detect it.
+Exploitation. Well, certainly we can use antivirus, anti-malware software Xdr systems in order to find exploitations.
+Same thing for installation. There's malware being installed in the system. We have tools that we can use in order to try to detect that
+command and control. Usually this is a reverse shell going back to the attacker's own network. And of course there are tools to detect something like this happening.
+And then, lastly, action on the junctures. This is everything else that's going on. So if someone goes ahead and try to mine Bitcoin on the computer. There are tools that can try to detect that as well.
+Can I get a confirmation that you can see the screens right now. So right now it's a cyber kill chain, and there's a chain with 7 steps on it.
+Okay, perfect. Thank you for the Confirmation. If you cannot see the screen, may I suggest that you
+log out and log back in to the call?
+So the Department of Homeland security has adopted this cyber kill chain
+for the sole reason that they try to buy tools
+that can cover every single part of this chain, or as much as possible, and
+the philosophy of this chain is that if you break this chain at any part, so, for example, delivery, if you break the chain at delivery, then the attacker would not be able to do the rest of these steps here. So you try to find ways to detect and stop
+the attack
+before they get all the way to the end, which is the goal to do whatever it is they want to do, they have to get to the end.
+And so there are tools, multiple tools used for detecting every single part of the chain.
+So when the Department of Homeland Security goes ahead and buys a tool for the Federal agencies.
+They have to just have the vendors bid on
+part of this chain. Do they detect? How well do they do that what is the effective rate effectiveness of the tools for various parts of this chain?
+Because you want to have as much coverage as possible.
+So that's that's 1 way
+in order to try to detect attacks, because we're making the assumption here, which is not 100% true, the attacker has to go through all these steps
+to exploit a system.
+Another philosophy is called the Mitre attack framework.
+and the minor attack is more of a taxonomy
+rather than a frame rather than a chain, or rather than a steps. That attacker will do.
+The mitre attack tries to tries to.
+Have a taxonomy of every single type of thing than an attacker would do
+when they try to exploit a system.
+So, for example, just just an example, let's say the attacker would.
+Let's say, attacker. Well, 1st they need to gather some information from a victim.
+and then they need to establish accounts.
+Then they try to do phishing over here, and then they try to do some scheduled tasks on the computer to get into it.
+Then they create accounts for persistence.
+and then they have, like root login scripts.
+Then they do some domain policy modifications on the Active Directory. So it's a not that the attacker has to do all of these steps
+in order to get in, but that the attacker has to do something when they're attacking a system, and so they may not do everything on the steps here, but
+but that they have to do something here.
+And so this attack, the mitre attack framework allows a taxonomy of different attack. Groups, apts active, persistent threats
+to see like, oh, these are the techniques they use. These are how they usually get into a network. And then you can get tools and techniques in order to try to detect at least detect encounter
+some of these attacks.
+So, for example, if you know that, let's say fishing
+is a very, very big deal, or the attackers are using phishing in order to get to a network. Then you know that this is the thing that you need to do
+in order to spend resources on, to try to stop. And Mitre has a defense framework as well. That corresponds to this, or you know that, for example, the attackers generally do domain policy modifications that's going into active directory or equivalent and making changes to it in order to gain access to the network.
+Then you know that this is the area that needs detection tools to detect it, stronger controls over it, more monitoring and so on.
+So this is the mitre attack framework
+for this class. We're going to follow this framework, the cyber kill chain.
+and the reason for that is that we're just going to go over generally. What an attacker has to do in order to get to get into the system. This is what we'll be talking about for the next couple of weeks
+about how an attacker gets in the system. So we'll be going down this cyber Q chain for next couple of weeks.
+Today, we're starting at reconnaissance over here, and probably today and tomorrow we'll talk about today and next week
+what an attacker has to do
+in order to learn about the systems that they are trying to attack.
+Dang
+reconnaissance. Reconnaissance is a term we use for casing a joint that is just like bank robbers who need to rob a bank. They 1st need to go in and see the bank, see what their security is like. See, when they change their guards, see where they have security cameras, and so on.
+Well, it's exactly the same thing when
+trying to hack into a network or a system, they need to 1st gather information about the system, the target. What the security measures security protocols that they have, what weaknesses they have in order to try to exploit it
+here.
+The information they're trying to get could be could be everything. Here
+the IP address, network, typology, information, how the network is laid out, domain names that they use.
+domain names that they used account names, account, name, formats, but they use like 1st letter, last name, last name, 1st letter@domain.com domain.org, or did they use something else. What operating system they usually use? Probably windows. What kind of database servers did they use? Oracle? SQL Microsoft sequel server? Something else?
+What are the security policies. How complex are their passwords that they use? Do they have bring your own device? Do they have
+free? Wi-fi?
+What kind of physical security do they have? Can someone just walk in and steal some laptop with information on it, or do? Or is there better security than that home address or frequent hangouts of employees, and so on.
+Can you think of something else?
+Then an attacker will try to get
+aside from this list, which is pretty good. It's not full.
+What do you think are?
+Would the attackers be interested in anything else that you can think of?
+Does anyone have any suggestions on what an attacker will try to get. In addition to this
+personal information, social security numbers.
+How about job postings?
+Job postings will give information about
+job postings will give information about what technologies they use or what problems they're having ex-employee accounts.
+so they can find out
+if they have any disgruntled employees. They can check on Linkedin and see the employees working there. They can try to figure out how long does it take for them to delete an account after employee leaves
+the organization.
+They can try to find out
+what laptops the employees uses, so they use windows. Or Mac.
+maybe what brand of laptop sometimes that might help as well.
+So there's lots of information that they can try to get. They can try to get their websites like a list of their websites. The list of their systems are on the Dmz.
+If you can figure out where the employees goes to hang out, then maybe you can do some shoulder surfing like. For example, let's say there's a Starbucks
+by the workplace.
+They can hang out the Starbucks and see if they can overhear some conversations, maybe do some shoulder surfing to see someone type in their password, or just get some information about it.
+find out the domain names when they expire.
+find out what any companies that might have recently acquired or merged with, because.
+having 2 companies merging is very disruptive to the it, or, in other words, the it usually is not secure when they're trying to merge 2 networks together.
+Yeah, there's lots of information that you can get.
+So there's some public database, public information sources that you can use to get information on a particular target. For example, you can look at public databases. We're going to talk about some of that in a minute.
+Dumpster diving dumpster diving is just going back in the trash can, and seeing if they threw out some sensitive information.
+Social engineering, social engineering is users giving access. Oh, excuse me
+tricking people into giving out information that they normally don't give in.
+Give out. Does anyone remember
+that Twitter got hacked a couple of weeks ago, a couple of years ago, like about one or 2 years ago.
+And it was done using social engineering
+Dns information domain name system. That's the lookup for websites to IP information
+gives a lot of information as well. Or at last you can just physically physically break into a target and see what information can be found.
+So, for example, for example, most companies have some way of performing backups.
+and they might perform backups on hard disk, on tape drives. Well, if you break into the company and then steal the backups.
+That's a lot of information that could be stolen.
+Spoofing caller Id is very easy, very, very easy. So you can call up to be someone actually
+have. Have you heard of these scams where
+there's a couple of different scenarios? But usually I saw one video where someone said that they got called up.
+And it was the police department. That is, the phone number that came up was the police department, and this person was saying that the police called her and said that she missed jury duty. And now this warrant out for her arrest.
+Right? You heard stuff like that before. There might be another one. I think this another one that happens very frequently is that whereas the Irs calls you, or something like that.
+or and they say that they owe taxes or or ice
+ice calls you up or calls a person up and says that they're being deported.
+and then they have to pay like a $400 fine by Western Union in order to stop it, or something like that.
+And one of the ways that this works is that
+call Id has no security right now. Some companies are trying to fix that right now, but Caller Id has no security whatsoever someone can call attacker can call someone and have any phone number. And so one of the ways that these scams work is that they say, oh, just go online and look up the police department's number.
+It's the same number or or another one I heard is that they say, Oh, this is chase credit card fraud services calling. And they say, Oh, yeah, just look.
+we're calling from the number from the back of your card. So this is the same number. This is the same thing because they're able to spoof it.
+And it's very, very, very easy to do.
+All you need is an ISDN number.
+ISDN number, and it's like $10 a month in order to do so. And you can get one anonymously as well.
+Many companies actually, most companies
+use this method when they're making calls, anyways. So like, let's say someone from the like, someone from Verizon calls you. They don't want you to call them back on the direct line. So they give you all this like they change the number to the be the one on 800 Verizon number, or something like that. So you can call the customer service representative directly.
+So most companies
+generally do this. This is the same method in which companies can call within the company to have the different numbers and such
+but attackers can use this
+very, very easy to do. Just proof. The numbers
+there are lots of.
+There are have been lots of attempts, many, many attempts
+in order to fix this problem.
+Currently, it's not fixed. So Apple has tried. Google has tried.
+I believe Verizon as well. They have this verified call caller badge. I think Apple does, too, in which, if they're able to verify that the number is from that number they'll have a badge or they have a little symbol on the on the side that says that this really is from the number that's calling. But it it doesn't work for everything right? I'm not sure the limitations for Verizon or for iphones. But it's definitely not 100%.
+And you see that many people who don't even know what's going on.
+I'll understand this technique will might fall for this
+and another way that someone might fall, for this is internally as well. So there was one attack. I forgot the company name. I think it's Twitter.
+where the service desk got a call.
+and the call was an internal number, that is, they spoofed the number
+to be an internal number, so the company thought that the help desk, person or service desk person thought they were receiving a help desk call from within the company, so that just put them at ease completely, that it's not an external number. It's an internal. It's an internal number.
+And they thought, Oh, yeah, it's just someone, some user in the in the building that needs some support.
+and I believe in one case they reset an admin credentials based on this information.
+so very, very dangerous. And certainly, if you ever get a call from Chase.
+Be very, very careful
+with it, especially if they say, Oh, yeah, it's the same number as the back of the card.
+There's also a thing called Google Hacking. Google. Hacking is a way of using Google keywords
+in order to find information about a specific company.
+One of the one of the best Google hacking techniques.
+Google Directive is the site. Conan one.
+So just an example. Right? You're trying to find someone like someone's name like my name. For example, you're trying to research me.
+There are multiple people of my name
+all over the world. But if you do site Conan Nyu Edu.
+then you come up with my profile, so you'll be able to find information
+on the search term on a specific website. Nyuedu, for example, probably the most, the most useful one as well. But let's say they're trying to find information about a company like company name site Conan. You know, jobboards.com, or something like that, or indeed.com. So you can find exact information about the company on a particular website.
+Exercise number 2, exercise number 2.
+How would you find a fire on nyu.edu.
+With this string.
+This file was generated by Nessus.
+So you want a file called.
+This file was generated by Nessus on the domain. Name Nyuedu.
+How would you do that?
+Let me set a timer here for 2 min. You can try it out, and then let me know
+what you've what you get to get the results
+moment while I'm trying to set a timer all right. Time is up.
+Give her a shout.
+all right. So what's the answer? So the answer is, Sitecoin at Nawaedu.
+This file was generated by Nessus.
+This file will generate that this is.
+Let's give it a shot. Let's give it a shot
+moment while I share my screen.
+One moment while I share my screen.
+Okay, so here we go.
+Sitecohen Nyu Edu. This file was generated by Nessus.
+Do I get any results?
+So this looks like it's a file.
+And inside this file has this term. This file was generated by Nessus. So if you're searching this for some reason.
+you just found a file that talked about this. I don't look at this. I don't know what this is.
+however, if I'm just doing a general search for it, then you can just remove
+the site, Colon, and you get this file was generated by Nessus.
+And then I see all these results over here.
+Does anyone know what this is? What any of this stuff is over here?
+What is what is this search term.
+This file was generated by Nessus.
+What does it mean? So what is Nesus?
+What is Nessus?
+So in this class we're going to talk about 3 main tools that an attacker uses.
+These 3 main tools are lessons. Excuse me and map Nessus Meta split.
+So end map is the open source
+network scanning tool we'll talk about today, or maybe next week.
+Then there's Nessus.
+Nessus is the most popular vulnerability scanning tool out there used by everybody. I believe there's an educational version, I believe that's free. And then the corporate version is very expensive.
+It is probably the de facto, the number one vulnerability scanner, that is, it finds known vulnerabilities this patch. Tuesday. It finds these vulnerabilities. So if there's a system that didn't get patched after Patch Tuesday, tomorrow, they will immediately be able to find which host has been affected by this.
+and then the 3rd one is metasploit. Metasploit is a is a framework that can be used to exploit known vulnerabilities, that is, vulnerabilities that are already known to exist. They can go and exploit those. It's
+very, very, very easy to do. Unfortunately.
+So what are these?
+What are these? This file is generated by Nessus? What are these results?
+R.
+So Nessus?
+When Nessus creates a scan report in the older version it will have. This file is generated by Nessus in the report, so the report will just have this information on it. This is one of the default ways that they they do it.
+And so when Nessus generates a vulnerability, report it.
+it has his name on it, and it has very sensitive information on it.
+Now that you know this, why do you think we have these Nessa scan reports on the Internet
+like, why do we have this on the Internet
+like, why are these things here?
+Any ideas?
+Yeah, it it can be, or very likely the publicly misconfigured sharepoints, or misconfigured like buckets or some sort of data stores. It can be leaks like something can be stolen off a company and placed on the Internet.
+For some reason. So these are very, very sensitive information.
+And there is a whole database.
+There's a whole database of this. It's called exploitdb
+Google, Dorks, Google Dorks.
+So the Google Hacking database, the Google hacking database is a database of Google hacks
+for various things. So, for example, this search over here can find some information about users in a database.
+And you see that there's hundreds. And actually, there are almost 8,000 different types of Google hacks. And this is all automated, completely automated. So someone will run a script. There's tools that can do this that will do all of these things
+except for sitecohen like your target. So Sitecohen Nyu Edu.
+and it'll try to find all of those things and print out a result for you, and then just go and peruse it and see whether there's anything interesting
+that's there. It is very, very, very easy to do.
+And it's just called the Google Hacking database.
+Here's here's another example.
+Here's another example.
+This Google search file type, SQL, insert into Josh users values. Md, 5.
+This this value insert into Josh User's values
+is a line from a database.
+And by doing the search. You can actually find username and passwords
+from Jumba databases. So someone has accidentally exploited, exported a database and put it onto the web by accident and Google indexed it. And then, if you do the search, you can actually find username passwords
+online.
+So by just using Google and by using their Google hacking database, a lot of potential information
+can be found online.
+Someone asked me to do this search. One second, let me reshare my screen.
+Okay, so let's see what this gets.
+Nessus scan report from Amazon. aws.com. Oh, very interesting, very interesting.
+Do I need quotes to get this to work
+so potentially. You can see some very interesting information.
+Penetration, testing potential, some potential information.
+It's very interesting.
+I don't know about the search, but certainly it is very, very interesting. Right? There's some lots of information, and you're doing some sort of something about a particular company. So let's say that you're researching Nyu. You can see, maybe Nyu has some sort of information here. So, for example, whatever this file has has, Nyu is in it, for whatever reason.
+so very interesting, just some things that an attacker can get, that maybe the company did not intend or did not realize that they have.
+that they have released.
+And this can be completely automated by using the Google hacking database.
+Another database that you can get information from is the Edgar database. The Edgar database is a public
+is a database for publicly traded information. Excuse me.
+scratch that, let me repeat myself.
+This is a database run by the sec for any companies that are publicly traded. They're required to file reports on the Echo database
+you ever read Yahoo Finance
+and Yahoo Finance whenever, like a company has like quarterly reports, or they have something happen like Yahoo finance and the equivalent they will have like a news article that talks about. Oh, the company it went up. They invested in this. They went down because this happened, and so on.
+Where did you get this information from here?
+From the reports that are filed from the sec. And then they use an AI to go through the document and then pull out highlights from it.
+Maltego Maltego is a very, very interesting tool. Maltego is the Maltego
+is a search engine that tries to find relationships.
+So, for example, for example, let's say you have someone's email address, Maltego.
+we'll go and try to find where this email exists all throughout the Internet.
+So let's say you have a target's email address.
+They take this email address and they go and see if there's an Instagram account. If there's a Facebook account.
+is there a I don't know what the popular stuff
+Tiktok account, whether they have an account in some like Yahoo email, Icloud Amazon account
+whether they have an account with, like all sorts of different websites, whether this email is listed in the Dmz. And so on.
+And Maltego does this by using scripts
+for hundreds and thousands of websites that can do simple things like, Oh, you got an email address. Let's see what other information can I find?
+And so, for example, if they find some sort of Instagram account?
+And then that Instagram account is connected with someone's handle, Maltego will automatically go and take that handle, or that phone number, or the person's name that I found, and then do yet another search with that information. So example, they found this email address and his email address. They found a
+Instagram handle or something like that.
+Then they go use that handle as a search term
+and do yet another search with it.
+and then let's say, from there they find a name.
+and then they then go ahead and use that name and do more searches based on that name. And eventually you get a graph
+something similar to look looks like this over here on the screen
+where they can try to connect all this information together
+here and see if there's any correlations with it.
+Maltego is what's an open source intelligence tool.
+There's a free version and a very expensive paid version. So, Maltego, you can go ahead and try it right now, you can download to your computer and try it. And you would
+be amazed on what you can do with it. Many companies use this type of information to do research
+on users, employees, and so on.
+So, for example, example.
+someone goes, applies for a job at a company, and they're able to find like the Instagram handle
+and say, Oh, yeah, because of your Instagram pictures. We don't want to hire you
+right? Something like that, or your Twitter feed. Well.
+this is the tool they use in order to find it
+right. They just put whatever information they have on the applicant
+and the tool can find all their accounts. They find their flickr account. They find their Instagram account. They find their imagar. How do you say the image sharing Site Imagar website? And they can see all this stuff
+right from here.
+And it does correlations, too. So they find a handle. They use that handle and use it on other sites
+to see if they have similar names. So if someone's sharing the same handle between Instagram and Tiktok.
+and it finds one, it will find the other one extremely powerful. All public information.
+So the thing is, how does this work.
+How does this work?
+It's unfortunately very simple.
+I think it's a it's a python script, or it's a perl script. It's just a script.
+Great. That's it.
+It's just a script.
+It makes a query by using a script
+and seeing how the websites responds back to a inquiry with the email address.
+That's it. The whole thing runs like that.
+It's very, very easy. And so what big companies do
+is that they buy a special version of this
+that comes from a different IP address. So it won't be associated with that company when they're doing research.
+So they do research on the competitors. People apply for jobs. You know, people who like guests that come to the company just background information. It's like a low level background check.
+And they can cover all this information.
+It's it's very, very powerful.
+And like this tool. Like, if you think someone oh, yeah, I'm using this handle from this website, no one knows or only someone has to really dig very deep in order to figure this out.
+the tool does it void on you?
+And of course, now that we have AI assistance for many tools. It's becoming even more powerful like this. Tool is already extremely powerful
+before AI.
+So take a look at it, you can download it. There's a free version. It's
+the free version is very slow, and it's limited to just the number of results. I think you get 15 or 50 results back at a time. And that's it. So you can't build graphs this large. But you get the idea. It's very, very powerful there.
+Social media. So social media, of course, is also tools
+that can search the social media and find information about the users. Maltego kind of does that as well.
+Here's a tool that doesn't work anymore. This tool is called cree.py Cree, dot, PY, or you can pronounce it creepy
+if you'd like Creepy is a tool that takes social media.
+Excuse me, social media postings or
+extracts the location out of it.
+Does anyone remember a couple of years ago, when you were posting on Instagram, it used to give the location of the of where you took the photo or where you posted.
+I think they took that away in the in the last couple of years. I don't remember when, but it used to. They all used to do it like. So I definitely know that Twitter.
+Facebook, and Instagram.
+When you posted a photo it'll leave the metadata in it.
+and then someone can see. Oh, yeah, this photo was taken at this restaurant, or
+or what does anyone remember that, or am I too old
+and creepy is a tool that goes and downloads this information from the social media profiles and then makes a map just like here. Just what you see here makes a map of where all the user has been or where have they taken photos, or what time and such? So from here you can identify where they live, where they work, hangout locations, frequent locations, and so on.
+It doesn't work anymore, because people are getting more security conscious. And they and Twitter and the social media sites have disabled
+automatic sharing of the photo's location
+now. So it doesn't work anymore. But the concept of it still definitely still works.
+Exercise number 3.
+What are some ways in which you can obtain information
+from a company using public information sources.
+So question is, can you name some of these tools that we just talked about?
+Or there's something else that we talked about.
+I'm set a timer here for 2 min, and then I'll take a break, and I'll actually let me set it for 3 min. I'm gonna take a quick break.
+and you can, too, and I'll be back in 3 min here, and I'll be right back.
+Take a look alright one more minute.
+How about Whois? Whois is another site.
+another tool used for finding a link between the
+a registrant of a domain, name.
+and domain name. So who is is a tool that
+used to be very useful. In which, let's say, you're trying to find the contact information for a website you can use who is to find out information about it and then send them email.
+Well, those days were gone like 30 years ago. So today, it really just has a lot of
+private information on it.
+The problem with who is today is that it's still required for a lot of Dns services so like one of the things that who is does is that
+if you registered a domain name.
+sometimes the registrar needs to know who registered it for confirmation.
+and then, because who is still used.
+Anyone can look up who is and find information about who registered the domain. So the story we talked about last week with Matt Honan. One of the ways that Hacker found all this information about him was because he registered a domain name.
+and it was on Whois. And so, using Whois. They found his name phone number, email, address and home address.
+Has anyone ever registered a domain name?
+And then you start receiving lots of emails, lots of snail mail. Lots of crap
+after you register a domain name.
+Anyone's ever did that.
+Yeah, I know it sucks, and then you get spam for like months, if not years, forever.
+Because of that
+right now, whether you can use a privacy guard like who is guard, or something like that. We had to pay a couple of bucks a month extra
+when
+not 100% sure whether that's legal or not legal. But whether there's a incident, legal incident where you can prove that you own the domain name, or whether you're saying that Godaddy owns a domain name, it's not 100%
+sure about that.
+But who is? It? Has a lot of information.
+Europe has made it private.
+or the EU has made it private. The Us. Is trying to do it. But when there was an attempt about 2 years ago, they found that so many automated services require who is access
+in order for it to work.
+Okay.
+Dns also has a lot of information as well.
+Dns
+is the lookup between a domain name and the IP address. So, for example, let's say you're trying to go to the website Engineeringnyuedu. When you do that and you type into a web browser. The web browser makes a Dns a record request
+for the IP address for Engineeringnyuedu, so that your web browser can go to it. So how the steps work is that you type in engineering your web browser makes a Dns request for the IP address, and then your web Browser goes to the IP address. So that's Dns, so Dns is a required part of the Internet.
+There are a couple of Ds Dns
+registries within the world. There's 6 of them. And the one closest to us is Erin, called the American registry for Internet numbers. That's America as a North and South American America.
+and they register domains and excuse me, IP addresses for North and South America. So for some companies.
+You can go to Erin and find information about what IP address blocks they use.
+So now I want to give a little demo.
+Give me one moment to share my screen moment.
+Give me one moment to share my screen.
+Yes, we can.
+Okay, perfect.
+So
+I pull up my web browser over here with a couple of sites. But one of these sites is the Scc. Aggregate database.
+Would someone tell me a large company that they want to find some information about any company
+that you might be interested in?
+Nyu Nyu isn't a publicly traded company. So it's not on this website.
+Openai. Not a publicly traded company, either.
+How about Chase, hey? So Chase
+is Chase, a publicly traded company.
+Actually, I don't know, are they, Netflix? I think Netflix is
+Netflix. All right. So let's go to Netflix
+over here. So this sec echo database Security Exchange Commission. Echo database has all the firings for the public traded company that required to do so.
+And so you see these reports that they have now I mentioned that
+websites like Yahoo finance, and the finance related websites. They always have articles talking about a company, about how their finances are doing, and so on. Well, they just read this information, using AI and just generate an article from it. But everything is here. So let's just take some look at some
+information here. So I'm just pick this random one over here, this 10 Q.
+And let's see what information comes out of this. So here's some Netflix information and such.
+and you can find information about Netflix, such as
+Oh, let's see what that! What can I see here?
+Oh, they don't have much here.
+so you can see the earnings report. You see, information about that.
+You will see information of, let's say, if they have any major deals with companies. For example, it will be listed here. As well. If you talk about their plans. It's listed here as well, but it has information such as Oh, let's say, for example, look, I know their what is this? Their Co. Chief executive officer is this person?
+They're another co-chief, or they do. They have 2 Ceos.
+2. Ceos.
+What?
+Okay? So so they have 2 Ceos.
+All right. Greg Peters and Ted Sarando
+and the C. Chief accounting officer is
+this person here you also see other information, such as you can see, like who their lawyers are, the lawyer firms. If, like, for example, they retain their law office. It will be here. If they retain accounting office, the information will be here as well. Maybe this one's a bad report. Let me look at another one
+as well, maybe I can see some other information.
+Okay, what else do I see here?
+The chief financial officer is this person.
+So you don't see that much here. But you can imagine that you can just use and use an AI
+and just go through these documents and see any information. Typically, you find information about their C-suite people. You see information about stock trading. You see, information about companies. They work with their vendors and so on. And with this information someone can do something like, Oh, hi! This is your vendor. I need this and this, or I need you to do this bill for me, or do something with it. And this is information that you can learn from just from this report.
+Another thing that you can learn about is from Aaron Erin.
+the American registry for Internet numbers
+has a list of for many companies.
+They're I registered IP blocks.
+And so I want to see
+what IP addresses. Nyu has. So I go to Erin and I go type in Nyu.
+Let's see if it's Nyu or New York University. Let's see.
+Huh?
+Well, this is what happens when you do live. Demos doesn't work.
+Okay? Good. So Nyu, here I see some information about.
+I see some information about Nyu from Aaron.
+And so let's see, for example.
+I want to write some of this information down.
+Let me get something to write this down
+one moment. My screen sharing did not work.
+Okay. So I see here, Nyu, I know you probably already know this already, but Nyu's 1 of Nyu addresses is 7, 2, 6, Broadway 8th floor. Right? So I'm learning some information about Nyu. They have address at 7, 2, 6, Broadway. I found their email address here. Here's an email address.
+And although we didn't talk about this yet.
+Email spoofing is extremely easy.
+Actually, I would say, it's trivial to do so. For example, you can say, Oh, yeah. Here this is the I'm sending you an email from the Nyu Network Operation Center. Here I see a phone number here, let me copy this down.
+I can do. I can see. Oh, here's another address, one metro tech center.
+right? One metro tech center. And certainly I know that you know all this information already about Nyu. But
+you can understand that all this information is already here. So I have another email address from Nyu.
+I have this other email address I just found from Nyu. I found this other phone number, another phone number. And actually, I came here to find IP addresses which I haven't even gotten to yet.
+I have so many I can't even type it in. Here's another telephone number. Here's another email address. Here's another
+another address for Nru. It's a lot of information. Now, actually, here's exactly what I came here for.
+Here is Nyu's ipv. 6 IP. Address. So this IP address range.
+These are the ipv. 6 IP. Addresses assigned to Nyu.
+Right? So these are the ipv. 6 IP. Addresses, which
+right now we're not using. Ipv. 6 very widely. So this may not matter. But what I want to go and find is Nyu's ipv. 4 IP. Addresses. Huh! Here it is.
+there it is this. This is what I'm looking for. Here. Here is the block of Nyus IP addresses.
+Let me write this down. This is the important thing
+over here. So this is one of the IP address blocks.
+Okay? And so Nyu is an old enough institution in which they got these blocks of IP addresses
+from Aaron today. Aaron is not handing out whole IP blocks like this anymore. So only the older companies or older institutions get these IP blocks today, they get smaller smaller chunks
+because we're running out of IP for IP addresses.
+Here's another address for Nyu. Here's another. Oh, look! The office of information security. It's at 7, 2, 6, Broadway second floor.
+Okay, very good. Now I know where the Information Security Office is.
+so I see that I found Nyu's ipv. 4 IP. Addresses over here.
+They are this right? It's 2, 1, 6, dot 1, 6, 5 dot 0 dot 0 dot 17.
+I think that's everything. I don't think I missed one.
+So that's some information that we have about Nyu.
+Some other information I want to find out is who is
+right. Remember who is who is, is the tool used for looking up who registered a domain name.
+And let me try. Nyuedu.
+Let's see if I messed this up.
+Oh, I'm not a robot.
+and someone else already owns this domain. Okay, let's find another hubiz lookup.
+Let me try one of these nyu.edu.
+Here we go. This one worked all right. ny.edu. So this is the entity
+that registered Nydu. So registrant is Nyu at this address, this phone number and his email address.
+So this is the organization that registered this domain name for nyu.edu.
+And if someone registered it personally. So let's say you're making a website yourself, and you register a domain name.
+and if you did not get the who is guard or the privacy guard.
+then your information will be here which can be looked up by everyone.
+There are scripts that just look up the information and then they go and send spam emails, spam calls, and even snail mail to the users in order to, you know. Get them to buy something or scam them out something as well.
+So that's the wiz lookup. And so you can find information such as, oh, I have the address for Nyuna.
+Another thing that we can do is by doing a dns lookup by doing a dns lookup
+a dnslookup. Remember what Dnslookup is, it? Is
+at the Ns. Lookup is they? Look up
+the IP address for a domain name. So let's say you are going to engineering dot Nyu Edu.
+And when you type this in on your web browser, it'll do a Dns lookup to get the IP address for it.
+Okay? So the IP address for engineering. Edu, is this
+it? Says amazon.com. What does that mean?
+What does that mean?
+So strange? Right? Because I'm expecting
+this is Nyu's IP address like I looked up on Aaron.
+That Nyu's IP address is over here. 2, 1, 6, dot, 1, 6 5 dot 0 dot 0 slash 17 yet it's 35.1 7 4.
+Well, it's different, because it's actually hosted
+at amazon.com. So this gives me 2 pieces of information really important information. So the 1st thing is, I want to note that engineering
+Nyuedu is hosted by Aws, and that
+Nyu has a vendor. So aws is a vendor.
+So just very silly imagination. Let's say I go. I call up Nyu, and I say, Hey, this is aws! You didn't pay your bill if you don't pay your bill. Now, your website's gonna go offline.
+And then maybe hopefully, I get someone fragiled. And they say, Okay, what information do you need?
+Maybe you can social engineer some information.
+Okay? So Nyu engineering nyu.edu is hosted by amazon.com.
+Can someone give me another Nyu website
+since since we started on the path of Nyu.
+Does everyone know another Nyu website for us to test
+Brightspace? Okay, Brightspace, bright space, dot nyuedu.
+Huh?
+What's going on here.
+What's going on here?
+Why does bytespace dot nyu edu turn into nyu.bytespace.com.
+Do you know what that means?
+So it's an alias so brightspace.ny.edu at j points to brightspace dot nyu
+nyu dot brightspace dot nyu.
+But this tells me something very important.
+This tells me that Brightspace is actually hosted by a vendor.
+So Brightspace is actually hosting this Nyu site. So when you go to Brightspaceny, Edu, you're not actually on a Nyu server. You're on a server hosted by Brightspace, so Brightspace is a vendor.
+Brightspace is a vendor for Nyu, and then.
+when you go to so the actual domain, even though it says Brightspace, dot nyu edu is actually nyu.brightspace.com.
+And then if I go to brightspace.com.
+You see that brightspace.com is actually hosted by aws as well.
+So Nyu contracts Brightspace out to Brightspace.
+and Brightspace has its hosting done by aws.
+So here I better watch out if I want to hack Nyu, I better search for
+aws vulnerabilities as well, which there are quite a number of them like. It's easy to do some misconfigurations. So now that I know that Nyu is on aws, on multiple sites.
+then I know that that's something that I have to look at like if I want to hack into Nyu.
+try to hack into aws.
+How about another website?
+Someone mentioned cyber dot nyu Edu cyber dot nyuedu, where does that go?
+Aws cyber dot ny dot EU go to aws.
+Okay, what's another one
+cyber dot Nyuedu goes to aws.
+Albert. Okay, so let's try. Albert
+albert.nyu.edu, that's your that's the register site.
+Oh, hey!
+What's this?
+What's going on here? Look, albert@nyu.edu is on? IP address 2, 1, 6, dot 1, 6, 5, 6, 2 dot 3 0. Does everyone remember what Nyu's address space is?
+Look, Nyu's IP address race is 2, 1, 6 dot 1, 6, 5 dot 0 dot 0. So
+this means that this server is hosted on-prem.
+The servers hosted on premises.
+So it's on a server rack somewhere at Nyu.
+It's very interesting right now, albert@nyu.edu is a very important website, so they probably take security seriously. But maybe there's something else on the address space
+that isn't fully patched. Maybe I can jump to another. Maybe I can attack another server
+on that IP address range and then jump over to Albert.
+So Albert dot nyu
+dot Edu is hosted on-prem on this IP address. Okay, so this is an interesting find.
+Another one another, one
+another. Nyu domain
+hosting the Inviteidu. What is hosting the invite Edu? Let's find out hosting.
+I would bet stream is hosted by Microsoft. I would bet. Oh, look at this hosting! The ny.edu is digitalocean.
+Oh, this is a good find. I did not know I did not know this.
+Oh, digitalocean is another cloud provider.
+the best feature of collisional ocean flat rate fee.
+I think it's the only one with a flat rate fee.
+How about Dreamnyuedu stream, dot nyu Edu. I think it's hosted by Microsoft.
+Okay, I actually don't know what this is.
+What's this is hosted by cloudflare. Okay, what's cloudflare.
+So stream dot nyu
+dream dot nyu Edu goes to
+kaltura.com, which I actually don't know where it is, which is hosted by cloudflare.net.
+Okay, so cloudflare is a content delivery system. Cdn.
+and it helps companies move Internet traffic to closer to where the user is.
+Okay. So very interesting, very, very interesting. So here I find just a couple of interesting things.
+First, st they have aws, they have some on-prem, they have the geoocean, and they have this company called kaltra.com, which I actually don't know what this is. So these are all the vendors that they use, and the servers on Prem so potentially like, let's say, like, we're trying to hack Nyu
+right now, you could potentially look for Aws vulnerability, because it's easier to misconfigurations. Just do a Google search. There's lots of potential misconfigurations and scanners for it as well. Digitalocean as well. They have this company, caltra.com. I don't know what this is, and they have some on-prem servers, and they have a number of vendors, too, so we know that they work with brightspace.com digitalocean, and and so on.
+so cloudflare and aws.
+So question, why would someone use cloudflare instead of aws?
+Cloudflare and aws are different services.
+The different service. So one service that Aw does is to provide a server.
+They provide a server someplace, just pick a location. They have a server farm in like Arlington, for example, Arlington, Virginia or in Virginia.
+and then that server is there. That's where the server is. If you want another server, you have to pay for it.
+and then a Cdn content delivery network
+takes that information and replicates it to places all over the world. So they have a website. They take that information and puts it all around the world. So we'll have faster delivery of this information to the particular users.
+Cloudflare is also a security website as well. So Cloudflare
+is famous for preventing Ddos attacks so cloudflare kind of acts like a proxy
+front of your server. So if someone tries to attack your server, cloudfare can stop the attack before they get to your server, and Cloudflare is really really great at stopping Ddos type of attacks. They have different tiers. Cloudfare has a free version, and they have very expensive plans as well.
+Okay, so so far we've been doing Dns
+and I've been looking at Dnsa records. So far.
+Dnsa records are records used for looking up for Ipv. 4 address Dns record types.
+So so far the default I've been doing a look at a records.
+These are the ipv. 4 IP addresses.
+So, for example, example, I go to my web Browser and I type in engineering Edu.
+it'll do an a record, and that's looking up the Ipv 4 IP address.
+What's another?
+What's another record type, do you know for Dns?
+Here's another one, another one is a a, a, a just 4 A's. This is the ipv. 6 IP. Address.
+So let's take a look. I want to see if they have an Ipv. 6 IP. Address.
+Do I have that here? a a a lookup.
+So in doing an aaa lookup
+and I get nothing so engineering.ny.edu does not have an ipv, 6 IP address.
+Okay, another one is txt TXT.
+Txt is a
+another Dns record type. Txt is used for several reasons. But one thing it does is to use is to be used for email security. Specifically, Spf records. So txt
+is free tax.
+It's retax, but often used for email security that's called the Spf.
+Spf is a type of email security used for verifying which domains are allowed to send emails for
+which domains this is actually something else over here. So this txt record
+is a record type for Apple and Google in order to verify that
+Nyu actually owns this domain. This is used for Google tracking, and so on. So when someone tries to add Google tracking to the website, they need to confirm that they own the domain. And they put information such as this over here to prove to Google that they actually own the domain.
+What's another one another? One is cname cname
+stands for canonical name. You kind of think of it as an alias similar to alias.
+is another way to call the name, but
+is not displayed to the user.
+Another way is a pointer. Let's see, they have a pointer one here.
+They probably don't.
+Pointers is a way it can do many things. But one thing a pointer does is to help a reverse lookup. There's no method for reverse lookups in dns. But pointers is to help with that.
+I don't see a pointer.
+Here, let me try. Pdr.
+and they don't have this. Okay, another one
+is Ns Ns stands for domain name
+server, and S.
+And this shows you what the tells you. The
+Dns servers for the domain name Dns servers for the domain.
+So
+the domain names for Dns is Ns. One dot Nyu Edu Ns 2.nyu.org, and Ns 4.nyu.edu. And here are the IP addresses that it has
+as well.
+So this one's at this. Oh, actually, we must miss them. It says it's nyu.edu. So this is nyu dot Edu's IP address space, too.
+So this as 12 as 12,
+1, 2, 8 dot 1, 2 2 dot 0 dot 8, as an example is also a Nyu
+IP address range, so that somehow we missed from before. But now I know
+that Nyu also owns this domain. Name as well.
+What else, Mx. What's Mx?
+What's Mx
+Mx mail exchange? So let's take a look. Let's do. Mxnyuedu.
+Mx is the mail server
+for Nyuedu. So, for example, let's say you're in your email client. You're in Gmail, and you want to send me an email. You type in my email at Nyuedu.
+What Gmail then does is that it wants to find a server
+that handles the email for ny.edu. So it does a Mx lookup
+for Nreedu, and from there is able to see what is the email server
+for nyu.edu. So, okay, so here's a couple of steps. You go to Gmail.
+You type in my email address you hit send. Now, it's saying, Okay, mxlookup, what is the email server for Nreedu mxlookup, Nreedu. And what comes up mxlookup for Nreedu? What comes up? What is this?
+What is this pphost.com over here?
+Does anyone know what this is?
+Anyone figure out what this is?
+Any clue? Any guesses?
+What's what's proofpoint
+proofpoint is an email security service.
+It's an email security service. Yeah, it's a, it's not a hosting service, but it's an email security tool.
+So when you send an email to Nyuedu.
+what it actually does is that it goes to the server called
+Point. And it does email scans. So here we have this, let's say, here we have the user.
+And a user sends an email and it goes to Proofpoint.
+And then after it goes to Proofpoint, it goes to Gmail.
+So it goes like this, you want to send an email.
+send an email from the user to proofpoint.
+And then from proof point.
+does a scan and then sends it to Gmail, hosted by Google Workspace, or whatever subscription they have.
+So it scans inbound traffic only. So when someone's sending an email from the outside to Nydu.
+it does an Mx lookup over here
+and it sees, oh, you want to send email to Nyedu. You send it to this address like this address handles the email for ny.edu proofpoint does the scan. It does virus scanning it does spam, scanning and whatever.
+And then it sends it over to Gmail.
+So it's a email security. Service.
+So we learned a lot of information here. We kind of did it manually. But there's an automated way to do everything here that we just did in an automatic fashion as well. PP, hosted
+pphosted.com is the domain name for proofpoint. So this is the domain name they use
+for their email security services. So it's pphosted. It's proofpoint. It's the same as proofpoint.
+And you can look up proofpoint. It's an email security service. They have cloud services. They have on-prem services, and so on.
+But you can do all this stuff automatically. So this is great domain name a domain called Dns Dumpster.
+Here in your text. This is this is slide that says Rob. Text. Robtext doesn't work anymore. So you can use Dns Dumpster. And when I type in Nyu Edu
+over here.
+let me try again.
+If I do. nmiri.edu over here.
+Nyu has a lot of records, so it doesn't fully work on this one.
+but it finds it kind of does what we just did right. It finds all of these domain names from it. Oh, look! What's this like? We'll never find this manually blah blah
+dllap dot vo 4 7 dot web dot Abu dhabi dot nyu edu.
+and it finds that it's running this web server, and so on.
+So it has all of these domain names. Right? So Nyu
+has. Look at all these domains that it has.
+and according to this, it found 202, 29,000 records. I think some of them are duplicates. But you get the idea that look how many domain names they have.
+Do you think Nyu has fully patched every single one of these domains?
+Look how many they have right it's if they did.
+they're very, very successful, but almost no organization is able
+to do all like Patch, everything all the time
+they get information about text records and so on. But really, what I want to show you is this visual diagram.
+which is very cluttered for this? Let me
+make this screen bigger as much as I can.
+Okay, so I hope you can see a little bit better right now.
+But let's see if I can zoom in.
+Am I able to zoom in a little bit?
+No, I can't zoom in.
+so I know it's hard to see. But here, Nma Edu, and it does the mx lookup, and it sees the mx lookup for this.
+Then there's a dns lookup over here, and a Dns lookup goes to all. Ns lookup goes to Ns servers.
+and over here there's a record lookup.
+and you see all these domains that I found for Nyuedu over here.
+These are all the ones that they found. Now, remember, Dns doesn't work in reverse, so you can't just easily find all of their domains not easily there. So this is definitely not a complete list. But these are things that they found online
+for the domains for Nyuedu. So like you're trying to hack into Nyu trying to find information about Nyu. Look how many domains they have over here which I know you can't read, and I can't read either. But there's a lot of information here, and there's no way it's complete, because Dns doesn't have a way for reverse lookup Dns, supposed to go from domain name to IP address not the other way around. So this is not complete.
+So this kind of automated everything that we just did manually.
+But it's it's pretty amazing here to find all this information.
+And so you can do additional lookups from here automate to find the process. What vendors they have, what IP address that they have, and you can get pretty good information here.
+Another one I want to show you
+is okay. We did. Who is we did, who is already. I want to show you what a trace route is, a trace route
+list. All the hops between the source and destination. So let me do, Nyuedu over here.
+Let me check the time. I want to see if there are any.
+Okay with proper
+can someone do a quick check? How many exercises do we have this week? Do we have 4 exercises this week
+or 4 questions for the exercise?
+Okay, so we'll get there in just a moment. There.
+So traceroute traceroute tries to find
+finds all the house between a source
+and destination. So here I'm doing a traceroute to Nmari Edu, and here shows all of the hops between the source
+and destination
+over here. So you see, they started over here, then went to line node. So that means the server is running on line. Node
+goes to da da. It goes to zio.com, which is the ISP for Nyu Edu.
+So it goes here da da da, da, and then it comes to this Hi! And
+this is a trace route, so it shows all the hops between the source and destination. I do a trace route to Nreedu.
+And what is this over here?
+What is this over here?
+It says NGFW.
+Paulo, vl. 3, 0 9 0 net.nyu.edu.
+What do you think that means?
+So, Paulo? That could mean polo auto?
+What's what's Ngfw.
+could it be a next-gen firewall Palo alto firewall?
+Yeah. Next-gen firewall. The Ngfw. Probably stands for next generation. Firewall Palo alto.
+What's this Vl 3,090.
+Gee, I don't know. I'm not an expert. Palo altos. Is there a model number called Vl. 3,090.
+I think it stands for Vlan 3,090.
+So I'm just guessing here, right? Because I don't work in a network department. I think this is saying
+it's a next-gen. Firewall, Palo Alto Vlan, 3,090
+question.
+why is this information here?
+Why did they put the Dns name for this device here?
+It's like, so now I know
+that they're using a next they're using a palo alto firewall.
+It's on Vlan. 3,090.
+Why is it here like? Why would they put that here because they can name it anything you want?
+They can name it anything they want?
+Why did they decide to name it that way.
+Do you think it was an accident?
+Do you think they set it as default?
+Do you think
+like? Why, why did they name it like they could have named this with some random characters instead.
+Why did he name it that way?
+Specifications.
+I didn't hear that. Go ahead.
+Is it a specification.
+No, they can name it anything they want.
+One of our colleagues mentioned that maybe they did it on purpose, because someone can access it remotely and troubleshoot if they find a problem and they know where to look.
+Yeah, that's exactly it.
+Most most of the time.
+These things, some standard naming convention such that if there's a problem like if there's a network problem.
+they they can't be trying to figure out names and and such. If there's a problem with that firewall.
+They need to go and figure out and be able to troubleshoot it immediately, and trying to obstruct the name, trying to like, not show the information will make it significantly harder. And you know, if the whole Nyu website is down, you know that every minute will count, or whatever they have on that server.
+So this is why that even though it reviews a lot of information, they're saying, This is the model number. This is the Vlan. This is the information. If something happens to that server, they need to be able to troubleshoot and figure out what's going on immediately. So, and they're willing to risk
+that. This information is now like. Now I know they have Palo alto systems. Oh, let me go check some vulnerabilities in Palo Alto. Maybe they have a recent vulnerability you can try to exploit now that I know is that next Gen. 5 or Palo Alto, even though the Vlan, just in case
+it's useful.
+But the thing is
+they need to troubleshoot this, if there's a problem. So you see that almost all companies, everything that you see on the Internet. It's well named because they need to have enough information that if it goes down they can't be running around touching the wrong server.
+So that's tracerow trace file can review lots of information.
+And Shodan Shodan is called Internet of Things. Search engine. It's very, very powerful. I will talk about it next week. But maybe spend a moment to research what Shodan is. It's very, very interesting. It's called the Internet of Things search Engine.
+Before we end for today. I want to give the last exercise exercise number 4.
+We're going to spend just 1 min on this one. Let me set a timer for 1 min.
+and I want you to tell me
+what is the difference between Dns and whois and what information that you can attain for this one.
+and they give you 1 min for that.
+Oh, I'm sharing the wrong screen, so you don't know what I'm looking at.
+So exercise 4 is what is the difference between who is an and Dns. And what information can you obtain from each?
+Let me add another 30 seconds to the timer.
+and then the last one, the last exercise exercise a.
+This is the homework part of the exercise. So please do this research on your own. Explain 3 methods used for network reconnaissance and provide a security measure to mitigate
+the risk, if possible.
+associate with each method. So this is the homework exercise. So please go ahead and spend a moment. Do it yourself. Please don't write too much, but just make it as straightforward and simple as you can.
+This is the end of our lesson. Today.
+Next week we will continue, and we'll talk about Ds Dns Zone transfer. So we'll be continuing this lesson next week. Oh, and the lesson is on Tuesday next week because of President's day.
+So again, logistics. Please note that lab. One is due next Sunday, February 16, th but you can submit it 5 days early. That's tomorrow. Tuesday for 5% extra points. We have ta office hours tomorrow, Tuesday, 8 to 9 pm. Eastern time, and always you can look up the next schedule for the next ta office hours on Brightspace zoom or on your calendar. If you have it synced to your phone, please note again. The next class would be on Tuesday because of President's day.
+Thank you. Everyone for joining me today. I wish you a wonderful week and a wonderful extended weekend.
+Take care, and I'll see you next time. Thanks, bye.

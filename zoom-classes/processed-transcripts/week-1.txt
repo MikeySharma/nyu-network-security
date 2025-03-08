@@ -1,0 +1,868 @@
+Hello! Welcome to Cs. 6,823 network security. My name is Professor Philip Mack. Today is Monday, July January 27, th 2025. And this is the 1st class for our spring. 2025 Network Security class. I'm very grateful for all of you being here, and I'm very happy to be your professor for this semester.
+Who am I? I am a cybersecurity officer at a large major international organization. I don't mention where I work. But if I told you you would know this organization
+altogether, I have 20 years of cybersecurity experience. Previous to my current job I was the Security Operation lead at a large government organization.
+Essentially, I was a Soc. Manager for a Us. Agency, and a Soc. Manager or the Security Operations Center would be the office that is, looking at alerts, looking at intrusions, monitoring logs, cleaning up, looking to look at indicators of compromise and see the attackers see if the attacker got into a network looking at phishing emails and whether users are clicking on links, helping user awareness
+on what to do to stop these types of threats, essentially monitoring a network and ensuring that all monitoring tools are in place and are working fine and running a 24 7 operation.
+Before that I was as a part of the Department of Defense, and I was there for 12 years. I was a cybersecurity lead, doing multiple different duties. Some of the interesting things I did were working on a mind detection robot. There was a time where we needed
+mine detection robots in order to find ieds in Afghanistan and Iraq and the area between North and South Korea, and to ensure that a human is not placed in harm's way when we need to find and detonate ieds and other mines and such
+before that I worked at New York Stock Exchange, where I started a network in network communications.
+However, I got my master's degree at New York University as well on a Dod scholarship. I believe the scholarship still exists today. It's where you have to put in 2 years, where you do your 2 years master's program, and then afterwards you would spend 2 years with
+a position within the Department of Defense. So essentially, they pay for your education in cybersecurity, and then you had to work in a cybersecurity role for the Department of Defense, and initially it was only 2 years, but, as you can see, I
+loved working for the Us. Government, and I was there for over a decade before I moved on
+about this course.
+One of the things that you'll learn in this course is that you'll learn within the next 6 weeks you will learn how to hack into systems. Essentially, you will learn how to hack into systems with any known vulnerabilities. So, for example, there was Patch Tuesday 2 weeks ago.
+If there were any windows, computers that were not patched within this time frame. You will learn how to hack into these systems. You're able to hack into your own Wi-fi system. You'll be able to hack into your neighbor's wi-fi and such. You will learn these skills.
+However, there's a big wedding for this class, and probably for the rest of the cyber fellows or the Cybersecurity master's program here at New York University.
+Is that just because you're learning how to do these techniques doesn't mean you are allowed to use it on any other systems unless you have permission to do so. So in this class this week, you'll be setting up a lab environment on your own computer or in your cloud.
+This system, you will learn the tools and techniques to hack into the systems
+to be extremely clear. You are not allowed to hack into any systems in which you do not have permission to do so. So don't do it. We cannot protect you if you do that. But you will learn how to use the skills
+in order to do that. And
+you will use these skills to protect your own networks and your organization's networks.
+How to reach me.
+Probably the best way to reach me is on slack. You should have received a slack invite already. Please go ahead and join Slack. And that's the best way to reach me. You can also reach me by email. My email address is right here, Pmacnyuedu, or you can send me a message through rightspace.
+But email and slack is probably the best way to reach me.
+If you want to meet with me one on one for any reason. Please make an appointment with me. You can do so by just sending me a message, either by email on slack, and let me know when you're available, and then I can pick a time and we'll have a Zoom Meeting together so
+essentially, try to reach me on slack 1st or by email. And then, if we can get our issue resolved during that time, we'll get on a 1-on-one call
+course website. Brightspace would be our main course. Website, you should all have access to Brightspace right now. Otherwise you would not have been able to get onto the Zoom call.
+and on Brightspace there will be a couple of things that you need to look at the syllabus. The lecture slides, assigned readings, and everything's right there, and I'll show you exactly where to look. If you're new to Brightspace in a moment after we get to the syllabus.
+we'll be also using the seed labs for our lab assignments. The seed labs is a virtual environment in which you set up on your computer
+or on the cloud in which you can do your lab assignments on. And we'll go over that in just a moment as well.
+What do we plan to get out of this course? And so this course is network security
+network security. Typically for most people, it's 1 of the last courses they take in the Cybersecurity master program.
+Well.
+it used to be the last course, as in one of the most advanced courses that you take. But then, not too long ago, we have pen testing and offensive security. So generally, network security is one of the last classes that you take at the master's program because of the advanced level.
+But if you want to take penetration, testing, or offensive security, or even both. Then you probably want to take this course a little sooner than that.
+Now I know that
+for many of you this is not the last class of your master's program, and we can discuss whether whether that can work for you or not.
+What I want to. I want you
+to get out of this class.
+Right? I want that after this class.
+Not only do you know, network security that you know networks and you know how to protect networks. You know, network architecture, and that you'll be able to just discuss ways to protect the network and the architecture.
+I want you to be able to
+go to any interview, or if you get in the elevator with the CIO or Ciso, that you'll be able to have a good conversation with them about cybersecurity.
+So at the end of this course
+I want you to be able to
+read a cybersecurity news article like the article could say, Oh, company! ABC got hacked. They got hacked by this or that.
+and then you would have enough knowledge to understand what that means. You have enough understanding to like. Give your own analysis of it
+like, I want you to be able to say, Oh, well, that company! Well, they should have done this, or it was very challenging of them because of this new type of attack. They're able to talk about these things.
+That is what I want you to get
+at the end of this course so that I imagine you can walk into like maybe a job interview.
+And they can ask you topics that are
+discuss in this class or cybersecurity in general, and that you're able to have a good conversation about it, that not only do you understand the concepts you'll be able to show them some of your technical skills, if necessary.
+Like, for example, we're going over some of the tools in this class. We'll be talking about nmap and metasploit, and if you don't know what these tools are. That's fine right now. But at the end of this course I want you to be able to say, Oh, yeah, I know that tool. Yeah, I used it before in the class. This is how you do this. That's how you do that. This is how you find vulnerabilities. That's how you scan a network. This is how you exploit the vulnerabilities. It's very easy. This is how you do. It steps 1, 2, 3,
+and such, and that you're able to be able to talk about it
+specifically. What we plan to get out of this course is understanding the problems of securing a network. Why is it challenging and what you can do about it? Understand? Technically, the underlying, underlying protocols, of securing a network
+cryptographic algorithms? Tls, for example, talk about methods and tools for attacking and defending a network.
+The steps that attacker will use to attack a network, and the steps that you can do to stop an attacker from
+trying to gain access to a network. And then we're going to talk about some advanced topics like firewalls, Tls and wireless security.
+Our textbook, our textbook is by Professor Renning du.
+and it is the Internet security and hands-on approach. 3rd edition.
+Here's the Amazon link for it.
+There is no Pdf copy, as far as I know. So, unfortunately, you have to buy the book. The 3rd edition is required, because the 3rd edition has one new chapter. That's not in the second edition. So if for some reason you're able to save a few bucks, and you can get the second edition just to note that you'll be missing one major topic from the second edition, and from the last time. The Amazon is only like $10 difference. So it's really not even a big deal.
+The book is a required part of the course. It's for background information. But generally I don't ask questions directly from a textbook.
+It's like, you're not going to say, I'm not going to say, Oh, yeah, this question. If you didn't read the textbook you have no way you can get it. No, no, no, that's not how it works. But
+the book is for background information. Just to get you like, get into the world of cybersecurity, and understand in detail some of these topics that we talk about, that we kind of gross over in our lessons. But these are details that you kind of expected to understand.
+I'll come back to the slide in a moment
+course, or in grading policies, course and grading policies
+on this slide talks about the breakdown of the different parts of this class.
+We have homeworks and quizzes.
+and that's worth 10% of the grade. So specifically, this semester, you have 3 homeworks and one quiz. So each homework and or quiz is worth 25% or 2.5% of the grade.
+The lab assignments. That's the C lab assignments I talked about a moment ago, and I will talk about it some more is worth 40% of the class. So the lab assignments are the hands-on portion
+of the class. This is where you have to perform a specific goal, like, for example, on Lab one, you have to be able to do a Tcp reset attack. You have to be able to write the code and understand the knowledge and concepts
+in order to perform a Tcp reset attack. So that's the lab assignments. And that's worth the most part, it's 40% of the class. So it's a mass majority of the class.
+And then we have a midterm and final exam, and these are 25% each. The midterm is on the 1st half of the course, and the final is on the second half
+of the course.
+and then also throughout the semester I have bonus exercises. These are kind of like participation points
+for the class. If you do them all, you get 2% added to the top of your grade. So let's say, for example, you're getting like a 93 average in the class. If you do all the weekly bonuses, you get 2% added to the top of your grade, you get 95 and 95% is an A in the class.
+So generally, the question I want to know is.
+how do you get an a in the course
+I began a in the course
+to get an A in the course, you need a 95% or higher in order to guarantee an A in the course.
+So here are the grading, the grading criterias for the course. And your goal is to get 95% in order to get an a.
+Now, it's not as hard as you think, but
+you need to put in the work to do so.
+And the reason for that is that to to get a 95%.
+You don't even have to be perfect in everything.
+You don't have to be perfect to get 95%, because there are bonuses as part of the course.
+So, for example, there's a 2% bonus for just doing the weekly exercises.
+and the lab assignments have bonuses as well for submitting them early or for bonus tasks as well. So you can potentially get more than 40% on the lab assignments and the weekly bonus. So 95% is certainly very achievable for most people. So you want to get an A that's 95% and above
+a minus is 90 to 95.
+And then if you want a B range A, B, then you get something between 80 and 90. So that's a b minus B+B, plus, that's between 80 to 83, 83 to 87, 87 to 90,
+and then
+for a C grade, you have to get between 73, and a an 80. So for a graduate course, it's only C or C plus, there's no C minus. So it's 73 or above to get a C or C plus.
+So obviously, the goal is to get an A in this course. And that is what I want to
+to get right. Your goal is to I an A and try to get a 95% overall in this course to try to get an A
+and a 2% weekly bonus is a is a total of all the weekly bonuses. So this course we have like 12 or 13 lessons like live lessons, and if you do them all.
+Then you get a 2% bonus added on top of your grade, meaning you get 93%. You get 2% added at the top.
+You get 95%. It's worth a lot of points of all. And then each of our labs and homeworks. They have a due date.
+But some of them have a varying due date, especially the lab assignments. You're allowed to submit them early for a early submission bonus. So generally you get a 5 percentage points for submitting it 5 days early, or if for some reason you must submit it late, you get a 10% deduction. So you get opportunity to submit it early, and just get some extra points from that as well, and we'll go over that in just a moment.
+Now
+what happens if you get sick, or you have some family obligations, or you have a work thing that comes up.
+That's not a problem. You have to fill out a form called the excused absence form right over here.
+and if you don't have this link, you can always google it. Nyu tendon, excuse absence, and you'll find a link to it. It's a form that you have to fill out whenever you can't make it to the course. For some reason. Now.
+this is a grad class. So you don't have to come to a lecture live. But if you, for example, can't get any lab assignments due because you're sick or you can't take the midterm exam because you're sick, or maybe your company got hacked.
+Fill out the excuse absence form. So if you got sick
+and you have a medical note, or you have any Phi or Pii send to them. Don't send me any Pii. I don't want to see any pii in my inbox.
+If you need to send a medical note. Send it to the excuse absence, folks. They'll go and validate that, and they'll just let me know that the student has been excused for whatever whatever reasons, just the dates.
+If you, for example, many of you already work in cybersecurity, or some of you are working, and let's say your company got hacked like. Let's say your company used
+one of the recent firewalls that got hacked recently, or had a major vulnerability, and your company got hacked right. So your company got hacked, and your boss says everyone has to work this weekend, and I don't care if you have an exam this weekend. You got to come in and work because we just we probably got breached.
+No problem right for that. Just send me send me your excuse with whatever proof that you're able to give that is, can be on me to decide. So just send me whatever information that you are allowed to provide, and I can look at it, and then you can have a short extension on whatever assignment is due at that time.
+So essentially, if you have a medical issue or a personal issue.
+Anything with Pii. Send it to the excuse, absence form.
+That's the student advocacy people. They deal with this all the time. If it's a work-related reason like
+you have to be on call because someone was sick or you're the team leader, and there's been a reorg. And now you have to be work at 7 days a week because of the reorg. Just let me know, and that's perfectly fine
+academic dishonesty.
+If you're not familiar with the Nyu Academic dishonesty policy. Please take a look at that. Just for you to be aware of. This course follows the Nyu Tandon Computer Science Department. Academic dishonesty policy.
+and that is a 3 strike policy, three-strike policy, and how this policy works is
+on the 1st strike, you get 0 on the assignment on the second strike
+you get a 0 for the course, and on the 3rd strike you'll be asked to leave the school.
+So that's a street strike policy. Essentially, it comes to academic dishonesty or plagiarism. So academic dishonesty is
+in a specific case. It's something like cheating on an exam. So an exam has to be done by yourselves if you got help on the exam, or something like that, that is academic dishonesty, or something like submitting a paper that someone else has submitted that sort of stuff.
+Plagiarism is copying someone's work without attribution.
+So that is taking someone's work like copying from Wikipedia or copying from the Internet and then
+submitting it as if it's your own without attribution. So of course, this is a computer science course. There's no way that you are doing anything without copying someone's code. Right? That's that's how it works here. But when when you copy someone's code
+or you had to copy someone's work, you had to give attribution for it.
+So, for example, for example,
+you can probably legally copy something from Wikipedia not give credit for it, and no one cares or no one does anything about it.
+That's now how academic
+plagiarism works. So if you go ahead and copy something from Chat Gpt, or you copy something from Wikipedia, or from someone else from Reddit. And you don't give attribution to it
+that's considered plagiarism.
+So you can never submit something that you did not write, or that you did not do by yourself.
+and lastly, about Gen. Of AI Chatgpt Gemini deep seek, and such
+you really should be using generative AI
+in all the work that you do, including this course.
+So you should be using generative AI or Chatgpt to help you with the course, help you with your work help you with schoolwork definitely is something that you should be doing.
+However, when you submit something you have to submit something that's your own, you cannot submit something from chatgpt.
+So, for example, you submit code. That's from Chatgpt. And you didn't write yourself
+that is considered academic dishonesty in discourse.
+because our syllabus says that this is not something that you're allowed to do.
+And also it's gonna be easy to
+see. So so please don't, please don't do that now, of course, if you're doing an assignment and you need some help, and you want to ask Chatgpt for some help to get some ideas. That's perfectly fine
+right? That's not a problem at all.
+One major thing is that generative AI is not allowed on exams, so exams must be done by yourself
+without assistance from other people or from AI is something that you have to do yourself.
+and the reason for that is that
+we need a way to be able to grade and understand how well your knowledge is in this class.
+So there is no Gen of AI or other systems doing exams.
+You're also responsible for the information submitted to ensure that doesn't contain private information, intellectual property, or plagiarism. So, for example, if Chatgpt decides to plagiarize someone's work and you submit it.
+That's plagiarism, even if it came from Chatgbt.
+So you're responsible for anything you submit if you use generative AI, so I
+believe that you should be using chat, gpt, etc. If you're doing your work or any work for your class.
+But in order for us to assess you properly in this course, you cannot use it. And so, if you do use generative AI on the exams, or submit work from it that is considered academic dishonesty, and you will get 0 on the assignment, or the midterm, or even the course, if you do it multiple times.
+so please don't do it. So please use generative AI.
+But please do not submit any work from it, and for the exams
+don't use generative AI at all
+weekly exercises. So each week there are weekly bonus exercises starting from this week. We'll start on it today, and I'll give some more details in a moment. And these are weekly exercises. They're fairly straightforward and simple, but it's some little piece of work that takes about a few minutes for you to do on a weekly basis. It could include answering some questions, doing some basic amount of research and submitting that.
+And if you submit that you get a fraction of the 2% for this week, so you get 2% for the entire semester. If you submit it today, you get a fraction of it like 0 point 2% or something like that which it adds up to a lot
+you have until the following class to submit it. So our next class is next Monday. So you have, until 2 Pm. Of the next class to submit it. But usually it takes like 10 min. So it's something that you can do right away. And for most people they do it just right in class. It's nothing, no reason to wait and forget about it.
+Class time expectations.
+So this is a graduate class at Nyu, within the State of New York, and we are required to
+give you a number of hours of work per per class.
+So as a graduate level class at this number of credits
+required to give you something like 11 to 13 h of work for the class.
+So which means that if you take 3 classes, that's 40 h. That's like a full-time job.
+and I know that many of you are very smart.
+You don't need to take 13 h per week
+per course that you're taking. I absolutely know that.
+But I want you to make sure that you do budget that you
+that you budget 13 h per week for this class.
+and a lot of this time
+is taken by doing the lab assignments. So your time in this class, you sit into a lecture that's 2 h per week. You review your notes, you understand? You do some studying. That's 1 or 2 HA week. You do the homework assignment which can take one or 2 HA week. You prepare for class, and then you do the lab assignments the lab assignments can take between 20 to 30 h
+per lab assignment. So some people could take 10 to 20 h per week
+doing the lab assignments. So what I really want you to do is make sure that you budget your time for this class that you have time in order to properly complete the lab assignments and understand it because it's not just doing the work. You have to understand
+what you're doing. Enough that oh, if I asked you some question about it on the exam, you'll be able to answer the question. So you really need to do to budget the time for this class in order to make sure that you're successful for it. And if you end up finishing your work sooner than the 13 HA week.
+Great! Now you have extra time on your schedule.
+What do you need to do now
+for the course. 1st thing, join slack. If you haven't yet joined slack, introduce yourself, give some small tidbits about yourself, introduce yourself to your colleagues. I suggest you post your socials and get in touch with your other colleagues in this class. One thing that you're going to notice.
+One thing you're going to notice about this class is that we are a very, very varied class. So we have.
+We have students who haven't worked before. We have students. We have some undergrad students. In this class. We have some people who are working, but wants to get into cybersecurity. We have people who have been cybersecurity 5 years or 10 years. We have some high level C-level people in this class. So we are all over
+a place, and
+please take some opportunity to get to know your classmates during this time in this class and your other classes. As well. It's it's very important to create a social network and network for yourself. Show your skills, help your colleagues, you know, help each other to do well in this class and your other classes as well.
+Make sure you subscribe to the calendar. You only have to do this once for all. Your Brightspace courses so on, Brightspace, go ahead and subscribe to your calendar, and any classes that uses a calendar which this class we do. You get on your iphone, or whatever gmail, the calendar of events of the class. So you have the class schedule, the assignment due date, exam, due date. All that kind of stuff will be on your calendar, and you should subscribe it once if you haven't on Brightspace, and you see it for all your classes.
+and then, lastly, make sure you set up seedlabs, which we'll go over in just a moment. Seedlabs is the virtual environment in which you'll be using to complete your lab assignments.
+Here's a picture of Slack. Go ahead, go to slack. Introduce yourself. This is what it looks like, please use the channels to ask for help. If you run into any problems. I always prefer
+that you use slack, and you ask the public channel so you could get a chance to help each other out and hopefully get a better, faster response. We have 4 teaching assistants for this class, so they can help as well. When you ask the ask your question in a public channel.
+Now, if you have some personal issue, personal problem, something that's not related to the course materials, of course, always send me a DM direct message or send me an email directly, so we can work out whatever issues that we're having
+things I won't do at the end of the class. I won't give you extra work to try to improve your grade. I either give everyone the same work, or I give no one the same work. So please make sure you watch your grade as you're going along
+the semester. I can't bump up your grade because you need it for a scholarship or any reason. I can't review any early assignments to find some points. You're expected to go through your assignments, and make sure there's no grading errors, or there's no mistakes or anything, and bring up to me in a prompt manner, like within 10 days or 2 weeks, and such.
+Here's the class schedule. A class follows a Monday schedule for the semester. We have altogether 14 classes
+here, and the course is divided into essentially 2 different parts.
+The 1st part, the 1st part is, how do attackers get into networks?
+How do attackers get into networks?
+So that's the 1st 7 lessons
+we'll talk about what an attacker does, how attackers find the networks, how attacker finds information, how they find vulnerabilities, how they hack into systems, and we'll talk about what they do after they get into networks. Then we'll talk about some basic cryptography. So that's the 1st half of the course.
+Generally we follow a Monday schedule
+on Monday, the 17.th It's President's day, and our class will actually be on Tuesday that week. This is the Nyu schedule. So if you have any other Monday classes, they follow the same schedule, and you have no class on Tuesday. This is the Nyu schedule, but overall it's a Monday schedule.
+and then after 7 classes. We're going to have a midterm exam. And a midterm exam. Would be on Saturday, March 15, th
+with a starting time between 10 Am. And 12 noon, so you can start your exam sometime between 10 Am. And 12 noon, and you have 2 h to take the exam.
+Quick question.
+Go ahead!
+For President's day being that there's no class that Monday. Does that mean the class will be moved to Tuesday. Is that what I'm looking at.
+Yes, that's correct. So President's day is on Monday, but the class will actually be on Tuesday, and this is the Nyu schedule. So if you have any other classes on Monday, it'll be on Tuesday.
+and there's no Tuesday at all that week. You just do the Monday class, and then, after your midterm exam. We have the second half of the course, and the second half of the course is, how do you protect against attackers?
+That's the second half of the course.
+So we'll talk about Tls, so we'll talk about message integrity. Pki, Tls, we'll spend 3 weeks on these topics. Best integrity. Pki Tls.
+Note that march 24th is spring break. So there's no class during that week.
+Then we talk about firewalls, no talking about firewalls.
+and then we'll talk about layer, 2 security wireless security
+in a review. So then there's 7 classes. And then, after that you have your final exam. That's on May 10, th Saturday, May 10.th Same thing, starting time between 10 Am. And 12 noon.
+Yeah.
+So this is a course schedule.
+Now, if I want to give show you.
+I'm going to show you, Brightspace, if you haven't seen that yet.
+So this is Brightspace. This is something that you should already be familiar with already.
+and this is a course website. There's some interesting things you want to look at. There's the calendar right here. More. Choose calendar
+and this calendar. You can choose which course to see. You can see all your courses essentially. If you go and subscribe to the calendar right here you subscribe to this link.
+This is your personal link over here. Once you subscribe to it, you can see
+all the class schedules for all your classes
+here, so for any of your courses that uses the class calendar. You see it, and then for the class to populate, you can see. Oh, here's the course. Here's the zoom link, and and so on, and when assignments do and such, so you just hit, subscribe over here, just do it once for your entire Brightspace career.
+and then otherwise you can take a look at the contents of the course. The contents, of course, is where I post everything. So everything is posted here but
+90% of the time.
+I also send out an email with what any changes I make here.
+This is syllabus. Make sure you take a look at that over here. It has all the information that we just talked about.
+also has the reading materials. What chapters you should be reading? At what time and such
+in case you need it. We have the link to slack.
+We have the link to gradescope as well, so slack is our chatting platform. You should be on it by now. Gradescope, you got an email and invite to it as well. Gradescope is where all the assignments are located. So any of your assignments for the course, due date, submission. Everything's on gradescope, one place to see everything.
+and then every week I post the
+lesson slides and some reading materials as well. So you can see these are slides. These are reading materials. Everything is posted here.
+You should also see any announcements. These are emailed out to you, but you can also look at them if you missed them for some reason as well, and that's the majority of what you need to look at in Brightspace
+also. Right now you should be setting up seedlabs right? So seed labs is a virtual environment in which you do your lab assignments on
+and getting set up depends on what type of computer you have.
+If you have a relatively new computer in the last 6 years.
+then you can run it on your computer. So I have a 2019 Imac, that's it's an Intel base. Imac
+and I run virtualbox perfectly fine.
+So if you have a computer that's relatively fast from the last couple of years.
+You can run Virtualbox and run the virtual machines on your computer here.
+And to do that, you follow the instructions on this page. So if your last couple of years use virtualbox, you follow the virtual machine manual, and you just follow the information here on how to get set up
+and make sure that you follow these step by step, and don't skip any steps, because if you skip some steps here.
+you can run into some weird issues that it's very, very hard to troubleshoot. So this is your goal for this week. Try to get this set up
+one tip.
+One tip is that when you're running a virtual machine.
+give it as much memory as you can handle. So if you have a lot of memory, give it more memory. Give it more CPU. Give it as much as your computer can handle. It'll make things much, much easier
+if you have a silicon, Mac. So that's a m. Series, Mac. m. 1, m. 2, m. 3, m. 4. You have to use the Vmware fusion version, or
+excuse me, they discontinued vmware fusion. You got to use vmware workstation
+for this. Choose vmware workstation, and you follow the instructions here on this slide, on this tab instead. That talks about what you need to do for Apple's silicon machines here.
+We tested them for all the lab assignments, and there's no issues for all the lab assignments. There's some caveats here, but they're relatively minor here.
+So if you use a M series, Mac, you can do vmware fusion.
+And then if if you can't run it on your computer, you can use the cloud version for it.
+The Cloud version currently is at no cost
+for the Cloud version. If you never use cloud before I would recommend digitalocean. Digitalocean
+is uses a monthly fee for the virtual machine. So you just pay one price per month, no matter how much of the virtual machine how much resources you use.
+And then, currently, there is a $200 credit from using the Github student developers program. So what you do is that if you need to use a cloud version
+which is preferable in a couple of ways like, for example, your computer's not fast enough, or you travel for work a lot, or
+or as such, use the cloud version, or you want to learn how to use cloud services. Take this opportunity to learn it.
+You get the Github Student Developers program. You get a $200 credit by signing up for the Github Student Developers program
+using your nyuedu email address.
+Oh, and you need a United States IP address. So if you're not in.
+if you're not in New York, use the Nyu VPN,
+get yourself a New York IP address
+and then sign up for the Github Developers program. Get the $200 credit
+and then you go and sign up for digitalocean here. And from digitalocean you get $200 credit. That's more than enough for this semester.
+So
+for this semester to run the seed labs on digitalocean costs $12 a month for the second tier virtual machine. And so it's $48 for the entire semester. So the $200 covers it
+perfectly fine there. So if you never use cloud before, use the Geo Ocean.
+If you do have some experience with Cloud.
+you can also use Microsoft. Azure azure is actually my preferred
+provider because I use it for work, use it for work all the time, so I'm very familiar with it. But Azure also gives a $100 credit for signing up with your Nyuedu email address. But you just sign up using a special link for the students or something like that. So you can google it and find it.
+And although Azure only gives a hundred, it does go a long way because
+it does go a long way, because
+you know, one of the things
+with using cloud services like azure
+is that you get billed by
+you get billed by the minute.
+And so you get a virtual machine. It's actually very cheap. You get a really powerful virtual machine.
+It's like 25 cents an hour
+right? And I use like azure to do testing. I need to test some some software. I want to run some malware to see what it does. I want to open a file. Oh, I just build a virtual machine in azure and just test it from there. So it's very cheap. But
+if you forget to turn it off
+that 25 cents an hour
+turns into $400 a month. So you have to be really, really careful. So if you're experienced that you know what you're doing? Yeah, I love azure because I get a really powerful machine, but I only use it for like 1 h, 2 HA day, and then, when I'm done, I turn it off, and it'll stop charging
+most of the fees there. So if you experience, you can use azure, use your nyu.edu email address sign up for azure. You get $100 per year.
+and that's way more than enough for this for this lab environment there.
+So your goal this week is to get your sea lab set up, and you can try one of these methods if you're a relatively new computer virtualbox. If you're on apple silicon, use vmware fusion. Someone just mentioned that vmware fusion is still available on
+for Mac. So get vmware fusion set up and try to start on the lab assignment, and then
+also use the cloud version.
+I think that you need a New York IP address, because when you're signing up. You have to tell them where you where you're going to school at, and you're saying that you're going to the
+New York University in New York. Then you need a New York IP address. So either you are around. So if you're in New Jersey, I think that's perfectly fine. But if you're in. For example, California, you might run into some problems. So I suggest, just use Nyu VPN. Or whatever VPN get. New York. IP address, then sign up for the Github students program. After you get approved, sign up for the digital ocean
+and take it from there.
+So overall, the cloud services are free.
+And in today's world. If you don't know how to use cloud services, you gotta learn
+how to do that.
+So you don't need to use the cloud version. You can use the other versions as well. So there's the
+on.
+what can I say on computer, on-prem version, virtualbox or vmware fusion? But if you don't have a computer that works for you. Use the cloud version there. So there's 3 options for you to choose from. I suggest trying the on computer 1 1st see if that works out. If it doesn't work out.
+use a cloud version.
+Personally, I prefer the cloud version because I can build. I can build the whole seed labs in like 5 to 10 min in the cloud.
+And that's it. You're done. It's faster than your own computer to do. So
+so that's your goal for this week. Make sure you get C lab set up.
+So one moment. Let me change my slides. Let me reshare my screen
+one moment, please
+alright. So if you have any questions, always just raise your hand, or to use the chat, and just speak up at any time
+a question about the exam. So the question open book open notes that hasn't been decided yet, so I'll get back to you shortly. In a couple of weeks about the modality of the exam. The exam would probably be proctored, but you get to bring some of your own notes, but I will let you know shortly about the about the exam
+question about the seed labs.
+When you use the cloud version, are you able to use a Gui GUI with it?
+Yes, if you use a cloud version, you can also use A, you can also use a Gui as well. You can use Vnc
+and log into the cloud version and just do everything from a gui as well.
+You can follow the instructions to get that set up.
+or, if you prefer, you can do it all with the command line, which
+many people do as well. It's much faster if you know how to use a command line. It's very, very powerful.
+Question common. Please go ahead.
+In terms of the exams or assignments.
+Do any of these require lockdown browser? And I asked, because I run Linux, and in the past. So that was an issue.
+That's a good question. So the question is, will Lockdown Browser be required for the exams?
+I don't have a final answer for you yet, but it's probably yes. So you'll probably need a computer that can run lockdown browser.
+lockdown browser is a tool that essentially takes over your computer and monitors your computer while you work there. It's not supported in Linux. And for those of you who are on Linux or a computer that doesn't support it, we can find another way to take the exam. That is probably like taking on a zoom call and such.
+But I don't have the final answer yet, so please give 2 or 3 weeks, and then I'll let you know specifically what details there are about the midterm and final exam. And how you have to take the exam
+a question, a question about the on computer version of the seed labs question, is
+you having some trouble with the shared folder with the on computer version of it.
+So yes, if using the on computer version of the of the C labs, there are.
+The shared folder is very fickle. So the shared folder is used to transfer files between the virtual machine and your computer. And of course this is
+very helpful and very necessary, because you want a way to easily transfer files back and forth.
+But what I found is that it's extremely fickle, right? It breaks all the time. Sometimes it doesn't work, and the only way that I really found is that 1st you have to recreate it every once in a while, like just delete the share folder and recreate it for it to work the other way is that you just forget about it
+and just use scp or some sort of Linux command line tool to transfer files back and forth between your computer and the virtual machine, which might actually be easier than trying to set up a shared folder. That's the only thing. It's fickle, that's the thing. It's not easy. A 3rd option is that you can install vmware tools and just do drag and drop between it as well. So those are your options. But the shared folder is just very, very fickle.
+and some people have suggested that when you do the seed labs, you can email yourself the thing actually, even even better, you can just submit it directly from the virtual machine. So on the virtual machine, you can go to gradescope and then submit your work directly into the portal from your virtual machine.
+So there's lots of options to do so. But yeah, the share folder is very frickle, basically to me. Every single time I have to use it I have to recreate it, and it was so frustrating that I just set up scp and just copied it, and it's so much easier just to do it by command line than to set up the share folder over and over again
+logistics.
+So
+please note that all assignments on grayscope.com. You should have received a link to it. I'll give a demo of what grayscope looks like in a few moments. But right now 2 assignments have been set up, homework number one and Lab number one. Homework number one is immersive labs, immersive labs is one of our training platforms. That we have
+immersive labs is one of the training platforms that gives semi-hands-on kind of work. They're easy.
+They're easy to do, and this is something that's very easy to do. You just do your work. Try to get the answer. You get it wrong. You can try again, and you can do it until you get 100% on it very straightforward. So that's homework number one. Homework number one is due at the end of the semester. So your final exams on May 10.th This is due like 2 days afterwards, but you have to keep doing it as you go along so you can't do it at the last minute.
+There are a lot of them. There are a lot of immersive labs, and you essentially have to do it on a weekly basis before we get to a next class. So, for example, next week, you have a couple to do for next week to get ready for the class.
+One important thing is that when you sign up for immersive labs, you have to do it through this link, this link that says Cybermillion, immersive labs online, you have to register using this link
+and use your nyuedu email address. So you do both of these at the same time in order for you to be able to see the lab assignments. If you don't register on this link, or you don't use your nyuedu email address, you're not going to be able to see the labs, and then you have to open a support ticket to get it fixed. So when you register for immersive labs. Make sure you do it through this link. And with your Nyuedu email address, some of you
+have already done some of the labs already as part of information, security, and privacy, ISP. If you took that already, and if you did those already, you don't have to redo them. So just if you did it once. That's perfectly fine.
+awesome.
+I released lab number one. Lab number one is the seed labs for Lab Number One. It's due on February 16.th That's 3 weeks from now.
+and
+there's a bonus for submitting it early. So if you submit it 5 days early, you get 5 percentage points added to the grade. So, for example, you get a 100 on the lab assignment, but you submit it 5 days early. You get 105 points, or you submit it 3 days early, you get 103 points just points added to the top.
+just for submitting it early.
+And then, if for some reason you need to submit it late. You get 1% per day for submitting them late. As well. So you get deduction. So you get 100, but you submit it 2 days late. You get 98 on it. So you have that option as well. If you can't get it done in time.
+And then for Lab one, there's like additional bonus for automating, some parts for Lab One. We'll go over that later in this class today. So you can automate some points of it. And you get extra 10% bonus points on it as well. So for Lab one, you can actually get 115%
+on Lab one.
+So it's those are very, very valuable points for this class. So.
+if possible, if your schedule allows it, start doing that one as soon as possible. Here.
+question on lab one, are resubmissions allowed, so on lab one.
+we lab one is manually graded.
+so that means, once you submit it. We have to manually go and grade each of these items, so that means that
+you cannot resubmit
+after we graded it. So you submit it. We wait till the assignment closes, and then we will grade it
+after that. So after we grade it, you can't resubmit it, because that means we have to recrade the whole thing over again. So lab one.
+you can resubmit until we grade it. But the bonus points that are calculated. So the 5% bonus points for submitting early is calculated, based on the date that you submit. So if you submit it by
+so 5 days before February 16th is February 11.th So you submitted by February 11, th
+and you don't touch it. After that you get 5 percentage points just for submitting it by
+February 11.th But then, if you touch it again and you resubmit it, then you will lose the bonus points for that.
+So yes, you can resubmit it, but we will only grade it one time, because it's a manually graded lab assignment.
+Some of the assignments are automatically graded.
+and for those that are automatically graded
+you can submit it an unlimited number of times. So, for example, homework number one is automatically graded so you can submit homework number one unlimited amount of times. Submit it. Get your grade. See what your grade is, redo it
+that's homework. One lab. One is manually graded, so
+we have to look at it, grade it manually. It takes a very long time, and then you get a grade for it.
+Oh.
+good question, that link and the slide. You say we have to click on that link. Where can we find that I cannot find it on Brightspace. This, yeah, this one.
+Where is this link? Because you said, we have to click on this link.
+That's a good. That's a good point.
+Let me let me see, let me jump ahead. Let me jump ahead. Give me one second.
+Is it on the Powerpoint? I think it's in the Powerpoint you shared.
+Yeah, from the grid scope. It does have the link.
+But the great scope go to the website. Immersive labs, dot online. It didn't have that cyber meeting in the beginning
+that should not make difference.
+Okay, let me jump ahead and share my screen. One moment.
+Let me reshare my screen.
+hey? So we have homework number one on gradescope. So this is gradescope, and on homework number one.
+you would see a number of links here.
+So this is homework number one on the top. It gives instructions on how to register for immersive labs. So you can click on this link over here.
+And when you click on this link over here.
+it goes to cybermillion dot immersive Labs online register and the code cybermillion should already be here
+when you register for it. So you click the link from the assignment.
+and it should already have it. And then on your email address, you have to make sure that you use your nyuedu email address when you're signing up.
+and that you have to call cybermillion.
+And you have this cybermillion immersive labs online.
+So if you use the link.
+that is, if you use the link that is here.
+It should populate this with all this information over here.
+Question, comment. Go ahead.
+Hey? Professor!
+So. Yeah. So in my last semester I did the immersive lab. So, and in the break I also did few more labs over there, because I see that there's the opportunity to go through on based on this lab. Right? So is there any problem. If I did some few more few more, a few more labs and submitted over there.
+I mean.
+No problem, no please.
+Problem right.
+Oh, I think it's great.
+Oh, okay, thank you.
+Wonderful.
+and there's a handful that you already did in ISP. And so you don't have to redo those you have to know about it. But you don't have to redo it.
+Question comment. Go ahead.
+I had a quick question. So on homework one we see like a whole list of lessons. Do we have to finish each lesson before.
+like
+the next lecture, for instance, or like, How does homework one kind of articulate? Because I see like 9 lessons? And I kind of want to understand.
+That's a really good point. Thank you for asking that. So the question is, are you expected to do the assignments before class? Yes, to
+to ensure you enhance your learning as much as possible. You should be reading the reading materials. You should be reading the book, and you should be doing the immersive labs before the class. Now.
+they're very simple, like for these access control. It says 15 min, but you can. Some of you can do it in 5 min here.
+and then next in next week we have lesson 2. You should try to get these things done before we get to lesson 2
+there, or at least start on them to make sure that you understand where we're at question. Comment. Go ahead.
+Yeah, Hello, Professor. So in the last semester, I think I also completed few of the labs from the
+so site.
+And that time I I did use the same Nyu Id, and the password and everything, so I can still use the same one. Right? Do I need to register again, or I can.
+No.
+Okay, okay, fine.
+You should, you should be able to do it. So
+the the way the sign up thing works is kind of sucky, because if if for some reason you signed up without the cybermillion, you may not see the lab assignments. Okay, okay, so what what you do is you go here and you go to lab assignments. So let's say you open them up, and then
+you open them up, and if you can see the lab assignment you can go ahead and go do this lab assignment.
+If for some reason
+you can't see the lab assignment, it probably means that you're not in the Cybermillion program for Nyu. And what you need to do from that is you open a support ticket. It's very easy somewhere on the website. And just say, look, I can't see this lab I'm with Nyu. I need to sign up for cybermillion, and then they'll get it fixed in a short time. There.
+Okay. Thank you.
+So the yeah. So the big thing is, if you sign up without the Cybermillion code, some some of the labs you can't see, and you can fix that with a support ticket.
+And so when you do the assignment and excuse excuse, what's on the left on the left is the code. We use to write this. So when you do the assignment here, you see the right side, and you do the assignment. You can like click on the link, like domain name system.
+And you get to this page.
+What you need to do here is that you can just go to the lab assignment, for example, here, and then you can complete the work.
+That's part of the lab, and some of these are very simple. Some of these are hands-on. So let's say, let's look at this one. Intro to wireshark.
+This one's a little more in depth where you have to answer some questions here, and you can go to a desktop.
+and when you click on this, it's starting a virtual machine in the background.
+and you can just do some assignments.
+You do your assignment by opening this file and then following the instructions on the left side on how to do it, and then you answer the questions and and so on. So they're very straightforward. There's no penalty for getting it wrong. It's it's pretty interesting there, and it gives some really, really good fundamentals
+here.
+And then, once you're done with this.
+you go to your profile and you download your activity report.
+and once you do your activity, report
+alright one moment while I change my screens.
+One moment I'm changing my screens.
+I can't see what you see. So my screen is different from yours. But once you're done with doing the immersive labs. You go to the immersive lab submissions and you submit your activity. Dash, report, dot Pdf, file
+onto it, and then you can see
+you can see the grader will grade your file and then show you what score you got immediately, so you can see it relatively quickly, and then understand what score you get, then you can submit it again.
+As well.
+Let me go ahead and reshare my screen.
+So for all your assignments, you can go to gradescope.com, and then you can see the list of your assignments that you have open at that time.
+I want to talk a little bit about cybersecurity.
+And I want to talk about network security.
+So what is network security and what is cybersecurity?
+What is cybersecurity? And why is it different from
+like any other course that you've taken
+at Nyu. That's not cybersecurity related like databases.
+Some of database is one of the required courses in the cyber in the Cybersecurity master's program.
+It's a fairly important, and for database you get instructions on
+how to do something, and you got to do it like you get like part, you get requirements. So, for example.
+on the final exam for database, you get a set of instructions and you have to build a database out of it. So, for example, in a database you get, you shall make a database.
+You shall have a schema that does this.
+You shall have joins that. Do this you shall have statements that do this.
+you shall do this, you shall do that, and then you go and you implement all this stuff for the final exam, and then no, you do well, and you get an a
+and that's database.
+And that's essentially how database works. All the stuff that you learn in database.
+It's about how to implement something on a database
+like you learn how to make it efficient. You learn how to write good queries. You learn about filters and displays, and how to do these things, and on exam you get, I'll do this. Do this view. Do this.
+but then it's cyber.
+We don't ask the question like, How do you do this? Or How do you do that?
+We asked a question like, How do you not
+do something so like. If if this was a database security, course we'll go.
+How do you make the database to not review personal information
+like, how do you make the database not leak credit card numbers?
+Okay? And when you took a database course, or when you will take database, course they don't say.
+how do you protect your database from SQL. Injection attacks.
+They don't have these requirements on it. You don't learn about that in database course.
+and the reason for that is that
+now most of computer science courses is about
+positive requirements like how to do something.
+while in cybersecurity we always think about how to prevent something or look at edge cases like
+when we make requirements like cyber people. When we make requirements, we go. Oh, that database make sure it doesn't leak information. Make sure you can hack into it. Make sure you don't store sensitive information. Make sure that the Admin password has a complex password, like most of the requirements that are security related. They are
+negative requirements, or, in other words, you shall not do something.
+and that gets like to be very difficult when you say, Oh, your database! It shall not leak unauthorized information. It should not allow unauthorized users to access it.
+and that's hard, because, like, when you get a requirement like on your database. Final exam, they say, write a joint statement that does this.
+Okay, I know how to do that, or I know how to start to do that. But then, like in the security course you say.
+ensure this database does not leak credit card information.
+and you go. Wait a minute.
+What do I do? What? What statement do I write to make sure it doesn't do that
+so suddenly it becomes much, much harder
+to figure out how to protect the system. When you had to say, You shall not do this or you shall not do that.
+And that's 1 of the ways that cybersecurity and network security is different from other computer science disciplines, because what we need to do is always think about
+what undesired behaviors we need to be thinking about what things that should not be done, what things, what potential threats that can occur that we need to be prepared for.
+So we have to have a different mindset. We have to think a little differently, like, what is the system designed to do? What is it normally supposed to do? And then
+how can these normal operations be exploited?
+We think about what vulnerabilities are in the system. How can we protect the system from undesired behavior like undesired behavior, would be, including unauthorized people trying to access
+the database.
+And then what is the cost for defending the system like? If, if trying to stop a sequel injection attack would cost a million dollars.
+Is it worth? In order to do so.
+we have a comment from the chat. The comment says, I think that the key differences in scope. We can see that cyber as the overarching discipline that includes network security as one of its components.
+Yeah, that's correct. From my experience, I think cybersecurity has protected entire house, including contents, residents, and access points, while network security is specifically about securing the doors, windows, passages into and within the house. Yes, that's absolutely a very good statement there.
+So network security is in one way trying to protect
+the accesses into and outside of the network.
+And that is a great definition.
+Today, accesses are getting very, very challenging
+to to do like like, for example, like network security, right?
+Someone's working from home.
+They are VPN into their work environment from home teleworking, like many of us right now today.
+Then, the attacker goes and hacks the home computer
+or an IoT device inside their home and then jumps over to the work computer from there
+and then from there the corporate network.
+Did I just make that up?
+Or is that a true story?
+Yeah, this actually happened multiple times, this exact thing happened.
+So now.
+now, corporations or offices need to protect themselves from telecommuters, teleworkers, home computer and their home network to ensure that their corporate environment doesn't get hacked
+through the employee's laptop. So network security has becoming more and more complex as the way that we do work is becoming more complex as well.
+And the other thing of of more complexity is that when you get systems
+and multiple systems together, you get more vulnerabilities than otherwise. So when you have a system of systems like you have this database, you have that database. You have this control system, and you put them together on the network suddenly. You have more vulnerabilities than if there were by themselves.
+Let's take a very simple view. Here we have a diagram of a user accessing a database. So this user here, let's say he's an admin or something. I don't know whatever. And he's accessing the database, he or she's accessing the database, using a username and password and uses the username password to log into the database. Right? Very simple view on password authentication.
+Oh, so we're starting our weekly exercises right now. So we're going to do our 1st exercise in just a moment.
+But first, st right now, I want you to go to gradescope
+log into periscope. You should have gotten the link in your email
+and then log into gravescope. And one of the assignments there should be called the Week number One.
+a bonus exercise.
+If someone can confirm that, you see that that'd be great.
+So log into grayscope.
+Yeah, I can.
+Hey!
+Yeah, I can see that.
+Thank you so much.
+And one of them is the week number one.
+Most of this.
+Yeah, if you haven't gotten there yet, just take a notepad, and and just write down your answers, and then make sure you submit it
+before 2 PM. The next week. So our next class will be on February 3, rd so submit it by 2 Pm.
+Next week.
+and so I get a chance to look at it before class there. So it's due at 2 PM. Next week.
+So the question, one
+answer the following question for question, one. So for question one, exercise number one, the 1st question
+I want you to answer this question. There.
+The question is, suppose you have a database with a password.
+What are some ways to hack into the account?
+That is, how would you forgot the username and password?
+So I'm gonna set a timer here for 2 min and we'll let you think about it for 2 min, and then afterwards we can discuss it together. So I'm setting a timer here for 2 min.
+Let's see.
+Still working on my timer
+one moment while I set up a timer.
+I can't get the timer to work, so let's just start a timer
+ourselves and start looking trying to answer this question, and then in 2 min
+I want to hear some of your answers. If you want to share it. So let's start. Give 2 min and answer this question.
+Okay, I got the timer to work, so I set it to one and a half minutes. Here, you should see the timer on the screen.
+One more minute
+right now. What you should be doing is exercise one question, one on the weekly bonus exercise on gradescope.
+And you're trying to answer this question here on your screen, and I'm giving you another 30 seconds in class time to answer the question.
+Once you answer the question, there's no way to submit or nothing. You just would. You stop typing pretty much.
+You can hit, save on the bottom, I believe.
+or some button that looks like, save or submit, or something like that.
+But if it submits without the other questions being answered, when that be an issue.
+Oh, the submit button! Think the submit button is a save button. Actually.
+I'm not sure where it says on the bottom, because I don't see it.
+Or I just hit. Submit without answering other questions.
+Yeah, hit, submit, and then you should be able to open up again.
+Someone says that there's a save button there as well save or submit. It doesn't matter. Once you submit or save it.
+If it closes, you can open up again and then continue working on it. So it's really just a save button.
+Okay? So now I want to hear some of your answers. So these bonus exercises there's no right or wrong answers. So when I look at these, I'm not grading these bonus exercises for correctness, I'm grading it for completeness. So in order to get credit for the bonus exercise, you need to complete all the exercise numbers. So every single one, I think there's 4 on that page, so I had to complete all of them
+for this week.
+But
+I don't grade it on correctness. So if you don't get the answer correct. That's perfectly fine. As long as you made an effort to write something on the thing, then you get credit for it.
+So I want to hear some of your answers here one moment while I share my screen.
+So I want to hear some of your answers here like. So let's see, I'm gonna go through
+the chat bottom up. So I got key logging.
+Yeah. Key logging key logging is a great thing. So key logging is looking at what the user types. So this is trying to say that.
+So we're saying that somehow the attacker got access to this computer.
+and the attacker is now installing some malware on this computer to log the username password here. So he's doing a key logger.
+The actually let me go back up.
+Where are we? He says, brute force, right? What is brute force? Brute force is just trying out different passwords
+until you get the answers. So brute forces works when they have some simple password, like the password, is like password or password, 1, 2, 3. You can just brute force and try to get the answer by just guessing password. Then there's the default password check.
+So that is checking whether the database is using a default password, or such like. Some databases oracle, for example, has default passwords, and if someone goes and installs a database without changing the passwords doing the installation, then the database will come with
+default, passwords and default passwords are all over the place like routers software. This is why you can never install software. IoT devices, whatever. They also often have default passwords, and these default passwords are available and you can search them up online so you can see whether, like the default password was configured.
+We can do SQL map.
+SQL. Map is a tool. It's used to kind of like SQL injection, but it uses to extra information from the database. So SQL. Map is a tool for
+relatively unsecured databases to try to steal and get information from the database.
+We can try credential stuffing you ever heard of this term.
+Credential stuffing.
+credential stuffing is when you steal the user's password from some other website
+and see if they reuse the password. So, for example, let's say that the admin is John DOE. What they do is that they go online and search for
+passwords online and see if John DOE has any passwords that are found like this information, you can look up yourself from the website. Have I been pawned, for example, and they look up passwords from John DOE, and then they use the same passwords and see whether they use the password for this database.
+What else we have?
+We have John the Ripper, password Cracker. So John the Ripper is a password cracker.
+And what John the Ripper does is that the attacker somehow is able to capture the information between the user and the database, and from there, once it's captured. It can try to break the hash or break the method they use to send the password there. John the Ripper supports lots of different protocols, and you can try to break the password. From there we can do sniffing.
+What is sniffing, sniffing, is looking at the network traffic and seeing if the password or other information is there? Maybe they can find a username or something like that. There
+we can do. SQL injection.
+SQL. Injection is a broad set of techniques that sees if there's any flaws in the database that allows some information that can
+be exfiltuated from it. This usually is relationship to a website, and such, where the website is processing some SQL. Statements, but they don't have it secured properly. So they're able to like change an intended SQL. Command to an unintended command that takes more information than
+than the developer intended it to be.
+Then we have phishing attacks.
+So what's phishing attacks? It's trying to have the user reveal the information. In some other way. A very common phishing attack is, send the user an email and saying, Oh, your password expired. Please click this link and update your password. And the user clicks the link and then reviews the password. Right? That's phishing. Or that's 1 type of phishing.
+What else do we have?
+We have a lot of good responses here. Are there any any major ones I missed so far here?
+Phishing attack? I would say. Phishing attack is the same as social engineering.
+Anyone, said I. Anyone think I really missed one here. Token spoofing, also called replay attack.
+token, spoofing or replay attack is trying to find a cookie or some sort of token used for authentication. Like, for example, you log into a website and you get a cookie after you log in. If that cookie is stolen, someone can try to log into the website, as you.
+for example, or the tokens, or a database, or something like that. It's a very similar concept there.
+Dictionary attack, rainbow tables.
+dictionary attacks, and rainbow tables are different ways. In order to try to use very common passwords to try to log into the database. So if the user is using some common password like password 1, 2, 3, it's in the dictionary, or it can be attacked by using a rainbow table.
+So here something as simple.
+something as simple as trying to log into the database or trying to hack into a database
+becomes very complex. So now, suddenly.
+if I give you the requirement like your requirement.
+stop unauthorized users from accessing the database.
+You have to do all of these things here, this 10 different things or more.
+in order to stop an attacker from getting in
+so trying to say, Oh, secure the database becomes something that is, that is extremely difficult here. There's more than one step
+that needs to be done.
+And the reason for that is that overall
+when you have multiple systems together.
+the system becomes more complex. So in this example, this one example, here the attacker does a password reset, and the password reset asks for their high school information what high school they went to in order to reset the password. So Attacker went to social media
+and was able to find the high school that the Admin went to.
+and was able to use that to reset the password along with, like the color of the car or the 1st elementary school they went to, or whatever it is that they use for the password reset. So those things are very dangerous, of course.
+so Tech was able to reset the password.
+and I didn't see all the responses. But did anyone think of this one?
+So far I use by attacking the password reset our procedure.
+So you see that there are lots of ways that you could potentially hack into the system.
+And in order to secure the system, there's so many things that needs to be done.
+So, of course, welcome to cybersecurity. You can see that this job is
+challenging, and why it's so much fun, because you know your
+what you do on a day-to-day basis.
+essentially, is essentially trying to figure out what are the vulnerabilities here that
+we may not have realized, especially when you go ahead and have a system together like that.
+You have a system, a system that gets complicated. And then you have further vulnerabilities because of that.
+Now I want to switch gears a little bit.
+and I want to take a moment to spend the rest of our time today to talk about
+lab assignment one here.
+So let me change slides and let me share. Reshare my screen.
+And I want to talk about Lab one
+in order to to get us all started on it. I may not finish today, but we'll see what we get to for today.
+So this slide on lab one concepts guide. You can download it from Brightspace. Or I think I emailed it out today as well.
+Lab, one has 4 parts, and you have to do 4 things.
+For lab one. And here's the 4 here. The 4 things you need to do.
+The 1st thing is a sync flood attack.
+a sync flood attack is a type of Ddos attack
+that can take down a server.
+So your 1st task is that you're going to do a Ddos attack or specifically a syncflude attack.
+And you use that, and you would take down the server and show how the server
+cannot work anymore. After you do a Sync flood attack task 2 is a Tcp reset attack
+and a Tcp reset attack is a Tcp reset attack is an attack
+used for breaking Tcp connections. So you have a connection. It just breaks the connection.
+Task 3 is Tcp session, hijacking Tcp session. Hijacking is taking over a Tcp connection and then injecting data to it. That means you're changing data onto the stream
+and then task 4 is reverse. Shell. Reverse shell is when you
+hack into the system and tell it to connect back to your own system so you can give it further commands.
+One moment.
+one moment, while I share my screen.
+So someone just reminded me that there's once
+lied I did not go through. Give me one moment.
+So there's 1 slide that I did not go through in this class. That's the prerequisites for this class.
+and how to be successful in this class.
+So for network security.
+there are some prerequisites for this class in order for you to be successful. Essentially, there's 4 things that you need to know. Well in this class. The 1st thing is that you need to know some sort of networking already, preferably, that you've taken the computer networking course at Nyu. Either the graduate version or the undergraduate version. If you took that one.
+the grad version and undergraduate version are very similar to each other. So if you took the undergrad version
+of the course and you remember some of the materials.
+then then you're all good with that. So you need networking.
+The second thing is that
+you need to know some sort of cybersecurity already. So network security is not intended to be your 1st cybersecurity course. That's ISP. So you are expected to have taken ISP or have some sort of cybersecurity knowledge. We'll be talking about cybersecurity concepts, and we will
+may not be defining every single concept. So we go over some of these things fairly quickly, like, for example, from ISP, you should learn about password attacks already. So when we talked about those password attacks, you should be familiar with it. So this should not be your 1st cybersecurity course at Nyu.
+The 3rd thing is that you need to know some sort of python programming or any programming. So the lab assignments you need to do some programming.
+Not that much. You'll be writing between like 10 or 20 lines. So it's not that much, python, but
+I don't want you to be stuck on like syntax average for python.
+Some of you have worked on python before, and python, I feel, has one of the most annoying syntax structures there is, it's by spaces. So it's very frustrating if you never experienced it before. But if you have programmed any
+any object-oriented like programming language, C. Java Javascript, c plus plus.
+then you should be fine. If I done. Perl.
+Php, you've done any of that, you wouldn't have not a problem with python.
+and then, lastly, you should be familiar with Linux like you should know enough about Linux to create a file, open a file, change directories and do some basic troubleshooting, some basic commands and such.
+So these are the 4 things you need to know
+to be successful in this class. So again, that is.
+you need to know networking. You need to have some type of experience, Linux, and you need to know programming.
+If you have these things, then you're set up to be successful in this class. Now wait, I know. What you're thinking is that
+you may not have all 4 of these things
+you may not have, and that's that's perfectly fine as well.
+What that means is that you have to spend some additional time, you know, getting ready for the course on areas where you have some deficiency. And so, for example, let's say, let's say you haven't taken computer networking yet, or taking any networking course.
+that means that when we get to the parts where we talk about networking like we might be talking about
+Arp, Dhcp. Layer, 2 protocols, and when we get to those portion.
+if you're not familiar with it. You have to know that you need to spend extra time
+working on it.
+Or if you haven't programmed before, you haven't programmed recently. Then you have to know that when you're doing python, you need to budget extra time
+to
+work through learning how to do python at the same time. So that's an extra maybe 10 h, 2030 h extra to get yourself situated in python. If you haven't really programmed before, so you can still be successful in this class, but
+you have to know that you need some extra time to prepare for it.
+and the best way to do it. I think if you, if you're not sure.
+just go ahead and do that one right? So the add drop date is next Monday, February 3.rd So you have
+8 days to figure out. And I suggest that we go ahead and just do lab one
+and see. Just get a feeling. How far are you able to do it. Do you feel comfortable with these concepts? Are you feeling comfortable, writing a few lines of code and testing it, using wireshark? Whether you're comfortable with these things, and whether you can get by. And so that's the best way, I see. And if for some reason you don't feel comfortable with it, then you can decide. Maybe you go back and you take the ISP operating system.
+We don't have an intro to programming course, but
+many of our courses already have programming. So it starts to build up the skill level
+in order to get to this class like
+operating system, database and ISP require tiny tiny bits.
+amount of programming for each of those courses. So it gets you built up level for this class.
+And then, if you still have any questions about whether you believe you're suitable for this class. Just reach out to me and let me know your thoughts and concern.
+Lab one is due 3 weeks from now. So that's February 16, th approximately. And lab one varies right? So lab one will take you between
+10 to 40 h of work, and that depends on your level of comfort. So if you don't have all the prerequisites, you might suddenly get stuck on some syntax error when you're programming, or if you never use wireshark before. You might need a extra learning curve to learn how to use wireshark
+as an example. So just see what you get stuck on something like really long get stuck on something. But for most people it takes between 10 to 40 h
+for this.
+and our tas are getting organized, and so they'll be having office hours starting this week hopefully, but if not next week, and announced the schedule to you shortly in by slack and by email.
+So back to Lab one back to lab one. So lab, one has 4 tasks.
+and there's some bonus parts of it.
+The 1st task is a sync flood attack.
+So what is a sync flood attack?
+And so before we talk about what a sync flood attack is, I want to talk about
+the Tcp three-way handshake. One moment. Let me share my screen. One moment.
+Let me share my screen, and I want to talk about the Tcp 3 way handshake.
+And do you remember this from your networking class, the Tcp three-way handshake.
+So let's talk about it here. The Tcp 3 V handshake
+is when 2 computers want to talk to each other. They start a handshake before in order to start the communication, and this handshake is called the Tcp. Three-way handshake, because there are 3 parts to this handshake
+here, and the handshake works like this.
+The hand should work like this computer. A, on the left side starts a conversation and sends the Tcp sync packet.
+And does anyone remember what the next step is
+on a Tcp 3 way handshake? It's the Sync act, so we call it. Tcp Sync act message.
+And then what's the 3rd message?
+It's Sync act. So it's just a Tcp Ack.
+and sometimes you call this the Sync act Ack, but it's just an act.
+So this is a Tcp three-way handshake, and whenever a connection starts it has this Tcp three-way handshake. It's always this Tcp, three-way handshake.
+But deep down inside. Here's how it works like when the 1st computer sends a Tp Sync to this computer, it replies back with a Tcp sync.
+and but when it receives the sync message.
+it starts working in the background like when when the host receives a Tcp sync packet.
+it will start opening sockets, allocating resources, CPU and memory
+to prepare for the connection. So it's already starting in the background
+in order to prepare for this connection. As soon as it gets a Tcp Sync packet. So it gets a Tcp sync packet. It replies back with a Sync act. But it starts allocating resources
+to it
+right off the back, because when it gets the Tcp act it's ready with the connection and starts a connection.
+But but here's where the Sync flood attack comes in. So let's say I take the same thing again.
+I take the same thing again. But then
+but then, what I do here instead is that this is now actually the attacker.
+and we call the Attacker Treaty for Intruder treaty. And what if the attacker sends not just one Tcp sync packet? The attacker sends
+a thousand Tcp Sync packets.
+What will happen then?
+Like if the attacker is sending thousands of Tcp Sync packets, then the target
+will be allowing resources times X. Number of times, like server.
+will allocate resources for each Sync.
+Tcp, sync. Received will soon run out of resources.
+And is this very hard to do.
+Is this something that's very difficult to do, do you think?
+No, no, it's very easy like, do you know the size of this Tcp sync packet? Do you know what size it is?
+Size of a Tcp sync packet?
+Anyone know it's guess the number in your head.
+Then I'm going to tell you. All right. Guess a number right. It's 40 Byte incise.
+So the IP header is 20 Byte IP. Hydro is 20 Byte, and
+Tcp. Header is 20 Byte, so it's 40 Byte in size. So you see that this is nothing. This is absolutely nothing
+in size. So this Tcp sync flood attacks are extremely easy to do. Tcp sync flood attacks
+are very easy to perform, and a normal computer computer has 40 sockets
+for the available sockets. And this varies by CPU and memory, but a normal computer like, for example, your home computer. If you ran a web server, it can only probably handle like 40 50 simultaneous connections. So it's not many. While a Tcp sync flood is 40 Byte in size. They can send millions of these per minute
+very easy to do so.
+A single attack is very easy to do. The computer will get clogged up and will have no more resources very quickly.
+That is task one that is task one. So the 1st thing that you do
+in Lab one is that you're going to send a sync flood attack and clog up this computer.
+And then from there you you will show how it's not working, and then
+submit your screenshot to show. Oh, you can't count it into the computer because it's completely clogged up with sync floods.
+So that's test one.
+And then so this is like task one, a, the 1st pass, and then your next task
+is to mitigate a sink flood attack.
+You mitigate a sync flood attack, using this thing called sync cookies.
+and we will not talk about exactly how simple keys work.
+But in this diagram shows an idea of how it works. What a sync cookie does
+Wilson cookie does is that doing a Tcp three-way handshake? You send a Tcp sync packet
+and the Tcp Sync packet has the initial sequence number A, so the Sync number number
+is some initial sequence number A, here.
+But then Host B.
+It'll send back a Sync Ack with
+a cookie inside its initial sequence. Number B, and then
+Host B. Is expecting a 3rd response back.
+And this 3rd response will be a ack message. This ack message will have the cookie
+in the Ag. Message
+over here. So Cookie is expected to come back to the host message. We'll talk more about that in another week when we get into this topic. But essentially the difference between here is that
+when Syncki protections are on.
+When the host be receives a Tcp sync, it does not allow it resources at that time.
+Instead, it sends a sync cookie.
+and it sends the single key back to a and if A was an attacker.
+the attacker will never send back the single key. But if the attacker
+excuse me. If this was not an attacker, and it's a normal connection.
+it will send back a sync cookie back to the host, and then the host, after it receives a sync cookie, then
+it will start opening its socket and open its resources, and so on. So when Host B. Only when Host B
+only when Host B receives the Sync cookie back.
+does it allocate a socket for the connection?
+So the
+so the host won't allocate resources
+until after it sends a single key back to Jose.
+and then host, A returns back the Sync cookie to Host B. This allows it so that when it's receiving a sync flood like this.
+It's not actually opening the sockets yet, and it protects itself from
+the attack. So it is exactly like a token exchange. So the attacker excuse me when the host sends a sync packet to Host BB. Kind of sends a token back to A, which we call a sync cookie, and then a
+replies back with the Sync cookie in the Tcp. 3rd step of the Tcp. 3. Handshake. If it returns back, it's probably a legitimate host and opens a socket. If it doesn't return it back.
+then it doesn't open the socket. Because, you see here, when the attacker is doing a sync flood attack.
+it doesn't really wait for the return packet just sends a lot of junk
+to it, hoping to take away its resources.
+So that's task one and the 2 parts of task. One is. First, st you send a single key and show it doesn't work.
+The computer doesn't say that. Why it doesn't work it just times out. So when you're doing this attack, and you're trying to demonstrate that the computer is not working, you try to turn it to it, and then it just times out. It just doesn't work.
+just doesn't work at all, and it has no ability to explain why it doesn't work.
+And then the second thing is, you turn on single keys, and then you do the attack.
+and you see that. Wait a minute. You do the attack, but you're still able to tell it to the computer.
+So that's task one
+pass 2 is a Tcp reset attack
+task 2 is a Tcp reset attack.
+A Tcp reset attack is a tag that breaks the connection
+between 2 hosts. So here in the example, you have 2 hosts, you have Alice.
+and you have Bob and Alice and Bob.
+they're talking to each other with talent. So Alice opened a townnet connection to Bob over here. So this is what you're going to do in a lab assignment. You're going to take Alice and Bob, and you can have Alice open a connection to Bob over here a talent connection.
+and then you're going to have the attacker, and that's that's also you.
+You're going to send a command over to Bob.
+and this command is going to break the connection.
+So Alice and Bob were trying to talk to each other.
+You go and just break the connection.
+From there
+you just break the connection.
+And how do you do this, you do this by sending a Tcp reset message
+over to Bob or to Alice.
+You send a Tcp reset message.
+and essentially you break the connection in between these 2 hosts.
+In order for this to work.
+we need to also get the correct sequence and or acknowledgement number
+in order to put it in your Tcp reset attack.
+So in this Tcp reset, we need to correct Sequence Act number, because, as Alice and Bob, as they're talking to each other, their sequence and act number are incrementing with each other. What you are doing is that
+you'll be sniffing this connection like with wireshark. You sniff this connection, and then
+you get the sequencer act number.
+Then you write a program
+for the attacker. You run it and you attack this connection and you break the connection up there.
+And that's task 2.
+This one
+is probably one of the biggest hurdles in in this lab assignment. Like, once you're able to get past lab task 2.
+The rest of the tasks are are fairly straightforward after this. So this is an important one. So you try to if you are trying to decide whether
+you want to stick with the class, or you want to go back and take your prerequisites.
+This is the task that you want to get to
+to see whether you can understand and be able to do the lab assignments here.
+This is probably the biggest hurdle you have. You have to know that you have to figure out what is the sequence or act number that you need to use
+in order to break this connection.
+And then, and then
+there's also a bonus section for this one. The bonus section is trying to automate this, so instead of doing it manually, so the 1st task to get the normal credit. You manually go figure out what the sequence and act number is, and then you write in hard, coded numbers in, and you
+and you do your attack.
+The extra credit part. You get 5% extra credit.
+If you automate the whole process.
+That means you write your program
+on the attacker and you sniff this network.
+You listen to a tenant connection.
+You read a tent connection and then you automatically go and break the connection.
+So it's like an auto pawn or auto breaking of the talent connection. You snip the network, you see it, and you go and break it there, and you do that, you get 5 extra bonus points so you can get
+altogether. You can get up to 115 points on the lab assignments.
+Question, comment. Go ahead.
+Hi, Professor. So
+for all these labs, as you mentioned at the beginning, that there are different ways. We can set up the environment, either using the Vm locally or using the cloud options like digital ocean versus azure. So any of these options we can use to complete this lab. And from there we can capture the screenshots and the script and then upload it here. Right? That's fine, right.
+That's correct. Yes, absolutely. Any method you use is the same.
+Okay, fine. Thank you very much.
+Next person question, comment.
+Could we reuse any reference from the textbook, or we must write the script in a different way.
+Well, the script is very straightforward here. So on great scope. Just for everyone's information, you get the skeleton code, and you get 90% of the code already. So really, the code for this one, you just need to know what values need to add in to it. So it's very straightforward. You don't need to rewrite the whole thing. Just use the sample code and fill in the blank on what you need to do.
+Okay. Thank you.
+Alright, so bonus exercise back to bonus exercise. We're going to bonus exercise number 2 right now.
+Bonus exercise number 2. Question 2.
+What happens when the Tcp reset
+is sent with the Wrong Sequence Act number to the target.
+So you're the attacker here.
+What if you send the wrong Tcp sequence or act number to the target.
+What will happen?
+What do you think?
+What do you think?
+Write your answer in exercise number 2 portion of the bonus exercise.
+We're running low on time. So I'm just gonna talk about it.
+It gets ignored.
+If you send a Tcp reset, number
+a packet with the wrong sequence of act number. It just gets ignored. Nothing will happen to it.
+We're running. We're nearing the end of the class right now.
+and let me ask you one more. One more question here for today. One more question
+I'm moving on to exercise number 3.
+Exercise number 3 is something you do at home for Exercise number 3. I would like you to join, Slack, and introduce yourself and give some details about yourself. Your experience in cyber, the classes you're taking. If you're hiring, looking for a position, fun, facts, socials, whether you have pets or not. And once you're done with that, mark it as done in question number 3 for exercise number 3.
+So when you finish exercise number 3, please go ahead and just mark it completed.
+Can someone remind me, is there exercise a or I don't have exercise a this week on the greatscope.
+It is there it is showing exercise, a something.
+Okay, so exercise A is your homework part of the bonus exercise. It's a small question. I don't remember what it is that I wrote down right now, but you have to do a small research and answer, Oh, excuse me, you have to do some small research on a news article on a recent hack, and I'd like you to give some short response on what you think about the hack and your thoughts about it. Some recent cybersecurity news on a recent hack, and that's exercise number a.
+So for the bonus exercise for this week, please make sure you do these 4 parts, and you get the bonus exercise.
+And then, lastly, there's the model points.
+all right. I did write it here then. Lastly.
+there's some model points. The model points. Is any questions you have about today.
+like from today. Do you have any questions about today's class? Please go ahead and write it down on the model points portion, and if you have any to-do lists for yourself for this class, write it down for yourself. So if you say Oh, I want to make sure I set up clan for this week. Make sure I get the book. Make sure I start to do this. I want you to write it down for this week as notes for yourself
+to prepare for before the next week.
+All right.
+Thank you very much for joining me on the class today. This is the end of our class today. So today we have went over part of Lesson One. We talked about Lab one part of Lab one next week. We'll continue our class. From where we begin. We're going to continue with Lesson number One. You were going to continue with Lab Number One and talking about it a little bit right now. What I want you to do for the rest of the week
+is that make sure. Take a look at homework number one, and get started on it to get an account and get started, just to make sure you know what you're doing. And then I want you to get C lab, set up and start doing Lab number one. So the 1st thing is, get C lab set up. But it's on your computer on the cloud version. Start on Lab one, look through the Pdf file and see if you start understanding and start working on Lab one and then finish the bonus exercise. That's due 2 Pm.
+Next Monday. Thank you very much.
+1st of, can I talk to you after everybody leaves?
+Okay.
+Absolutely so.
+Thank you very much for joining me on the class today, and I wish everyone a wonderful week. Thanks.

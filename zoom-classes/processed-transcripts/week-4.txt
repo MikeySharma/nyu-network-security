@@ -1,0 +1,1026 @@
+Hello! Welcome to Cs. 6,823 network security. My name is Professor Philip Mack. Today is Tuesday, February 18, th 2025. And this is week number 4 for network security. Today, we're covering lesson 2, part 2 of lesson 2.
+1st of all, some logistics.
+Currently, you have Lab one lab 2 and homework number one out lab one was due February 16.th That's on Sunday. However.
+if you haven't submitted it yet, please go ahead, you can still submit it late until February 26, th and you get a 1% deduction per day that you're late up to a 10% deduction. So, for example, if you submit it by February 26, th which is the last day, then you get 90% as your maximum grade right off the bat, so please submit it as soon as possible. Now, however, you have some sort of professional
+or personal or illness, please do let me know, or actually, specifically. If you have a personal or illness, please go ahead and form student advocacy, and they will inform me once they have validated your documentation for a professional reason. You can reach out to me directly.
+Also.
+lab 2 is out. Lab 2 was released a few days ago, and I'll go over it in just a few moments. Lab 2 is due on March second. That's 2 weeks from now. And again, you also have a 5% bonus for submitting it up to 5 days early, and a 10% deduction for submitting it 10 days late for Lab One. It will be graded probably the second week of March. It takes us about one week to grade it, and it will start grading it after the date. Submission, deadline.
+If office hours are a Geo.
+Is the office. Yes, we have office hours tonight with the with Anubath at 8 PM. Tonight. So tonight, if you have any questions about Lab one or Lab 2. Please go ahead and attend office hours.
+Lab 2.
+So
+Lab 2 was recently released, and Lab 2 is, I think, you could think of as a continuation as of Lab one.
+By the way, by the way, the author of the book, Professor Wei Ling du
+has Professor Kevin do, has has a book.
+and he has a number of Udemy courses as well, and the Udemy courses go through the materials. Very, very well. If you'd like a link to it to Udemy. Course, it's on the lab website, so you can find the lab assignments. Excuse me, you can find him. Go over these labs and give some hints about the labs.
+Now, the labs don't have the full answer to them. So the labs give as much information as possible without actually doing the labs. It's somewhat of the way that we teach this course. Maybe it goes into a tiny bit more detail. But the answers aren't there. You still need to do a lab yourself, but you get information on what you need to do, how to get set up and such.
+So that's for all the labs. Now for Lab 2.
+It's a lab on Tcp attacks, and you can think of it as a continuation of Lab one. So if you haven't finished lab one yet. Please go ahead and do that first, st and then lab 2. You have 4 tasks to do
+for Lab 2 for task one, you'll be using
+a sniff function to learn how to capture packets
+and also learn how to use the filter which is to keep yourself from capturing packets that you don't need.
+So question one task, one really is.
+can you use the sniff function? Are you able to properly use the sniff function in order to
+capture packets.
+This one is fairly straightforward. You should be able to get it without a problem. If you're having some trouble, just Google it. And there'll be lots of examples online for you to try out.
+So question one should not be a problem, but really is to get yourself set up and make sure that you are able to complete the lab.
+Question. 2 is to spoof an Icmp echo.
+What quest packets an Icmp request bracket
+an Icmp request packet is your simple ping. You send the echo request.
+and then you can go reply.
+So that's a normal ping. Let's go in a little bit more detail here.
+Icmp echo, request and reply so normally, and let me get some drawings over here.
+So normally, let's say you have some sort of server here, and let's call this server. I don't know amazon.com.
+or whatever. Actually, since we're using Google, let's use Google.
+and how a normal ping request works is that let's say you the user over here, you will send an a ping request. This ping is actually a
+Icmp echo request.
+So you send a ping packet at go request, and then
+Google will respond back with an echo reply.
+So it'll return back with a Icmp echo reply.
+and this would be a normal icmp echo, request again. A normal icmp echo. Reply.
+Now for lab one, you'll be using Scapi to create these icmp echo requests.
+which is which is very straightforward to do. But but
+on a lab assignment, instead of you pinging Google.
+you're gonna fake it. So that Google is pinging you. So here's how it works. So on the top over here is how it normally works on the bottom.
+You will be having a a user here.
+and what you would do as an attacker is that you will send an Icmp echo request
+and you'll be sending this Icmp echo request
+to Google, IC from Google. So you're sending this Icmp echo request
+you the attacker, you're sending it to user one, that is, you're telling the user one that Google
+is sending the ping to the user instead.
+And then the user will go and reply back to Google with an Icmp echo reply.
+So you'll be faking a Icmp echo request from Google to the user.
+And then the user will reply, back with the echo, reply, back to Google.
+so that is your task number 2. So this is lab 2 task number 2.
+Now it's fairly straightforward. And by this time what you need to do is you learn how to write.
+I pack it to the network, which is something that you should already know how to do for that from that one already. So it should be straightforward
+on what you need to do here.
+So that's task 2 task 3.
+You'd be writing an Icmp Icmp tracefront program.
+Do you remember what a trademark pool game is lab to task dream a traceroute program.
+Please go ahead.
+Hi, Professor, a couple of students on us. We joined the wrong zoom, because the one on slack was different on Brightspace.
+So we I just joined right now. I was wondering if you could
+kind of just rephrase what you mentioned. Sorry about that. We just joined.
+The I think the link that you provided and the one on Brightspace was different. So oh.
+sorry for that, me know. So which one is the one that's not correct.
+Brightspace, or not, sorry not.
+It's.
+Slack! Sorry.
+The one on slack is not correct. Oh.
+Nice.
+Seen.
+It put us in a different room.
+Oh, okay.
+okay. So for those of you who have for those of you who are watching recording, we had a little error with the zoom link here. So what I'm gonna do here is I'm gonna repeat some of the things I mentioned about Lab 2, and then we're gonna move on for there, for
+so for those of you who already watched the 1st few minutes of the video, please bear with me for a few minutes here again.
+So we started discussion today with Lab 2. So lab 2,
+it's a continuation of lab, one kind of like a continuity of lab One and Lab 2 has 4 different tasks here.
+Task one for Lab 2 is to use sniffing in order to capture packets.
+This is very similar to the extra credit in lab one. So if you did the extra credit in Lab one
+task, one for Lab 2 should be very simple. So
+task one is to use a sniff function on Scapi in order to capture traffic on the network. And you'd be asked to capture different types of traffic on the network.
+This uses the Bpf. Filter, the same type of filter as used on on Wireshark.
+So I think many of you should already have experience using wireshark already, and if you want to write a filter for Scapi, you use the same filter as wireshark. So if you're not sure whether something is working or not.
+test it in wireshark. Right? Once you get that working, the same filter will work in
+Scapi. So that's task one task one is, can you capture some traffic. Can you use a filter in order to properly capture the traffic that only the traffic that you need
+task 2 task 2 is to spoof an Icmp echo, request packet an Icmp echo request. Packet is a packet in which you send Icmp ping, and you get an Icmp reply. So on the top half of the screen. Here you get an example where
+you send a Icmp echo request to Google. And let's say, this is the Google Dns server, which is
+8 dot 8 dot 8 dot 8,
+and you send an Icmp echo request to Google, you get an Icmp echo reply from Google normal.
+Now for task 2, you'll be spoofing an Icmp echo request from Google.
+So you're pretending to be Google.
+and you're going to send an Icmp echo request from Google to the user.
+So here's how this works.
+You, the attacker.
+or what we call a checker, 2D. Will spoof an Icmp echo request packet and send it to user one.
+And you're pretending to be the Google Dns server 8 dot 8 dot 8 dot 8.
+And then the user one reply, back with the Icmp echo reply back to Google
+because it thinks that Google sent the packet.
+So that's Task 2 task 2 is you're sending an Icnp echo request. But you're pretending that you're sending from someplace, else someplace impossible to come from Google. Dns, Google Dns server should not be sending you. Icmp echo request.
+The next task is test 3
+is you have to write your own tracerop program.
+So a trace file program.
+We kind of did it last week. A trace route program is where you take. You have a beginning
+and you have a destination, and you have a number of hops on the Internet
+in order to get from destination A to destination. B,
+so let's say over here on the right side. That's the Google Dns server.
+and that's on IP, 8 dot 8 dot 8 dot. 8,
+and on the left side is your seat machine, and for this task
+what you need to do is to find a trace route between
+your machine and Google Dns server.
+And in order to do this you will send out a number of Icmp echo requests with a Ttl
+that's limited. Starting from 0 from one and 2, and so on.
+So, for example, you send out one packet here, the 1st packet that you sent out packet one
+you do? An Icmp ping with Ttl. Equals one.
+and with the Ttl. Equals one your ping.
+We'll stop over here as the 1st hop, and then I'll send back a reply back to your host.
+You're host will then
+read this information and capture this. So in order to do this properly, you need to send this ping using a send send function.
+Then, after you send it, you have to sniff the traffic back because you're expecting an Icmp echo. Request Echo, reply back from
+from some hostile Internet, and you try to sniff this information back, and then afterwards
+just do again. You do an Icmp ping with Tt ttl. 2,
+and then from here it should go to the second hub.
+It'll end at the second half.
+and you should, or sometimes you might, get something back from the second hub, and so on.
+And then you continue doing this. So on, on and on, and on.
+until you reach the Google Dns server.
+depending on where you live. It can take between 10 to 30 hops
+depending on where you are. Maybe most of you should probably get something like between 10 to 15 hops.
+But you would be getting some rep. Used to be sending Icmp. Pings.
+and you'd be getting some replies. You have to sniff that reply and then capture that data and then print out on the screen.
+So that is a tracerop program.
+There is one major thing that you need to be aware of. With this task
+some skeleton code is given
+for the program. The skeleton code does not fully work. In all cases the skeleton code is missing one key aspect in which you need to figure out on your own.
+The one key aspect is, if you don't get a reply back.
+the program doesn't handle it correctly. So let's say, for example.
+on the 4th hop you send an Icmp echo request to the 4th hop, and then
+this node decides not to send anything back
+decides not to send anything back.
+And then
+it. The program doesn't work properly. So if this happens, you have to have your program be able to handle, not receiving any
+replies back.
+So for task 3, 3. The sample code does not handle, but does not handle.
+When there is no reply properly.
+Program will hang.
+And you need to be able to fix this problem in order for the program to work properly.
+So that's task 3.
+But that's 4
+to task 4.
+We want you to write your program.
+That Spoofs Echo replies.
+So your program will be spoofing an echo reply.
+Whenever it sees an echo reply. So you should be. You'll be sniffing the network for Echo request.
+and then you will write a echo. Reply back to the host.
+So let's take an example here.
+So on a normal situation, let's say, a user here sends an Icmp request to Google
+Dns server, which is 8 dot 8 dot 8 dot 8. And then Google Dns server will send an Icmp echo reply.
+This is all normal, and this is the way that it's supposed to work.
+But then you, the attacker, you're going to come in
+and you're going to send another echo reply back to the user.
+So here's the attacker.
+And you're going to sniff the network for Icmp echo request.
+And then when it sees an Icmp apply, you're gonna reply back also, we're offend.
+Icm echo reply. So you're going to send a second Icmp. Echo reply back to the host.
+So the host here will receive
+2 icmp. At Gov applies here.
+So when the user tries to ping
+8 dot 8 dot, 8 dot 8,
+the user will receive 2 icmp echo replies, one is from the real Google
+and 2 is from the attacker.
+That's that's you.
+So you, the attacker will be replying, will be sniffing for Icnb echo request
+and replying back with icmp echo replies, let's take another example.
+Let's say the user is trying to ping.
+IP. 1, dot, 2, dot, 3 dot 4 would someone check.
+What do you get when you ping
+IP address one dot, 2 dot, 3 dot 4.
+Anyone can pull up a terminal window and try out.
+Time out right.
+Yeah, you got a timeout, and
+a timeout is essentially another way of saying there, there is no reply.
+So if you try, if the user tried to ping IP, one dot, 2 dot, 3 dot 4.
+It's
+why do you think there's a timeout here?
+Why do you think there's a timeout.
+It's it's not responding. The the host is not responding.
+Yeah, yeah, the host is not responding because it it doesn't exist. I guess it doesn't exist either doesn't exist or doesn't respond.
+So when the user tries to ping IP, one dot, 2 dot, 3 dot, 4.
+There is no response.
+So probably host, does it exist
+right? Probably the host doesn't exist. So there's there's no reply, essentially does not reply.
+For whatever reason there is, there's no reply.
+But but you, the attacker, you're still stiffing the network.
+You're sniffing the network, and you see an Icm echo Echo request.
+You will reply back.
+You will reply back with an icmp echo reply.
+Anyway.
+So so for those who tried it. When you ping IP. 11 dot, 2 dot, 3 dot 4,
+you should get no? Well, you should get a timeout.
+But when your program is running
+you're gonna get a reply. You're going to get a proper response back because you will be spoofing the Icmp replies from your program, and you'd be sending the reply back anyway, even though they're in reality
+one dot, 2 dot, 3 dot 4.
+It's not going to have a reply back, because it's the IP that doesn't exist on the Internet. I don't think it's possible to have this IP address on the Internet.
+And then there's 1 more case that you're going to try.
+So the 3rd thing you're going to try
+is to ping a local IP address
+and the local IP address is, what is it? Let me double check.
+It will be 10 dot 9 dot 0 dot 9 9.
+So if you're going to ping 10 dot 9 dot 0 dot 9 9,
+you when you ping 10, that old at night.
+10 dot 9 dot 0 dot 9 9.
+It's a host that does not exist. You will not get a response back.
+You will get, not get a response back.
+Now, you the user, you're also on this network. So you're I don't know what the IP is, but I think it's 10 dot 9 dot 0 dot x or something like that. I don't know what the IP address is.
+but the user is pinging. Another
+is ping another host on its same subnet that doesn't exist.
+So for this host there's also
+there's also no reply as well, because the host doesn't exist.
+But this host is on your local subnet.
+and what your program is going to do is your program is sniffing for a Icmp echo request.
+And your program's not gonna work. In this case, your program's not gonna work.
+The program's not going to work.
+because when your user is trying to send an Icmp echo request to 10 dot 9 dot 0 dot 9 9
+I don't know if you remember this from your networking class. If it's on the if it's on the local network.
+it actually does something before it actually sends out the ping
+packet like, if it tries to connect to it. It tries to do something 1st
+before it tries to connect to it.
+like the 1st thing it does is that it does not do an arp. It does not do a Icmb ping, it actually does a.
+it does. It aren't ping our Arp request
+right? So it was on a local network.
+When it tries to talk to someone.
+It does an Arp request first, st right? And we're going to talk more about in detail after the midterm exam. We're going to go into Arp like crazy, because Arp.
+Well, unfortunately, Arp has a lot of vulnerabilities in it.
+but we're not there. We're not there yet, so arf.
+Excuse me, the the host, before it talks to someone on the local network.
+It's going to send an Arp ping arpquest first, st
+and since the host doesn't exist.
+There's no reply.
+There's no reply, because the host doesn't exist.
+Your attacker machine, your program is sniffing for Icmp echo request.
+But there aren't any Icmp echo request, because when when the user tried to ping the local IP address, it, never even gotten to the point where it was trying to send an Icmp. Echo request. So therefore the attacker
+never send a.
+The attacker never sees an icmp echo request in order to send an icmp echo reply.
+So that's task 4. Those are the 3 things you need to do in task 4. So again, in summary for task 4, you need to do 3 things, and this is not the right one. Let's double check what the order is. 1, 2, 3, 4. So the
+so the 3 things you need to do in tabs. 4 is first, st this is part one
+part one is, when you send an Icmp echo request to IP one dot, 2 dot, 3 dot. 4.
+And what's happening here is that you, the attacker?
+You see this Icmp echo request you send the Icmp echo reply.
+So for for part, one over here with IP, one dot, 2 dot, 3 dot 4.
+How many? Echo replies, are you expected to get here?
+How many? Echo replies, here with your program running with your program running.
+So with your program running, you're expected to get one without the program running, you should get 0.
+So the user sends an Icmp echo request.
+It's not going to get a reply from the server, because this IP one dot 2 dot, 3 dot 4 doesn't exist.
+But with your program running over here.
+Your program will send the Icmp echo of apply, and therefore the user should get
+one icmp echo reply for every icmp echo request that's sent out.
+So that's part one, and then part 2 is actually this, one, part 2 is when the user
+sends a icmp echo request to 10 dot 9 dot 0 dot 9 9. Or, in other words, you're typing ping, 10 dot 9 dot 0 dot 9 9 onto a terminal window.
+And for this one
+you're right. You should get no responses whatsoever, because this host is not responding because it doesn't exist.
+and the attacker is not responding back, either, because the attacker doesn't see an Icmp echo request
+to reply back to.
+That's part 2, and in part 3
+is actually the 1st one that we talked about. Part 3
+is when the user sends an Icp echo request to Google.
+And then your program is running over here, too.
+So in this scenario when you're sending it to google.com or Google Dns server.
+how many? Echo replies, are you expecting to get in this case?
+You should be getting 2 because you get one.
+When you send Icnpa echo request you get one reply from the real Google Dns server
+8, 8, 8, 8.
+And then when the attacker is also responding.
+then you get 2 responses back.
+So whenever the user is pinging 8 dot 8 dot 8 dot 8
+for every Icmp echo request. That's being sent out.
+He'll get 2 replies back to the Icmp. Echo request you get 2? Echo replies.
+so that is lab 2. So that's lab 2, so lab 2 has 4 parts.
+The 1st part is how to use the sniff function.
+You also need to learn how to use the Bpf filters as well. This is extremely important
+that you learn how to do the filters correctly in Lab 2. If you do not do the filters correctly, you get multiple portions of the lab incorrect. So the 1st step. Question one.
+how to sniff something, how to use filters.
+Question 2
+spoof, an Icmp echo request packet. This is the one where you pretend to be google.com.
+Where did my window go?
+This is the one where you're pretending.
+Here it is. This is the one where you're pretending
+that Google Dns server is sending out Icmp echo request to the user. And the user is replying back with echo, reply to Google Dns. So that's task 2
+test 3. It's through an Icmp trace run program.
+So you get a trace drop over here.
+You'll be sending an Icmp ping with Ttls that's going up from 0,
+and you get the Icmp of applies back from each of these hubs.
+Now, you also remember, have to take care of the case, the condition
+in which there's no reply whatsoever. So sometimes you send a packet to a particular host, and it just doesn't respond back.
+It doesn't respond back.
+And then task 4 is what we just discussed. You'll be writing a program here to send. Icmp echo replies. Whenever you see an Icmp echo request, and you have several conditions in which you need to test it.
+So that's Lab 4 lab 2
+lab, 2 has 2 bonus parts.
+The 1st bonus part is submitting it 5 days early. So you submit it 5 days early, you get 5 percentage points for submitting it early.
+The second extra credit is to get
+pinging 10 dot 9 dot 0 dot 9 9 work.
+So we discussed that when you ping 10 dot 9 dot o dot 9 9.
+It doesn't work, it doesn't work.
+It doesn't work, because when you send a ping to a local host, it 1st does an arp ping or an Arp request.
+and since the host doesn't exist, it will never apply back to it.
+So for question 5 for Task 5,
+you need to make that work.
+And in order to do that you have to write another program to perform Arp cache poisoning.
+So you need to learn about arpcache poisoning
+and write a program in order to do so
+in order to get Test 5 to work.
+So this one.
+if you're not familiar with arpcache poisoning, you have to make sure you get familiar with it 1st before you work on it, because
+if you are working on off cache pointing without understanding how it works.
+it gets very frustrating. So make sure you understand the underlying theory
+of cash poisoning before you attempt extra credit.
+Please make sure that you just don't copy some code off the Internet aside that that's not allowed.
+You don't understand the code, and I guarantee you that it will be more frustration than you can imagine.
+So the extra credit. Please do the rest of these first, st and then do the extra credit. Make sure you fully understand what arch poisoning is before you try to do the extra credit.
+And then one more note again, I want to talk about the filters.
+The filters for Scapi is very important.
+The one of the major issues is that Scappy
+will read, is read in its own packets that it sends out.
+So if you send out a packet, Scapi will automatically read in the packets, even including the ones that Scapi sends out because it doesn't know.
+So you need to use the filter in order to filter out the packets that it itself sends out
+so. And if you don't do it correctly, you have problems
+in several parts. Maybe you have problems in question 2. And in question 4 as well. So the filters is really really important that you get it right.
+And the Bpf. Filters they are the same filters used in wireshark. So make sure you research and understand how they work and why they work, and so on. It's very, very important for this lab assignment to get that correctly. Otherwise, students usually lose like maybe 20 or 30% because you have multiple parts of this lab
+that isn't working without the proper filter. So make sure you understand the filter there.
+So that's lab 2 plus lab 2 there
+lab 2 is due on March 3.rd That's 2 weeks from now. And there's a 5% early bonus submission, early submission bonus. So if you can submit it by next Tuesday, you can get a 5% bonus added on top of the grade.
+Let's move on. So exercise one exercise one for this week is.
+please list 3 tools that we discussed in the last lesson.
+Just list the 3 tools. You don't have to talk about what it is, or you could, if you like, but please list 3 tools that we talked about in the last lesson.
+Let me go ahead and set a timer.
+I'm sure that this they change the where the buttons are every single time.
+miss our timer here for 2 min, and then
+please let me know if you recall what are tools that we used last week.
+I like their music.
+So what's some tools that we talked about last week? Okay, well, there's about Ego
+Maltego. Yes, Maltego is a very, very powerful open source intelligence search tool. It's also very expensive, but it comes with a free version. Maltego is a tool that can
+use open source techniques in order to find the same information on thousands of Internet accessible sites. So example that we used is maybe I think I an email address. And they can go to thousands of websites and check whether the account exists with that email. And then, if it does, it finds uses that to find something else
+we talked about creepy, creepy, creepy is very simple. It harvests the metadata or the location metadata of photos that are posted on social media prior to
+due to creepy due to programs like creepy Instagram, Facebook, Twitter. All these sites used to post photos
+of pictures with the metadata on where the photo was taken.
+and that allowed someone to harvest all that data and determine where someone lives, work where they hang out, and so on.
+Aggra database. The aggra database is the sec Securities exchange Commission database used for publicly traded companies, and they're required to do their 10 k filings or whatnot.
+And from there, that's how many of the finance websites write articles about these companies. But this is where you find information about
+phone numbers, office locations. The deals that going on, the vendors. They are working with that kind of stuff. Lots of information there.
+Show them. Show them.
+Did we go for Shodan? Shodan is an Internet thing. Search engine. Shodan is the search engine that can find.
+Well, it started as IoT. But I can find lots of stuff
+on the Internet. So if you do a search, for for example, Nyu on Shodan Shodan will show you lots and lots of
+websites, Ips, and then devices that are running on Nyu. Edu
+Shodan is the one that found the baby cameras that were attached to the Internet.
+There was some security cameras attached to Internet. And even I. There was a case where the
+traffic lights of a city or connect to the Internet.
+and Shodan was able to find them.
+These traffic lights, as in
+the lights that control where the cars go or not. The red, yellow, green lights were connected to the Internet. And we're accessible from the Internet
+show that. And it's a tool that allows the researchers to find those kind of things very, very powerful.
+We talked about Google search filtering options like the site option. Right? Google is very, very powerful. There's lots of things you can find on Google. Also, we talked about Google hacking.
+Google. Hacking is where you, I
+use a tool called a bit of a site called Exploit. dB,
+where you can simply just run the script and run
+all these Google hacks or these Google searches on a specific site. And they can review the information as well
+we talked about.
+So then, what else do we talk about?
+Shodan is also very good at finding servers running specific versions of software that has known vulnerabilities. So an example of this would be, let's say, a new version of a firewall came out right. I think. 2, 3 weeks ago there was a Palo alto.
+Vulnerability that needs to be matched would be able to off the firewall
+or vices on the Internet to determine. Well help researchers determine whether it's a vulnerable version or not. So if you ever see articles that says, Oh, this new patch came out, this new Palo alto patch came out. And there are 100,000 machines on the Internet that's vulnerable to this
+exploit.
+This is how they figure out.
+You can show them so is what they do is that they find a string that specifically specifies what version that the
+the device is using and are able to do a showdown showdown search on the Internet with it.
+Of course, the attackers are also using the same tool.
+and this is how attackers are able to find the targets that did not patch their software as well.
+Very good. Thank you for sharing that
+last week we left off at the Dns Zone transfer.
+One thing that we did
+was that we tried to find Dns names for Nyu Edu.
+so we wanted to find what Dns names that nyu.edu had
+let me pull up the slides that we talked about it. Was it last week or the week before that we talked about it?
+So we have some many examples
+of Nyu domain names here, engineering.nyu.edu, Brightspace, Cyber, Albert, hosting stream, and so on.
+Now they might have other servers out there as well
+like maybe they have service like test.nyu.edu. Maybe they have other websites. Oh.
+there was a tool that no one mentioned Dns Dumpster.
+and I believe we went through that last week. Dns, Dumpster, Dns, Dumpster tries to find all the domain names under a particular.
+a particular 1st out a particular domain, or subdomains within the the domain name.
+and it lists out lots and lots of different subdomain names in under Nyu Edu.
+But the thing is that these aren't exhaustive, exhaustive lists.
+These lists are just information that leaked online through various ways. Maybe like they were searchable on Google. Maybe they had some website that's running on it. But it's not an exhaustive, exhaustive list. They have a lot. But it's not exhaustive.
+So the exhaustive list of information of Dns servers there is
+of Dns names is on the Dns server, so the Dns server Wood have all the Dns names.
+and the reason that we care about this
+is that there are some domains that
+Nyu probably doesn't want us to know.
+Right? So, for example, it could be like a test server
+like test.nyu.edu or vpn.nyu.edu, or maybe like ours
+staging one staging 2 devserver.nyu.edu, like all these websites that
+maybe they shouldn't. They don't want us to know about us.
+And hey, the logic here is that sometimes a dev website or a dev system
+may not have be as secure as a normal website. Right? So for those of you who work in a corporate cyber security or corporate environment. You would know that that there are test servers development servers UV. T. Servers
+that are probably not as secure as normal production servers.
+And we don't want people to find these servers, but
+if they're on the Dns server, someone can try to guess the name of it.
+Another thing they can do is do a Dns Zone transfer a Dns Zone transfer
+is a vulnerability on Dns servers that allow someone to take all of the Dns servers Dns names off the server.
+So this one query, Dns Zone transfer is able to query and get all the information of all the Dns names on the Dns server
+and the DNA zone transfers originally
+intended for duplicating a Dns server. So someone wants to make a backup Dns server and get all the information so you can.
+They'll make a backup of it.
+But however, it's been abused, because now someone who's able to do a Dns loan transfer would be able to see all the Dns names on the server.
+Luckily today.
+by default, this setting is off. So Dns Zone transfer are off by default, so it should not be possible.
+but not too long ago it used to be default on, and then people were able to find all the Dns names off the server.
+so this one should not work anymore.
+But you can test that as well as well.
+Vulnerability scanners like Nessus would test for things like this
+another thing that attackers can do is to perform a brute force forward Dns attack.
+And what this attack does is that attacker goes and then just tries a lot of different Dns names, so they go ahead and try
+ftp.ny.edu ns dot n ny.edu VPN dot ny.edu test dot Nydu like staging server, one dot Nydu, and so on.
+And there are some lists out there on the Internet that you can download to just run a script and try it.
+So you get like a list of
+hundreds of thousands of different subdomain names that you can just make a query on and determine whether they have a Dns name for that server or not.
+and this competitor exposed things that they not do not expect. And these are things like, you know, dev, one dev, 2, and so on.
+So that's another attack.
+What can we do about it?
+This is concept called split Dns split Dns
+is when you have 2 Dns servers.
+one for internal services and one for external services.
+So this is how a normal corporate environment handles this Dns today you have 2 Dns servers.
+One is for people outside of the organization.
+So these are 4.
+You have the external Dns server.
+and this Dns server will only have extra
+production externally facing domains like the wwwny Edu, and so on.
+And then for anything else.
+you put it on the internal dns. So if you have a test server, a staging server, a Uat server, a server for piloting, a particular piece of software that testing, you know, developing or etc. Things are intended to be internal.
+then you put it in the internal Dns server.
+So this concept is called split Dns.
+and in the last 10 years this has become the normal way in order to have Dns servers so pretty much all organizations.
+They have 2 Dns servers, one external and one internal.
+And when you have a Dns name on it. You have to decide whether you're putting on an internal Dns server or the external Dns Server
+Service discovery. So right now, so far
+we did a few things we performed reconnaissance. We learned about a network. We found IP addresses. We found subnets. We found some some information about Nyu. We learned about what kind of firewalls they have. Right. They have a Palo alto firewall. We learned about some of the Dns names like we learned some of the vendors. We we learned a lot about Nyu here.
+but what we want to do now is to find out on each of those servers what is running
+on the server like? What services are running on the server?
+So every host, every host, has a number of ports.
+Do you remember how many ports there are that a host has?
+How many ports are there?
+Is that? So I got 64,064 K.
+Is that Tcp or Udp points.
+or both?
+Yeah, it's both. So a host
+has 65,000 Tcp ports
+and 65,000 Udp ports.
+So they have over a hundred 30,000 ports here altogether.
+So there's a lot of ports that they have.
+and for each of these ports there could be a service running on it, so
+a a server can run up to. Well, supposedly it could run up to over a hundred 1,000 services, but you know it probably doesn't have the resources to sustain that.
+But a server has a lot of ports on it.
+and what we want to do is typically perform a port scan in order in order to determine what ports are open and what services are running on those ports.
+Just some side information. This is a this is a Tcp. Header.
+It's a Tcp. Header, and there are some things here that makes this very obviously a Tcp header.
+right? It's very obviously a Tcp header to me.
+Once I look at this.
+I know it's Tcp header, because I look at the sequence number and acknowledgement number, and only Tcp has a sequence acknowledgement number so
+clearly, clearly it is a Tcp. Packet.
+But this is a Tcp. Header. This is something that you should be very, very familiar with. So at this point, if you're not familiar with a Tcp header, which is what's shown here.
+please make sure you become aware of it. You can either go through the Wikipedia page on the Ccp. Header.
+or you can go over your network your networking book as well, and review this part of the the book
+which describes these things I would suggest just if you need a refresher, just go to Wikipedia and just do a review on the Tcp. Header.
+Udp. Header, and the Icmp. Header while you add it there. And of course you don't need to memorize. But you should know what each of these
+parts of a Tcp. Header.
+Now, when we want to find out whether a port is open or not.
+we can do a port scan, so it's sending
+you start with a Tcp three-way handshake.
+and then from there you can determine which the port is open
+or not open. We talked about this, I think a couple of weeks ago. Let's reveal.
+Yeah, I think this one. The 1st things that we talked about
+on this slide shows the Tcp three-way handshake.
+And this is a very, very normal process.
+You have a host A, and you have a host B on the right side.
+and you send a Tcp Sync packet the host.
+If it's open it'll send a Tcv. Sync back and then
+it'll send Ccp Sync act back.
+So this it's the normal process. When when a port is open.
+let me copy and paste this. I want to just repeat this one more time.
+So we have here
+a normal response.
+When a port is open.
+So let's say you're sending a Tsp Sync packet, and remember that's to a specific port. So let me send it to destination port.
+Let's say 23 for telnet, or maybe maybe I use 4, 4, 3, or https.
+You send a packet, or the host sends a packet to the server.
+Tcp sync packet of destination portfolio for 3.
+If the port is open, it's going to send these Vsync ack Mac.
+and then your host will send Hcp act.
+So this is the normal process for or it is open.
+Port 4, 4, 3 is open.
+Question, what if port 4, 4, 3 is closed?
+What's what's gonna happen
+if the port is closed, the pack, the packet doesn't get dropped. Not normally, not normally.
+What you would get is a Tcp reset.
+Get a Tcp reset.
+Sometimes it's a recent act.
+So let's say, someone's trying to connect to Port 4, 4, 3, because they're trying to get https.
+and the computer will send a Tcp sync packet to port. Forward 3.
+But the put is closed.
+That means the service is not running. There's no web server running on port 4, 4, 3,
+the host will reply back with a Tcp reset.
+In other words, that's another way of saying the port is closed.
+So if the port 4, 4, 3 is closed
+you get a gets gets a Tcp reset.
+So this is, how about anything?
+Determines whether a port is open or closed if the port is open
+and I'm talking about Tcp, if the Tcp Port is open.
+this Ccp Sync packet they get Ccp Sync back.
+That means the port is open.
+If the port is closed they get a Tcp reset.
+So the reset means the point is closed.
+So this is how you how something determines whether a port is open are closed.
+But wait, there's more. There's more
+copy of this.
+Hello, Professor!
+Go ahead. Yes, quick. Question.
+So in the 1st lab, we.
+we we learn about the CPU reset attack
+when we did the reset through the attacker machine.
+So how that is different than this scenario.
+That's a good question. So on Lab one, we did a Tcp reset attack and a Tcp Vset attack
+is where you break a connection intentionally. Do we have a slide on it?
+Maybe you don't have a slide on it. A Tcp reset attack is when you break a connect a ongoing connection.
+while it's ongoing by saying a Tcp reset attack.
+that one is different from this, because this was so far, this is not an attack.
+A Tcp reset
+is a part of a normal process when the port is closed, so there is no attack here. It's just that the port is closed. If the port is closed, the normal response is to be reset. So when the port is open, so you try to go to a website at Port 443. The server is open.
+You're trying to make a connection to it.
+It will send a Tcp Sync Act to state that it's open. So the port is open it'll send a Tcp Sync act.
+But if the port is closed.
+that is, it's not available. There's no web server running on it. Then they'll send a Tcp reset
+back. And this is just a way to say this service is not available. This web server is not running. You can go. You can get web pages from this site.
+Then there is another possibility, and there's a possibility. If you get a Icmp echo, Icmp destination
+unreachable.
+If you get Icmp destination unreachable and Icmp destination unreachable is when
+you get a response saying that the server or the port is unavailable.
+So you get a Icmp destination unreachable
+from your networking class or from your other classes you took.
+What does that generally mean when you get Icmp destination reachable? What do you think it could mean
+if you get Icmp destination unreachable.
+Maybe maybe the route is not found.
+Right it could be. The route is not found.
+That is a networking error, so it could be a networking error.
+I just call it networking error route not found it could be.
+It could be being blocked, blocked by a firewall.
+It could be blocked by a firewall.
+It could be that the host doesn't exist.
+I call that networking error, too. So route not found comma host does not exist.
+And those are basically it right? So there's either some sort of networking error
+route is not found. Hostess does not exist.
+A. The Ttl ended, or from a security perspective, it's being rejected by firewall.
+It's being rejected by firewall. So when a firewall rejects a packet.
+then it will send back an Icmp destination unreachable.
+So it's rejected by a firewall. Let me put this in quotes rejected.
+So in other words, if you can. Icmp destination reachable, there are 2 possibilities here.
+There's some sort of networking error
+routes not found. The host doesn't exist.
+Some congestion, some something else.
+Or there's a firewall in a way.
+and the firewall is rejecting the packets
+and rejecting is a term that means if I was being nice, if I was being nicely
+telling you that you can't go to this port or this host.
+the fire was being very nice and saying, You can't access this.
+And then there's a 4th possibility.
+This is a 4th possibility. The 4th possibility is that it doesn't respond back at all.
+So you send a Tcp sync packet to
+destinate to Port 4, 4, 3, and then you just get no response at all like a timeout.
+What do you think?
+What do you think is the cause of that?
+What do you think are the possibilities that will cause that?
+Actually almost the same.
+It could be. Yeah, it could be a networking error. That is a route not found. Host does not exist.
+or the pack is being dropped by a firewall, a not nice firewall
+that is operating, and it's dropping the packet.
+So let me just do a sidebar here a firewall firewall can reject or drop a packet. So reject
+is the firewall is being nice, is sending a Icmp destination unreachable.
+saying that you can't. You can't access this. We can access this device or this host
+while a drop is the firewall not being nice, the packet is
+well, what's another way to say? Drop without dropping it. It's being sent to the bit bucket
+being sent to the bit bucket.
+There's no way to say it. In other words, the firewall is not responding at all.
+and sometimes the firewall may reject the packet or drop a packet. So reject is just being nice. Reject this
+Icmb destination reachable. You are not supposed to access this.
+or the firewall can drop it. That is
+no packets at all. You sent this not supposed to have access to it, that's it.
+and the thing is sometimes a reject is better than a drop, and sometimes a drop is better than a reject. A reject is usually very good when you're doing troubleshooting. So let's say you're internal network. You forgot why this isn't working. Maybe it's because of firewall issue.
+And if the file was rejecting packets. Then they'll help you. Troubleshoot! What is going on here?
+But if the file was dropping all the packets, then
+it's very, very hard to troubleshoot something when you get no response whatsoever.
+But, however, if someone's attacking you.
+then drop is better than reject, because drop just stops the attack
+completely. A reject can be used to give information to the attacker about what is going on, as we are trying to do here.
+So when you're trying to find out whether its port is open or not.
+Then there are 4 things that can happen.
+Right? So let's say you're using a tool like Nmap and Nmap is a Port Scanner and Nmap can send a packet over to
+Port 443 over here, and Nmap can determine, based on the response what is going on. There are 4 possible responses to a packet.
+The 4 possible responses are, the port is open.
+You get a Tcp sync act back
+right? That's the 1st possible response, port is open.
+You get CC. Park.
+It's closed.
+You get Ccp reject, it is be rejected.
+3, rd possible response is Icmp destination unreachable.
+This could mean 2 things. It could mean some sort of networking error.
+or it's being rejected by a firewall.
+Since this is a security class. I don't care about the networking, networking error. There's something there's some ways you can trouble. Try to troubleshoot a networking error.
+Usually you can try
+routes a different route. You can try to troubleshoot in other ways. But that's not part of this class.
+What we care about is the second one which is
+rejected by a firewall that is.
+there is a firewall there, like I am scanning Port 443,
+and I am learning that there is a firewall there.
+4th possible response.
+The 4th possible response is no response, and
+when there's no response it can mean 2 things. It can either be
+some sort of networking issue. The host doesn't exist time out. Whatever
+the second thing is, the firewall is dropping the packets.
+the firewalls dropped in the packets.
+so there is a firewall there who is dropping the packets.
+So when you do Tcp scanning
+and you're scanning Port 4, 4, 3,
+you get this 4 possible responses here, and
+Nmap is trying to do this for
+all 65,000 Tcp ports.
+Has anyone ever done a scan like that before?
+If Nmap is trying to scan all 65,000 ports.
+How long does it take to do that type of scan?
+Has anyone tried it before?
+Less than a minute? Yeah, absolutely.
+And map is really, really fast. You can scan 65,000 Tcp ports in less than a minute.
+It's very, very fast.
+So when you do a scan on a device.
+You use the scan to try to determine what services are running on it, and Nmap
+can do a scan in under a minute or 65,000 ports.
+It's very, very fast.
+Exercise 2.
+Please explain the 3 steps in the Tcp. Three-way handshake.
+Let me set a timer here for 2 min. We're not going to go over this because we did go over it already. So this is for your own.
+for your own exercise.
+Can you, in your own words. Explain the Tcp three-way handshake. Set a timer here for 2 min.
+moving on.
+There are.
+There are many programs out there that can send packets and run scans. Hping is one of them.
+H. Ping is a program that can send packets in pretty much any way you you possibly wanted to to send.
+It's very similar to Scappy, except it's faster in some ways. But Scapi
+is more versatile. But Scapi is slow, right? So Scapi
+generally it's very hard to write real programs with Scapi. That's that's 1 problem with Scapi, that it's really really great for testing and such. But you want to write a real program. It doesn't really work because python is too small.
+There's some techniques I can use to speed it up, but it gets it gets complicated right? Because Python is generally just. Not that fast of a program. Hping can be faster in some ways
+as well, and it's also scriptable.
+But the program that most people use for scanning is called nmap.
+Nmap was featured on the 1st matrix, where they used the nmap to help find a vulnerability
+and hack into the power network and power station and a few seconds.
+Obviously, that's not really possible, because the reality of today is that it takes months
+in order to hack into something like it takes some attacker
+from the beginning, from reconnaissance all the way to actually breaching a system they take months to do like if they're able to do it in one month. That's considered extremely fast.
+We have to go over some definitions here.
+some of it can get dry, so please bear with me for just a few minutes for us to go over these different types of Nmap scan types here.
+These are all very important, but they're dry and and hard to understand. So after you listen to me, please go over again by yourself to make sure that you understand them.
+and we'll start over here. The second one Tcp sync, scan a Tcp sync scan is the scan that we just talked about over here. A Tp sync is a scan that nmap does in order to find
+Tcp ports. So let's take an example here of what Tcp sync scan is.
+So what nmap does with Tcp sync scan is that
+it just goes ahead and it does one thing.
+It sends a Tsp sync packet.
+and then Nmap will listen for a response.
+And that's it. That's what.
+And the really great thing about this is that it's very fast.
+It's it's extremely fast, because Nmap can send out
+hundreds and thousands of Tcp sync packets at the same time.
+and it just listens to a response. So this is a sync scan. Syncs are very, very, very fast.
+The other type of scan that MF. Can do is a connect scan
+and a Tcp. Connect scan is much, much slower. It's much slower because a connect scan uses the operating system's Api to do the scan.
+So the Tcp connect scan is when Nmap doesn't have admin rights.
+and it will use the operating system's Api in order to open a connection. So when it uses those operating systems, Api to open a connection, it starts with a Tcp sync packet
+right? And then it'll get back a
+it'll get a wait. When is it again? So let's say the port is open. Remind me
+you send a Tcp sync packet, and the port is open.
+What do you get in response?
+A sync act?
+So you get a Tcp Sync act.
+And then what's the next step of it. What's the next step? When the port is open
+you get a Tcp act back.
+So you get a Tcp sync act, then you get sync, act.
+So then, then Nmap just opened a port.
+So here, this is a Tcp. 3 handshake
+and map. Just opened the port now.
+and map needs to close the port.
+We didn't talk about this in this class, but do you remember
+how you close a Tsb port?
+You send a fin?
+So then Nmap will send a Tcp fin.
+And then what what happens after that?
+Then you get a Tcp fin.
+and then you get another Tcp fin back.
+I think it's just an act. Actually.
+so, a normal procedure of opening and closing a port
+takes a 6 step process. Tsb Sync act ack fin fin act Ack can act can act act
+so. It's a 6 step process in order to open and close a port normally.
+and a Tcp connect scan is when Nmap doesn't have
+admin rights, and they need to use the Admin systems. Api to do so so in this case, and Map
+does not have elevated privileges, must use operating system.
+Api sockets to open close ports.
+while for a sync, scan and map has elevated privileges.
+can write directly to the network.
+And this is what nmap does essentially nmap.
+We have a sync, scan it, bypasses the whole operating system and writes directly into the wire.
+and so it makes it extremely fast. It just writes on the wire, and it starts sniffing to see what the responses are.
+while a Tcp connect scan is. When map does not have elevated privileges. It will just
+use the operating systems Api, or, in in other words, it will open a socket and have the operating system
+do it on its behalf in order to open a port, and then they'll have to close the port. So it takes much slower. It's not even. It's several orders of marriage, you slower.
+So that's a sync scan that's connect scan and map, syncscan versus connect scan.
+Then we have things like a fin scan, null, scan, and so on fin scan, null, scan, X-mas scan.
+What a fin scan is!
+What a fin scan is is
+when someone sends a fin packet over.
+When you send a fin packet over.
+and it's a unsolicited fin packet.
+It's supposed to respond back.
+But we're reset.
+So what I mean by an unsolicited fin packet. Is that a host
+that it wasn't talking to anyone suddenly gets a fin packet.
+and if it gets the fin packet but doesn't have a connection open with it, it'll automatically just send a reset back to it.
+That's the normal response back to it.
+But sometimes it doesn't work properly, or some operating systems doesn't send the same responses. So a fin scan really is to just send a fin
+packet and see what will happen afterwards.
+That's a fin scam.
+Another scan type is a Xma scan. An Xma scan is when they set
+a Xma scan is when they set the fin urgent and push facts at the same time
+been urgent and push flags.
+and for this type of scan a close port is supposed to return a reset.
+Now some operating systems don't work exactly like this, and it helps nmap identify the operating system.
+And then a 3rd type of similar scan is called a null scan. A null scan is when you send a packet with no flag set at all, no Tcp flag set at all.
+and when this happens it's supposed to return a reset.
+It's supposed to return a reset.
+But whether it does or not
+helps determine what type of operating system it is. So these types of scans, Finn, now, and Xmas.
+These types of scans helped them determine
+what kind of operating system it is.
+and then we have a axe, scan
+a axe. Scan is a scan used for determining an operating system's a firewall's Acl to identify if there are any stateless
+policies being used used in place.
+So let's take an example. Here.
+Let's take an example.
+Let's say, let's say you have a firewall.
+and let me just draw a little firewall over here.
+So you have a firewall here, and
+you have a computer on inside the firewall, and then
+you have a cloud like the Internet outside of the firewall.
+Let's say, let's say
+you have a host inside, and it's allowed to go out on Tcp 443.
+So let's say, you're allowed to go out to the Internet on Tcp port 4, 4, 3.
+If someone's allowed to go out on Tcp, 4, 4, 3,
+then the firewall allows for like a two-way connection between the host and the Internet
+on Port 4, 4, 3.
+And so generally, when you think about the types of flags that are allowed to go through here, the
+the packets that go out would include flags like sync an act, for example.
+because it's going through a Tcp connection. So it'll have package like sync flag like flags like sync.
+and so on going here, and you have the flags going
+like back on the outside as well.
+So bidirectionally you get flags such as sync and act, and other flags that going back and forth.
+Now, let's say, let's say you have an attacker, and the attacker
+wants to try to talk to a server on Port 4, 4, 3.
+So let's say the attacker.
+As the attacker tries to go
+and talk to the host at Port 4, 4, 3
+attacker tries to connect to Port 4, 4, 3.
+Normally it won't work because it's blocked by the firewall. The firewall
+only allows the packets to go from the inside of network to outside the network.
+but not from outside a network to inside a network.
+So this would normally be blocked by the firewall.
+So when an attacker tries to connect to the host on Port 4, 4, 3, it will be blocked
+by the firewall, because it only allows outgoing connections to Port
+4 for 3, not incoming connections.
+and so the attacker tries to connect to Port 443, and when it tries to connect to Port 443.
+Well.
+you know what it sends when it tries to connect to a port it sends a Tcp sync packet.
+so it sends a Tcv sync packet trying to connect to Port 4, 4, 3.
+But the firewall blocks it because you don't want someone connecting to your
+to your home computer, for example, on Portfolio 3.
+So it's it's blocked by the firewall by default.
+But if the attack
+but only sets the Ack flag to be set.
+then the attacker can actually get through the firewall.
+So in this another example, let me pick another color here, purple.
+If the attacker tries to connect to Port 443.
+But attacker uses a act flag only. So Attacker goes and tries to connect to Port 4, 3,
+and the attacker uses an act flag connects to Port 4, 4, 3, using Tcp flag only the attack.
+The packet will actually go through the firewall because the firewall, in order to allow
+the computer to normally access the Internet on Port 4, 4, 3. Going outside
+has to be has to allow Tcp act packets
+into network. So coming into the network.
+it has to require Tcp packets.
+and if the attacker sends a Tcp app packet
+it's able to get through the firewall.
+So when the attacker tries to connect to Port 4, 4, 3, using a Tcp A/C. Packet, it will
+be allowed through the firewall, because the firewall is already the firewall must allow
+Tcp act packets to come in into the network due to allowing Port 4, 4, 3, 2,
+go out of the network.
+So because the this firewall allows the host to go out of the network on Port 4, 4, 3.
+It must allow packets to come in
+with the Tcp. A/C fax set.
+So when the attacker tries to go into network with a Tcp Ag. Packet flag set.
+then it'll go to the firewall
+and it will actually reach it can reach that particular host.
+Question question.
+If the attacker manages to go to the firewall.
+and this Tcp app packet reaches this host over here.
+and this host did not have did not have an existing connection with the attacker.
+How does a host normally respond back to an unsolicited app packet
+like the host receives that act packet that's unsolicited.
+They'll reply back with a reset.
+It'll reply back with a reset.
+and this reset can actually sometimes go back to the firewall through the firewall
+and back to the attacker, so send a reset.
+and this reset goes all the way back to the attacker.
+and the attacker can then see. Aha!
+It's blocking port 4, 4, 3 over here, but then.
+but then, when you send a Tcp. Act packet through the firewall.
+It can reply back with a reset packet.
+If successful, the host will reply back to and map to the attacker with a reset packet.
+So this is an nmap, Axcan.
+I know that this was confusing.
+If this was confusing, I I understand that this was confusing.
+Please make sure there's some resources that I put out. That helps explain this a little better if you're still confused. Maybe you watch this part of the video again.
+Okay, so this attack works.
+Because, let's say, this host allows outgoing packets through Tcp. Port 4, 4, 3. And I think I think I mentioned, or I didn't mention, that this only works on stateless firewalls.
+So this firewall allows Port 4, 4, 3 to go out
+of the packet of the of the network.
+and in order to allow it to go out. It must allow Tcp Sync packets to go back in.
+Now, when an attacker tries to do a normal scan by sending a Tcp sync packet to Port 443, it will get blocked by the firewall.
+so Tcp sync packet will get blocked.
+Then, however, if the attacker tries to connect
+to the host, using 2, 4, 4, 3, 3, using Tcp act packet.
+This Ag packet will actually go to firewall because
+because the firewall allows the Ccp. Port 443 to go out of the firewall.
+It must allow Tcp. Ag packers to come back in.
+Therefore, if the attacker is sending a Tcp. Act into the firewall.
+It'll get to the host, and then the host will send back a reset packet.
+So this scan allows to find out what potential going ports the host has
+in order to determine what the firewall is doing, what ports and open, and such.
+So please take a moment and look at our some of the resources to try to understand what Nmap Askscan is if
+this was difficult to understand, and I I understand that it is. I understand it is
+one of our colleagues correctly mentioned that an Nmap Xcan is used to map out the firewall rules of a stateless firewall
+and to determine which ports are blocked or not blocked. But even more specifically, it tries to find out
+what outgoing ports are open.
+Okay? So this scan helps, finds out what outgoing ports are open on a stateless firewall.
+So that's a nmap. Act scan.
+Now, if there is an IP allowness or deny this it would not help the protect against this.
+maybe.
+Maybe not. It really depends. Like, sometimes the attacker tries to jump to one server and does a scan.
+and then does another scan from a different server to see if there's a particular relationship that's going on.
+Let's take a quick example over here.
+This is not important now, but it's a topic that we're going to talk about in the future. So it's something to mention it right now would be really nice.
+So let's say, for example, let's say, for example, there's a there's a firewall.
+It's a firewall here.
+And this firewall allows for certain
+relationships here, so some relationships could be like it allows packets to go from here to here bidirectionally. So it goes here to here
+by bidirectionally, but it does not allow traffic to go from
+here to here, so no traffic coming from here to here. So an attacker.
+an attacker might come into a network
+and then gets to this host and then tries to do a scan around the network. See what's going on, and sees it can't get through.
+Then the the attacker might pivot to another host.
+jumping to another host, and then from there it can do scans, and then this scan from this server might go through the firewall. But scan from this server doesn't go through the firewall. This is a
+this is a very, very normal way that attacker does in order to
+no map out the network and determine the relationships.
+Can I get a confirmation that you can see my screen right now? This screen has 3 holes in the firewall and some arrows over here.
+Okay, wonderful.
+And so this is a typical thing that attacker does right. They they go into network.
+And usually the hosts that are closest to the outsider network. They're most protected. Least things are allowed. So what the attacker does is that they scan and try to find other systems on the local subnet jump to the other host, and these other hosts might have more better relationships with other servers. So, for example, in this example.
+this internal host, like that's behind the firewall, can communicate to this server, but not communicate this server, so attack can jump to one server to another server in order to get into the host.
+We talked about this already.
+Exercise number 3.
+What are 4 possible responses to a Tcp sync scan?
+And what are the indicators for each result. So this is something we just talked about. We talked about the 4 responses to a Tcp Sync scan.
+Do you remember what they are.
+You don't have to memorize it, but it's something that you absolutely need to know. This is one of the topics.
+Scanning is one of the topics that is pretty much guaranteed to be on the midterm exam.
+So I said, I'm here for 2 min. Tell me.
+were the 4 possible responses to a Tcp sync scan.
+and what the indicators of each result.
+So the answer to this question was discussed a few moments ago.
+So these are the 4 steps
+the 4 responses to a Tcp port scan. So the 4 responses are
+what is open where you get a Tcp. Syng.
+but it's close when you get Tcp reset Icp destination unreachable, which
+probably means that it's rejected by firewall from a security perspective is getting rejected by firewall.
+and then no response and no response
+to us means that it got dropped by a firewall.
+Now, it could also be a networking error for both of these. But that's not important for our class. There are other troubleshooting techniques you can use to to determine that causes those causes.
+Udp scanning Udp scanning.
+So let me check where we are at right now.
+Okay, so we're going to go over Udp scanning as well. So Udp scanning is
+unfortunately a lot more complicated than Tcv scanning.
+And the reason for that is that Utp, it's a much simpler protocol.
+It's a much, much simpler protocol.
+So Udp works slightly differently than Tcp just as an example.
+can someone name a Udp protocol that we can use an example?
+Okay, so let's use Dns, Dns is a good one.
+I don't want to use Dhcp. Because Dhcp is a
+Dhcp. Is a bad example, because Dhcp has taken
+Dhcp. Is handled by the operating system rather than an application. So it works a little differently than the other
+Udp protocols.
+So let's say, let's say.
+before we talked about Tcp Nmap doing a Tcp scan and Nmap wants to do all 65,000 ports for your Tcp. And that takes just a few minutes
+for Udp. However, it doesn't work, it's much more complicated. And for Udp. Let's say, let's say
+I want to check. If Udp. Port 53, which is for Dns is open, they will send a
+Udp packet.
+It'll send a Udp. Dns port 53 packet over to the Server.
+and if the port is open you get a response.
+So if the port is open, you get a Dns response.
+So that's it. That's Udp.
+You send a. The point is open.
+When you send a send a request, get a response.
+You send a request. You get a response.
+Then from there, you know the port is open.
+What if the port is closed? This one's tricky.
+this one is tricky. Do you know what? What is the response when the port is closed?
+This is a tricky one.
+It's not intuitive, it's not intuitive at all.
+It's not no response.
+It's not, it doesn't drop.
+It's not intuitive at all.
+It's an Icmp destination reachable.
+So when a port is closed, an Icmp destination unreachable is received.
+So that is the Udp method of telling you that the port is closed.
+This is normal normal thing. So
+the port is open. Send a Dns request. Get Dns response.
+What is closed?
+You get you send it. The Dns request you get Icp destination unreachable. That means the port is closed.
+In other words, there's no Dns server on this port.
+It's confusing. Because a few moments ago we talked about Tcp, right? Tcp port open.
+What called that?
+When you get Icp Icmp destination reachable in Tcp.
+it probably means there's a firewall that's rejecting packets. That's very likely. What's going on.
+But in Udp however, in Udp
+and Icp destination. Reachable means support is closed.
+Just just to be extremely confusing here.
+It's because there's a connectionless protocol, and this is the only way to respond back that it's closed.
+So let me put a a big asterisk here
+a big asterisk, because I don't want you to get confused. It's very confusing the asterisk asterisk is.
+don't get confused with Tcp Icmp destination reachable. Tcp, icmp. Unreachable.
+And then this is even more confusing.
+What happens when you don't get a response.
+What happened? What does it mean when you don't get a response? So a 3rd possibility
+is that you get no response.
+We get no response.
+and when you get no results
+it could be a couple of reasons.
+One. I think you can guess firewalls blocking it.
+One is.
+Firewall is blocking the sports.
+So if the file was blocking the port, there's no response.
+But another reason is, if this is an improperly formatted request, improperly formatted pack request.
+So let's say, let's say, here
+you send a Dns request to Port 53.
+But there's some sort of transmission error
+there. So Dns header got messed up somehow. Right? There's a couple of bits that get flip, whatever. There's a transmission error.
+What does Utp do?
+No response.
+no response. Which is normal. Right. This is how Udp works is a connectionless protocol. It has virtually no error correction. So you send a Udp packet to Port 53.
+Some error occur. A couple of pips got flipped.
+What does Dns server do?
+Nothing like? If we see something it's garbled, it's not understood. It doesn't respond at all.
+That's it.
+That's how it is.
+How about a different scenario?
+Let's say, let's say you're running a smtp server
+on Port 25 or whatever it is.
+and you send a Dns packet to it.
+So somehow, you accidentally sent a Dns packet? 2 an Smtp server.
+What's gonna happen?
+What will it respond with?
+What do you think?
+Do you think
+so?
+If a smtp server received a Dns request.
+it'll say, Wait a minute. This is not an smtp request.
+This must be a garbled, evered message, no response.
+So if so, here's the 1st scenario.
+A Dns packet gets sent to a Dns server.
+but there was some errors in the header.
+the server would just ignore it right? No response.
+What if you send a Dns packet
+to an Smtp server or or a network time protocol server, whatever you send it to the wrong server. For some reason
+we send it to the wrong port.
+What's gonna happen?
+Nothing, because the server will think it's an improperly formatted request it.
+It thinks that this I'm ever on it.
+and it just won't respond back to it, and that the 3rd thing
+which we're going to talk about next week is the Icmp destination unreachable limit
+due to due to previous attacks that Icmp destination. Unreachables are actually limited to one
+per second, one per second in Linux.
+or 2 per second in windows.
+so the Icp destination unreachables are limited to one per second. Linux, or 2 per second windows. So if there's more than that.
+you can't get Icmp destination reachables
+any more than once per second.
+we're running out of time today. So I'm gonna jump ahead
+to exercise number 4. Let's give 1 min to this, and then I'll have the model points after this. So let me set a timer here for 1 min.
+and I will ask you to
+fill out exercise number 4. Question number 4 on the weekly bonus exercise. So exercise number 4 is
+in Utp, scanning what are 3 responses
+and the meaning of each one.
+Let me give you a minute for this one.
+so I'm going to jump ahead to exercise a now exercise A is.
+explain the difference between a Tcp sync, scan and Tcp. Connect, scan.
+and provide a specific scenario for where each one of these would be useful.
+So I'm asking for. Tell me the difference between a sync scan and it connects can
+thank you all for joining me on this class today.
+I really appreciate it and
+thank you for letting me know of the technical issues. Earlier today.
+some logistics lab one was due this past Sunday, you can still submit it late if you haven't submitted yet. There's a 1% deduction per day up to 10% late deduction maximum. If there's any particular reason, you can't submit it, you must get approval from me in advance. This will include being sick personal issues or professional reasons.
+Lab 2 was released. Lab 2 was discussed earlier. Today. Lab 2 is due on second march. That's 2 weeks from now. And also there's a 5% bonus for submitting it 5 days early. And there's a 5% bonus for doing the bonus task as well.
+Ta office hours. That will be today at 8 Pm. Eastern time you can always find the latest schedule on Brightspace. Zoom.
+Thank you again for joining me today. I wish you a wonderful week. Take care, everyone bye.
+Thank you. Bruiser.
