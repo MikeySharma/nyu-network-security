@@ -1,0 +1,1038 @@
+Hello, welcome to Cs. 6, 8, 2, 3. Network security. My name is Professor Philip Mack. Today is Monday, March 10, th 2025. This is week number 7 for network security. This is our Midterm Review course.
+1st of all, logistics, you have a midterm exam. The midterm exam. Is this coming Saturday on March 15, th with a starting time between one to 3 pm. Eastern time. The Exam. Is 2 h long, so what this means is that you could start the exam between one to 3 pm.
+You can start at one o'clock, and then you finish at 3, or you can start as late as 3 Pm. And then finish the Exam. By 5 Pm.
+The midterm exam. Covers all topics except for lesson 4 slides, 41 onward. So while we're doing the lessons. We did not get a chance to finish. Lesson 4. Slide 41 onward, so that would not be on the midterm exam. But otherwise everything else is so that includes lessons 1, 2, 3, 4, and 5.
+Homeworks, number one. Homeworks, number 2.
+The labs assignments number one, number 2, or the reading materials, reading materials from the books, the slides, and the video recordings. Like you see here.
+the midterm is open book, open notes, open virtual machines and open Internet. However, the restriction is that the midterm exam must perform individually, that is, you cannot work with anyone else, and you cannot
+use any AI tools for the midterm exam. So usage of tools, such as chatgpt gemini, etc. Is strictly forbidden, and it will be considered unauthorized collaboration or plagiarism.
+If you have any questions about what you can and cannot do for the class. Please reach out to me directly, and also review the student code of contact conduct linked here, or you can just google it.
+Examples of unauthorized collaboration is working with anyone else through either a forum or a question and answer site. Several that you probably are aware of, and usage of any chatgpt or other AI content. Related tools would be considered plagiarism. Now, specifically, I'm referring to Llm, such as Chatgpt, Gemini, and such.
+If you have an AI enabled note taking program that is acceptable. So, for example, you have onenote onenote has AI in that copilot, if you use that. That's perfectly fine.
+However, using copilot to generate answers for you, for the midterm exam is not allowed.
+You do not need to have a virtual machine available. It's
+I'm stating that you could have it available. But there will be no questions pertaining specifically for a Vm. Meaning just to be extremely clear. You won't get any questions that say, please go, do this on the virtual machine.
+You might have questions similar to Lab one and lab, 2 questions that you can answer that do not require you to go to a virtual machine. So, for example, in Lab one and 2, you have some sections that we had to fill in the blank with some code.
+You had some areas where to write a filter.
+These things you could do with our virtual machine. You may go to a virtual machine to test them out, but it is not necessary, and the exam is not designed that you would need to do that, you'll be able to answer all the questions. But if you want the Vm. To be available to help you.
+that is available for you to use, though it is not necessary
+for the exam. It's open book. We will not be using anything such as lockdown, browser, or proctoru. We are not using those tools for the midterm exam.
+Please note that the exam is 2 h long. So that means that when you start the exam you have 2 h completed. The timer does not stop for any reason. So, for example, you close the window or your computer crashed, or you need to use a restroom break. The timer does not stop for any reason. So the moment you start, you have 2 h to complete the exam.
+If, for some reason that you can't take the exam. Don't take the exam and get a proper documentation.
+So, for example, you're feeling sick. You're not feeling well. Don't take the exam. Get a doctor's note instead.
+Or let's say, for a professional reason.
+you are on call that day, that is, you know. Maybe you don't need to be called in. But you're on call.
+If that's so, don't take the exam. Get some sort of documentation like your schedule, or whatever or email from your supervisor, and just send me an email with your reason for not being able to take the exam at that particular time.
+If it's a medical reason, then please send it to student advocacy. The link is over here, but just Google it Google Nyu student advocacy, excuse absence and then submit the documentation to them. Don't send me any pii send it to student advocacy.
+So right now, here are the things that generally you should be working on
+as an order of priority for me.
+1st thing is the sample midterm problems. Those are probably the best thing that you can do right now. So go ahead and review them
+and do them as if it's a real exam.
+So for each problem, try to do it without
+try to do them with some sort of time limit and answer the question fully. Do the best that you can before you move on. That's the best way to work on the sample midterm problems.
+And also don't forget to review the cryptography lecture as well in the cryptography, homework so generally for all the labs and homeworks. So you have homeworks number 1, 2, and and Labs one and 2
+the questions you should be able to do in a fairly quick basis.
+So, for example, Lab one.
+the 1st time you did lab one, it may have taken you oh, 10 to 20, to 30, maybe even 40 h, to complete the 1st time.
+But at this point I expect you to be able to complete the lab assignment from scratch
+in maybe 15 min.
+So that's the amount of speediness that you're able to do.
+That's the expectation. So far. So, for all the homeworks and labs.
+you went through the learning process. You went through the difficult part. And now, if you had to do it again.
+Like, for example, homework number 2, cryptography.
+Right?
+Imagine that if you had to redo the homework altogether from scratch.
+you should be able to do it in maybe 15 min is too short. But in a fairly quick amount of time. Now you have references open. You have the Internet open. You have notes available to you. So you have all the information you don't need to memorize any formulas you have examples that you can refer to.
+but you expect to be able to do it in a fairly quick basis for all the labs and all the homework assignments as well.
+And then, after that, I also want to make sure that you understand the lessons, the video lectures, and the slides. So I will recommend that you go to the slides and go through the slides slide by slide and make sure that you understand everything in the slides.
+And if you don't understand it, make sure you Google it, or find some reference or resources to help you understand it.
+I also recommend that you go and watch, re-watch all the video lessons that we have at double speed. Watch it in the car, or when doing your commute, or whatever, and even at double speed, you should be able to understand all the concepts
+that are being that we have gone through. So we have like 6 weeks that you have to go through. You have more than 6 days before the midterm exam. So just one a day. Listen through it and and do just do a check that you understand
+everything that was discussed.
+So there was an update. So originally the midterm exam was going to be 10 to 12 noon.
+but I changed it to 1, 2, 3, and the reason for that is that gradescope has a maintenance time between 11 to 12 Pm. Where I will be down. So it was either.
+Actually there was no choice. You have to start after 12 noon, essentially for the midterm exam.
+So I did send an update for that. And I'll send another one in case you didn't get the email.
+So that is the details for the midterm exam.
+So for today we'll be going through a review of some of the materials, not all the materials, but really just some of the materials that I feel that some people have gotten caught up with for whatever reason. So we'll be going over what we talked about for week, 1, 2, 3, and 4, and then we'll go over some cryptography as well.
+Lab one lab on video.
+what did you have to do for Lab one. So the 1st thing is sync flood. So for Lab one, your 1st task was to test sync flood.
+sync flood is a type of Ddos attack that takes up all of the connection queues on a particular target.
+So this particular attack, the attacker over here sends a sync packet to the victim.
+and when a sync packet gets sent to the victim, the victim will use up one of its connection queue. A particular host has a limited number of connections. Maybe a typical computer might have 50 ish, maybe 100. But whatever it is, it's some sort of limited amount.
+We have some good notes that talk about this. Let me pull up a note slide one second here.
+So I'm resharing a screen. And we talked about a sync flood attack. So this slide shows that the attack on the left side over here is able to send lots and lots of Tcp Sync packets to the recipient. The victim.
+Tcp sync packets are really, really tiny.
+Tcp sync packets are 40 Byte in size. IP header is 40 Byte. Tcp header is 40 Byte. They're really really tiny.
+and the attacker sends these Tcp Sync packets to the recipient, and they're able to take up all the resources of the recipient.
+And the reason that this works is because the Tcp sync.
+a receipt of a Tcp sync packet starts the process of opening a connection. The target is preparing to open a connection and it'll just run out of sockets. A normal computer just doesn't have that, many of it. So if the talker just continues to send Tcp sync packets.
+the victim won't be able to open up any legitimate connections.
+What can we do about it? Well, this is a defense mechanism called sync cookies
+and sync cookies is pretty ingenious sync cookies.
+Let me pull up the slides. I believe we have a slide that talked about sync cookies.
+Here it is. We have a slide to talk about single keys. So when the attacker here on the left, 3D.
+The attacker sends a Tcp sync packet.
+the Tcp sync packet has a sequence and act number as part of the normal. Tcp, three-way handshake, and the sequence number is some sort of random number, and the act number is 0,
+and when the recipient receives this Tcp sync packet
+instead of opening a socket, it will generate a sync cookie instead.
+A sync cookie looks like this. It depends on the operating system, but on Apache it looks like this. A sync cookie is an Md. 5 of the IP. Source and destination, the port source and destination, a slow time and a magic number.
+So it takes the Sync cookie. These numbers takes an Md. 5 of it takes the 1st 32 bits of it and then stuffs it in. The sequence number over here.
+So the Sync cookie literally comes back as the initial sequence number B,
+so the Sync cookie goes into the initial sequence number B.
+It stuffs it into the Tcp sync app packet.
+It gets sent back to attacker, and then
+the recipient forgets everything. It just forgets everything. There's no storage, there's no cache, there's nothing.
+Why, why does it doesn't store anything after that. Why doesn't it keep the information.
+Well, in case they're under attack, whatever queue that they're using is going to get filled up.
+So after it generates a single key, it doesn't log anything. I mean it logs it, but it doesn't remember anything after that. There's no cache, or there's anything in memory after that.
+So then the packet gets sent back to attacker.
+If the attacker replies back.
+which they don't right? Generally attackers, they're just sending a Tcp sync packets. They're not going to reply back to a sync ack.
+so that's the end of it.
+But if it's a legitimate target, excuse me if a legitimate sender.
+the sender will actually reply back to the Sync hack
+with a Syng A/C or just a Tcp's act.
+and this Tcp act has a sequence number of A plus one and an act number of B plus one, or, in other words, this simple key plus one.
+And so when the recipient receives a Tcp sync ack.
+they will see, they will say, Oh, okay, let's see if there's a single key in here, since sync is enabled.
+The recipient recalculates the synchro key
+and then see if it matches the sync number, the Sync cookie number in the Ack. Number.
+If it matches, then it continues, then and opens a socket.
+If it doesn't match, then it just ignores it completely.
+So this is sync cookies and syncies. Sync cookies has been very effective against sync flood attacks.
+Sync cookies are genuinely by default off.
+and they don't get turned on until there's an attack.
+And the reason for that is that all this generating of syn cookies takes up about half the CPU
+off the server.
+So if the if the server can handle 100 connections at a time, enabling sync cookies
+effectively, reduces it to 50.
+So sync cookies are generally turned off until a sync flood attack is detected. Then it gets turned on automatically, at least in ubuntu it gets turned on automatically.
+So that's synchron keys. And that's 1 of the mitigating a mitigating
+for a mitigator, for a sink flood attack.
+Another attack that you did in lab, one is a Tcp reset attack and a Tcp reset attack is fairly simple.
+It's fairly simple. So we have Alice and Bob, and in Lab one, you open a calendar connection between Alice and Bob, and then the attacker here on the bottom will send a Tcp. Reset.
+and when you send a Tcp. Reset, all you need is the correct, either sequence or act number, or whatever.
+Actually.
+from your testing, you found out that you just need a correct sequence number in order to to perform a correct Tcp reset attack.
+You only need a correct sequence number to do so.
+Now, whether you use the sequencer or act number depends on which side which attack which side you're attacking here.
+And so you have determined that it depends on the last packet that you see in most cases.
+in most cases. The last packet that you see was from Alice to Bob.
+And if that is so, then you just copy the sequence number of the packet and put it into a Tcp reset, and then you will reset the connection.
+It is wow! It was so easy, right it was.
+It was incredibly easy. So if the attacker is able to see the network, this attack was just incredibly easy.
+and later in the class, we talked about how easy it is to do so. I guess we haven't given the details. But
+the examples we gave is that if you're on Starbucks, if you're in the hotel. Wi-fi.
+Essentially, you can do arp, cache poisoning or some other attacks that there's like multiple attacks that you can do.
+And you can see everyone's traffic just like that.
+This is the reason why, generally
+cybersecurity professionals have been recommending people not to use public Wi-fi
+for this particular reason it's exactly this reason that people can see all your traffic. They can see all your Dns traffic Dns later we talked about Dns, or we will soon again. It's unencrypted. There's so many type of Dns attacks. You can be redirected to a wrong website. Blah, blah! Lots of things that you can do. So generally, this is why you shouldn't use public Wi-fi without VPN.
+Now, someone who knows what's going on.
+who understands a little bit about security won't fall for this because A. Dns attack.
+you go to an unencrypted site or
+for Tcp reset attack. You start seeing your connection just keeps breaking and such.
+But regardless this is a Tcp reset attack. It's really really easy.
+The other possibility that you can get is that the last packet came from Bob to Alice.
+and if you're attacking Bob's side. Then instead, you take the act number here and then put it in the sequence number field, and then you do an attack from the attacker to Bob, and then you break the connection
+and then also for the Tcp reset attack. You can attack either side.
+You can. You can attack Alice side. You can attack Bob's side. It doesn't matter which side of the of the connection you attack.
+It will break the connection, that's it.
+And then the next task. You did task 3, I believe, was session. Hijacking session hijacking is slightly more complicated, and it's only slightly more complicated by that. You need the correct sequence and act number.
+which is, which is pretty easy. Actually, it's not any much harder than that. So if the last packet was from Alice to Bob.
+and you're attacking Bob. Then you just take the same sequence and act number.
+and you will be able to hijack a connection.
+If the last packet was instead from Bob to Alice.
+Then you just take the sequence, the act number, and you reverse it.
+and then you attack Bob, and you break the connection.
+Now the thing is, when the attacker attacks Bob, you also add a malicious command to the payload.
+and this malicious command tells Bob to execute something or such
+tells it to execute something on the server, and such
+question. Just a question. General question.
+I see here. This diagram shows the attackers attacking Bob.
+Can the attacker instead attack Alice?
+Can they attack Alice? Yes or no? And why can the attacker attack Alice on the second hijacking attack?
+Well, because the answer is yes and no.
+so yes, you can perform a session hijacking attack on Alice, but it won't do anything.
+It won't do anything, so you must attack it on the server side, Bob.
+you must attack her on the server side, Bob.
+Why.
+well, imagine you have a townnet session.
+Alice opens a tonnet connection to Bob.
+Alice is the client.
+Bob is a server, Alice types something into the telnet server LS.
+Then the bot. Then the server will execute that command
+and give the response back. Or Alex can type touchfile dot txt
+the server will execute that command and send back the results.
+What if Alice, or if the attacker sent a command to Alice, and the command to Alice says.
+Touchmalware, dot exe dot txt.
+What's going to happen there?
+The attacker sends a command to Alice's side, the client, the talented client.
+and tells to tell the client touch Malwareexe what's going to happen.
+It just prints it on the screen, and nothing happens.
+because, remember, Alice's side is the talented client.
+The server can't give commands to Alice.
+the client side. It only displays information.
+So the server just displays information to Alice's side. You can't execute any commands to Alice's side.
+Nothing will happen.
+So if, for example, in a lab assignment, you took and attacked Alice
+for Alice. It will just display the command on the screen.
+and that's it. Nothing happens. You just displays it because anything that gets sent from Bob to Alice is just displayed on the screen. There's no execution of anything
+from the client side. This is why, from task 3 and task 4 for lab one.
+It has to go towards
+it has to go towards the server side, because only the server will execute any commands
+you type. Touch Malwaretxt. It'll actually execute that command and perform this action.
+If you do it on Alice's side.
+it does nothing, it does nothing.
+it just displays it on the screen.
+This is different from the reset attack. Question. Task 2 on Lab one.
+because you're just doing a reset. If you do a reset on the server side, you do a reset on the client side. It doesn't matter. It'll just reset the connection from either way, because you're pretending to be the other. Bob, you're pretending to be Alice sending it to Bob for Alice. You're pretending to be Alice, sending it to
+Bob, sending it to Alice. It'll break the connection, and that's it. It doesn't matter, but for session, hijacking it only for telnet, for telnet. It only works on the server side, because only server only the server execute commands.
+and then and then you have one more.
+Was this one more? You had
+one more session hijacking with the what was it called in the lab with the reverse shell
+with the reverse shell. Maybe we forgot the slides for this one.
+So for this one, not only did you send a malicious command to bob you also.
+You also ran a little server on the attacker. So you ran a little server and you have port. Open
+the 2 that you did. This was Netcat. So you did, netcat, dash, l dash, PADA. D. Or whatever it is that you did.
+and then you open a port port 8,080 or 9,090 on the attacker machine.
+You send a malicious command to Bob, and then you had Bob open up a reverse shell
+back to the attacker.
+and then with the traverse shell, you're able to type in additional commands, touch additional files, mine, Bitcoin.
+install ransomware, whatever it is that you want to maliciously do, you can just do that kind of stuff.
+So earlier, we talked about sync flood attacks
+and synth attacks is one of the ways that a synth flood
+sync cookies is one way that sync flood attacks are mitigated.
+There was a second way in ubuntu that mitigated sync flood attacks.
+Do you recall what that was? There was these 2 things that you had to do in Lab one
+in order to turn off sync flood protections. The 1st one was sync cookies.
+and then there was a second one.
+Do you remember what it was?
+The second item that was preventing sync flood attacks from being successful.
+Yeah, it's the reverse cache Tcp connection. So in ubuntu, they reserve 25% of the sockets for previously known, IP addresses.
+so it reserves a number of them for known IP addresses. So that means when a sync flood attack is ongoing.
+the real limit for the sockets is actually artificially reduced, and it saves a number of sockets for the sole purpose of
+known connections. So for Lab one, you have to turn off both of these protections before you're able to do your syncflit attack and have it be successful.
+So that's syncfloat attack.
+And that's what we did for Lab one
+now moving on to Lab 2, which is a much quicker discussion.
+By the way.
+lab 2, I'm expecting to return Lab 2 by Friday, so you have an opportunity to review it before Saturday, your midterm exam.
+So for Lab 2, you also have 4 tasks.
+Task one
+task, one was to use the sniff function, to capture packets and to learn how to use the filter.
+So hopefully, you were able to do task one and complete it successfully and perform the test in order to do so.
+The filters, once you get the hang of it.
+it's fairly straightforward. The filters is the same as the Berkeley filters, which is the same that's being used in wireshark or Tcp. Dump or T. Shark. So pretty much all of these network filtering protocols use the same filters, and so one of the advice to learn how to use the Bpf. Filters is just to do it on wireshark.
+So you capture some traffic on wireshark, and then you just test the filters on wireshark and wireshark is a much better gui than scappy to do this testing.
+and after a little while you get the hang of it, and you learn it quite quickly, and then you use the filter in Scapi
+question 2. Task 2, task 2 is to spoof. Icmp echo, request packets. So you're using Scapi and you're spoofing a Icmp echo request. I believe, in this particular example, you're pretending to be Google, dns server 8 dot. 8 dot 8 dot, 8, sending an echo request to a host and having a send it back.
+Task 3 is to use. Send an Icmp trace route program
+and you'll be sending a number of Icnp pings with a varying Ttls in order to create a traceroute. So for task 3, 1 of the things that you need to do is be able to send
+and receive replies for Icmp. When receiving replies. You need to be able to handle things such as
+duplicates and no responses, and you have to write about depending on how your trace route is. You have to write some code in order from the skeleton code you have to modify a little bit in order to handle that properly.
+Task. 4 was the really interesting part
+task 4 was where you sniff the echo request, and you write echo replies.
+You had 3 different conditions. Ping 1, 2, 3, 4, 10, dot, 9, 0 9, 9, and ping 8 dot 8 dot 8 dot 8.
+And when you ping one dot, 2 dot, 3 dot 4,
+you would normally get no response. But with your program you get aicmp echo reply.
+When you do ping 10 dot 9 dot 0 dot 9 9, it just doesn't work.
+It doesn't work at all, and it doesn't work because it on the local network
+and on the local network. Scapi will send out an arp ping instead of an Icmp ping first, st
+and when it sends an arp ping and it gets no response. Arp, ping is just a fancy way to say Arp request. It gets no response. It doesn't even bother to send the Icmp ping.
+and therefore your program doesn't see an Icmp ping to reply back to it.
+and then for the 3rd one to ping 8 dot 8 dot 8 dot 8. It's a real IP address on the Internet. You are expected to get one reply, and for your program you should make it to have 2 replies
+for Lab 2. 1 of the major errors that occurred from what I've seen from your responses is that your program did not filter out your own packets.
+So what I've seen multiple times is that
+your program is replying back to a ping from 1, 2, 3, 4.
+At the same time it reads its own ping that is sent out.
+and then send out another reply, causing a massive massive loop that eventually freezes your computer and causes everything to not work. So for that. If you're encountering that problem, it means that your filter was not set correctly. Your filter has to be set such that it does not read in its own packets that it sends out.
+So in this case, there you have multiple ways to do it. But if your program is sending out. Echo replies.
+Then you had to filter out.
+echo replies, and have it not read in his own echo, replies.
+as an example of what it should do.
+Multiple right answers. But don't create a loop is
+essentially what you need to do with the filter.
+So that's lab one and lab 2,
+and if you're not, if you don't recall Lab one and lab 2, please go ahead and just redo the whole lab assignment
+again, and you should be able to you. The expectation is that you'll be able to do it quickly.
+This is a risk matrix used by the Department of Defense. It's a 5 by 5 matrix, and the green is placed like this. If you have any questions about oh, why is this box green? Why is this box green and this box yellow.
+It doesn't matter.
+It doesn't matter which ones is green, which one is yellow. It doesn't matter.
+The point for risk matrices is that it helps you decide
+with your really limited engineering budget which risk you should treat
+so ideally. What happens is that you have multiple risk in your organization. You have identified multiple risk.
+But you have a limited budget. What do you do with your limited budget? And how do you reduce the risk for your organization as much as possible.
+And so the idea with a risk matrix is that, oh, you have a risk over here. You have a risk over here, you have a risk over here.
+Okay, so first, st you have some money. See if you can take care of this risk first, st
+and then after that you still have money, take care of this risk.
+and then, after that, if you still have more money, take care of these other risks.
+That's the purpose of a risk matrix is to help you decide
+how you should handle these risks.
+And then the other purpose for a rest matrix is that it's for quantitative
+wait, qualitative risk assessment. So it's quantitative. And it's qualitative. Quantitative
+with numbers is where they're able to figure out the exact value, exact risk number
+like what Geico does for car insurance.
+So you input your information, your car, your whatever information. And let's figure out, okay, your risk number is X, and this is how much you're going to be charged for it.
+Cybersecurity is not there yet. We're not at that level yet. It's
+I think we're almost there, but we're not quite there yet. So in order to handle cybersecurity risk, we use this risk matrix.
+And for this risk, matrix, it's more like
+in comparison to one to another like we don't know. We don't fully understand cybersecurity risk.
+We just know that maybe this risk is
+has more impact than this other risk. That's this kind of way that we feel about it kind of like
+vibes, right? Just a feeling here.
+And because we're not able to give actual numbers and actual, definite things. The risk matrix uses a Delphi method.
+the Delphi technique in order to assess the risk. The Delphi technique is where you for each of these risks, you ask 3 different independent experts
+in order to assess the risk.
+and why? I might say I didn't mean independent, but I mean independently, as 3 experts
+to identify what these risks are anonymously from each other, and you ask them.
+oh, well, this risk is so and so how would you rate it, and why and such?
+And then you try to get a somewhat of a consensus of what the risk is.
+Question one exercise a.
+By the way. These exercises are not collected this week, so please go ahead and do this for yourself.
+Exercise a what is residual risk, what is residual risk?
+Let me set a timer here, let me give you 30 seconds to think about this. If you don't know the answer.
+please Google it and refresh yourself.
+Ever since they changed the interface. I can't. I can't find anything.
+I set a timer for 30 seconds.
+Okay, so what is residual risk?
+So we don't have a weekly exercise this week. It's not. It's not collected this week. So these exercises are for yourself only. So exercise a what is residual risk.
+reserve, reserve risk is the risk that remains after treatment after treatment or after medications.
+So here's an example.
+Example. Risk number one over here.
+Example number one is, the software is really buggy and would likely have buffer overflow vulnerabilities
+for whatever reason it was rated as 4 5 over here likelihood, 4. Consequence, 5 or impact. 5.
+Excuse me, consequence or impact same thing, likelihood, likelihood and impact.
+and then some sort of treatment to it, and mitigation reduce the likelihood of this risk by spending more resources to reduce defects, and this is a fancy way of saying, Fix the bugs. And so the risk goes from 4, 5 to 1, 5.
+And so 1 5 is the residual risk.
+One of our colleagues mentioned a very good definition of residual risk. It says, a residual risk is a potential impact that could not be mitigated any further
+transferred, avoided, or replaced by other security measures that could be implemented. This is a very good definition, because residual risk is not the absolute, lowest possible risk there is.
+It's what's possible to do in your organization.
+So a silly example would be, oh, if you want to reduce the risk any further.
+You will have to spend a lot more money to do so.
+a lot more money to do. So. Let's take example.
+you have a basement that can get flooding that can get flooded. You spent lots of money on upgrades to the server room in order to mitigate all the effects of flooding
+in order to really mitigate the flood, the risk of flooding you have to move the server room to someplace else.
+and that costs so much money. You're not going to do it, even though it's possible you're not going to do it. So the residual risk is how much risk remains after you did everything that you're willing to do for it.
+And unfortunately, in the world of cybersecurity.
+even when I worked in the Dod.
+and you may think that the Dod has unlimited money for cybersecurity.
+and maybe the Dod does. Compared to many organizations.
+It's still not enough.
+It's still not enough.
+And we have to run these exercises all the time.
+because not only do we have to spend our money in the right way
+after you after you do these exercises and reduce your risk.
+Then you have a gut feeling based on your experience, saying, Wait a minute. This chart was not correct. We need to fix something. There's something wrong here and try to fix it.
+So
+the point is that this risk matrix is to help you prioritize the money that you get to spend on cybersecurity. And the idea is you rated it in some way, and you just want to reduce it as much as possible, based on the resources that you have and this resources includes money, time, schedule requirements and
+engineering resources.
+Here's another example, a quantitative risk assessment, quantitative meaning with numbers.
+Let's go over this very quickly. If you're not familiar with this from your other class, please make sure you spend some time on it. I will guarantee you that on the midterm exam you'll either have a question on risk, either qualitative risk assessment or quantitative risk assessment. So you will have a question on risk
+for the midterm exam.
+And the question will likely to be either this question or this question over here.
+So quantitative risk assessment. I'm going to take a silly example over here. Let's say you have a value of a building, and this building is $750,000. So this is the asset value AV asset value.
+and let's say the single loss expectancy. That is how much
+will be lost for each incident of an occurrence
+here. It says it's $250,000. That means each time there's a fire
+it'll cost $250,000 to fix it.
+And how does Geico know it? Geico has an army of actuaries that calculate this information. So they're pretty good at this. Each time there's a fire
+lose $250,000 annualized rate of occurrence. Aro a RO is.
+how often does it occur per year.
+So in this example, error occurs every point 0 5
+or 5% per year. Or, in other words, this is once in 20 years. So the aro of 0 point 0 5 or 5% means
+there's a risk of a fire to occur once in 20 years, and that is 5%
+exposure factor which we did not go over over here.
+The exposure factor is what is the probability of something occurring.
+So in this case, in this example, it did not take that into effect. It just says
+it's $250,000 every time that there's a fire.
+Then, therefore, the annualized loss expectancy that is how much money would be lost each year.
+whether something will happen or not. So if you just do just probability if a fire happens every 20 years, and it costs $250,000 every time there's a fire.
+and each year, whether there's a fire fire or not, you have to pay 1 20th of the cost
+of having a fire, because you're presuming there will be a fire every 20 years.
+Therefore each year the annualized loss expectancy ale is 12,500. So
+you're paying 12,500
+for the probability that there will be a fire every 20 years irrespectively, of whether there's a fire or you'll ever have a fire.
+Now we have a question question, if a fire alarm
+that costs $5,000 a year to maintain.
+and $15,000 to install initially?
+Is it worth it?
+Is it worth it. What do you think?
+Let me give you 30 seconds to go over the numbers here
+and let me know what you think.
+So what do you think?
+Is the fire alarm worth it or not?
+Any thoughts?
+Well, yes, is not good enough. I need a yes, and why? A yes is not
+a yes, is not a correct answer on the midterm exam.
+Well, let's do the math. Let's do the math.
+Let me insert a table here
+of some sort, and let's say, if you have no fire alarm.
+and then this is a fire alarm.
+And so for year one, the 1st year you have no fire alarm. It'll cost 12,500
+for year. 2 will be 25,000,
+and for year 3 is 17,500. Okay, so that's how much it costs. If you have no fire alarm
+and with fire alarm, let's say it costs 15 k plus year to install plus $5,000 per year. So the 1st year it's like 20 k, so the 1st year is 20 k.
+20 k. To install it to run it.
+and then the second year. It's
+plus $5,000. So it's $25,000.
+And then the 3rd year, it's $30,000.
+I see. I made a miss the little error here and such.
+Okay, so I see here that for year one
+without fire alarm, it'll cost 12,500 with the fire alarm. It'll cost $20,000, so it's not worth it.
+And then the second one is $25. So it's Breakeven.
+And then the 3rd year you start to see a savings for having a fire alarm here, so your answer would be something along the lines of Yes, after 3 years having a fire alarm will be worth it, because it saves money after 3 years.
+So that's that's 1 answer. That's 1 correct answer, another correct answer.
+Another correct answer would be. Oh, I'm a house flipper.
+and I only plan to own the house for 6 months.
+so therefore it's absolutely not worth it for me to get a fire alarm, because the initial cost would be more than not having a fire alarm
+as an example.
+Question, comment. Go ahead.
+Hi, sir! Can you hear me?
+Yes, I can hear you.
+Okay. Question, please. Why, at the 1st year I understand why we pay 20,000. But that was the 15,000 was only initial investment.
+so I expect only to pay 5,000 every year, going forward correct.
+Yes, so question is, why is the number 20,000 here? Then it's 5,000 afterwards. So I added the cumulative amount here instead. So without fire alarm, cumulatively. It's 12,500, and then year 2. You pay 25,000 cumulatively.
+then year 3. You pay 37,000 cumulatively
+for a fire alarm. It's 20,000 plus 5 k plus 5 k. So I added a cumulative amount here rather than the yearly amount.
+Got you. Thank you. So that will depend on the business. Correct, Professor, like this. If this is worth it or not, it depends on how long that will last the business, and another consideration.
+Right. So this is an excellent point. So our colleague here mentioned here that it's also a business decision as well. It's not purely a numbers thing.
+And this is exactly right, because when you are a cybersecurity professional, and you go to your Ciso or your CEO, and you try to pitch. We need to fix this vulnerability. We need to mitigate this thing. It's not just a just a numbers thing. It's also a business decision as well. You need to put it in terms of. We're going to save money in the long run, or you're going to put it in terms of
+in terms of. We don't want to lose our reputation by being hacked during this critical time. That sort of thing.
+So it's more than just a numbers game. So when you give your reason here.
+Yes, no, you need to say, because
+after 3 years we'll save our company some money, and we expect to stay here and own this building for more than 3 years for it to be worth it.
+for example.
+Or you can say, Oh, we think inflation is going to be really, really high. So because inflation is really really high, we don't want to invest, or we do want to invest or don't want to invest. Whatever
+you make your decision to be, but generally it's more than just a simple oh, this is the math! This is numbers, this is it, and such. So for a question like this. If you get a question like this.
+then in many cases, but not all.
+You can have a yes or no. But you need to make some sort of logical sense here, so you can answer could be, yes, this is worth it, because I plan to stay here 3 years or more, and then we get in. Get to save, or you can say no, because
+whatever reason that makes logical sense, it'll work out. But you need to back up with some sort of real reason here.
+And so for a question like this, if it's numbers, you probably need something like a table like this to show that. Well, I actually think you understand what you're talking about before you move forward with that.
+So that's a general rule for the midterm exam is that
+if you get a box where you have to answer a question.
+it needs to have some sort of explanation there. So on the midterm exam, you'll have multiple different types of questions. The questions could be multiple choice. It could be short answer, or it could be long answer. And you've probably seen this on gradescope before you get multiple choice. So you just choose one or multiple ones.
+You get a short answer, which is like a very small box, and you can just type in an answer for that. And then you have a long big box, and for the big box
+you have to write your answer with some sort of explanation. So any answers like Yes or No is not going to work for that. You need to say yes, because
+or no, because or this is how I'll solve this problem because or so on. So this needs to be some sort of explanation discussion and such.
+Now, this is just a silly example here. So of course
+you can. In a real life scenario, you have to think about interest rates. You have to factor in expected loss and decoration of the asset that you have to replace it after 5 years, 10 years, or whatever you have to consider that in a real life here.
+We're just just using an example to make sure that you understand what this concept is. So to answer a question from the chat window. No, you do not have to factor in loss, expectancy, or rate of a
+or such in terms of the answer. Here.
+now, moving on to a different type of dos attack a Ddos attack.
+So a Ddos attack can be done in multiple ways and it can. There are many different types as well.
+One type of Ddos attack we talked about was called a bandwidth attack.
+I just saw an article also called a vomble volumetric volume, metric
+attack as well, but essentially this type of attack just completely fills up the connection like completely.
+and the traditional way to do it is to get a botnet. There was recently an article that gave some absurd numbers like 30,000 hacked webcams, and these IoT devices was able to create ginormous Ddos attacks
+which it's pretty crazy, right? I think it's really crazy
+that such a thing can occur, but
+I can't check the numbers, which is pretty crazy.
+But aside from a botnet, another way to create a Ddos attack would be to use services that are already on the Internet. The example that we use in class is the Dns service, Dns domain. Name service is used for looking up. The IP addresses for domain names
+on a record type.
+But Dns also has other record types, and specifically they have this txt field, which is pretty large, it can be up to 512 Byte in size.
+Now, 512 Byte may not be that large, but
+you think about the size of a Dns request a Dns request is pretty small. They are approximately 60 to 80 Byte in size, depending on the size of the URL that the domain name that you're looking up.
+So if you're looking at my longer domain, name it could be a little bigger, but
+overall it's not a big deal. A Dns request is 60 to 80 Byte, but Dns response is
+up to 512 Byte in size. So it's like an 8 time or 9 time
+increase in size. So the attacker here. What they do is that they send this Dns request to multiple open Dns servers on the Internet at the same time.
+which there are a lot. There are maybe like 10,000 open Dns servers on the Internet.
+and they send these really really small requests to these Dns servers.
+And this Dns Servers sends a Dns response back to the victim.
+And these responses can be pretty big up to 512 Byte in size.
+and the thing here is that the victim
+has very little they can do to try to fix it because the victim here, and let's say they're running a server. And even if they're running a firewall that's blocking the traffic.
+this firewall is saturated because this type of attack is a bandwidth attack. It takes up the entire bandwidth of the Internet connection.
+and therefore.
+even if he has a super firewall that's able to selectively block out the correct traffic and so on. The traffic's already down, down the bottleneck already.
+So it's really really challenging to stop a bandwidth type of attack.
+That's why we have services like Cloudflare. And what cloudflare does is that it kind of load balances your traffic before it gets to you. So Cloudflare would, for example, run its firewall like devices
+on the Internet, and then filter the traffic
+before the traffic goes to your host.
+So that's the idea, for that's the idea for
+Cloudflare and the other type of Internet-based Ddos Internet filtering security type of services
+port scanning. We also talked about Tcp and Udp. Scanning
+this part is also very important, because I can also guarantee that there will be some sort of scanning type of question on the midterm exam. So this talks about Tcp, we also talked about Udp, let me pull up some slides on it.
+He talked about Tcp. Port scanning somewhere here.
+Here it is. We have slides on Tcp. Port scanning.
+and then we have slides on Udp. Port, scanning as well. I can pretty much guarantee that there will be something along with scanning. So this is Tcp scanning. We have the Sync connect scan type. We talked about Udp scanning. And so something of here will be also on the midterm exam as well guaranteed. So this is very important knowledge for you to to understand and comprehend.
+So most of the traffic on the Internet.
+Most of Layer 4 traffic is Tcp, Utp and Icmp, that's where most of the traffic is on the Internet
+and Tcp and Udp both have a lot of points. They they both. They both have
+a lot of points and 65,000 forts, and for Udp, which is a connection
+protocol scanning is more straightforward and more easy to understand. So essentially. When Nmap, one of the popular scanning tools, try to scan a server for a port, it can get 4 possible responses which could mean several things. So when Nmap tries to scan, let's say, Port 443, which is a common Internet protocol for web traffic
+scans. Port 4, 4, 3.
+It sends a Ttp sync packet.
+If the port is open, then it'll get back a Tcp sync.
+so that's the normal response for porters open. So you send a Tcp sync packet to Port 4, 4, 3,
+you get a Tcp act.
+Excuse me, you got Tcp sync act. It means the port is open.
+Okay, very easy, Ben.
+The second possible response is a Tcp reset. So if Nmap sends a Tcp sync packet to Port 443.
+Get a Tcp reset.
+It means the port is closed.
+so open disbsync act close reset.
+Then we have the interesting ones.
+If in absence a Tcp sync packet of 4, 4, 3, and get Icmp destination unreachable.
+Well, it could mean some things that could mean a network issue.
+Route is not found. Congestion. Host does not exist, etc, etc.
+or for security reason, which is the only thing we care about. It was rejected by firewall. We also went on to talk about the difference between a reject and drop
+reject is a firewall being nice and a firewall sending an Icmp destination unreachable just to be nice and saying, Okay, you don't scan. You're not supposed to access this.
+or the firewall can drop a packet, which means it doesn't respond at all.
+So a destination, unreachable security. Reason is that it was rejected by firewall. Then the last possibility is no response, and this could mean several things.
+No response could mean a networking issue.
+or it could mean that there's a fire wandering away, dropping the packets.
+So when you do a Tcp. Port scan. You have 4 possible responses.
+When the port is opened. Cdp Sync. App port is close, reset
+packets being rejected by for firewall. You can actually be destination reachable.
+You get no response. You get a it's drop by the firewall. No response.
+Now, just to be even more confusing.
+Dash Udp.
+and please do not get Tcp and Udp confused in any way whatsoever. They're different protocols do not get them confused.
+So Udp scanning is significantly more difficult significantly more difficult.
+Remember that Udp is a connectionless protocol.
+The default action, when there's an error, is to ignore everything.
+So let's say, we picked one of the most common Udp protocols, which is Dns.
+let's say you send a Udp Dns packet to 453.
+If you get a response, it means the port is open.
+so you send something to Port 53. You get a response.
+The port is open, or if the port is closed, you send A. Dns request to Port 53.
+You can Icmp destination unreachable.
+So the Icmp destination unreachable means. The port is closed for Udp.
+so this is very important that the Icmp destination reachable
+means the port is closed for Edp.
+and then the 3rd possibility is that you send a Udp. Dns packet to port 53,
+and you get no response.
+And this one's a tough one when you get no response.
+It could mean that the file was blocked in the packet.
+but it can also mean there was an improperly formatted packet, an improperly formatted pocket.
+When the packet is improperly formatted, like a transmission error.
+the server will just ignore it.
+So you have a Dns server running on Port 53.
+You get Dns packet, but a couple of bits were flipped due to transmission error.
+The Dns server.
+We'll just ignore it.
+It just ignores it completely, ignored it.
+As you know, Tcp. Works a little bit differently and has error, correction, and such retransmissions
+by Udp. Just ignores it.
+But another question is, what if you sent the wrong packet to the wrong protocol?
+So, for example, let's say you're not running a Dns server on Port 53. You're running a network time protocol on Port 53.
+Why would you do that? I have no idea why you would do that.
+But let's say that is so.
+If that is so, and you send a Dns packet to the Ntp. Server, the Ntp. Server
+would treat it as a malformed packet and just won't respond back to it.
+So in that case the port can be opened.
+but you still get no response.
+so the port can be open. But you still get no response because it was malformed, or it's the wrong protocol.
+And so same thing like, let's say there was some piece of malware, and the piece of malware is running on Port 3, 1, 3, 3, 7,
+which stands for elite, and you obviously don't know the protocol that the malware speaks on.
+So you send a probe to Port 3, 1, 3, 3, 7, and you get no response.
+Well, that means what that means. You don't know.
+Right. Is it being blocked by firewall, or did you use a wrong protocol? You have no idea.
+So this is why the end map categorize this as open filtered.
+So nmap categorizes this as open filtered because you don't know.
+Nmap calls this response open filtering
+because the port can be open. That is, you sent the wrong protocol to it.
+or it can be filtered. Another way of saying Block! Drop by firewall
+filtered. It's no way of saying drop by firewall.
+And then, to make this even more complicated.
+the 3rd reason that you could have no response is because the Icmp destination, unreachable limit was reached.
+The Icnp destination, unreachable, is limited to one time per second in Linux, or 2 times per second in windows.
+and the reason for this limitation is because
+way back then, and I'm talking about like, 15 years ago, there was this Ddos attack that used Icnp destination reachables
+where an attacker will send a broadcast message over to a whole network.
+and then the network will respond back with Icmp destination unreachables, causing a flood to the victim.
+So because of this attack, Icmp destination reachables were limited.
+But this also means that Udp scanning is extremely extremely slow. In order to avoid the Icmp destination unreachable limit.
+which is once per second. Generally you have to scan at a slower speed than once per second.
+So if you want to scan
+all Udp ports. Someone did the math. It takes like 18 h to do so, and that
+seems correct, based on my experience as well.
+It'll take more than 18 h to scan all Udp ports.
+which is why it's never done. And therefore, if you need to hide some malware and some port, it's going to be some high Utp ports, and generally all scanners of any sort. Openvast nesus retina nmap.
+Whatever
+does not scan all udb ports, it scans all Tcp ports, because it takes like 10 seconds to scan all Tcp ports, but scanning all Udb ports takes a day so never done.
+Exercise. B. So can you list the possible responses for a Tcp sync packet and reasons for each
+and for Utp?
+Let me set a timer here for 2 min.
+and for this one. It's just for yourself. I'm not going to answer this question. We already answered this question already.
+Let me set a timer here
+for almost 2 min, and you can take a moment to think about this yourself.
+So moving on Dns, how does Dns work?
+Dns works in a freely recursive manner.
+So here's an example of how Dns works in your home.
+It's missing one thing here. So you have your computer over here. But then, usually there's also your router as well. So locally at home. This is
+Verizon quantum gateway that you have at home, who's also acting like a Dns server. So that's missing from this chart over here.
+but generally your computer, your Firefox, sends a Dns request.
+and this request goes to your primary Dns server. So if you're a Verizon files customer. You are using the Verizon files. Dns server.
+The request gets sent the root server.
+It gets sent a request to root service, and the Root Servers reply back with the dot. Let's say you're doing engineering. It'll tell you the namespace for that Edu namespace.
+It'll send your request over to that Edu namespace. Then you get a response back, saying, Oh, if you're looking for engineering, Edu, why don't you check the Nyu Edu namespace?
+Then
+your local Dns server will send a request over to the primary Dns server for Nyu Edu, and I'll ask, do you know the IP address for engineering?
+It'll send a request back to the server, to your Dns server. It'll get cached and they'll get sent over to your computer as well. And then your computer will navigate to engineering.
+Now, there's a couple of attacks here that are possible. The 1st attack
+is, if anyone's in your local network.
+remember that Dns traffic is not encrypted and not protected in any way whatsoever.
+So because of that.
+anyone on your local network and the example that we use was someone in your local Starbucks
+would be able to see your traffic snippet and then reply back faster than the real Dns server.
+In order to reply back faster than the real Dns server, you need to do 3 things. The 3 things is.
+yeah, do it faster.
+One. Do it faster.
+2.
+Use the Dns servers. IP address, which is pretty easy.
+3.
+Match the transaction Id, and the port number from the packet.
+and this one's a tricky one, because it depends on
+whether you can see the packet or not. So someone in the local network
+who can see your package see your Dns request going out
+will be able to see the transaction Id and the port number from the Dns packet and respond back really, really fast. And then it can send you over to a fakeengineering Nyuedu website.
+That'd be easy to do so, and then and then another possible attack
+is if the attacker tries to Spoof.
+Step 7 over here. The attacker can try to Spoof step 7
+by replying back as if it's the Dns server for engineering.
+When it does that it will pretend to be the
+Dns server for engineering. Edu responds back with a fake IP address.
+But this IP address gets cached onto the Verizon files Dns server and get cached on your computer. And when they're able to spoof step 7 over here
+the effect is much larger. This will affect anyone who uses the Verizon files. Dns server who wants to go to engineering dot nyu Edu.
+And another thing that the attacker can do, which is really really hard, even harder.
+is trying to spoof. Step 5 step 5 spoofing step 5.
+They're able to change the whole
+Dns server for engineering for Nyuedu. So if you're able to do step 5, it'll tell the Verizon file server that wait a minute. The Dns server for engineeringnydu for Nyuedu is actually this server over here, the fake server, and then from there the attacker is able to
+change all the Dns responses for anything asterisk dot nyu edu.
+So doing. Step 5 is very powerful, but very, very challenging to do. Step 7. Very hard to do also.
+however, trying to spoof. Step 8 over here very easy. As long as they're on your local network it's very, very easy.
+and this includes any hacked IoT devices as well. So for those of you who own a house, you might have a nest, doorbell, camera, ring, cameras.
+garage door opener, and other kind of stuff that is using IoT. Well, if any of those get hacked and go on your Wi-fi network, they can do this attack.
+Exercise. C exercise. C.
+This one!
+We're not going to go over this one right now.
+This one I copied from the sample midterm exam. So take a look at it, and then try to answer it. The answers will be given in the. When I give out the answers to the sample midterm questions.
+It needs to be talked about, and so on.
+Okay, now we are up to Lesson Number 5.
+At this point you should have.
+You should have reviewed Lesson number 5. The lecture slides the video and did homework number 2 already.
+If you haven't done all of that yet, I recommend that for those of you who are watching this video stop the video here.
+do lesson 5, the video, the homework, the lecture, and everything like that do all of that, and then come back and continue over here.
+So I'm continuing with Lesson number 5 here.
+and one of the main topics
+is Diffie Hellman Diffie Hellman, along with Rsa
+is one of the major reasons why we are able to have the Internet that we have today like this is the reason that you're able to go to amazon.com, and enter your credit card numbers or other private information, and not be concerned that hackers are able to see that information.
+So that's why Diffie-human and Rsa are so good.
+We talk about how to compute numbers for diffie-hellman and Rsa. And we'll be going over that right now.
+So let's take this example. Over here
+on the left side we have Alice on the right side. We have Bob, so Alice and Bob and the goal here with the fee Helman is.
+how can they create a shared key? K.
+How can we create a share key K.
+Without them meeting in person in any way.
+So the way that they'll do this is that they'll use the pheumen
+they would. Alice, on the left side, would send over a capital A. G. And N.
+Over to Bob and Bob would send over P. Over to Alice.
+and from that they're going to be able to generate a secret key K, that even
+if everyone on this call
+listen to the numbers. And everyone on this call over here saw what GNA. And B. Are.
+They still won't figure out what the secret key K is.
+If this concept is not familiar to you, one of the reading materials is a Youtube video that explains it really, really nicely over there. So if this concept is confusing, please take a look at the video. That explains that I think that's pretty good. It's the one that uses colors to explain the free Haman.
+So let's take. Let's go over and just take a explicit example on how to do this.
+and we're going to go over it together right now. So, Alice.
+let's say Alice chooses. N. Is 23, and G is 5. Alice chooses secret number a. And Bob chooses secret number B.
+So Alice 1st calculate a as g raised to a MoD, n.
+so g raised to a MoD n is a equals g, which is 5
+raised to the A, which is 6
+MoD. N. Which is 23.
+For questions like this, and for questions on the midterm exam.
+If you need to do these calculations, you should use a tool called Wolfram Alpha.
+let me pull up the website right now.
+So you should use Wolfram Alpha, let me share my screen.
+So if you have a question like this on the midterm exam. Just usual from Alpha, and just type it in. So I want to do 5 raised to the 6, MoD.
+23.
+The answer is 8. So this is 8, and this is perfectly fine to do on the midterm exam. It's a loud tool.
+Okay? So you have 8. So Alice here will send over A, which is 8 over here.
+G, which is 5 and N, which is 23, I'll send it over to Bob.
+Bob would choose a secret number B 15. So Bob chooses 15. So B is B equals g raised to the a
+5 raise 2D.
+B, which is 15 MoD. N, which is 23. And so again, I just use Wolfram, Alpha 5
+raised to the 15th Ma. 23, and the answer is 19.
+Now both sides will try to generate the key. K. So Bob sends B back to Alice
+and B is 19.
+Then both sides will try to generate the key. KK is K. On Bob's side, K is a
+raised, the B MoD, n, and from Alice's side
+K is B raised to the A MoD, n.
+so let's say, Bob calculates key KK equals capital A, which is 8
+raised to the B, which is 15
+MoD. N. Which is 23.
+So 8 raised to the 15, MoD. 23, I get 2, 8 races I get 2
+K equals 2, and then from this side
+K is B raised to the A which is 19
+phrase to the A, which is 6
+ma. 23, which is 23. And this equals 19 raised to the 6 ma. 23.
+I get to.
+So on both sides I get K equals 2,
+and I get K equals 2.
+And the amazing thing about the Phi Haman is that
+if Alice and Bob, or let's say me and you.
+I'm Alice, and you're Bob.
+and we do this exchange, and we exchange A, GN. And B. And we have the other 100 people on this call. Who's listening in?
+They won't know what our key K. Is, no one would know upset me. And you.
+That key is the key. K. Is 2
+that the key came is to no Ombudo.
+So that's the amazing thing about the freehamen.
+Everyone listening this call is not going to be able to figure out what keyk is
+simply by listening to A, GN, and B.
+That's the amazing thing here.
+Okay, question question.
+how can I check that? I didn't make any silly mistakes here
+like, how do I know? Like I'm doing this? And like, let's say, this is a midterm exam question.
+and I'm doing these calculations.
+How can I be sure that I didn't make a mistake here?
+How can I check my work?
+Yeah, if the K. Are the same?
+See if Alice and Bob are able to generate the same K on both sides
+using these 2 separate calculations.
+then we know we're more likely than not that we did not make any mistakes.
+So this is the the goal here. So for these Diffie-hellman questions, you do these calculations.
+and you expect to get the same. K.
+That is a way that you know that you did everything correctly.
+Here's exercise. D. 2, this problem. Please go ahead and do this yourself again. Make sure that you get the same K on both sides. So you're able to check that? You got the right answer.
+Next question, Rsa.
+Creating Rsa. Keypad. Same thing for Diffie. Hellman, if you haven't gone through Lesson 5, you haven't done the homework. Please stop and do that before coming back to this. Otherwise this will be a very, very difficult to understand portion
+of the lesson.
+So in Rsa, we're trying to create a public key and a private key pair.
+So essentially, we're creating 2 keys that are related to each other.
+2 keys that are related to each other very, very closely to each other
+in such a way that for Rsa. You can take one key. Let's say the public key encrypt something with it.
+After you encrypt the name of a public key. You need the other key, the private key in order to decrypt it.
+or if you decide to encrypt something using the private key.
+then the only way to decrypt it is to use the public key. That's how amazing. And that's how cool.
+Or I say, yes.
+So here we're going to go over the process on how to create a public private key, or that is these 2 keys that are linked with each other.
+So the 1st step is that you choose 2 large prime numbers. You choose 2 large prime numbers.
+P and Q. So for today's world, you need to create P and Q to be 2 0 4 8 bits in size at least at least. So in other words.
+in binary
+it needs to be 0 1, followed by 2 0 4, 7 bits minimum to get a 2 0 4 8 bits in size.
+That's how large these keys are supposed to be. So you take P. Times Q, and you get a size of 4 0 9 6,
+because the key size is n, so if you choose, P. And Q, the 248 bit size, you get a 4 0 9, 6 bit size key size.
+So you calculate. N, and then, Phi.
+you choose an encryption key E,
+you choose its encryption, key d, that goes with E,
+and then you have your public and private key.
+So let's go over.
+Let's go over an example.
+So the example we're going to use
+is P equals 5 and Q equals 13,
+and we'll compute NVE. And D.
+So let's just move forward with this.
+You compute P. And Q.
+You compute. NN. Is P. Times, Q.
+P. Times, Q.
+And P. Times, Q is 65. So that's 5 times 13 is 65.
+And then you compute. Phi, Phi is p. Minus one q, minus one
+p. Minus one times Q minus one.
+and you take 4 times 12, and you get 48.
+Then the next step is to choose E,
+and you choose the encryption key and to choose the encryption key E, you need to meet 2 criterias.
+2 criterias. The 1st criteria is that E must be between one and fee.
+so e must be between one and Phi.
+That's the 1st criteria, and the second criteria is that E and Phi are relatively prime.
+so relatively prime means that they have no other factors but one in common. So that means E and Phi must be relatively prime.
+So how do we do this? Let's do this by trial and error.
+Let's just do it by trial error. So let's just choose E, and I'm going to look at this with possible values of E, and then non-possible values of E, so possible values of E,
+and not possible.
+And I'm going to ask for your help with this.
+So let's say I'm going to choose the number 2
+is the number 2, a possible value of E, and
+let me just go through the criterias again. The 2 Criterias to me is that
+this possible value of E must be between one and Phi.
+and the second part is that E and Phi.
+E. And Phi, and Phi is 48 in this case must be relatively prime, so
+is 2 and 48.
+Are they relatively prime with each other?
+So to check, if they're relatively prime, we have to check what factors they have.
+and if they, if the factors is more than just number one.
+then they are not relatively prime.
+So between 2 and 48, what factors do they have that are seeing each other.
+and for that there is one and 2.
+So that means that 2 is not relatively prime of 48. So 2 is not a possible value
+of E.
+How about the number 3 is the number 3,
+relatively prime of 48, that is, is 3. A possible value of E
+is 3. A possible value of V.
+Yes.
+3 is a possible value of E, because 3 and 48
+have no common factors except for one.
+Right?
+No.
+yeah.
+3 goes into 48.
+So 3 is not a possible value, because 3
+is a factor of 48.
+So 3 is not a possible value of E,
+because 3 and 48 are not relatively prime.
+Okay, next, what about 4 is for a possible value of E, no, it's not y.
+it's not, it's not. But why?
+Because 4 goes into 48, but actually 4.
+Remember that 4 is 2 times 2,
+and so 2 is also a factor of 48
+as well, and 4 is itself a factor of 48. So 4 is not a possible value of 48.
+But the other thing to note is that
+all, even numbers, are ruled out, because all, even numbers, have a factor of 2
+and 2 is always a factor of 48. Well, actually.
+you see that how this works, like Phi
+is P, minus one Q minus one.
+And P and Q are always odd numbers, because they're prime.
+So it's prime number minus one. So it's even times, even even times even is 48. So Phi is always an even number.
+Therefore 2 and Phi are always, never relatively prime, so no even numbers will ever work.
+No, even E can never be. Even E can never be even I can never be evil.
+That's it.
+So you can forget all the, all, the even numbers. Okay, how about 5?
+If I've a possible value of E.
+Kiss, because 5 and 48 have no common factors except for one. Okay, skip 6. How about 7
+is 7. A possible value of E.
+Yes, because 7, 48 have no
+common factors. Okay, how about 9
+is 9 and 48 relatively prime?
+No, why not?
+Right?
+9 is 3 times 3 and 3 is a factor for the 8.th So 9 doesn't work.
+9 doesn't work.
+How about 11 does 11 work?
+Yeah. 11 works 11 and 48 are
+have no common factors. Okay. 13.
+How about 13.
+13 works? Right? Because 1340 have no common factors?
+15.
+How about 15?
+No.
+Why not?
+Because 3. Yeah, how about how about 17?
+How about 17?
+Does it work? Yes, 17 works? How about 19
+does 19 work?
+Yeah. 19 works?
+How about 21,
+no. 21 doesn't work, because 3 times 7, 3 is a factor. How about 23,
+23 works? Right? No other factor but one.
+How about 25 does 25 work?
+Well, what are the factors of 2525 is 5 times 5,
+5 is not a factor of 48. So it works. Actually, yeah, 25 works.
+How about 27,
+27 does not work, because 27 is 3 times 3 times 3, 29.
+Bye, 29 works. Yeah, 29 works, 31,
+31 works, yes, 3. D. 3
+does 33. Work no, 33 does not work because 33 is 3 times 1135
+does 35 work.
+Yeah, 35 works, 35 is 5 times 7. And neither of these are a factor of 48.
+How about 37,
+yeah, 37 works? How about 39,
+39 does not work? No, no, because it's 3 in there? 41,
+41 works?
+Yeah, 41 works, 43,
+43. Works, yeah, 45,
+yeah, 45 does not work, has a 3 in it? How about 47,
+47 works?
+How about 49 does 49 work?
+49 is 7 times 7.
+Trick question.
+Sorry? It's a tough question. So remember, there's 2 conditions.
+The 2 conditions is E must be between one and Phi, which is 48. And the second condition is that they're relatively prime. So it's bigger than 48. So it doesn't work. It doesn't work. No. So essentially, we found all possible values.
+Okay, we found all possible values of it.
+And this there's no easy rule to figure out.
+There is no easy rule, so don't take any shortcuts. Don't make assumptions on it, because prime, just because they're prime numbers, just because they're odd numbers, doesn't mean it rules out or not rules out here. So even though in this case it didn't work. But some prime numbers won't work here, depending on what V is. So just because it's prime doesn't mean it's work.
+And just because it's odd, doesn't mean it's work like, here, you get weird numbers like 25 and 35. You know these perfectly work as well.
+So how does a computer do it. A computer essentially does trow. And ever.
+yeah, exactly. That's how a computer does it. So a computer would.
+If it's picking a random E, it would just pick a random number and then does a check.
+and then it'll pick another random number and do a check
+and then pick another number and do a check.
+That's how a computer does it until we find ones that works by randomly picking numbers.
+Yes, I am serious about that.
+So
+on an exam. I will ask you. There's a couple of ways I can ask these questions. It could be, tell me the 1st 5 numbers, so I could say, oh, tell me this. 5 numbers, how many of these are
+possible values of EI can also. Another way is, I give you a handful of numbers, and then you have a yes and no question to say whether they are or not
+factors of values, of possible values, of E,
+so that's the possible ways that you can have a question on this, and you're pretty much guaranteed to have a question on this one.
+Okay, so the next part, the next part
+is you have to choose. D, so you have the encryption key ee now.
+and let's say that you choose the smallest encryption key here.
+and after that you want to choose an encryption key d.
+In order to choose the use. This formula over here.
+The formula is, Ed. MoD. V. Equals one.
+And so in order we plug in the formula. So let's say, let's take
+E equals 5. You plug it into a formula. You got 5 d. MoD phi, which is 48
+equals one.
+See?
+Now, in this class, we don't go over exactly how to solve this. You use the reduced equilian algorithm which you'll learn in a future class cryptography on how to do it. But in this class we don't talk about exactly how you do it. So for our class, if you need to calculate, D, you do it in a trial and error type of method, I'll give you some values to try, and then you have to figure out a value within some
+some realm of possibility here. So we don't go over the formula on how to solve this episode by trial and error. If we do trial by error, you'll find that D equals 29. In this case.
+It's relatively simple to do. If you use Wolfram Alpha, you type into Wolfram Alpha, and you try a few values in order to figure it out.
+So that's the method that we're using in this class. But when you get to Crypto, you use the reduced Euclidean algorithm
+in order to figure out.
+So then, finally, what is the public key values?
+What's the public key values. The public key value here is
+Ne. So N is 65, and E was 5.
+So that's encryption of the public key. One of the keys. And the second key is nd 65,
+65, and 29.
+Okay, so let's say, you have this question on the exam.
+How do you know if this was correct or not
+like how do you know some mistake, you know, like there's lots of room for error here. So how do you know whether you made an error or not
+in this case, how can you tell
+like, how can you tell if you make any mistakes?
+Yeah, you encrypt something with one of the values and then decrypt something with the other value.
+So let's do that.
+So next thing is, let's say, encrypt something. So you encrypt something with M. Equals 10,
+and so you encrypt something C. Equals M. Raised to the E. MoD, NC ciphertext equals M. So it's 10 raised to the E. 5, MoD. 65.
+And this becomes what I don't know. I'm going to use Wolfram Alpha here. So I get 10 raised to the 5,
+MoD. 65. I get 3.
+Then
+I decrypt it. So I use the formula, M equals C raised to the D, MoD and and M equals
+C. Which is dirty, raised to the D, which is 6 Osd 29, MoD. 65.
+Okay. And this becomes 30, raised to the 29 ma. 65.
+And the answer is, 10.
+Answer is 10.
+So
+this means that we didn't make any mistakes. So I got M. Equals 10. I encrypted it, using my values
+of 65, 5, and I got 30, and then I use that and decrypted it, using my value. 65, 29, and I got 10 back. So that means everything was done correctly here. This is like the ultimate proof
+that it was done correctly here.
+moving on to the next topic. The next topic is
+block cipher mode of operations. So the purpose of block cipher mode of operations is to ensure that when you encrypt the same thing over and over again. You don't have the same results, like, for example, Aes
+Aes has a block size of
+what is the block size? Is this 128, or is it 256
+byte in size? I forgot exactly what the byte size is, but regardless when you encrypt something with Aes, and let's say you encrypt something over and over again.
+You could get the same results. So in order to stop something, stop it when you encrypt the same thing over and over again, you use a something like a mode of operations, and what this does is that it
+takes one block and mixes it with another block
+in order. So you get different results every time.
+So let's say, for example, we have an encryption algorithm over here on on this chart
+and for this encryption algorithm.
+And this is a very, very simple substitute for an algorithm. If you take like 1 1 1 and you encrypt it 3 times, you get 0 0 over and over and over again.
+So instead, what they do is that they make
+you perform the encryption. But you do it via a mode of operations. So that means each block that is encrypted
+gets mixed in a little bit differently than before.
+So in order to do this, I like to do it in the visual method, so I would go over and do this visually, and we can all all do it together. And I'm going to ask for your help here as well.
+So let's say, I take this plain text, 1 1 1,
+and I put this in the input spot over here. So it's 1, 1, 1, 1, 1 1
+and 1 1. And the Iv here is I see the Iv is 101. So I take this and put 101 over here.
+and I'm going to ask for your help here. So I'm just going to follow this diagram
+all the way through follows diagram all the way through.
+Let's say here 1 0, 1 Xor, 1 1 1.
+What is that? What is 1 0 1 Xor, 1 1 1.
+That's 0 1 0 0 1 0.
+And then I take 0 1 0, and I encrypt it. What do I get?
+So I take 0 1 0, I encrypt it.
+I get 1 0 0.
+So this is 1 0 0 over here, 1 0, 0. Okay, so then, this 1 0 0,
+I found this line, it goes over here. So it's 1 0.
+0. So then I have 1 0 0 x or 1 1 1.
+I get 0 1 1 and then take the 0 1 1 and I encrypt it.
+What do I get?
+I get 1 0 1.
+So I get 1. 0, 1,
+all right. So then I take this 1. 0, 1 which goes over here, one
+oh, one. So 101 x or 1 1, i get 0, 1 0,
+then 0 1 0 encrypt, I get 1 0 0 again.
+Yeah.
+So the ciphertext here, ciphertext, Ecos.
+100-10-1100.
+Okay, great. I got the answer pretty straightforward, huh?
+And for those of you who
+maybe you don't like this visual method, you can do it mathematically as well. So, for example.
+you can just pull up the formula on Wikipedia
+and just do the formula instead. So let me show you. Here you see this formula, this ciphertext one so ciphertext one over here.
+so ciphertext one really is xor of Iv and plaintext one encrypted.
+So it's the Xor of Iv Xor plaintext, one
+syntax one, and then you take the whole thing, and you encrypt it.
+and then you can see one, and then for C. 2,
+you get to get C. 2 over here. It's really the
+xtor of the ciphertext, one with the plaintext one. So it's an encryption
+of ciphertext, one x, or plain text 2, and then ciphertext. 3
+is the encryption of separate text. 2 Xor clean tax 3.
+So there we go. Here's the formula to do the same thing except you can do it in a mathematical formula instead.
+And you can just pull this right from Wikipedia and do that instead. If you don't understand how I just create this out of nowhere, then don't do it. But really I just looked at the chart and wrote it down mathematically. So it depends on which way you'd like to do it, if you prefer the visual way, or you prefer the mathematical way.
+anyway.
+Anyways, I meant to say the city ciphertext, ciphertext, ciphertext.
+Anyway, I got the answer. 100-10-1100.
+How do I know an error wasn't made here.
+How do I know there was no mistake?
+How can I be sure that I didn't make a mistake? And there's tens of.
+I'm really trying to. Yeah, decrypt it. You take the same thing. You decrypt it. So let's try it.
+Let's try it. Now.
+here is the picture for Cbc. Cyber blockchaining mode of operation. I have the cyber Texas this.
+and I'm going to decrypt it. Now let's take the same thing and decrypt it.
+So I'm going to do exactly the same thing opposite.
+So remember, this one is for decryption. See ciphertext, and then panetext in the bottom. So ciphertext is
+1 0 0. So let me
+put that over here. So this is 1 0 0, and it's 1 0, 1, 1 0, 1
+and 1 0. 0. Okay?
+And the Iv remains the same. So the Iv is 1 0 1. Okay, Iv is 101. Okay, so
+we take 1 0 0 and we decrypt it.
+What do you get when you decrypt 1 0 0.
+So you take 1 0. So you decrypt it.
+1 0 0 decrypted right. So you're going backwards here and you get 0 1 0, right.
+Don't forget that this table
+is similar to encryption decryption algorithm. So when you go from left to right. It's encryption.
+When you go right to left you get decryption.
+So here I'm decrypting it. So i 1 0 0 decrypted into 0 1 0.
+And now 1 0 1 x or 0 1 0.
+What do I get?
+1? 1 1. Okay, then, you see, I found a line here, this 1 0 0.
+It goes over here all right. So I get 0 1 0 decrypt.
+What do I get when I decrypt 1 0 1 0 1 1.
+So I get 0 1 1,
+and so 1 0 0 x or 0 1 1. i get
+1 1 1. Luckily, so everything looks good so far.
+Alright, then this 1 0 1. i follow this line, this 1 0 1 goes over here.
+So 1 0 0 decrypt, I get
+1 0 0 decrypt 0, 1 0
+and 0 1 0 xr. 1 0, 1.
+I get 1, 1 1. So I get cipher. Plaintext
+equals 11111111111.
+So I got the same answer back.
+So it's a guarantee that I did everything correctly.
+There's other examples in it. Please go ahead and do this yourself. Here's another example for Cbc.
+And here's another example for Cfb.
+and here's another example for Pcbc.
+so there's a couple of different mode of operations. Please be familiar with all of these. Heck. Actually.
+you should check out the Wikipedia article.
+Let me pull up right now. One second.
+let me share my screen.
+You have a Wikipedia article on block cipher mode of operation
+as the 6 common ones over here.
+and generally you need to know
+many, but not all of them. So, for example.
+here is Gcm, you don't need to know. Gcm, because Gcm is too complicated.
+There is Ecp, which Ecp is another way of saying no mode of operations, because, you see from the diagram there's basically nothing.
+Then the Cbc Cbc is the one that we just did. You need to know this.
+this Pcpc, which is right here? You need to know this.
+Cfp, you need to know this.
+And here Ofp, which you need to know this as well.
+So there are 4 of them you need to know. The 4 of them is Ofb, Cfb. Pcbc.
+And Cpc. And I gave an example for each of these right here. So you have an example for Cpc
+Cfp, Pcpc, and
+oh, this is Cfp, so there's 1 more you should know one more, and you should also know
+you should also knew.
+Do an example on Ofb as well, and they're on the Wikipedia article and
+know it as in. Just know what it is, because at the end of the day.
+look, it's a diagram. You see, it's a diagram, and they're pretty much more or less. All the same, if you know one.
+you know the other one. So since we did, we just did. Cbc.
+you should be able to do Pcpc without a problem.
+It's pretty much the same thing.
+So you need. You don't need to know, memorize, or any of that. You just need to know enough of it that you could look at it. You're able to do it.
+That's the level that you need to know for this, anyway.
+Thank you for joining me today. That's the end of our review class for today. Reminder on logistics. Your midterm exam is this Saturday between one to 3 pm, that's the starting time between one to 3 pm. Once you start, you have 2 h to do your midterm exam. It covers all topics that we covered so far, except for lesson 4 slides, 41 onward. This includes
+the homeworks, one and 2 labs, one and 2. All the reading materials, the book.
+the Powerpoint slides from lessons one to 5, and the videos from one to 5, including the Midterm Review class, which is this one
+right now.
+The Midterm exam. Is open book, open notes, open Vm, open Internet. But you must do it yourself. You must do it individually, and you cannot use any AI assistance. Tools, including chatgpt gemini, etc. For it any misconduct will be, will be considered
+violation of the stern code of conduct. You can Google, what that means for Nyu
+plagiarism or unauthorized collaboration would would force me to give you a 0 for the better exam.
+And also the last note is that the exam. Once you begin, you have 2 h. It does not stop for any reason. Even if you close a window or you have any technical issues.
+If you have any problems you can reach out to me on slack during that time. But I will not be answering any specific questions. So if you have any questions on the maternity exam.
+just do the best you can. You can also, in most cases write down some assumptions like, for example, you have a question you don't understand. You can say I don't understand this. I will assume
+this because of this, and so on, and that will be taken into consideration as well.
+You do not need wireshark for the exam. There will be no questions related to it. There might be some questions related to Lab one and 2 actually guaranteed that you have a question related to Lab one or 2, or both.
+But no question is written that you need a virtual machine. Right? You might have some questions like, fill in the blanks or answer those questions, but you don't need the virtual machines to do their questions.
+but you may have it available if you like
+again. Thank you very much for joining me today. I wish you a wonderful week
+and a peaceful, restful time to study and prepare for the exam.
+Thank you very much. Take care, everyone, bye.

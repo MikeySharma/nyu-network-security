@@ -1,82 +1,151 @@
-## CS 6823: Network Security - Class Summary
+## Cs. 6,823 Network Security - Class Summary - January 27, 2025
 
 **Instructor:** Professor Philip Mack
 
-**Date:** Monday, January 27, 2025
+**Date:** January 27, 2025
 
-**Introduction:**
+**Learning Objectives:**
 
-This comprehensive summary covers the first class of the Spring 2025 Network Security course.  The primary learning objective is to equip students with the knowledge and skills to understand and address the complexities of network security in today's interconnected world. Professor Mack, a seasoned cybersecurity professional with 20 years of experience, aims to empower students to analyze real-world security incidents, engage in informed discussions about cybersecurity, and apply practical skills using tools like Nmap and Metasploit.  The course will cover both offensive and defensive aspects of network security, including hacking techniques, network protocols, cryptographic algorithms, attack and defense methods, and advanced topics like firewalls, TLS, and wireless security. The instructor emphasizes the ethical implications of the skills taught, strictly forbidding unauthorized use on any system.
+* Develop a deep understanding of network security concepts and techniques.
+* Acquire practical skills in hacking and defending networks.
+* Be able to analyze real-world cybersecurity incidents and propose solutions.
+* Develop the ability to discuss cybersecurity topics with technical and non-technical audiences.
 
-**Key Topics:**
+**Instructor's Teaching Approach:**
 
-* **Instructor Background:** Professor Mack provided a detailed overview of his extensive experience in cybersecurity, including roles as a cybersecurity officer at a major international organization, Security Operations Center (SOC) manager for a US agency, cybersecurity lead at the Department of Defense, and network communications specialist at the New York Stock Exchange.  He also highlighted his educational background, holding a master's degree from New York University, obtained through a DoD scholarship. This background emphasizes the practical, real-world focus of the course.
+Professor Mack utilizes a blend of theoretical lectures, hands-on lab assignments, and real-world examples to facilitate learning. He emphasizes practical application and encourages student interaction and collaboration.
 
-* **Course Overview and Objectives:** The course aims to provide a deep understanding of network security principles, enabling students to analyze network architectures, discuss security strategies, and understand real-world security breaches. The objective extends beyond theoretical knowledge to include practical skills, such as using penetration testing tools, understanding vulnerabilities, and exploiting and mitigating them.
+**Overview of Topics Covered:**
 
-* **Ethical Considerations:**  The instructor strongly emphasized the ethical boundaries of the skills taught.  Students are explicitly prohibited from using these techniques on systems without explicit permission.  The course focuses on responsible and ethical hacking practices.
+This class served as an introduction to the Network Security course.  Professor Mack provided an overview of his background, the course structure, grading policies, assignments, and essential tools like Slack, Brightspace, Gradescope, and Seed Labs. He also introduced the fundamental concepts of network security, including the challenges of securing networks in a complex environment and the difference between positive and negative requirements in cybersecurity. Finally, the class began exploring the first lab assignment, focusing on TCP SYN flood attacks and TCP reset attacks.
 
-* **Network Security vs. Other Computer Science Disciplines:**  A core concept discussed was the unique nature of network security compared to other computer science fields. While other disciplines often focus on *positive requirements* (how to build or implement something), cybersecurity emphasizes *negative requirements* (how to prevent undesired actions).  This shift in perspective requires a different mindset, focusing on potential vulnerabilities and how to mitigate them.  The example of securing a database against unauthorized access illustrated this complexity.
+---
 
-* **TCP Three-Way Handshake and Sync Flood Attack:** The class delved into the mechanics of the TCP three-way handshake (SYN, SYN-ACK, ACK) and how it can be exploited through a SYN flood attack.  The small size of SYN packets (40 bytes) makes them easy to generate in large volumes, overwhelming a server's resources.  The concept of SYN cookies as a mitigation technique was introduced, where the server delays resource allocation until a valid response containing the SYN cookie is received.
+### Key Topics:
 
-* **TCP Reset Attack:** Another key topic was the TCP reset attack, a technique used to disrupt existing TCP connections. The attacker injects a specially crafted TCP reset packet into the communication stream, causing the connection to terminate.  The importance of correctly identifying the sequence and acknowledgment numbers was highlighted.  A bonus challenge for Lab 1 involves automating this attack.
+**1. Course Introduction and Instructor Background:**
 
-**Exercises & Discussions:**
+Professor Mack introduced himself, highlighting his 20 years of experience in cybersecurity, including roles as a cybersecurity officer, SOC manager, cybersecurity lead in the Department of Defense, and network communications specialist at the New York Stock Exchange. He also discussed his educational background, including a master's degree from NYU.
 
-* **Weekly Bonus Exercise 1 (Question 1):** Students brainstormed ways to hack a database account, assuming forgotten credentials.  Various techniques were discussed, including:
-    * **Brute force:** Trying different password combinations.
-    * **Default password check:** Exploiting default passwords.
-    * **SQL Map:** Using tools to extract information from unsecured databases.
-    * **Credential stuffing:** Reusing passwords leaked from other websites.
-    * **John the Ripper:** Cracking password hashes.
-    * **Sniffing:** Capturing network traffic to obtain credentials.
-    * **SQL injection:** Exploiting vulnerabilities in database queries.
-    * **Phishing:** Tricking users into revealing their credentials.
-    * **Token spoofing/Replay attack:** Stealing and reusing authentication tokens.
-    * **Dictionary attack/Rainbow tables:** Using precomputed tables to crack passwords.
-    * **Exploiting password reset procedures:** Using social engineering or other techniques to reset passwords.
+**2. Course Overview and Learning Objectives:**
 
-* **Weekly Bonus Exercise 1 (Question 2):** Students considered the outcome of sending a TCP reset packet with incorrect sequence/acknowledgment numbers. The answer: the packet is ignored.
+Professor Mack outlined the course's focus on practical hacking skills within a controlled environment (Seed Labs), emphasizing the ethical implications and strict prohibition against unauthorized hacking. He stressed the importance of understanding network architecture, protocols, and attack/defense methodologies.  The goal is to equip students with the knowledge and skills to analyze cybersecurity news, engage in informed discussions with professionals, and apply their technical skills in real-world scenarios.
 
-* **Weekly Bonus Exercise 1 (Exercise 3):** Students were instructed to join the Slack workspace, introduce themselves, and share relevant information.
+**3. Course Logistics and Resources:**
 
-* **Weekly Bonus Exercise 1 (Exercise A):** Students were tasked with analyzing a recent cybersecurity news article about a hack and providing their insights.
+* **Brightspace:** Primary course website for syllabus, slides, readings, and announcements.
+* **Seed Labs:** Virtual environment for lab assignments (local or cloud-based).
+* **Slack:** Communication platform for questions and announcements.
+* **Gradescope:** Platform for submitting and grading assignments.
+* **Immersive Labs:** Online platform for hands-on exercises (Homework 1).
+* **Textbook:** "Internet Security: A Hands-on Approach," 3rd Edition by Wenliang Du (Amazon link provided).
 
-* **Muddiest Points:** Students were encouraged to document any unclear concepts or questions from the class.
+**4. Grading Policies:**
 
-**Important Announcements:**
+* Homeworks & Quizzes (3 homeworks, 1 quiz): 10%
+* Lab Assignments (Seed Labs): 40%
+* Midterm Exam: 25%
+* Final Exam: 25%
+* Bonus Exercises: 2%
 
-* **Textbook:** *Internet Security: A Hands-on Approach*, 3rd Edition by Renning Du is required.  The Amazon link was provided.  The 3rd edition is necessary due to a new chapter not present in the 2nd edition.
+**Grading Criteria:**
 
-* **Course Website:** Brightspace is the primary platform for course materials, including the syllabus, lecture slides, assigned readings, and announcements.
+* A: 95% or higher
+* A-: 90-94%
+* B+ 87-89%
+* B: 83-86%
+* B-: 80-82%
+* C+: 77-79%
+* C: 73-76%
 
-* **Seed Labs:** Seed Labs is the virtual environment used for lab assignments. Setup options include:
-    * **VirtualBox:** For relatively new computers (within the last 6 years).
-    * **VMware Workstation:** For Apple Silicon Macs.
-    * **Cloud Options:** DigitalOcean (recommended for beginners, with $200 credit via GitHub Student Developer Pack) or Microsoft Azure (for experienced cloud users, with $100 credit).
+**5.  Course Schedule:**
 
-* **Grading:**
-    * Homeworks & Quizzes (3 homeworks, 1 quiz): 10%
-    * Lab Assignments (Seed Labs): 40%
-    * Midterm Exam: 25%
-    * Final Exam: 25%
-    * Bonus Exercises: 2%
+* Primarily Mondays, with one Tuesday class due to President's Day.
+* Midterm Exam: Saturday, March 15th (10 AM - 12 PM)
+* Spring Break: Week of March 24th (no class)
+* Final Exam: Saturday, May 10th (10 AM - 12 PM)
 
-* **Assignments:**
-    * **Homework 1 (Immersive Labs):** Due two days after the final exam (May 12, 2025).  Registration must be done through a specific link using the NYU email address.
-    * **Lab 1 (Seed Labs):** Due February 16, 2025.  Early submission bonus (5% for 5 days early) and late submission penalty (1% per day) apply.  Bonus points are available for automating parts of the lab.
+**6.  Academic Honesty and Generative AI:**
 
-* **Exams:**  Midterm exam on March 15, 2025 (Saturday), and final exam on May 10, 2025 (Saturday).  Start time between 10 AM and 12 PM, with a 2-hour duration.  The exam format (open book/notes, proctored, use of Lockdown Browser) will be announced later.
+* Three-strike policy for academic dishonesty (cheating, plagiarism).
+* Generative AI (ChatGPT, etc.) encouraged for learning but strictly prohibited for exams and submitting work.
+    * Students are responsible for ensuring submitted work does not contain plagiarism, even if generated by AI.
 
-* **Class Schedule:** Primarily Mondays, with a shift to Tuesday for President's Day week.  Spring break on March 24, 2025.  The full schedule is available on Brightspace.
+**7. Weekly Exercises:**
 
-* **Communication:**  Slack is the preferred communication method.  Email and Brightspace messages are also acceptable.  Appointments can be made for one-on-one Zoom meetings.
+* Short, weekly assignments for participation points (2% total).
+* Due by 2 PM the following Monday.
 
-* **Excused Absence Form:**  Students must fill out this form for any absence related to illness, family obligations, or work emergencies.
+**8. Seed Labs Setup:**
 
-* **Academic Honesty:** The course follows a three-strike policy for academic dishonesty and plagiarism.  Generative AI tools like ChatGPT are permitted for learning and understanding concepts, but submitting AI-generated work is considered academic dishonesty.  AI is strictly prohibited during exams.
+* **VirtualBox:** Recommended for newer computers (last 6 years).
+* **VMware Workstation:** Required for Apple Silicon Macs (M-series).
+* **Cloud Options:** DigitalOcean (recommended for beginners, $200 credit via GitHub Student Developer Pack), Microsoft Azure ($100 credit for NYU students).
 
-**Final Takeaways:**
+**9. Introduction to Network Security:**
 
-This class provided a foundational understanding of network security principles and introduced key concepts related to network attacks and defenses. Students should prioritize setting up their Seed Labs environment and starting on Lab 1.  It's crucial to review networking fundamentals, programming concepts, and Linux commands if needed. Engaging with the Immersive Labs exercises and staying active on Slack will further reinforce learning.  This course promises to be challenging but rewarding, providing valuable skills for a career in cybersecurity.  Remember to budget sufficient time for the lab assignments and actively participate in class discussions and exercises.
+* Focus on preventing undesired behaviors and addressing edge cases.
+* Importance of understanding system vulnerabilities and the cost of defense.
+* Increasing complexity of network security due to factors like teleworking and interconnected systems.
+
+**10. Lab Assignment 1 - Concepts Guide:**
+
+* **Task 1:** TCP SYN Flood Attack (and mitigation using SYN cookies).
+* **Task 2:** TCP Reset Attack (with bonus for automation).
+* **Task 3:** TCP Session Hijacking.
+* **Task 4:** Reverse Shell.
+
+**11. TCP SYN Flood Attack (Detailed Explanation):**
+
+* **TCP Three-Way Handshake:**
+    1. Client sends SYN packet (40 bytes: 20-byte IP header + 20-byte TCP header).
+    2. Server sends SYN-ACK packet.
+    3. Client sends ACK packet.
+* **SYN Flood Attack:** Attacker floods the server with SYN packets, causing the server to allocate resources for each request, eventually exhausting resources and preventing legitimate connections.
+* **Mitigation with SYN Cookies:** Server sends a specially crafted sequence number (SYN cookie) in the SYN-ACK.  The server only allocates resources if the client returns the correct ACK containing the SYN cookie. This prevents resource exhaustion during a SYN flood attack.
+
+**12. TCP Reset Attack (Detailed Explanation):**
+
+* Attacker injects a TCP RST packet into an established TCP connection, causing the connection to terminate.
+* Requires correct sequence and acknowledgment numbers to be effective.
+* **Lab Task:** Sniff the network traffic (using Wireshark) to obtain the sequence and acknowledgment numbers, then craft and send the RST packet to break the connection.
+* **Bonus:** Automate the process of sniffing and injecting the RST packet.
+
+
+---
+
+### Exercises & Discussions:
+
+**Weekly Bonus Exercise 1:**
+
+* **Question 1:**  How to hack into a database account (assuming forgotten username/password).
+    * **Student Answers & Discussion:** Keylogging, brute force, default password checks, SQL map, credential stuffing, John the Ripper, sniffing, SQL injection, phishing attacks, token spoofing/replay attacks, dictionary attacks, rainbow tables, exploiting password reset procedures.
+* **Question 2:** What happens when a TCP RST packet with the wrong sequence/acknowledgment number is sent?
+    * **Answer:** The packet is ignored.
+* **Question 3:** Introduce yourself on Slack.
+* **Question A:** Analyze a recent cybersecurity news article about a hack.
+
+---
+
+### Important Announcements:
+
+* **Homework 1 (Immersive Labs):** Due at the end of the semester (May 12th), but work should be completed incrementally. Register through the provided link using your NYU email address.
+* **Lab 1 (Seed Labs):** Due February 16th. Bonus points for early submission (5% for 5 days early) and automating Task 2 (5%).  Late submissions penalized 1% per day.  Resubmissions allowed until graded, but only the last submission will be graded.
+* **TA Office Hours:** Schedule to be announced via Slack and email.
+
+---
+
+### Final Takeaways:
+
+* Network security requires a different mindset than other computer science disciplines, focusing on preventing undesired behaviors.
+* The interconnected nature of systems increases complexity and vulnerabilities.
+* Practical skills like sniffing network traffic, crafting packets, and using tools like Wireshark are crucial for network security analysis and defense.
+
+**Follow-up Actions:**
+
+* Set up Seed Labs environment (local or cloud).
+* Start working on Lab 1 and Homework 1.
+* Join Slack and introduce yourself.
+* Review networking and programming concepts if needed.
+
+**Motivational Note:** Network security is a challenging but rewarding field.  By actively participating in this course and applying the concepts learned, you will develop valuable skills to protect networks and contribute to the cybersecurity community.
