@@ -1,0 +1,1047 @@
+Hello, welcome to Cs. 6, 8, 8, 2, 3, network security. My name is Professor Philip Mack. Today is Monday, April 7, th 2025, and this is week number 10 for network security.
+1st of all, logistics.
+right now you have 2 assignments out lab number 3, arch poisoning that was due yesterday.
+If you haven't had a chance to to submit it, please go ahead and still submit it. You have a 1% deduction per day late up to 10 days late. So meaning you can submit it. Let's say, today, you get one percentage points off. So meaning you should, you should still submit it. So you get 99% instead of a hundred percent, you should still submit it.
+Homework number 3 is out already. Homework number 3 is on expecting Tls that is based on today's lesson. So today we'll go over exactly how to do
+homework number 3, meaning not exactly how to do it. But all the concepts required for you to be to do homework number 3,
+next week, April 14.th We don't have a live class. Instead, we'll have a asynchronous, pre-recorded video that's on Lesson 7 on firewalls.
+The recording is already posted. So please go ahead. And after this class go ahead and watch that video. Also there is bonus exercises for the firewall lesson as well. That's lesson number
+number 10 or 11 or 11, I think. 8, 9, 1011. So it's week number 11 bonus exercise for next week. So this week this is week number 10. So today's bonus exercises go to week number 10, the firewall one goes to the next week's exercise number 11, and next week we're not having a live class. We're only having a pre-recorded video that's already posted. So everything for Lesson 7 has been posted the slides, the video, the assignment.
+and the and the video for it.
+Lab 4 is due on May 7.th There's a 5%
+early submission bonus, and a late submission of 7 days. So for this one I can only accept late submissions up to 7 days late. Reason for that is that
+I can. Only we have to create it in time for your final exam. So that's why there's only a 7 day late submission for that one.
+So that is, that is lesson 7
+lab 3, lab 4, and homework number 3.
+Question which chapters from the text cover the concepts for lab 4.
+I don't have that in front of me right now, but for questions like that you can always take a look at the syllabus. So if you go to Brightspace and go to Syllabus, you should be able to see what it covers. Actually, I have it open right now, so let me go ahead and share my screen, and I'll show you where to see that information.
+One moment while I share my screen.
+Okay, when you go to the course you go to content.
+and then you can go to Lesson 7, for example.
+lesson 7. The information for everything for Lesson 7 is included on this slide. So this includes the reading material. So for the book it covers on Chapter 7 firewalls and the reading materials is over here. So for each week you can take a look at the
+the chapters are covered in the book along with reading materials. Right? So please make sure you take a look at this on a weekly basis. And of course, if you have other questions about the schedule for the class, it's always under syllabus. So the syllabus will have a course schedule, and it will have information such as
+the chapters that we are preparing for each week, plus
+plus any strange schedules like there's no live class. Next week is all here as well, including the reading materials. So please make sure if you're not taking a look at this watch, this on a weekly basis. And of course, if there's any changes, I will send out an email announcement directly, so you'll be aware of any specific changes here.
+go ahead.
+Let me go ahead and reshare my screen on the Powerpoint slides
+today
+today.
+Oh, by the way, thank you for letting me know. So on gradescope the due dates for Lab 4 are not correct, so the correct due dates for Lab 4 are posted here. I see
+that it's not correct on gradescope. So gradescope has the same date, except I decide to extend this to 7 days instead of 4 days. So I gave some extra time for you to submit the lab assignment. But I'll go ahead and correct the lab 4 on gradescope. Later. Today.
+question Lab 4 would be possible to have a 5% early bonus submission credit like in Labs one and 2 and 3, yes, for Lab 3
+for Lab 4. You'll also have a 5% extra credit for submission for early submission as well. So there is a 5 percentage points for early submission plus another 5 percentage points extra credit for doing extra tasks in Lab 4. So for Lab 4, you can actually get to 110%
+of the lab assignment.
+So again, as always for lab assignments, please go ahead and do them as early as possible, so you can get the maximum amount of bonus points for it.
+So today we will talk about Tls.
+Well, 1st of all, what is Tls.
+Aside from the name transport layer security. Tls, I believe, is probably one of the most important technologies that we have that we use
+on the Internet.
+And well, not only that, just not on the Internet, but for encryption in general.
+Tls is what allows you to go to amazon.com using a web browser
+and be able to create a secure channel with amazon.com, and you never had to meet
+amazon.com before in order to exchange keys.
+Right? That's a really interesting thing like.
+if I want to create a secret channel between you and me, if somehow we meet.
+we could exchange a key, a symmetric key that we can use to encrypt messages to each other.
+That definitely is for sure that we can do.
+and countries have used it for almost 100 years with the same technique.
+So
+in the good old days diplomats will have diplomatic pouches, and these diplomatic pouches will include things such as
+how to what keys to use when they're doing circuit communications with each other.
+So, for example, a diplomat will bring in the keys to like another country. So then they can communicate with their home country in a secure in a secure manner.
+Today, we don't need that anymore. Thanks to technology such as Pki, which we had extensive discussion last week.
+and also Tls, so when you go shopping online and you go to amazon.com.
+you didn't need to meet amazon.com in order to have a secure key exchange by using Pki by using the Pki Keys, public keys and private keys from amazon.com. You're able to create a secure channel with amazon.com, and it's secure
+the vast majority of the time. Not all the time.
+the vast majority of the time.
+So today, we're going to talk about how Tls works
+and the steps are on this slide right now. 1st we start a Tcp connection.
+So no matter what, when you go to amazon.com, you start a Tcp connection first, st and then.
+after a Tcp connection is established.
+Then you start a Tls connection.
+and so your web browser. Let's say you're using Firefox. Firefox is going to reach out to the Server and say, I want to start Tls. Here are the specifications of Tls
+that I support.
+Here are the specifications of Trs that I support, and then
+the server is going to come back and saying, I want to select these specifications for tos, and they start the connection based on that specifications.
+The server then sends over a certificate over to your web browser.
+and then your web browser will go through certificates, validate the certificates, go through the whole validation chain that we talked about last week.
+and then, after it's validated, it will start creating a tis session based on those keys.
+Tls can be used in in many different modes. The most common mode
+that we use it with is encryption and authentication of the server.
+meaning that we have encrypted session, and then we authenticate that the server is indeed the server. In other words, when we go to amazon.com, we want to make sure that that server is actually amazon.com.
+The Tls architecture is split into a number of different types of records. There are 4 records in Tls.
+The 4 records are handshake change that bespect
+alert and application data. We're going to go over each of these in detail in a moment.
+But remember that Tls runs on top of Tcp and IP,
+so here. IP is on layer 3 Tcp. Layer 4
+and then Tls, which is layer.
+See, I'm not even sure what layer it is. It's above layer 4.
+It's above layer 4.
+Today we're supposed to use the term Tls, but Tls and Ssl are more or less interchangeable.
+So when you say Ssl people understand, it's T. OS.
+And the reason for this
+challenge is because there are a lot of old modules and such that still call Tia still call themselves Ssl.
+like Openssl.
+you know. They don't even support Ssl anymore. But it's open. Ssl, for example, the open source library used for encryption decryption.
+So for us, Ssl and Tls are completely interchangeable.
+Here's a diagram of the Tls. 4 handshake, and yes, here it is again. It says, Ssl. 4. Handshake, because that's the name of it. But this diagram actually talks about Tls version 1.2. So certainly it's not. Ssl, it's Tls.
+And here's this diagram of the steps a Tls handshake performs
+when it is establishing a connection.
+So let's go over these steps in detail.
+1, st first, st let's say on the left side is Firefox.
+In the right side is amazon.com.
+The 1st thing they do is that they establish a Tcp connection between the client and server, and then
+the next step is, Firefox will send a client Hello to the server.
+This client, Hello, essentially tells amazon.com that it wants to begin a Tls session.
+This client. Hello, has some
+information about what Firefox can support. So it tells you. It tells the version of the version. It supports the types of cipher speeds, it supports, which is a fancy term of saying what encryption algorithms it supports.
+whether it supports encryption, compression or not.
+Compression is not used anymore. Today.
+a client random number just a random number session Id. If it's trying to perform a resumption and other options.
+So Firefox, the client, sends it over to the server.
+and the server decides and looks at it, and decides which specifications to accept.
+So the server, Hello returns back with the same information.
+but it tells Firefox. These are the parameters that we're using. So, in other words, the client Hello, is just an option like these are the options I support. This is the version I support. This is the highest level I support. These are the cryptography algorithms that I support.
+and a server is the one that chooses which ones to use. So the server
+at the end of the day makes the final decision on what it supports.
+So that's the server. Hello! The server sends it over to a client and says, This is what I support.
+and so far, right now
+there has been no exchanges of any sort whatsoever. This is all plain text information. So this is plain text information. Hello, server, I want to start a Tls connection.
+This is what I support. This is the version, cipher, speed, compression, random number session. Id. This is information for me, the server responds back with, here is what we're going to continue with
+the server, then send over its certificate.
+that is, if we're going to amazon.com.
+The amazon.com certificate will be sent over along with the intermediate certificate, be sent over as well in step 3.
+Then in step 4.
+This is a server key exchange.
+So this is the part where the server sends
+its side of the key exchange if they're using Diffie Hellman.
+So remember diffrey-hellman. We talked about a gn being sent from one side and then B sent from underside. Well.
+if Diffie-hellman is being used, then the Server Key Exchange will send over the A. GN. Value here for diffie-hellman. If Diffie-hellman is used.
+so step 4 over here is Diffie-hellman.
+diffie Hellman, and this is the like, the A. GN. Values for defi hellman.
+So the servers being the Alice side of the conversation
+and then server, Hello! Done, server. Hello! Done is when the
+message is done. So this message doesn't do anything.
+Step 6, client key exchange. The client key exchange is where, if they're using diffie-hellman.
+the client sends over its side of the key exchange, and if they're using diffie-hellman.
+the value here would be. The B value over here is being sent over.
+Step 7 step 7 is a change. Step respect, message, change that respect. Message is a message that says
+I'm ready to activate encryption.
+It means everything is great. So far
+everything is going well. I'm going to start encryption. Next message will be encrypted.
+So that's what the change that respect message means. It just says, next message will be encrypted.
+Then we have the finish message in Step 8.
+The finish message has a hash
+of all prior handshake messages with your messages, one to 6
+as messages, 1, 2, 6 hashed in it.
+and it is because it's after the change type respect message. It's encrypted
+and is sent over to the server.
+Step 9.
+Change that perspective.
+Step 9. The server is ready to start its cyber encryption. So the encryption goes both ways, but
+they are encrypted separately on each side. So step 9. The server says, I'm happy with our exchange. So far I'm ready to start. Encryption
+change that respect means next message will start encryption.
+Step 10. Finish message.
+The finished message has a hash of all prior handshake messengers, which is, steps one to 6 and 8.
+So it takes these messages, hashes it, and then
+it encrypts it because it's after a change type, respect message.
+And after these 10 steps now they can use symmetric encryption with each other.
+Okay, I know that that was confusing. I know that was confusing. So
+let's let's let's go over again.
+Let's go over again, and maybe we can.
+We can go over again, maybe a little bit slower, and maybe if you have any questions, please let me know.
+Let me go ahead, since this is very important slides.
+and we'll copy over to our note slides over here
+so we can take a better look at it.
+All right. So let's go over it one more time.
+1st they start they start with their Tcp connection at the beginning. So
+so Firefox and the amazon.com were starting Tcp. Connection between them.
+and after they start the Tcp connection, Firefox will send a client. Hello!
+This client, Hello! Sends the specifications of what it supports, and it sends it over to the server.
+So it sends over
+it sends over the version that it supports what cipher speeds, it supports, whether it search for compression or not. A client random, and it sends over the server. Step one
+step 2 the server sends over its server. Hello.
+the server! Hello! Chooses! Which specifications to accept.
+So the client offers the parameters.
+The server selects the parameters in step 2 step 3
+the server sends over its certificates.
+the server sent over its certificates.
+So if it's amazon.com, it'll be amazon.com, and it'll send over
+the intermediary certificates as well.
+Step 4 server key exchange.
+If they're using diffie-hellman, the server will initiate the key exchange. So if it's diffie-hellman the server will send over the Agn values.
+Step 5, server hollow done. It's just the end of the server side. Step 6, client key exchange.
+The server will send over its side of the Key exchange. Excuse me, the client will send over its side of the Key exchange.
+If they're using their free element, they'll send over the B value for divvi. Hammond.
+Step 7. Change that respect, change cypress back is, I'm ready to start encryption. Now
+it.
+The next message will be encrypted.
+Okay, 8.
+Finish message, finish. Message is a hash check.
+So think of the Finnish message as a checksum to make sure that everything's still going. Okay.
+The finish message has a hash of all prior handshake messages which are messages one to 6,
+and it's encrypted because it's after a change. That respect. Message
+step 9.
+The server says everything is great.
+The server says, let's start encryption
+and then step 10. Finish message. The finish message is like again, a checksum, a check. Crc, just a check to make sure that everything's going. Okay.
+The finished message has a hash of all prior handshake messages which are steps 1, 2, 6, and 8,
+and it's encrypted because it's after a change type of spec message.
+This type of exchange.
+It's called a 1 way, one side handshake.
+The reason that it's called that is because.
+like, when you go to amazon.com right, let's say
+you're going to amazon.com.
+Actually, let's do that together one moment while I share my screen.
+So here I am on the amazon.com website
+in terms of authentication. I see a lock icon here.
+So with this lock icon, it means that this 10 step process
+was completed successfully. So therefore, a lock icon is created here, as shown here?
+Okay?
+Question, question, do, am I sure
+that this is amazon.com like, how do I know
+that this is amazon.com? It's not a trick? Questioned.
+I mean, it could be a trick question. But I'm not trying to make a trick question like, how do I know that it's amazon.com.
+Yeah. We checked the Ca, so I know that this is amazon.com.
+and we'll go over exactly how. But the thing is, I
+know that this is amazon.com like, unless something went wrong which it could. And we're going to talk about that later.
+I know that I'm in amazon.com right now 2.
+Does Amazon know who I am?
+Does Amazon know who I am right now
+like? Does it know what customer I am in right now.
+Well, I'm in private mode, so there's no cookies here.
+Someone said, maybe by IP Amazon knows who I am.
+Okay. Well, how sure is Amazon? Do they know who I am
+like, can I buy something right now? I'm not signed in right now.
+So can I just buy this nursery right now.
+So yeah, maybe Amazon does know my IP, but the thing is.
+Amazon doesn't know who I am enough to let me buy something off the website.
+Not yet.
+And the only way that Amazon actually knows who I am.
+If I go ahead and I go and sign in otherwise.
+Amazon actually doesn't know who I am.
+But but do I know?
+Yeah, I'm on amazon.com website.
+I do right. That's the whole point of this lock. Icon over here.
+This lock Icon means that the Tls process has completed successfully.
+and I know that I am on the amazon.com website.
+I know that I am on an Amazon account website. So it's only a 1-way authentication.
+Someone asked a question in the chat. Is this called a four-way handshake? No, it's not a four-way handshake.
+A four-way handshake means there is a authentication on both sides
+on it. This is this Tls process. The way that's depicted on this screen is not a four-way identification, because
+this only authenticates it one way.
+It only proves the amazon.com site
+amazon.com has no proof, has no proof that
+I am, whoever I am saying it didn't even ask
+like amazon.com in this exchange did not even ask who I am.
+The only thing that Amazon did was.
+let's start a connection together, a secured connection now with this.
+How do I know that I'm@amazon.com?
+Well, let's go through the steps that we figured out from last week. Here, let's say the URL over here is www.amazon.com, and I go to this lock, icon. I go to more information. Hold on. Let me share my screen because you don't see this for some reason.
+Okay, go ahead and click the icon again.
+I'm on the screen. The screen says it has a connection encrypted. Has cipher speed. Tls, aes. 128. Gcm, Shafty 6, 1, 28 bit keys. Tls, version 1.3. Okay?
+Then I go to view certificates.
+When I go to view certificate. Says it's www.amazon.com. The common name is amazon.com. But we ignore this part because it doesn't matter anymore.
+We see the issue with digicer, global. Ca, G, 2, which is over here.
+The vidality date is between September 2024 and August 2025.
+The subject alternative names, which is the list of names that this certificate is good for is here, and we see www.amazon.com
+is on this list somewhere right here.
+www.amazon.com is over here. So since it's on the list, it means that this certificate is issued for this website.
+All right, then I go ahead. I see the Rsa values that, and then E value. Here's the N value. Here's the E value and such, and remember what it does. This certificate is digitally signed
+by digitally signed. It is digitally signed using whose key which key digitally sign this certificate?
+Does anyone remember?
+Yeah, the digit key. But specifically, the public or private key.
+the private key. Yeah, because that's the definition of a digital signature. A digital signature is hash encrypted with a private key. So this amazon.com
+to your signature
+is signed by Digic global. Ca, G, 2. And in order to validate the digital signature, you validate it, using the public key. And where's the public key to validate it. It's right here in the certificate. Here's the N value. Here's the E value.
+These values can be used to validate the digital signature for amazon.com. So
+Firefox goes and validates this information is this, a subject name is this, issuer is digit global route G. 2.
+It's valid between August 2013 to August 2028. It's the Nne. Values, it checks whether it's certificate authority or not. It is certificate authority. And this certificate is also digitally signed. It's digitally signed by digicer global route G, 2.
+And this certificate is a root certificate. We know that because it issued itself.
+you see, the subject and issue are the same
+because of that. The browser then goes to certificate store.
+and your certificate store is somewhere over here on Amazon, on Firefox.
+and it goes to certificate store. Here I go to view certificates.
+Then I go to authorities. And then, if I go to digicert, what was it? Digit global route. G, 2,
+did you search global root? G. 2. Here it is.
+And this certificate is trusted by my web browser.
+Therefore this means that this certificate is trusted.
+The user global route G. 2 is trusted
+because it's trusted by the certificate store.
+And since this certificate issued digicircle of Ca G. 2, it means that this certificate, the Ca is trusted
+also.
+And then, since this Ca issued this certificate.
+it means that this certificate is trusted also.
+So therefore, now I know I have the correct certificate for amazon.com.
+Now I have the certificate for amazon.com
+question question.
+If I talk this certificate for amazon.com
+if I took this certificate from amazon.com.
+and I took the public certificate here.
+and I set up my own fake amazon.com
+like. Let's say I set up my own amazon.com.
+But it's a fake website.
+And remember, we talked about how Dns is so easy to hijack Dns is so easy to hijack.
+And let's say I go to Starbucks.
+I set up a fake amazon.com website.
+And I start doing dns cache poisoning and start redirecting people to my site.
+So you type in amazon.com.
+You get a fake dns response from my attack.
+Then you get redirected to my fakeamazon.com website.
+And I have these certificates or your browser.
+Will your browser show an error
+of these in this situation, or it won't show an error.
+Yeah, yeah, it'll show whenever it'll show an error.
+So here's here's the hard question, how does it know?
+Like, why?
+Why does it show an error?
+Why does it show an error?
+Well, there's several ways, several ways that can happen.
+The 1st thing is that if I just create a amazon.com certificate.
+and it's not validated by a Ca, that is not signed by a Ca, then it's not trusted.
+then it's not trusted, and therefore the browser will show an error.
+A second reason would be that each of these certificates has a
+has a public and private pair associate with it.
+So this amazon.com certificate has a public key which we have here.
+and it has a private key as well.
+So if I simply just took this public certificate here.
+even if I took this public certificate, I don't have the private key pair of it.
+So just to note I me grab some have a diagram here.
+Let me grab this diagram over here, so every
+every certificate that we talk about here you'll remember that it has a public search
+and has a private cert.
+So let's say, here, this is amazon.com
+private cert and amazon.com will also have a public search.
+and when I say public search.
+I also mean that they have public keys and private keys. So the private key here would be the Rsa. N. And D. Keys
+in the public search here in this case
+will be the Rsa. N. And E. Keys, or whatever convention that we'd like to use.
+So in this amazon.com certificate here.
+This certificate is a vessel for these Rsa keys like that's the whole purpose of the certificate.
+It's to store these keys and to validate that these are the keys.
+4 amazon.com. These are public keys for amazon.com
+the whole pki the whole. Ca, the whole last week's discussion. The entire purpose is, here
+are the public keys for amazon.com the whole purpose of that.
+And how do I know that these are the correct keys for amazon.com, because this certificate is digitally signed by digicert global root. Ca, G, 2. This Ca digitally signed by this and this root is trusted by my web browser. So all of this
+is for the purpose of getting.
+Look, here are the public keys for amazon.com.
+So now, after all this work.
+and you see how hard this is, how much work this is.
+this what we talked about last week, this whole validation, part of validating this this and this takes a
+do you even know how long it takes 750 ms to do?
+And I know that's, you know 3 quarters of a second, and that sounds like nothing. But it's a forever time.
+It's forever in Internet time.
+So 750 ms to perform all that work.
+So now let's go it one more time.
+Let's go one more time.
+So step one step one.
+The client sends over a client. Hello to the server.
+The server selects the specifications that it supports. Okay.
+the server sends over its certificates. So here, in this case, step 3. It's going to send over the amazon.com certificate.
+and it will send over the digicert.
+And did you search global CAG 2.
+Cert.
+So send over these certificates
+in Step 3.
+This is how this browser over here got these certificates, but just to note.
+it only sends over 2 of the 3.
+Why do you think that's so
+like so amazon.com sends over
+the www.amazon.com cert the digicert global. Ca, G, 2 cert, but not the 3rd cert not the digicert global root. Ca, cert.
+why not?
+Yeah. Because the browser already has this certificate in it.
+The web browser already comes pre-installed with this certificate.
+so there's no need to send it.
+So they need to send the other 2 certificates in Step 3 over here.
+They did use their global Vca
+is not sent because it doesn't need it. The browser already has this one, but it does not have these.
+and then step 4. The Server key exchange.
+So if the server is using diffie-hellman, this is the part where they send over the
+Diffie-harman values, and this is the A G. And N values. So if they're using Diffie-harman.
+it'll send over the A. G. And N values. So this is the what we in this class. We've been calling Alice's side of the conversation. But really it's just the 1st side of the conversation. So the A. GN. Values are sent over in Step 4.
+Server hollow done doesn't do anything right. Then step 6 client key exchange client key exchange.
+The client. Key Exchange is where this client sends over its side
+of the key exchange. And this is well.
+you already know what this is. What is it?
+It's the value. B over here.
+It's the value. B,
+and once we have the value. B over here.
+Well, we know that the server
+can generate Key K. From here.
+So you see here that the server sent over a Gn.
+And the client sent over the value B, so on. Step 6.
+Well on step 6. What do we know? Step 6.
+The server can generate key K.
+From this point.
+Why? Because the server at this point.
+as all the different values A, GN. And B.
+And once you have that you can generate key. K.
+Now, okay, what happens on the client, side on step 6.
+Well, the client side at the same thing
+can also generate keyk. So the client. Firefox
+can also generate key K.
+As well, because it has all the values the A GN. And B values.
+So from here, from Step 6,
+they're able to generate Key K. Already, and well, they take this key, K.
+And from this key K. They generate Aes Keys and Hmac keys and hash and Hrac keys. So this key K,
+this key K is called a premaster secret.
+So let me give you the official terminology. So you know this key K. Is called the Pre Master Secret.
+which we call Pms.
+So the premaster secret over here
+is then used. It goes to a function.
+and this premaster secret generates a aes key plus an Hmac key.
+So at this point, at step, 6.
+Firefox has the Aes key, like they generated an Aes key for use at this point.
+So if so far everything's good.
+if everything is good on step 7,
+step 7 says, start encryption at the next message. So so far, if all the checks, all the validations are good.
+Step 7 says, start encryption at the next message.
+So start encryption. Now.
+So step 7 says start encryption.
+Next message.
+That's what change that perspective means here.
+So step 8. Step 8 is kind of like a checksum step 8. The finish message has a hash of all prior messages, handshake messages. And let me just tell you that this steps
+1, 2, 6.
+So step 8 has a hash
+hash of prior handshake messages, and that's 1, 2, 6.
+So essentially, it takes messages 1, 2, 3, for our sakes, makes a hash of it.
+and then encrypts it.
+So step 8
+is the 1st encrypted message.
+So step 8 1st encrypted message encrypted, using keys generated in step 6.
+So in step 6, it got the A. GN. And B. Values it forgot key K from key K. It generates a Aes key and a Hmac key.
+and from here step 8. It now uses those keys and encrypts the 1st message over to the server.
+So the server here on Step 8 received its 1st encrypted message.
+so step 8 on the server side.
+1st Server receives 1st encrypted message from Firefox.
+So now here's the key thing.
+Can it properly decrypt it?
+Well, if it can, then everything is great, so attempts to decrypt.
+decrypt, and let's just say decrypts decrypts using.
+It's a ESH. Mac Keys.
+because it has the same keys.
+Supposedly it has the same keys as the server as the Firefox.
+so it takes it, it decrypts it.
+can it properly decrypt it if it can, great, then it validates the checksum, validates the finish message hashes
+so it sees, compares it to its own handshake messages.
+So it takes its side of message one to 6. So it takes message 1, 2, 3, 4, 5, 6
+hashes it, and then encrypts it and checks whether it gets the same message or not, as step
+as the from the client side.
+and so step a is kind of like a checksum.
+Do both sides see the same thing like is steps 1, 2, 3, 4, 5, 6, the same
+on the client side, and the server side.
+Now I know that sounds like a silly question like, Is it the same or not. But we haven't gotten to this point yet. But remember.
+remember, Trudy is listening to this conversation, and Trudy is here
+trying to change stuff, if possible, as well. So don't forget that that Trudy is in the between. This conversation is trying to do stuff to this conversation, at least listen in, if not, change the conversation if she can.
+So step 8. Here is kind of like a check.
+Did they see the same thing?
+Okay, so the server does these checks? Does it see the same thing as itself?
+Does hash of the prior handshake messages from the client side match what it saw on its side.
+Okay, if everything is good, change that perspective.
+So if so far, everything's good, the server.
+we'll send the change type of select message, which means start encryption now or at the next message.
+and then it'll send a finished message. The finished message has a hash of all prior handset messages, which is, steps messages 1, 2, 8, 1, 2, 6, and and 8
+sends it over to the client side
+client side. Now does the same thing, client.
+I'll just copy this one client, Firefox
+receives the 1st encrypted message from amazon.com
+decrypts using its aesh. Mac Keys validates the finished message hashes, compares it to its own handshake messages. So step 10
+is kind of a validation message from the server has a hash of the prior handshake messages.
+sends it over, and now Firefox gets to check to see if it matches everything as seen.
+So question right? So after this, after this, now they can.
+they can speak to each other, using their aes keys
+after step 10. Now they can start doing full encryption, and they can start talking to each other with fully encrypted texts.
+Question, question, trick, question, trick, question.
+where do they exchange the symmetric keys for? Aes, this is a trick question.
+Where do they exchange the symmetric keys?
+Where do they exchange aes keys.
+So the symmetric keys in this case are the Aes keys.
+Where did the aes key come from?
+Where did the aes key come from
+where did the Aes Key? They used to encrypt stuff come from
+the Aes key came from step 4 and step 6.
+So remember Diffie Hellman.
+We talked about Diffie Hellman a lot.
+Let me pull up. I think I have it here. Do I have it here or not?
+Okay, let me pull up another slide.
+and I want to talk about Diffie Hellman.
+let me share my screen.
+So remember Diffie Haman, Tiffany Hellman. We have Alice on the left side.
+and we have Bob on the right side. Epsep.
+The left side is Alice is actually the server, and the right side, which we call Bob, is actually what we've been calling Firefox.
+So how Tiffie-hellman works is that
+Alice's side will send over the Gn. And capital a values over to Bob.
+Bob will send over the B values.
+And then both sides are able to generate key K,
+they're able to generate Key K, and even with that they, anyone who's watching the conversation
+doesn't know Key K. So we talked about how. Let's say Alice is. Excuse me, Trudy is watching the conversation over here.
+and Trudy, even though she's watching a GN. And B. Can figure out what key K is. It's this very amazing thing about Duffy Hellman.
+Well, this exchange was done here on step 4 and step 6.
+So on. Step 4.
+The A side sent over the Agn values
+and then step 6. The B side send over the B values over here.
+So essentially, they did the same as this exchange on this slide.
+and so, after the A. Gn and B are exchanged at step 6.
+Both sides halves. All the value should generate. Key K,
+so to generate key K on step 6 does key K,
+called the premaster secret is used and goes through a function, and from there it creates an ae as an Hmac key.
+and it's done on both sides. So both sides from here both sides
+generated.ae s in H. Mac. Key on step 6,
+and they did it at the same time, and after step 6.
+They now have the same aes key symmetric key.
+and it has the same Hmac key.
+That's the symmetric key for hashing protection at the same time. So
+even though they never sent the Aes key over at Step 6.
+They both have the key.
+They both have the key as subsects.
+and then step 7, 8, 9, and 10.
+It's just to validate it, just to make sure that
+they both have the correct key. And it wasn't tampered with during this time.
+So step 7 change type perspective. It's just a message that says, next message is encrypted. 8. Message 8. Finished message hash of all prior handshake messages, which is message one to 6 are handshake messages, and it's encrypted, and it's encrypted as well. So because it's encrypted using the Aes key. Now it's a test.
+I consider this a test. Step 8
+in Firefox encrypted something with aes step 8 server side.
+Can the server decrypt it like? Is the server able to decrypt
+what Firefox encrypted on Step 8.
+So it's a test, right? It's a test, Firefox. If everything's going well.
+Firefox can't decrypt this message because it got the same aes and hmat key.
+and then continues everything. Script continues, step 9, change surface back, start encryption. The next message, step 10
+finished message, hash of all prior handshake messages which is, search 1, 2, 6, and 8.
+Again, this is a test.
+This is a test, because this message 8 over here, which was encrypted.
+the server has to decrypt it
+in order to put it into step 10.
+So this step 8 has to be decrypted and then put back into step 10.
+So it's a test, right? It's a test.
+Can you decrypt it, decrypt this message
+and then hash it and put it back into step 10. So that's the interesting thing, right? They had to re-put it back in step 10
+sends it over to the side.
+And now here's the test.
+Step 10.
+Well, this is actually step 10 over here.
+Step 10. Firefox received this encrypted message from the server.
+Can it decrypt it?
+And once it's decrypted, did it have the correct step 8 inside. Step 10
+to verify that everything is working fine. So if it's able to decrypt it properly, and it sees the same thing, the hashes are compared to the same as its hashes. Then it passed the test, and now it can start normal encryption.
+Now you start regular Http traffic, like, you know. Get HTML, or something like that.
+get indexhtml, or whatever it is trying to do.
+Question question.
+actually, let's go over it one more time.
+Right? Let's go over it one more time
+and have some questions while I add it.
+Wait! I hit some key. I don't know what happened. Oh, what was that? I don't know what was that that I just did, but I like them both.
+I think I turned on presentation mode by accident, somehow
+very interesting. So anyway. Step one client. Hello, Firefox sends its specifications over to the server.
+Okay?
+2. Server. Hello. Server. Chooses the specifications.
+Okay?
+Step 3 certificates. Certificates is sent over amazon.com certificate. Digicert. Global. Ca, G, 2, cert sent over.
+Step 4. Server key exchange.
+A gn value is sent over.
+Hmm.
+Question.
+Step 4. Server key exchange
+is that sent in plain text, do you think.
+or do you think it's protected in some way like.
+did they just send these values in plain text like this agn, or do you think it's
+like signed, digitally signed, or something like that.
+or signed in some way, or encrypted on step 4.
+So step 4.
+The messages are, protect it, using the servers.
+Private key.
+See? Step 4.
+Step 4.
+The stiffy Harmon values.
+They're digitally signed by server
+private keys. Well, do I need to specify that? Because that's the definition of the jury sign. Did jury sign means encrypted using servers private?
+But I'll just say it just just to be redundant here.
+So step 3 over here.
+Step 4. Excuse me. Step 4.
+Server sends over diffie-hellman values
+digitally signed by its private search. Private keys a better way to say it. Private keys
+step 4, and then Firefox on step 4.
+Firefox receives Dh. Values validates the digital signature.
+valid dates
+question, how are digital signatures validated?
+How does in step 4 over here?
+How does Firefox validate the digital signature?
+What does it use in order to validate
+digital signature. What keys does it use to validate the digital signature?
+Yeah, it validates the digital signature.
+using the public keys of the server
+using servers, or let me just be amazon.com s public key public key.
+Where does it get its public key from? Where does it get Amazon's dot com public key.
+So step 4, Firefox receives its vehement values.
+Then they're digitally signed validates. The digital signature using Amazon that comes up with a key.
+Where did the public key come from?
+Yeah, it got it from step 3.
+So it it got amazons.com
+pulpit keys from step 3. So in step 3 over here.
+Firefox receives amazon.com public. Cert cert keys
+and performs and performs certificate validation.
+Okay, is this confusing enough? Let's
+is this confusing enough. Let's let's start from the top.
+Let's let's start from the top
+client. Hello, Firefox sends over specifications. Server. Hello, server selector specifications.
+Step 3 certificates.
+amazon.com sends over its amazon.com certificate and its intermediary. Ca, certificate
+3. Firefox receives the certificates.
+and remember, the certificate has amazon.com s public keys. It's very important, you see, to the rest of it. So then it performs certificate validation to make sure that this is really amazon.com certificate. So this is the steps that it took that we talked about last week, in which
+let me share my screen.
+that we talked about last week, where it goes over the steps to validate the certificate, validate the intermediary certificate, and then validate the root certificate. So this is a very very important step, because it validates that this certificate really is amazon.com. So it does all of this work.
+So it checks the vidality, date the subject alternative names the Rsa values the digital signature. Make sure it's a Ca, make sure it's a Ca or not. Ca, it's not a Ca. In this case, validates the intermediary does all. The subsequent intermediary again
+uses the public key here to check the digital signature for amazon.com. Then it validates the global. Excuse me, the root certificate, and from the root certificate used to validate that the digital signature for the intermediary. So it validates the chain of trust all the way to the root and then verifies the root is in the certificate store.
+So it does all of that. And we mentioned that step 3. Here is the most expensive part step 3 takes 750 ms. This entire process takes one and a half seconds for steps, one to 10, but step 3 takes half of that time. 750 ms of time is taken in step 3. So that's how
+expensive this part of it step 3. So step 3 is where Firefox gets the public keys for amazon.com, and then validates this information
+as well.
+So I validated Step 4. Firefox receives the different helman values. These different helman values are digitally signed.
+Now, how do you validate a digital signature?
+Well, you use the public keys in step 3 to validate this legislature. So step 4 step 4 here.
+This proves, except for proves that amazon.com has the private key associated with the public key.
+Right? Let me say that again.
+Step 4.
+It's a verification that amazon.com has the private key associate with the public key.
+Let me write this down step.
+4 validates
+that amazon.com has the private key associated with the public key.
+and this is very important, so let me turn it.
+Let me bold it. Just just so. You know that this is a very important part. Here step 4 validates that amazon.com has the private key associated with the public key.
+So you got this public key. Excuse me, this public cert public key from amazon.com step 4.
+The server sent the digital signature of it of the Agn values.
+The digital signature is created using the private key, and therefore
+Firefox was able to use the public key from step 3 to validate
+the digital signature in Step 4.
+So let's take a scenario.
+Remember, Trudy is always watching.
+Trudy is always playing games here.
+Trudy is always playing games here, let's say, instead
+of talking to amazon.com, they're actually talking to Trudy
+right treaties performing an attacker in the middle like the examples that we talked about in Starbucks many times.
+and so far, client, Hello! Goes to Trudy. Trudy sends the server Hello.
+Trudy sends over the amazon.com certificate, digicert certificate, and so on.
+Then, Trudy.
+Well, step 4.
+It's very hard for 3D. To do, because step 4 requires a digital signature.
+So Trudy, in order to accomplish. Step 4 will need to have Private Key associated with amazon.com
+in order to accomplish. Step 4.
+Hold on, and Trudy doesn't have
+the private key associated with amazon.com certificate.
+So Trudy is stuck here like Trudy.
+is unable to to complete. Step 4 over here, because Trudy is not able to.
+does not have the private key associated with amazon.com
+in order to perform step 4 correctly.
+So this process is to stop someone like Trudy, trying to perform.
+trying to do a buff attacker in the middle.
+Now question.
+what if Trudy had the private key?
+So let's say, Trudy hacked into amazon.com Trudy was able to steal
+the private key to amazon.com.
+What can she do?
+It's it's game over, it's completely game over.
+So if Trudy was able to hack into amazon.com
+and steal amazon.com s private key associated with the public key.
+Trudy can do whatever she wants
+she could set up a fake amazon.com certificate. Excuse me, a fake amazon.com site.
+No one would be able to figure out that it's fake.
+because just by having the private key, it basically means you own the server in terms of security. Wise.
+She owns the server because once she has the private key. She's able to replicate. Step 4 correctly, and that's it. She can replicate the site completely.
+So step 4. Server key exchange
+is protected by a digital signature.
+The 0 signature is signed. It's encrypted using the server's private key
+which Firefox can use. The public key obtained from the certificate in order to validate the digital signature.
+Server. Hello, done! Is the empty message. 6. Client key exchange. Firefox sends over the B value.
+So at step 6, both sides is able to generate Key K, and from Key K called the Premaster secret they're able to figure out, generate the Aes key and the Hmac key. So both sides at this time. Now have an Aes key and the Hmac key
+step 7 change cypress back. It's an empty message. It basically means next message will be encrypted.
+Step 8. Finish message. Think of this as a checksum message, as a hash of all prior handshake messages which is steps 1, 2, 4 takes a hash of it and encrypts it because it's the 1st message after change type, respect message.
+So this is a test step 8 is a test. Can the server decrypt this properly.
+and in order to decrypt this properly, the server has to have the same Hvac and Aes keys?
+If the server does, then it's able to decrypt. Step 8 properly.
+If everything looks good, step 9 change that respect. The server says, let's start encryption now or next step
+next step. Step 10. Finish message. Think of this as a checksum again. Same thing. It has a hash of all prior handshake messages, which is steps 1, 2, 6, and step 8
+here.
+And remember this step 8 was previously encrypted. So this kind of a check, that step 8 was decrypted so it can be placed back into step 10. So I had to
+successfully decrypt step 8 in order for it to be placed back in step 10
+sent over to back to the client side. The client. Same thing does a check.
+it sees steps 1, 2, 6, and 8. Does it see the same thing on this side. If it sees everything's the same, it means that it wasn't tampered with, and the server is able to decrypt its previous messages correctly.
+and everything is fine.
+If everything's great.
+Tls. Establishment is complete now
+they are able to perform the normal. Tls. Excuse me, Http connection. So now it's where it starts. Firefox will do whatever it does, which is
+usually like, get indexed by HTML, or whatever it's trying to do.
+This is where it starts.
+This whole process takes about one and a half seconds of all.
+So that's the Tls handshake.
+I understand that that was confusing. If this is confusing, please go ahead and watch this part of the video again.
+and we will.
+We will also do some reviewing later on as well. It's a very important topic.
+So this gives you 90% of the of the information in order to do homework number 3. So homework number 3,
+you got a wire sharp capture with some
+you got wireshark capture with this exchange with these 10 steps of a Tls connection.
+So for the homework
+number 3, essentially, you get a wire sharp catcher. You have to go through this, and you have to answer some questions about
+the tiraves handshake.
+So that's the objective for homework number 3, homework number 3 is.
+go and answer some questions about Tls.
+So from here you should have enough everything
+in order to complete homework. Number 3,
+session resumption. So previously we talked about the full handshake. But since it's a very expensive process, there's also a Tls abbreviated handshake. The abbreviated handshake works like this. The client side the Firefox will send over a
+Firefox.
+Firefox will send over the session Id
+for resumption, so it sends the session Id. Immediately on step one, and if the server remembers this session. Id. The server will immediately begin the connection. So it sends the server Hello, a change type of spec and finish message.
+and then the Firefox site will send a change type, prospect and finish message.
+What's missing over here is the exchange of keys of any sort. So no certificate exchanges, no key exchanges know nothing about this.
+and this speeds up the process immensely speeds up the process immensely.
+We're going to skip this for this moment.
+We'll go to exercise number one. Exercise number one
+is the following exercise, number one is
+okay, so we can't skip this. We have to continue this. So the Ssl cipher speed.
+One moment while I change my screen, I am going to go. Look up.
+look up a list of cipher suites. Give me one moment.
+Here it is okay, let me look it up.
+So I did a Google search for Ssl cipher speeds.
+And when you do search for that, you see a list of cipher suites that's supported by Tls.
+and there are a lot of cipher suites. But I'm going to look up
+this one this one over here.
+This one is one of the most common sci-fi streets used in Tls. And let me read it out to you.
+We can discuss why it is together.
+This cypher speed, says TLS.
+DHE.
+Rsa.
+With a yes, 128 cpc. Sha. 56.
+So this is one of the most common ones there is, and if you did homework number 3 already, you see, you probably have seen this already.
+So this cipher suite is made up of 3 components.
+A cipher suite has 3 components.
+Let's talk about what those components are.
+Spicy, sweet has the components of
+the 1st one is the key exchange algorithm.
+The second one is the bulk encryption.
+And the 3rd one is the hashing algorithm.
+Or, in other words, it's the Hmac Algorithm.
+So for this cipher suite that we just saw. Tls. DHE. Rsa. With aes 128 Cbc sha-two, 56.
+Can you identify which one's a hashing algorithm here.
+can you identify which one's the hashing algorithm?
+Yeah. The hashing algorithm, the hashing algorithm is sha-two 56.
+How about the bulk encryption?
+The bulk encryption. Here is Aes 128,
+and the last one is called the Key Exchange and authentication algorithm key exchange, authentication.
+Do you know which one here is the key exchange and authentication algorithm.
+Bye, no one has gotten the right answer yet. Yes, it is DHE.
+RSA
+dhearsa.
+It stands for diffiehelming in Femoral Rsa
+is the key exchange and authentication algorithm.
+So this diffie Hellman with Rsa
+is the algorithm used for exchanging keys and authentication, and they work hand to hand. They work together.
+We saw an example of dhesa working together
+in our in this step 3 and step 4,
+because this is the Vhelming Exchange, is protected by Rsa.
+Like the Rsa. Private key.
+Here the jury signed, and using Diffie-hellman and Rsa. Together
+together they are the key exchange, as in the exchanging keys.
+plus is used to authenticate the server
+like Step 4. Here step 4 is how Firefox knows that it's talking to amazon.com.
+So let me write.
+Firefox now knows that it's talking to the real amazon.com
+here
+Rsa is the key that's used inside the certificate as well. So inside the certificate has the N. And E. Value. Those are the Rsa keys.
+So when we looked@theamazon.com certificate.
+We have this value over here. This is an Rsa and an E value here. So it's an Rsa key.
+So this cipher speed Dhe Rsa with Aes 128 cpc. Shat 56.
+It's really separated into 3 parts
+separated into 3 parts. It's separated to key exchange identification algorithm, which is dhearsa, bulk, encryption.
+which is aes 128,
+and hashing sha-two 156.
+So note that it has 3 parts here has 3 parts.
+and this is Aes 128 in Cpc. Mode. Remember Cbc mode, that's cyber blockchaining we talked about. I don't know how many weeks ago
+about how you make sure that the same thing gets encrypted over and over again has a different value.
+Just a quick note, quick side note about what Diffie Helman is dhg stands for diffie Hellman in femoral
+dg, is the diffie-hellman that we learned in class.
+So diffie Hellman is what's TOS cause the vehement
+of what we learned in class. So this is the A. Gn being sent on one side, the B cent being another side that's called the Wi-hellman infemoral in Tls. So just in a term of terminology, the Wi-hellman infemoral
+is the divvi helmet that we have learned in class.
+Okay, let's choose another cipher suite. Let me pick another one over here.
+Okay, I'm gonna pick another cipher suite over here. Okay, let's say this one.
+This one.
+Okay, we don't. We don't talk about.
+We haven't talked about.
+I did the curve in this class, but I think you'll get it anyways. So my question to you. Here is
+1st question, what is the key? Exchange and authentication algorithm in this
+cipher suite cipher suite is Tls.
+ECDH. E Ecdsa with Aes. 256 cpc, sha, 3, 84.
+So just to read this out to you, this is Tls elliptic curve that we have an femoral
+underscore elliptic curve, digital signing algorithm
+with aes 256 in Cpc mode.
+So yeah, 284.
+So the key exchange and authentication algorithm is Ecdhe Ecdsa.
+What is that?
+Ect is the elliptical curve version of the Vehemian femoral.
+So it's just like diffie-hellman femoral epstep is the elliptical curve version of it.
+We don't talk about this in this class. I think you talk about it in algorithms.
+not algorithms in cryptography. If someone took cryptography, let me know.
+And then Ecdsa stands for the curve. Digital signing algorithm. So it's a variant of Rsa.
+but it's only used for digital signatures.
+So Dsa, think of it as Rsa.
+but it can't be used for encryption. It's only used for digital signatures.
+Okay, what's the bulk encryption algorithm
+was the bulk encryption algorithm.
+yeah. Aes, 2, 56. Cbc, and what's the hashing algorithm?
+Yeah. Hash outcome. Sha, 384.
+Okay, very good.
+Let's do another 1. 1 more.
+Okay. So this one
+says, Tls, Rsa, with Aes 256, gcm, Sha, 3, 84.
+What's the key exchange and authentication algorithm.
+Rsa, what's the Poc encryption algorithm
+Aes 256 Gcm. Galileos counter mode. This is the most secure one today. And what's the Hashing Algorithm
+Shah?
+384.
+So you see the pattern here. Each cipher suite consists of 3 parts key exchange, authentication, algorithm, bulk, encryption
+and hashing. Our rhythm
+for cipher suites that are Tls version 1.2 or below. They're always in this format
+in Tls version 1.2, and below, it's always in this format.
+Tls version 1.3 changed it a little bit. So
+then we jump ahead and give a Tls version 1.3 algorithm
+Tls version, 1.3 algorithms looks like this.
+Here, let's take this example.
+Tls, aes, 128 gcm, sha-two 156.
+Hmm.
+It's missing something.
+What is it missing?
+It's missing something.
+Yeah, it's missing the key exchange and authentication algorithm here.
+And it's missing here in Tf, version 1.3,
+because it always runs it in secure mode.
+So the key exchange algorithm, an authentication algorithm are always secure version.
+So it no longer mentions it anymore in the cipher suite.
+So in Tls version 1.3,
+it no longer mentions what the key exchange authentication algorithm is because it's always done securely.
+And we're going to talk about what that is eventually.
+But it's still there, right? It's still there. It's just not mentioned
+here, but it's still there. It's still. It still has a key exchange identification algorithm
+99% of the time. It's the female femoral with Rsa, but
+T. Hours. Version 1.3 requires it to be secure.
+So it does not mention it anymore.
+All right.
+Next, exercising exercise. A.
+If the cipher suite, TLSD. H.
+E.
+With Aes. 128 Cbc. Sha-two, 56 is used.
+Where are the following keys exchanged? So question is, where are the keys?
+DHEA, GNBA B aes keys, Rsa. Public key, Rsa. Private key, the public cert and private cert. Where which steps
+are these keys exchanged?
+So let me set a timer, and I'm going to do an extended break over here. I set a timer for 4 min here. So for this you have enough time to do this task and to take a break as well, and I'm taking a break also. So instead of timer for 4 min, please tell me which steps does. All these keys are found.
+and I'll see you in a few minutes.
+just to confirm. You can see exercise number one over here.
+Yes, yes, you can see exercise number one. Okay. See you soon.
+Another 20 seconds.
+not the music. Okay?
+Question one.
+Where are the Diffie-harman values? Exchanged? Question, I guess.
+Agn, where are the diffie Hellman values Agn exchanged?
+If we're using this cipher suite.
+if the Agn value is exchanged in Step 4
+and the B value is exchanged in subsets.
+How about the the small, A and the small B value? Where at this exchange?
+Yeah, it's not exchanged at all. So the A and B value. They're considered the private dh diffie-hellman keys.
+So they get generated on the server or the client, and they don't leave.
+They don't leave okay. Great 2.
+A yas keys.
+Where are the aes keys exchanged?
+Did not exchanged because the ads keys are generated
+after step 6 after step, 6.
+Both sides has the A. GN. And B. Values. From there they can generate the diffie-haun value K, which we call the Premaster secret.
+and from there generates the Aes key
+so generated at step 6. But it's never exchanged.
+3. The Rsa. Public key or public search. Where is this value exchanged?
+Yeah, it's exchanged in step 3
+step 3. Because the Rsa. Public keys come from the public certificates which are sent in step 3.
+Okay. Number 4, the Rsa. Private key, or the private search.
+Where is the Rsa. Private key of the private store exchanged?
+It's not exchanged.
+remember, it's a secret. So this Rsa. Private key not only or not not exchange. It's probably generated in the Tpm. Inside the server. Tpm trusted.
+trusted processor processor module. Whatever. Tpm Tpm is a chip in almost all computers today
+where it does secure processing, including generation of private keys.
+So keys are usually generated in a Tpm.
+And they never leave the Tpm. Never. So even if the server got hacked, it should not, should not
+loseth Keith.
+If it's generating a Tpm.
+Should not okay.
+Public search.
+Wow!
+Public cert and public key kind of the same thing. It is in step 3 and the private cert same thing. It's not exchanged because the private cert, same thing as a private key
+more or less in this class.
+Okay, great, very good.
+Have another question for you.
+Do you have another question.
+So here in this handshake, we actually did the handshake for a normal key exchange
+a normal key exchange. So this exchange, that where there go this this exchange over here
+kind of used like this cipher suite
+like tis diffie-hellman femoral, Rsa. With Aes 128 Cbc. Sha. 56.
+But there are other cipher suites out there. As well. Let me pick another. One
+need to pick another one if I pick another cipher suite.
+Let's say I pick this cipher suite over here.
+All right, let me try to pick. Let me see.
+So let me make a copy of this.
+and I want to change the cipher speed over here to this like I'm changing cipher suite.
+and because the way they work depends on the cipher suites.
+all right. So here, notice the cipher suite is different here.
+So first, st this Rsa.
+and that's it. So Rsa is a key exchange and diffie-hellman a key exchange, identification algorithm. Note that there's no diffie-hellman here
+at all.
+There's no diffie helman here whatsoever.
+So when you do that, when you do that, here's what happens.
+Client. Hello, okay. Hello! Here are my specifications, server. Hello!
+Here are the specifications you will use certificate. It'll send over certificates.
+Step 4 Server Key Exchange.
+This one is not used so it's not used at all.
+Server. Hello done.
+Then the client Key Exchange.
+The client here will send over its value from step 6.
+So step 6.
+Firefox generates K. Which we call the pre-master secret.
+Let me write it out, premaster secret.
+And then this K is sent over on step 6,
+and K is just the encryption key.
+Just encryption key. So from K. When 6. When the server receives the Pre Master secret.
+it'll the pre-ms generates the Aes Key and Hma key.
+and same thing on the Firefox side as well. Firefox
+Firefox, we'll use the premaster secret and drag the Aes key
+and the Hmac key at the same time.
+So this exchange doesn't use Diffie Hellman.
+They just use Rsa, well, actually.
+I haven't seen Rsa used here.
+So let's see here, step 6.
+The pre-master secret is sent over as step 6.
+It's sent over in step 6.
+This is the actual key used for encryption.
+So Firefox cannot send this premaster secret in plain text.
+How can it protect the premaster secret here? What.
+how? How can it protect it like it has to be protected because you can't send this key
+straight over the air.
+So how is it protected here?
+Yeah. So it encrypts it using public key.
+So it's encrypted encrypt it, using amazon.com public key from the public search.
+So it got to cert in Step 3,
+and then they encrypt it, using the Amazon dot com's public key.
+So Server receives the pre-master. Secret encrypted
+server decrypts
+using private key.
+so Server
+is able to successfully decrypt this encrypted message, using its private key. So the Firefox encrypts it, using the public key.
+and the only way to decrypt it is to use a private key. So server is able to
+decrypted using the private key.
+Okay, so then
+step. 8. Finish message. Remember, the finished message is encrypted. So finished message has the hash of all prior handshake messages plus is encrypted.
+So let me just copy this over here.
+So I meant to do this over here.
+So sub. 7.
+Start encryption. Next message 8, finish message hash of all, prior handshake messages 1, 2, 6. So
+this finished message is encrypted, so it sends it over this side. And now this key is encrypted, using
+the the key generated from the premaster secret over here.
+So from here, in order for the server to read this encrypted message, it needed to have decrypted. Step 6.
+So step 6. It decrypted it got the Aes key, and from there it decrypts it, using what it got from step 6.
+So step 8.
+Server decrypts server, not decrypts. Validates.
+Yeah. Server decrypts step 8 and then server.
+Well, now send the change happens back message
+and then sends a hash of all prior messages and remember that they had to properly decrypt. Step 8 here
+to put it back, to step 10
+sensor over here and then step 10.
+It's the same. Firefox receives the 1st encrypted message from Amazon, com decrypts it, using its aesh. Mac Keys rather the finished messages. Hash compares its own handshake messages. So this step 10 validates that the server was able to
+decrypt the message that is sent on step 6.
+This
+is the authenticator part, because you sent it encrypted using a public key, and the server was able to prove that it was able to decrypt it, using the private key so essentially, step 6. The server is proving
+that it has a private key associated with the proper key.
+So generally bulk encryption is performed using symmetric keys.
+And why is that?
+Well, symmetric keys is significantly faster for bulk encryption.
+It's some. It's over 1,000 times faster
+to use symmetric keys than asymmetric keys.
+So that's why, in this, in tls asymmetric keys is used for just generating. Keys like asymmetric keys
+are essentially used for the sole purpose of authentication, and generating a key.
+After this key is generated, then
+all the rest of the encryption uses a symmetric key
+mostly for speed. Symmetric keys are much, much faster for normal encryption
+exercise? 2.
+What are the Tls record types for each message which messages are encrypted and not encrypted.
+So let me give you 1, 2 min to do this question. I didn't fully answer this question. So you have to do a little bit of guessing, but I don't think it's difficult for you to guess. So let me set a timer here for 2 min and to answer these 2 questions.
+okay, so
+a, what are Tls record types for each message?
+I didn't talk about this yet. So let's make some guesses. Handshake protocol, which ones are handshake protocols.
+I didn't fully mention it, but handshake protocol
+is everything but the change that brings back
+so its handshake protocol is 1, 2, 6, 8
+intent.
+So these are called the handshake protocols.
+It's just the type of it.
+2.
+Change that respect protocol.
+Which ones do you think?
+Or to change subject protocol messages?
+Yeah, it's 7 and 9. Right?
+Right? Good guess.
+Alert protocol is not here. There's no alert protocol here.
+application data. There's no application data here.
+So this only change separate spec and change and handshake protocol question 2, which messages are encrypted
+or not encrypted, or just better yet which ones are encrypted?
+It's a tricky question. It's a tricky question here.
+tricky question. It's a little tricky. It's not intended to be tricky, but certainly for sure
+the finished messages are encrypted
+right? The finished message is encrypted. So the finished message is encrypted because it's after change. Type is back.
+The change that respect this one is plain text, but this finished message is encrypted.
+So remember, encryption starts by side. So on the Firefox side
+the encryption starts after the finished message after the change type of spec message
+and the Change type respect message is the beginning of the encrypted message on this side on the server side, to be the finished side.
+And then there's another message that might be encrypted
+is a client key. Exchange. The client key exchange is encrypted
+if the cipher street only has Rsa, so here, with this example over here, the Cipher street uses Rsa for key exchange identification algorithm.
+and from here because it only uses Rsa. Then the
+client key exchange is encrypted as well.
+So it's a little bit tricky. If they're using a diffie-hellman. Rsa. Then step 6 is not encrypted.
+so it's a little bit different
+now. We are a little behind schedule. So I'm going to ask for one more minute, 2 more minutes of your time
+to talk about. Tis version 1.3, for the purpose of being able to complete your homework. So if you will give me an extra 5 min of your time. That would be wonderful. Thank you very much.
+So in Theoris version 1.3,
+there's 1 thing you need to to note. Really, one thing you need to note is that
+Tls version 1.3 came out.
+I don't know. Quite quite a while ago many years ago. But the one problem they found with tiers version 1.3
+is that
+there are lots of appliances that don't support Trs version 1.3 like appliances. Do you know what appliances are? These are like network devices.
+like ids or such IoT devices. They have, like Tls version 1.2 hard coded into them, and therefore they don't support Trs version 1.3.
+And because of this problem, Tos version 1.3
+supported in a weird way. So
+when you do your homework number 3,
+you will find that there's a Tls. Field for the what version number it is. So Tls, version. 1 point
+the Tls version is in the header for the Tls packet. You can see this packet in the client. Hello!
+You look at the client. Hello, it'll say Trs version on it. And they'll say Trs version 1.2 or whatever.
+But because of IoT devices, appliances whatever they don't support. Trs version 1.3. What they did is that they added an extension
+to Tia version 1.2
+to say that it supports Tls version 1.3.
+I hope that made any sense. So the client Hello
+will say that it supports Tfs version 1.2.
+But in order to know whether it supports Tls version 1.3 or not.
+You have to go to the extension, and the extension name is called Supported version.
+So the header for Tls version for Tls says it supports Tls version 1.2, but the extension
+will say that it supports Tls version 1.3,
+and it does it via extension.
+So the thing is the Tls version 1.3
+is supported via an extension, not from the header.
+just to be very, very confusing.
+So thank you for bearing with me for an extra minute.
+We will continue with this lesson
+at the next time that we meet. That's in 2 weeks from now, so we're slightly behind schedule, but we'll make it up next week.
+So logistics right now you have Lab 3 and homework number 3 out lab 3 was due yesterday. Please go ahead and submit it if you haven't submitted it yet.
+Homework number 3, homework number 3 has been released. It's based on the lesson from today. So after now, today, after watching this video today, you are fully equipped to
+do homework. Number 3,
+please note that next week we do not have a live class. Next week will be an asynchronous class, meaning there's a pre-recorded video, and everything has already been posted. So next week, April 14, th you have. Lesson number 7 is posted on Brightspace already.
+There's a video associated with it as well. That's been posted on Brightspace. Also the weekly exercise will.
+if I have it enabled, then I'll enable it right now, and
+also Lab 4 as well. Lab 4 has been released and associated with Lesson 7. So after you do lesson 7. Please make sure you do the reading materials. You do the video, you review the slides and you do the lab assignments and the weekly bonus exercise. So next week is a strength in this class. Everything has already been posted here.
+Lab 4 on firewalls is due on May 7.th You can submit it 5 days early for 5 percentage points. There's also a 5% bonus as well. So you get up to 110%.
+But the late submission is only for 7 days, so I'll only accept it as late as May 14.th Reason for that is that we need to grade it before giving it back to before the final exam.
+I know that gradescope has the wrong date on it. I'm going to go fix it in a moment as well, but the late due date is 7 days
+after it's due. So it's due on May 7, th and it's will be.
+and the late due date is May 14.th
+Thank you very much for joining me today.
+I hope you have a good week, and I'll see you in
+2 weeks for our next live class. But there's still stuff to do next week, so there's not a break. There's no break. But I'll see you in 2 weeks.
+Thank you very much. Take care, everyone, bye.
