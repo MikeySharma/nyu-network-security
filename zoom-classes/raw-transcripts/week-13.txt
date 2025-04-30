@@ -1,0 +1,1079 @@
+Hello, welcome to Cs. 6, 8, 2, 3. Network security. My name is Professor Philip Mack. Today is Monday, April 28, th 2025, and this is week number 13 for network security. So right now it's working to the end of the semester. We'll be getting pretty close to end of semester
+right now. Logistics, wise lab 4. So Lab 4 is due out is due yesterday. But if you haven't had a chance to finish yet, please go ahead and finish it right away. You have a few extra days to submit it late, if you haven't done it yet.
+but only a few more days. Please remember that the lab 4 is based on Lesson 7. So if you haven't yet, please make sure you go review lesson 7 and review the slides and the video before you continue and work on Lab 4, or make it significantly easier.
+The weekly bonus exercise for the firewall video number is Number 11, which is due on May first.st That's later. This week.
+Please note, your final exam will be on Saturday, May 10, th with a starting time between 10 Am. And 12 noon further information will be given will be provided very soon.
+Also, I'll give some sample questions for the final exam that will be released tomorrow as well. So more information about the final exam is coming soon. But please mark your calendars that it is on next Saturday, May 10.th
+This week. I'll give you sample final questions. This will help you review on what? The topics for the final exam. And have you practice on it.
+just like for the midterm questions, you will notice that the final sample exams will be very close to, but not exactly like, the final questions.
+So
+I suggest that you go ahead and do those problems as if you're in a real exam. The samples I'll be releasing tomorrow would include a
+6 final exams combined together. So there's 6 exams. So
+which means that you should take about 12 h to work on the sample exams. At this time you should probably budget maybe 2 h per day to work on it, and more time. If you need to catch up with the exam.
+Also, I'll be giving out more details about the final exam later this week.
+Exercise number one.
+Please go ahead and submit your course evaluations, or at minimum, I request that you go and find and make sure you know how to access it. Let me set a timer here for
+let me set a timer here for 2 min.
+and what I am going to ask for you to do is just to find it and start thinking about how to answer the
+course evaluations.
+So let me go ahead and set a timer here.
+So I set a timer for 2 min. You should have received an email in order to access your course evaluations. So please go ahead and find that also. If you are not able to access it, you should be able to access it directly from Nyu Albert. So when you log into Nyu Albert, and then you look at your course.
+Next to your course there should be a button for course, evaluations, and you can click that for each one of your courses.
+so please make sure you go ahead and do that, and it's required for the bonus exercise as well.
+I know I mentioned this to you, but I'm gonna repeat myself.
+The course evaluations are very important for several reasons. The 1st reason is that
+it is a part of Nyu's Tandon's ranking in the ranking systems like news and world reports, and such has the school rankings and such, and they always have the percentage of the student evaluations and the evaluations of the students. 2 different metrics as part of the rankings, and Nyu Tanden is doing very well in it, and please please help us continue to do. Well.
+that's number one, number 2, number 2
+is that we all want to have good professors at Nyu, and this is one of the main ways that you ensure that you have good professors. You do that by giving objective scores
+to let the Administration know whether these professors are good or not good, or needs to change or needs additional training, or needs some sort of improvement or something like that.
+right? And you know how hard it is to get rid of anyone here. So if a professor is doing really badly.
+and all the students are saying, Well, you know, don't they know that the professor is not so good. Well, they actually, they don't know, and they need your evaluations.
+And, on the contrary, in a positive manner, if a professor is doing really well.
+And you think, Oh, yeah, of course, they know that he or she is one of the greatest professors, and doing really well and really like his or her style, and so on.
+Well, the administration.
+It doesn't actually know that. So this is why your course evaluations are very, very important. It's really the only real tool that they have available. That's actual data
+that the Dean can use to
+affect your professors. So please do so for this class, and for all your other classes as well, it is really really important for the various reasons I mentioned.
+So last week
+last week we stopped at Dhcp attacks. And let me give you a reminder of how Dhcp works. Remember what Dhcp is. Dhcp is, how your computer iphone android, whatever gets an IP address after they connect to a network. So an example of this is when you connect to the Nyu wireless network, you go ahead and type in your net id and password.
+And then
+after that your iphone is on the Wi-fi network, but it has no IP address. So then it needs to get an IP address. And this is Dhcp
+dynamic host, configuration protocol. Thank you.
+And so anytime you go into a new network, you will make a Dhcp request example. You go into Starbucks and you connect to the Wi-fi. Okay, you type in the password, or whatever. Or you just connect to the Wi-fi, your device does not have an IP address. So it does. Dhcp.
+And of course we discussed that Dhcp. Has no security whatsoever. It's all plain text messages. And here's how Dhcp works. It's a 4 message system. You send a discovery message. You get an offer, you get a request and an act.
+So you connect to a network, you get a discovery, you send a discovery message.
+This discovery message is sent to the entire network.
+This discovery message is sent to the entire network, and everyone on network gets it.
+everybody, including other devices on the network.
+So you connect to your Starbucks. Wi-fi, your Cafe Wi-fi Dhtp discovery is sent to everyone.
+Everyone at the cafe gets it.
+Then the Dhcp servers will send a Dhcp offer.
+You might get more than one of these, because the way that Dhcp does. Redundancy is that they just have more than one Dhcp server running on the network. So a normal network typically has at least 2.
+So this Dhcpu. Server one and Dhcp. Server 2.
+And in response to your Dhcp discovery message, you get a Dhcp offer
+message. And this offer says, Do you want this IP address, and that's it.
+I'm done.
+Once your computer would choose an IP address you, send a Dhcp request message and a Dhcp request message is sent as broadcast. And it says, I want
+this specific IP address.
+I want this specific IP address.
+and it does that as a broadcast, because
+in the second step they received multiple IP addresses. So they want to let the other servers know that you didn't choose that one.
+So, for example, let's say the client chooses the IP address from Dhcp. Server one.
+When it sends a Dhcp request out broadcast message.
+It tells everyone in the network. I am basically taking this IP address. That is what it is saying.
+And so the other Dhcp. Servers can just forget about it and release the IP address.
+and you get Dhcp. Acknowledgment.
+Now this Dhcp office acknowledgment has the IP information. Here
+has the IP information here, and the IP information includes the IP address something that masks default. Routers.
+dns, servers, lease time, and if you're windows, you also get the web proxy information as well.
+and this is pretty bad if the attacker does it.
+So in this particular attack, and this attack, as described here, is called a rogue server attack. So let me put the technical term here. It's called a rogue
+Server.
+Rogue, Dhcp.
+Server attack in a raw Dhcp. Server attack.
+Trudy here is on the network.
+and Trudy is pretending to be a server.
+Trudy is pretending to be a server.
+so the client sends out Dhtp discovery message it gets sent to everyone also gets sent to Trudy.
+and 2D. Is going to pretend to be a server and respond back with a Dhcp offer.
+and the client would simply take the 1st one that it gets.
+That's it takes the 1st one delegates so Trudy.
+let's say she just happens to be the 1st one a client will take it.
+Question, is there some way that Trudy can
+ensure that she's the 1st one like
+we know. The client would take the 1st response back. The 1st offer.
+Is there a way that Trudy can just make sure that she's the 1st one that responds back.
+Is there a way that Trudy can do that
+some way that Trudy can make sure
+she's the only one that responds, maybe.
+Well, we had a similar discussion before about Dns way way way back many weeks ago.
+Remember that Dns has the same flaw.
+Dns takes the 1st Dns response.
+Well, dhtp, does the same thing.
+So do you recall in Dns?
+How does the attack go?
+Make sure that they're the only response or the 1st response.
+How can 2D here in this case do it for Dhcp, well.
+maybe maybe I asked the question a different way.
+How can 2D ensure that?
+Only she responds to this Dhcp
+discovery message?
+Can Trudy stop the other servers from responding at all
+like? Is there a way for treaty to stop the other servers from responding.
+Yeah, Trudy can perform other attacks, such as Arpcache spoofing.
+So the goal here for Trudy is that Trudy wants to wants to poison the cash for the client
+to do that. She has to be the 1st one.
+Now. Maybe she can be the 1st one by luck, definitely.
+or she can't stop the other servers from responding.
+She can do that in a number of ways that we have discussed in this class
+one way would be Arpcache spoofing by performing opcache briefing.
+They're essentially ensuring that these servers don't talk to the client directly. So our cache briefing can be in
+can be a dos attack.
+Yeah, a denial service stack by using arpcacheproofing.
+Essentially 2D is taking these servers offline.
+It servers cannot respond if they, if she correctly poisons the cash to talk to the wrong person
+or 2D. Can do some sort of some other type of attack. A bandwidth attack a Ddos attack whatever
+she does.
+But
+Trudy has a number of ways to stop them from talking, and being the 1st one to respond back to the client.
+so Trudy can rely on luck to respond faster.
+or she can do some sort of attack to make sure that she's the only one responding.
+So anyway, Trudy became the 1st one that responds, and therefore the client just takes the offer.
+The client then step 3 sends a Dhcp request message.
+This Dhcp request message gets sent out.
+It's just a confirmation that they want this IP address. It's to let the other Dhcp servers on the network know that she has. The client has selected this IP address.
+Then you get the Scp acknowledgment.
+and both the offer acknowledgments has this information, which is very dangerous if it goes to it, has the wrong information. So we discussed last week
+the default routers, the Dns servers and the web proxy. Information
+can be used to perform an attack on the middle attack.
+Like with the default route, remember the default route. The default route is used for connecting out to the Internet.
+So if you have the wrong default route, like the default route, is Judy, for example.
+Then it will try to go through 2D. To go to Internet. Very bad
+Dns servers. We talked about how dangerous.
+how many bad Dns servers are.
+So if they're able to update the Chcp information.
+you can have bad Dns servers. The Dns servers will effectively
+Trudy act as the man in the middle.
+and then the web proxy information which is in here so web proxy information.
+If windows
+the web, proxy information as well, if they're windows.
+and what the web proxy is. Well, the web proxy is anytime. You open your browser to go into Internet. It goes through web proxy. So that's another way that truly can be the attacker in the middle.
+So by performing a Dhcp.
+Server attack.
+Where am I? By doing a Dhcp rogue server attack?
+Trudy is able to take over the network, like all the clients in and become the attacker in the middle. Very, very easy.
+It's even easier than Dns cash poisoning this attack.
+It's it's just very easy to do now.
+Another type of attack.
+It's called A. It's called the Dhcp starvation Attack. And let me talk about Dhcp starvation attack. Now.
+yeah. Copy of the slide.
+Let me edit some of the slide information out.
+So a Dhcp starvation attack
+is when you take all the IP addresses on the network and
+there are no more IP addresses available for anyone else.
+So here's how it works. Truly.
+we'll send in a request to the Dhcp. Servers.
+so Trudy will send Dhtp. Discovery messages out.
+But, Trudy.
+It doesn't just send it one time.
+Trudy will send it hundreds of times
+times.
+and when Trudy sends it hundreds of times out 3D. Will be taking up all of the IP addresses. So here's how it works.
+Trudy will go ahead and send a Dhtp discovery message
+asking for an IP address. It gets a Dhcp offer, but because it sends out hundreds of requests
+they'll get hundreds of different responses back to it, and then they'll send in
+hundreds of Dhcp. Requests, and then you get hundreds of Dhcp acts.
+and when Trudy does this for hundreds of times
+you, she will essentially take up all the IP addresses.
+I don't know how many Dhcp IP addresses are available, but it's not that many.
+right? We have one server, typically maybe one server on this network might be serving. I don't know. 256
+IP addresses and another service serving another 256.
+So maybe this network might have.
+I don't know. 512 dhtp. IP. Addresses.
+I don't know, but it doesn't matter how many it has, because Trudy can just send Dhcp discovery messages to take all the IP addresses.
+So she just takes all of them. That's it.
+So 3D. Goes and connection network
+and asks for 500 different IP. Addresses.
+She asked for 500 different IP addresses.
+and then she gets 500 different IP addresses. And now there is no more IP addresses for any legitimate people who actually connect to the network.
+This is called a Dhcp starvation attack.
+This picture shows a Dhcp header, a Dhcp header
+goes on top of an Ethernet header.
+So imagine here you have an Ethernet header here.
+So this header here
+is a Ethernet header.
+and then
+after that you have a Dhcp header. This is normal on how network works. So you have an Ethernet header and a Dhcp header.
+and the Ethernet header has a source and destination, Mac address.
+But the Thcp. Header also has the source Mac address as well.
+So the Dhcp. Header has this thing. Core client
+hardware address CHAD DR. Client hardware address. But this client hardware address is essentially just a Mac address.
+So this is actually the Mac address.
+I don't know why this font became common sense over here.
+but this is actually the Mac address here in the header. So
+this is similar to the Arp header, where you see that the Mac address
+is duplicated multiple times in it. Actually, this is the source. Mac, address the client source.
+Mac address is over here, and this Mac address
+is sent in with the Dhcp. Header because
+the the Dhcp. Server wants to know
+which Mac address is it associated with
+the Dhcp. Server. Its goal is to give only one Mac address. Per. Excuse me, it wants to give one IP address per Mac address.
+So when someone comes in. They have a Mac address they send in the request in. If it asks for an IP address before it'll give them, you know. Try to give them the same IP address next time. This is how let's say you walk around Nyu, but you still have the same IP address over and over again as one of the reasons.
+So when someone comes in asking for an IP address again and it recognizes Mac address.
+it will give the same IP address here.
+So the Http. Servers remembers the Mac addresses when it's giving out the IP addresses.
+so it will make sure to give out the same IP address and actually not waste the IP addresses by giving the same one to different people.
+but but the Dhcp. Server only looks at the Mac address in the Dhtp. Header.
+The Dhcp. Server only looks at the Mac address in the Dhcp. Header, not in the Ethernet header
+only looks at it from the Dhcp. Header when it's assigning IP addresses.
+So when the Trudy is doing a Dhcp starvation attack.
+Trudy is sending out these Dhcp. Discovery messages like hundreds of times, but each time she sends it
+through the ascending the message.
+using a different client hardware address.
+which is, in other words, of saying, Mac address so essentially.
+Trudy is sending out these messages with different Mac addresses in the Dhcp. Header.
+so it will fool the Dhcp. Server to give out new IP addresses every single time.
+and the server won't give out the same address over and over again to the same Mac. Address.
+exercise 2.
+What do you see? The potential problem with the following information, and why?
+This is an exercise that we did last week. I accidentally included it here again. So let me just set a timer for 30 seconds for you to review the answer. If you don't remember where it is, and then we'll just move on from there.
+So this is the same exercise. It's not, it is deja vu the same exercise as last week.
+Let me set a timer here for 30 seconds for you to do exercise number 2.
+All right, let me move on.
+What can you do to stop the Htp. Attacks?
+Well, there's a feature called Dhcp. Snooping. Dhcp. Snooping is a feature on pretty much any banished devices
+and managed devices are well.
+they're not your home, Linsys, or whatever such. They're the devices that you buy for enterprise. So Cisco, juniper, and and so on. Those are generally managed devices meaning you need to configure the device doesn't work out of the box
+for pretty much every managed device that you can buy even the cheapest ones.
+It has this feature, called Dhcp. Snooping
+and Dhcp. Snooping is actually a set of 3 features.
+Here the 3 features are. One
+Dhcp. Snooping sets the interface as trusted or untrusted.
+So, for example, here, on the client side, it's considered untrusted.
+and on the server side, it's considered trusted on the side that's untrusted the client side.
+The client side can only send Dhcp. Discovery and Dhcp. Requests messages meaning
+requests that come from the client side here, so a client side
+can only send Dhcp. Discovery messages and Dhcp. Request messages, and the client side
+is not allowed to send Dhcp. Offers, and Dscp. Acknowledgments or Nacs.
+because the client side is only supposed to send these messages.
+Then we have the server side. The server side is considered trusted. And this is just a label. It's not really trusted. And those sites that's labeled as trusted
+can only send Dhcp. Offers and Dhcp. Acknowledgments.
+and it cannot send Dhcp. Discovery and Dhcp. Request.
+So essentially it is allowing each side to send only messages that it is allowed to send
+the client side can only send discovery and request messages here and here.
+and the Dhcp. Server is only allowed to send offers and acknowledgments.
+That's Dhcp. Snooping the feature. 2 for Dhcp stripping.
+That's feature one.
+So actually, this is very important. So let me write this down Dhcp snooping
+feature. One is setting interfaces as trusted, untrusted
+would I go?
+Trust the untrusted, trusted, untrusted can only send discovery a request.
+Trust it can only send offers, and x. And next feature one feature. 2.
+Feature 2 is that the Dhcp snooping
+keeps a table on Dhcp. Snooping
+entries called the Dhcp. Snooping, binding table, and it's essentially it's a table of Dhcp requests on the network.
+So here, for example, it says, this is from a Cisco device. It says, Mac. Address.
+Mac, address IP address lease time type Vlan, and which interface physical interface. They come from
+Mac, address, IP address, lease time. How it learned Vlan and physical interface. And this is keeping this information
+as a table on the router. Excuse me on the switch so it'll have it available to perform analysis. So feature 2 is keeping the snooping.
+creating and maintaining the snooping, binding table, and then the future. 3.
+Feature 3 for Dhcp. Snooping is that it actually checks whether the Mac address and the I excuse me. The Mac address from the
+from the Ethernet header, and the Mac address from the Dhcp. Header are the same.
+So we know we discuss
+earlier. How sometimes, maybe, like Trudy, might be able to exploit this thing where the Ethernet header and the client hardware address is not the same Mac address. Well, we'll talk about that in a moment.
+Dhtp. Snooping checks that the Ethernet header and the client hardware address have the same Mac. Address.
+3 checks the Mac Source Mac. Address
+from the Ethernet header versus the Dhtp. Header.
+Call it the client hardware address
+to make sure that they're the same.
+Now, let's say let's say you don't have a you don't have a managed switch.
+and you don't have a manager for Dhcp. Stooping. There's another way that you can block
+Dhcp. Rogue servers at least a cheaper way, a much easier and cheaper way.
+The easier way is that Dhcp. Discovery messages
+come with Source Port 68 to Destination port 67.
+So this this message here Dhtp discovery message has
+source Port 67. I always get this confused myself.
+68, and it goes to Destination Port 67.
+So it goes from 68 to 67,
+while in Dhcp offer goes the opposite. So Dhcp offer message goes from 67, 2, 68,
+so reversed, the Dhcp. Messages goes from 68 to 67.
+The offers goes from 67, to 68.
+The Dhcp requests go from 68 to 67,
+and the Dhcp act goes from 67 to 68.
+So essentially essentially messages from the client to the server
+goes from 67 to 68,
+while messages from the server to a client go some 68 to 67 to 68.
+So excuse me. I just got that messed up myself. But what's on the slide is correct. Here
+they go from Port 68 to 67, and 67 to 68.
+What that means is that you can actually block some these messages by blocking.
+So import numbers.
+Example, example.
+Let me go back to this slide where it says, untrusted to trusted, as we know
+that messages from the client to the server
+goes from Port 68 to 67, you can actually block Port 67
+on the router over here on the switch over here.
+So if you block Port 67,
+you stop the client from connecting to the server, but we don't want to do that. What instead, what we want to do is we want when the rogue server here
+comes in and tries to talk. The rogue server is going from 67 to 68,
+and so we make sure that this side of the network
+cannot talk to Port 68. It can only talk to Port 67.
+So the client side here can only go from Port 68 to 67,
+and the server side goes from Port 67, 68.
+Was that completely confusing? Yes, I know it's completely confusing with the 67, and 68. But the main point to take out of this here
+is that the Acp messages
+go from point 68 to 67, and back from 67 to 68,
+and because of that you can block the rogue servers by blocking
+Port 68 on the client side.
+So if you don't have a fancy router or a fancy device. Cisco device which has Dhcp snooping.
+You can also block Port 68 on the client side as well in order to stop
+Dhcp rogue server attacks.
+So that's Dhcp, that's the Http.
+It's a complex topic, and it's very likely that you'll have a question on the final exam on Dhcp
+actually, you're guaranteed to have a question on one of these topics that we discussed on this lesson here.
+And you can get more example questions from the sample final exam questions to be released very soon.
+Architects
+so, moving on to the next topic, Arp attacks, we discussed Arp attacks already before. But let's go over a review of it again.
+Arp is a protocol, and do you remember what Arp does?
+They don't know the purpose of Arp.
+Arp performs the Mac address resolution for an IP address.
+So when when the systems, when clients on network are talking to each other.
+they want to talk to each other, using IP address.
+So this computer over here
+wants to talk to IP address 1 0 dot 10 dot one dot one dot 4.
+So they talk in IP addresses.
+but they're actually on a ethernet network. So to really talk to each other, they have to use Mac addresses.
+So Arp is a translation between IP and Mac address.
+That's the purpose of Arp.
+The purpose of Arp is to translate
+an IP address to a Mac address.
+So here's how it works. This computer over here wants to talk to
+let me make the screen bigger here.
+This computer over here wants to talk to
+10 dot, one dot, one dot 4. So it sends an Arp request sends an Arp request to
+the whole network, saying, I am.
+Whoever I want to talk to 1 0 dot one dot one dot 4, please tell me.
+And the target machine comes back
+and sends a unicast message, and it comes back and says, Hello.
+I am 10 dot one dot one dot 4. My Mac address is a.
+so this computer here can update its Arp cache. So now it knows that if it wants to talk to 10 dot, one dot, one dot 4.
+It has to send the message to Mac. Address A.
+So this is the purpose of Arp.
+There's also a thing called a gratuitous arp, which doesn't work anymore. A gratuitous arp is when you send an Arp reply, but you send it to everyone on the network
+so broadcast.
+But we call it gratuitous, sends a gratuitous arp, sends it to the entire network.
+and every computer on the network will update its arm cache.
+This doesn't work anymore.
+It used to work.
+And all operating systems have been
+updated. So this doesn't work anymore
+in your lab assignment lab 3, you didn't even do a gratuitous art reply, because there's no point it doesn't work. So you tried the other 3 methods in order to test
+of cash poisoning.
+There's an Arp header. This is what Arp header looks like. The Arp header, remember, has an Ethernet header and an Arp header, and on your lab assignment. You have to toy with some of these parameters in order to get your attack to work.
+So remember there's an Arp header. There's there's an Ethernet header, and as our header.
+and even though these values are supposed to match, they they don't always match.
+they don't. They don't always match, and in your lab assignment you have in some cases made it not match
+on purpose.
+There's lots of tools to do it. The one that I use is editap. There's a Gui version and a command line version
+command line version works better, but
+edit caps, probably one of the best.
+Here's how an Arp attack will work. This is what you did in your lab assignment. You have this attack over here. You have this router, and you have this machine.
+The attacker will poison the cache for the router, and it tells the router
+router. If you want to talk to Mac, address 1 0 dot, one dot, one dot 2.
+Its Mac addresses actually see?
+And then you do Arpcache poisoning on 1 0 dot one dot, one dot 2,
+and you tell one dot, one dot, 2, 1 dot, one dot, one dot, 2, that if you want to talk to your router at 1 0 dot one dot, one dot one. Its mac address is actually C,
+and then the attacker will do a bridge between the 2.
+A host bridging is IP forwarding that you did in your lab assignment.
+So on your lab assignment.
+Remember that you had to do archcache poisoning.
+but you had to do it on both sides.
+If you don't do it on both sides. The Arp cache poisoning will break very quickly.
+and or maybe have a loop or something like that. Once the router, or once the switch sees a loop
+on a network, it will try to fix it with Icmp redirects.
+So if you accidentally poison just one side of the conversation, it doesn't work
+because the switch will try to fix it, and the grader will not graded correctly.
+as is because it's not correct, it won't create correctly.
+I know many of you have had this problem.
+and at least we have. You have reached out to me or the Tas. We discussed it. But yes, you have to poison, or the attacker has to poison both sides of the conversation in order for this work for the arpcache poisoning to be stable.
+otherwise the switch will try to break it.
+And then this bridging between the 2 different hosts. That's IP forwarding.
+If they want to undo everything, the attacker will send Arp
+packages back to the host, and tell them that everything's all right. So it sends our attack back to the router and tells the router
+if you want to talk to 10 dot, one dot, one dot 2.
+Its Mac address is actually a big send a
+arp attack to B, saying, if you want to talk to 1 0 dot one dot one dot one.
+Mac addresses that Julie A and cleans up everything and gets everything back up and running the way it's supposed to be.
+what can you do to stop heart attacks?
+Well, this is feature on expensive devices called dynamic arp inspection, dynamic arbit traction is a feature on
+more expensive devices to stop Arp cash poisoning.
+and it does it in the following way, dynamic arp inspection
+requires Dhcp snooping to be enabled.
+Remember, Dhcp. Snooping Dhcp snooping is the feature that we talked about a few moments ago.
+and Dhcp. Snooping one of the features of Dhcp. Snooping here on the slide is that
+it creates a Dhcp striping, binding table.
+and this Dhcp stream, binding table keeps track of the Mac address associated with the IP address lease time.
+The Vlan and physical interface where those messages came from. It keeps track of this information and keeps it updated.
+So that's the exhibiting binding table. Now, dynamic Arp inspection.
+We'll take this table, and now we'll look at every art packet
+and check it against the Dhcp. Reviewing binding table.
+So I take every art message
+and it looks through the header, and it checks whether it meets
+the requirements here from the Dhcp screen binding table.
+and it uses that to determine
+whether the attack should excuse me whether the arc packet should be dropped or allowed through.
+and so that means that every art packet that comes through
+it has to check it against the table.
+And well, you can imagine that it requires CPU,
+at least CPU and memory. In order to do this, and therefore the devices that have this feature
+are a little bit more expensive
+a little bit, not that much, but just a little bit more expensive.
+but essentially it stops Arp attacks by making sure that they really needed to have a Dhcp request that comes with it to be associated with the
+arp with the Mac address.
+So this th, this diamic OP. Inspection.
+So remember, dynamic art. Inspection is a feature that requires Dhcp snooping to be enabled 1st
+spoofing
+question, question, can you Spoof? A Mac address.
+Can you spoof a Mac address?
+Is it very easy to do.
+or is it very hard to do?
+Yeah, it's it's very, very easy to do.
+You did it on Lab one and Lab 2, and Lab 3.
+And so Scapi is one of the tools to perform, Mac address proofing.
+And you can see that it was very easy to do
+right. Maybe it took you a few hours to learn it initially.
+but now it's so easy you can. Just I bet you can write scappy code like just like that.
+Now it's very easy to do.
+How about IP address briefing is IP address proofing easy, hard, did you?
+Yeah, extremely easy, extremely easy to do.
+Scapi can do it. Various other tools to do it. It's just that the layer 2 and layer 3. It
+basically has almost no security whatsoever.
+and you can easily just spoof these IP addresses and Mac addresses, using Scapi or various other tools
+as well.
+we talked about a few other tools that can do it, but generally it's very, very easy to do
+so with it, being so easy to do. What can we do about it? Well, this is feature.
+There's this feature called IP source Guard, Ipsg and Ipsg
+is a feature on really really expensive Cisco devices really, really expensive Cisco devices.
+And it how it works is that it again uses the Dhcp snooping, binding table
+just as we discussed earlier. So this feature requires the Dhcp snooping, binding table, or the Dhcp. Snooping feature to be turned on, and that there is a Dhcp snooping, binding table as well.
+and with this table. It takes every IP
+and Mac packet like every single packet.
+and it goes through and checks it against this table
+before allowing it to go through or not.
+So it checks every single packet well on the interface
+before allowing to go through or not.
+And so you can imagine that this feature
+are on the most expensive devices.
+Right? The devices that will have these. This feature. Ipsg is around $500,000 a device.
+So these are your really really expensive high performance devices. And the reason for that is that this feature requires a lot of CPU
+memory and capacity. And it has, like, really really expensive memory storage, because it has to be really, really fast in order to do so, it has to be really, really fast.
+So these are. This is a really really premium feature.
+and it requires the Dhcp stream binding table as well.
+So in summary, the Dhcp stream binding table is a very very important table, right? And it does many, many things. 3 that we discussed here today. 1, st one
+Dhcp attacks. It can stop some types of Dhcp attacks because it keeps track of the Dhcp. Messengers here.
+2 dynamic Arp inspection.
+Where did I go?
+Dynamic Arp inspection.
+dynamic arc inspection uses the Dhcp stream bean binding table to check the Arp packets to see whether the Arp packet conforms to data from the Dhcp sleeping binding table.
+And then the 3rd feature that we talked about today is the IP source card, IP source card, same thing.
+It checks the Dhcp snooping, binding table to make sure that
+it conforms to what's on that table as well.
+and as we go down the line it gets more and more expensive
+and difficult to do so. Therefore it just costs a lot of money, a cost.
+a lot of money, because you require a lot of CPU memory to run these features.
+So today we gave a little summary
+on some of the layer 2 protocols, and how insecure they are!
+Well, they're not really insecure, but
+really that these protocols were designed a very long time ago.
+where security is not considered in the same way that we look at it today.
+And so these protocols, every single one here that's listed are all plain text protocols.
+and whatever protocol you look at, I assure you that there are many vulnerabilities in it, one of them being that they're in plain text without any authentication.
+And such and some of these things have really have taken down the Internet. Sometimes. Dhcp, Bgp, right? Bgp
+has taken down the Internet by accident, just by accident, has taken down the Internet.
+So these protocols are unfortunately easy to attack, and there are tools that can just do that as well.
+One more protocol Spanning tree protocol stp, Spanning tree protocol
+is a protocol used for creating
+loop-free networks on enterprise networks. Stp
+spanning tree protocol is what keeps loops from happening on a local enterprise network like within a company.
+Here's here's a diagram of how it works.
+Let's say you have a network here
+and a normal network will have redundant
+interfaces. So these routers, these switches are connected to each other, but they have redundancy, that is, if let's say, one line goes down.
+They have other links that can go forward that can handle the traffic.
+and it's also done in an automatic fashion as well. Where one link goes down, it can just automatically go to another link.
+Span tree protocol is a protocol to make sure that these links
+don't form a loop in any way. So what that means is that if if you're from a computer science background where you take
+the network of an enterprise, you pick it up from any point.
+You get a tree like you pick up the network, you get a tree right? That's what Stp does.
+and make sure that there are no loops on the network whatsoever. There's only one way, one path
+in order to get anywhere at any time, and it automatically shuts down links
+to make sure that there's no loop.
+because there's a potential problem. When there's loops it can cause a network storm. That's where packets accidentally goes around and around in the loop
+and creating more and more traffic, and then it can take down the entire network. So Stp's purpose is to make sure there are no loops by creating a tree network
+Stp uses messages called Bpdu. And there are 2 potential problems that can occur with Bpdu messages. Bpdu messages.
+you can probably guess.
+Don't have any encryption. They're plain tag. There's no authentication. There's no integrity. They're just. They're just messages on a network.
+And the 1st attack the attacker can do
+is that they can become root. So here's how it works.
+You have 2 switches over here, and the attacker will connect to both switches.
+and then the attacker will send Bpdu messages to both of these switches and says, Hello, hey! I have a higher priority. I have a higher bandwidth. Please make me the root.
+and they comply, and the attacker becomes the root of the network meaning
+the attacker is the attacker in the middle. For basically, almost all the traffic on the network by becoming the root node.
+So the attacker does that by sending Bpu messages
+to the switches on the network by connecting 2 different switches and sending the messages, saying that, hey.
+I have higher bandwidth. I have lower priority. I'm faster. You should make me your your root.
+and it does.
+That's the 1st attack.
+then once it becomes root, it becomes the attacker in the middle.
+What can we do about it?
+Well, this is feature called Bpdu guard, and it's called Ptv. Protection and juniper devices.
+And what Bpdu Guard does is that it limits which devices
+it limits, which devices are allowed to send Bptu messages like so very obviously, you can see from this diagram that this switch should not be accepting Bptu messages from some random person over here.
+and so pptu guard
+ensures that only proper devices, interfaces are allowed to send Ppdu messages. You can't just have a random person plug into your interfaces and then send Ppdu messages
+that's called Bpdu Guard, right? Making sure that only the different switches are able to send Ppdu messages.
+I know it seems obvious, but this is.
+these are relatively new features in the last 1015 years.
+Second feature is called root guard
+root guard limits, which devices are allowed to be root. So, for example, root guard is a feature that makes sure, hey, no matter what, on the network. Only this device and this device are allowed to be root.
+and therefore it won't allow anyone else
+to become the root of the network.
+So that's called root guard.
+So these 2 features, called called Bpd regard and rootguard
+protect the network to make sure that a rogue attacker just can't come in
+and try to be root of a network.
+So that's stp
+the last topic.
+For lesson 8 is 802.1 x
+Ao 2.1 x is probably a feature that
+you already use. If you're working in a company 8 0, 2, 1 x is layer, 2. Authentication.
+When let's say, let's say you walk into Nyu.
+and you want to connect to the Wi-fi.
+When you connect to the Wi-fi
+you have to go and type in your net Id and password in order to log into the net to the Wi-fi network.
+That's a 0 2.1 X, that's layer 2. Authentication, Ao, 2.1 X.
+It's actually pretty old.
+It was created for the the wired time, the wired network. But it didn't become popular until you got to wireless
+where now you need some like more secure authentication methods for wireless networks.
+And here's how it works. Here's how it works you. That's you over here, the supplicant
+you log into the Nyu network
+in order to try to log into network. You go and talk to the Wi-fi device. That's your Wi-fi access point over here.
+and your Wi-fi access point talks to you and says
+tells you how you should authenticate your network.
+Maybe it'll ask you for your username password.
+Then
+then your device.
+Excuse me, the Wi-fi device and you send a message to the backend authentication server
+most of the time, 99% of the time. This is a radius server.
+and this radius server will have the ability to authenticate the user to see whether it is the correct user or not.
+If it is a correct user, then it tells the authenticator the Wi-fi base station that you're able to log in and allows you to log into the network.
+So this is how 802.1 X works.
+Let's go over it one more time.
+You're welcome to Nyu.
+You connect to your Wi-fi, you connect to the Wi-fi base station to authenticate over here.
+The Wi-fi base station says you need to give credentials to log in.
+Then you type in your net Id and password.
+the authenticator forwards this data over to the backend authentication server, radius server.
+And then the radio server says Yay, or nay, whether this is actually a valid user or not.
+and then tells the authenticator to allow the supplicant to go into the network or not.
+And now you authenticate your network.
+This can happen in other ways as well. Let's say you have a work laptop.
+Newberg laptop probably has a certificate on it, a machine level certificate.
+When you plug in your laptop into your corporate network.
+It can do exactly the same thing you plug in it says you need to authenticate by certificate.
+Your computer will give a certificate.
+and the authenticator will forward it over to authentication. Server
+checks the certificate, sees whether you have a valid computer certificate or not.
+and then allow general network or not. Allow general network.
+Another example.
+You know the cap, the captive portals.
+When you go to a hotel network
+like you go to a hotel, you log into your Wi-fi.
+and it says, Oh, give your room number and your last name in order to log in, or
+maybe you're on an airplane.
+and it says, Please make sure you give your credit card number to pay for the Wi-fi before you allow in
+same thing.
+Same thing. This is how it works. You connect to your hotel. Wi-fi. You supplicant, connect to the Hotel Wi-fi. The Wi-fi base station is called Authenticator. Then it says, Okay, we need to give a captive portal sends up the little web page for you to go to
+with the information you. Your computer is only allowed onto that little site
+that takes your credit card information or takes your room number, or whatever.
+Once you enter the details.
+the information gets forwarded over to authentication server, which validates your information, validates your credit card number, or is it validates your room number, or whatever.
+and when it's done.
+allows you in it tells it sends a message back to authenticator saying, Okay, this person has free access to Internet now.
+And now it reducts you back and says, Oh, you're now connected. Please feel free to browse the Internet.
+Same thing. 8 0, 2 dot, one x.
+it's all using the same underlying technology.
+Here's a more detailed view of it.
+So you, the supplicant, the authenticator is the Wi-fi network.
+and then on the back end you have your authentication, server, which can be a windows server could be a radius server. It could be a radius server running on a windows computer or so on heck. If you're using a Mac computer, you have a free radius server
+that you can download in that.
+You have a free radius server from apple
+that you can use on your server so you can have username password authentication onto your Wi-fi network run by your Mac on your home computer as well.
+You can do that, and it's all free.
+So here's how it works. You have a laptop you connect over to your Wi-fi base station, you do an association and you start an authentication. Request the authentic. The Wi-fi Base station
+asks for your authentication information. So if you log into the Nyu network, it will ask for your username, your net Id and password.
+You send over the information forwards it over to the authentication server, radius server.
+and you might have some challenge and requests
+with it, depending on which protocol you use
+when you send the credentials. It tells you everything is fine, and then you can go and connect to a network.
+There are many types of a 0 2.1 x authentication, the one at Nyu.
+the one at Nyu. I believe it's eaptls, which is, which is username password through tls
+username password through tls. And how it works is that it creates a Tls tunnel between you
+and authentication server before you type in your username password.
+So that's called eap ttls.
+So when you connect to the Wi-fi network.
+You then create A, then you create a Tls tunnel directly from you
+all to the radius server. So no one can see your username password along the way
+when you're giving your credentials over to the radio server.
+That's 1 way to do it. But there's multiple ways.
+Another way could be another way could be as simple as mac address authentication
+meaning a a company. They give you a laptop.
+They turned on. They have, Ao 2.1 X authentication turned on on the on the network.
+And they just enter your Mac address
+onto the device and allows you your computer access. It based on the Mac address, and that's it.
+Or it could be a certificate-based authentication.
+This is also extremely common, and you get a work issue laptop
+and your work issue. Laptop has its machine certificates on the laptop.
+and when your laptop connects to a network, either by Wi-fi or by hardwire.
+and you do Ao 2.1 x. It will request a certificate, and your computer will provide its machine certificate in order to authenticate to the network
+so various ways to do it.
+But 8 0, 2 dot, one x is extremely important is extremely important.
+because Ao 2.1 x, make sure that
+no one can just walk into the office and plug into a network.
+because you know how dangerous it is. Once someone is on the network. We talked about it a hundred times
+how dangerous this meaning. If someone walks into your office
+and is able to plug into your network just like that.
+you know that all the all the layer. 2 protocols, once you're on the network, is pretty insecure.
+and therefore they have a really really good chance to.
+I'll take over your network
+from there. So 802.1 x makes sure that only authenticated users are able to get onto network and they do it various ways. They can do it by machine certificate, username and password. They can do it via Mac address, even though that pretty much that sucks.
+There's captive portal and other ways to do it, but pretty much certificate, or something through
+like password through a Trs. Session is probably the most secure ways.
+So this is the end of lesson 8 layer, 2 security.
+But I'm moving on to our next lesson. Lesson 9 on wireless security. We're not going to get through all of it today, but we'll go over some of the slides, and then where we end, we'll
+it where we end on the slides is when our the materials for the final example, we'll cover.
+So Lesson 9 is on wireless security.
+The objectives of this lesson is to go over what 802.1. 1 wireless is describe Wep, its flaws and
+the various ways to exploit it. We'll talk about Wpa and Wpa 2,
+and talk about Wi-fi Protector setup. If we have time to do so.
+1st of all, what is 802.1 802.1 1
+8 0. 2 dot. 11 is layer 2 for wireless
+like. All this time we talked about Ethernet, ethernet, ethernet right? And and this is the wrong word. I actually used the wrong word here.
+Ethernet is 802.3
+i. Triple EL. 2 dot. 3,
+and it is the layer, 2 for Ethernet, but 8 0, 2, 11 is the layer 2 for wi-fi.
+So it is the I triple e standard for layer, 2 for wi-fi.
+Now it doesn't really matter for us, because all the attacks we talked about
+does it matter if you're using Ethernet a 0 2.3
+or wireless 802.1 1.
+All the attacks work arpcache poisoning works on wireless Dhcp cache, Dhcp attacks.
+works on wireless dns, attacks, works on wireless everything works on wireless heck I was saying. Sometimes it's easier to do on wireless.
+Ao, 2, 11. Wireless has evolved this. Ao, 2, 11 BAG, and a CAX
+and right now, where are we? I think we're on ax right now. Right wi-fi 6 E. Also called ao, 2,011 ax.
+One of the major differences.
+One of the major differences between the different wireless protocols is the frequency.
+and how many simultaneous channels that it can broadcast on at the same time.
+Thank you for letting me. I'm not sharing the right slides here.
+Thank you for pointing this out.
+You didn't miss much. There was the intro side. There's the objectives, and this is where we're at right now.
+Thank you for letting me know.
+So this slide talks about 8 0, 2 11, which is
+which is a layer, 2 for wireless.
+and here are the different 8 0, 2, 11 wireless marketing names
+and standards over the last couple of years.
+So we have Wi-fi 1, 2, 3, 4, 5, 6, and we're at 6 or 6 E. Right now, or 7. I'm not sure right. Do we have 6 E devices. Yet I'm not sure. Certainly. I know we are at 6, maybe 6 E.
+There are 3 major frequencies in which wireless works on 2.4 5 insects.
+Right now, the most popular one is 5 gigahertz.
+5. Gigahertz is probably one of the best because it doesn't interfere with your normal home electronic devices, like microwaves and vacuum cleaners and and such. So
+5 Gigahertz is is pretty good, but also the later version's Wi-fi 6.
+They can handle interference significantly better than prior generations.
+If you're using a really old device like, let's say, let's say you're using
+8 0 2 11 b, 1 of the 1st versions that come out
+you go. Oh, it doesn't matter. What. Why does it matter that I upgrade or not?
+You know. I don't need it faster, or what or such.
+But there are significant security differences between
+the older Wi-fi versions and the newer Wi-fi versions.
+Specifically one, they can handle better protocols.
+So in a O. 2, 11. Ax. Wi-fi. 6.
+It supports Wpa. 3. The latest encryption standard for wireless encryption.
+The strongest version right now another thing is that the later
+the later versions of Wi-fi can handle simultaneous channels for broadcast and receiving.
+So, for example, Wi-fi 6 can actually broadcast on 4 channels
+and receive on 4 channels at the same time.
+meaning it can run up to 8 channels at the same time.
+And this is really really important
+in case someone's trying to sniff the network.
+With today's commercial technology, people can easily sniff wireless wireless traffic.
+It's very, very easy to do so.
+But with the tools that we have today.
+You can only sniff one channel, her one channel per antenna.
+So if, let's say, using Wi-fi 6,
+and you're broadcasting on 8 channels simultaneously, like 8,
+2, and excuse me for to and for receive if someone's trying to.
+If someone's trying to listen and eavesdrop to your wireless traffic.
+they'll need to have a machine with 8 antennas to do so.
+and so I would hope I will hope.
+if you see someone walking around
+with a laptop with 8 antennas on it, 8 wi-fi antennas on it.
+Then they might look a little suspicious.
+Right? They're walking around with a laptop, and there's like 8 antenna sticking out on it like like reindeer antlers, so you might find that a little bit suspicious. So it makes it a tiny bit harder to sniff the network.
+If you use the latest Wi-fi
+version, if you use a older version like version 3 which only broadcasts on one channel at a time.
+then by just using a laptop with one antenna.
+which is the built-in one they're able to sniff the wi-fi wi-fi traffic.
+But if you don't want to sniff your traffic, if you're using Wi-fi 6, they'll need something like 8 antennas in order to sniff your Wi-fi traffic correctly.
+So that's 1 reason one reason to keep your equipment updated as well. It's also faster as well
+terminology. Just to make sure we're talking about the same things. This is a diagram of a typical architecture for Wi-fi. Let me describe what this is. There's an Internet. You have a router.
+and then you have your base station, the base station. Technically, they're called ap access points.
+And so let's imagine you walk into Nyu and Nyu Metro Tech Center has hundreds of base stations
+throughout the network throughout the campus.
+And each of these space stations are actually called Aps. Each of these Aps have the same Ssid.
+they have the same Ssid, and the Ssid is Nyu, or whatever it is.
+so they all broadcast on the same Ssid. Every base station. Excuse me ap broadcast on the same Ssid Nyu.
+but each ap has a different Spssid.
+So every Ap. Has a different bssid. Ap. Is a base station.
+The Bss. Id.
+It's just a fancy way of saying, Mac address.
+So each Ap. Has. This has a different Mac address.
+but they have the same Ssid and Yu.
+So you go to walk into Nyu.
+and you look at the Wi-fi menu on your device. You see one Ssid Nyu.
+but if you have some sort of tool that can look at it.
+and more carefully, then you see all the different Mac addresses for the different Aps that you can connect to.
+So you have these Aps, you have an Ssid, and then you have the bssids, which is the Mac. Address, the Mac addresses, and then your
+your device will connect to an Ap
+Channel beacons and frames
+depending on what frequency you use, you have different channels. So if you use frequency, 2.4 gigahertz
+is actually divided into 13 channels.
+and the device will automatically try to use the one with the least amount of interference as it can.
+The Ap. Also regularly sends out beacon frames. These beacon frames tell the tell nearby devices that this Ap. Is nearby.
+Beacon frames are sent out by default every 0 point 1 seconds, or, in other words, 10 times per second. So it sends out a pulse.
+So your computer is able to pick up the pulse and from there able to tell the signal strength
+and what Ssid it is in its Mac address, so you can choose to connect to it.
+So when you walk into Nyu, your device will constantly get these pulses
+10 times a second from every Ap.
+Out there.
+and it makes a decision on which Ap. Is the strongest. When you want to connect to the Ssid.
+And by default initially, it always tries to connect to the one with the strongest beacon, strongest beacon.
+and then your host will associate with the Ap. And then it will try to authenticate into a network, and then, after it authenticates the network, it tries to get a IP address using Dhcp.
+here's what an 802.1 1 frame looks like. And remember.
+ao, 2, 11. Frame is just another way of saying
+it's it's another way of saying layer 2 for wireless.
+The 8 0. 2, 11. Frame, as one interesting thing has at least 3 different Mac addresses.
+So remember, in Ethernet a 0 2.3, it only has 2 Mac addresses. It has destination
+and source, Mac. Address in that order.
+while in a 0 2.1 3
+ao. 2.1 1 it has 3 Mac addresses.
+The Mac addresses are Destination, Source and Router.
+so it has an extra. I extra Mac address in it destination, source and Router.
+So address 3. Here is the Router address. It needs to know the router that it is attached to as close as possible.
+The reason for this address tree
+is so it can continue conversations when you walk around
+to different Aps. So let's say you're downloading a video or something like that, or you're chatting or whatever.
+and you're walking from one Ap. To another. Ap.
+It continues to stream, and it hands it off to another. Ap.
+Even though it's on a different device.
+and it does that due to address 3, the router, because it knows your router address. It can try to continue the conversation, using that router, and so it keeps the conversation going, even if you walked over to a different Ap. This is why the address 3 is over here.
+Oh, don't draw that in a moment.
+An Ap.
+The best way to think about what an Ap. Is is that it's a translation device
+between wireless and wired.
+That's it.
+That's the best way to think about an Ap.
+Translates wireless to wired.
+That's it.
+No, you get the Ap. The base station.
+It gets a Ethernet packet.
+It takes that, translates it to a wireless packet and sends out, or the other wearer.
+It gets a wireless packet and it goes and translates it to Ethernet packet.
+Here's an example of how it works.
+So let's say, the packet's coming in from the Internet over.
+So a packet is coming in over here
+from the Internet over to the wireless device.
+And here this is the Internet side, and on the Internet side
+8 0. 2.3 frame Ethernet.
+It has a destination address and a source address.
+The destination address is h. 1 in the source. Address is the Router.
+Remember the source address is always the router in Ethernet.
+So then it hits this Ap.
+And the Ap. Will translate it
+to a wireless frame, and the destination address is the same. h. 1. So destination address remains the same.
+The source address becomes the Ap.
+Become is a source address, so it knows where to send it back to.
+and then the router address. Excuse me. The source address becomes the router address.
+So the Ap.
+The whole purpose of the Ap.
+Is just a translation device. That's it translates between wireless and wired.
+That's its function.
+Let's look I again from the other direction.
+So you have a wireless packet coming in.
+and this wireless packet has a destination source and router address, egose ap.
+And the ap
+translates it to an Ethernet address. So it takes a wireless frame, translates it to an ethernet frame
+from an Ethernet frame. Now the destination addresses the Router.
+and the source address is the host.
+So the Ap. Goes away.
+The source address becomes the source address and the Router address becomes the destination address.
+So that's it. That is what an Ap. Is.
+8.
+A translation device between Ethernet and wireless frames.
+That's it.
+That is what an Ap. Is at the most fundamental level.
+Now at home, let's say, you know.
+I let's say I have the revision quantum gateway device.
+It's actually multiple devices in one. There's an ethernet switch.
+There's a router. There's an Ap. There's a cable modem
+and a fiber optic modem in it at the same time. Blah! Blah! Blah! All this kind of stuff.
+But when you're buying it for an enterprise like Nyu
+when they're buying these devices, they're not buying like these routers that these like multiple function routers for Nyu
+did just bind the basic Ap and placing it all over the campus, just the Ap device.
+as in just the function translates between Ethernet and a 0 2 11.
+And that's it.
+Here's what an 802 11 frame looks like in additional detail. So the top part we kind of saw already. You have the Dui addresses. Address one, address 2, and address 3,
+and then here. Address 4. That's just for ad hoc. That's like point to point, non infrastructure Wi-fi devices. We don't ever use this anymore. So this doesn't matter.
+And then in the control frame you have.
+1st you have this field that says more fragmentation that I want to point out.
+and this other one, called Wep.
+More fragmentation is when a wireless frame is fragmented.
+Oh, note.
+A ethernet frame has a payload size maximum payload size of 2, 3, 1, 2 Byte.
+So an Ethernet. Excuse me, a wireless frame, a 0 2, 11 has a maximum size of 2,312 Byte.
+Does anyone know what is the maximum size of an IP packet generally.
+Yeah, 1,500 Byte, 1,500 Byte
+that's called the Mtu maximum transmission unit. And it's not a standard. It's just something that the the world has somehow settled on like the world
+has sold, that a packet goes through the Internet.
+Its size is maximum size is 1,500 Byte.
+That's it, it was decided. And that's it.
+and that's it. So there's no standard. There's no ever. There wasn't even any research in why, this was the correct size, but this is the size, and that's it.
+that's it.
+And this is really important, because before this size was settled
+there would be random fragmentations all the time.
+like all the time, and the host doesn't know what side they're supposed to send these packets on.
+They had no idea, so they'll send a packet at some size, and then the router will come back. No, no, no, this is too big. The packet has to be under 1,500,
+and then the packet keeps going along, and it hits another router, and the router says, No, no, no! At this network it needs to be under 1,200, or whatever it is, so it keeps going back and forth, back and forth to figure out what the correct size is.
+So the Internet has somehow settled 1,500 exercise.
+That's it.
+You send a packet, 1,500 Byte you can get from point A to point B on the Internet, and everyone has decided that that's the correct one.
+That's it.
+So on wireless the maximum size.
+Max. Size is 2, 3, 1, 2 Byte.
+So, in other words, in other words, in wireless there should never be any fragmentation going on.
+because it's bigger than the Mtu size.
+So a wireless frame has a maximum size of 2312 Byte
+larger than 1,500 Byte, and therefore we are not expecting any fragmentation at all in wireless.
+So if there is fragmentation, then there might be an attack or something that's going on there.
+so fragmentation would not be normal in wireless.
+The other thing is, wep wire wire encryption protocol in wireless wep. It was the 1st encryption protocol that came out with Wi-fi.
+and it was unfortunately it was not secure at all, and it was broken, I think, in less than a year since wireless came out, and it was very, very insecure.
+Sniffing, wireless, sniffing, wireless, sniffing wireless is very, very easy to do.
+It's the traffic is literally going through your air. We're not even sure it's illegal
+for for sniffing wireless traffic.
+It's very easy to do. You have the software available, you just need an attender that you can buy from amazon.com. They're like $20 each, so you can get like 8 attenders, and it only cost you less than like 200 bucks.
+Very, very easy to do, very, very easy to do
+in Defcon. 20 years ago they were able to read Wi-fi traffic from 125 miles away.
+So, meaning some satellites can actually read Wi-fi traffic.
+they were able to read Wi-fi traffic from 125 miles away, and
+they used a normal device like they didn't modify it
+very much. It was just all normal Wi-fi, and they were able to read it 125 miles away.
+Pretty crazy.
+Yeah.
+Remember that 8 0 2 dot 11 is
+802.1 1 is layer 2, and no matter what.
+even if the traffic was encrypted like, even if you have Wpa or Wpa 2 or Wpa. 3.
+Even if your traffic was encrypted.
+you still see some data that will get leaked out.
+Some of this data will include your Mac address
+or the frequency of your discussions.
+or some packets that just don't get encrypted like art packets.
+Our packets don't get encrypted, and therefore you can see some of these packets there.
+So even if your wireless traffic was encrypted.
+they can still see your Mac address, for example.
+So let's say, for example, let's say, for example, I'm sniffing some traffic.
+or actually, since this is like something bad. Let's say, Trudy, let's say Trudy is sniffing the traffic.
+and Trudy goes to an office.
+and Trudy's in her bike bike van with equipment inside, and she's sniffing the wireless traffic.
+And even if the wireless traffic was encrypted.
+trudy, we're able to see the Mac addresses.
+Okay, so let's say she goes to the office.
+and Trudy's able to see the Mac addresses at the office.
+Tuesday was the Mac addresses at the office.
+She doesn't know who the Mac address is associated with, and she doesn't see the traffic because they're encrypted
+truly can see the Mac addresses, and then let's say, Judy also goes to Starbucks.
+let's say 2D. Also goes to Starbucks.
+and then from there she's sniffing the wireless traffic as well, and from there she's
+is able to see some of the same Mac addresses.
+So even if the wireless traffic was encrypted, the Mac address, if it says static
+can follow the person around.
+So through these different traffic at the office, she's sniffing traffic at Starbucks.
+Trudy is able to see the same Mac address. Then she knows Aha!
+Someone from this office who, you know she's sniffing traffic from.
+He's at Starbucks for his like coffee break.
+and so that gives a really really big privacy concern, because the Mac address is can be sniffed.
+and someone who's sniffing the wireless traffic, which is very easy to do
+can see, can follow the person around or can follow the device around.
+They're at the office at this time now they're at Starbucks, and now they're at like, you know, someplace else for a social event.
+So because of that, in the last few years.
+almost all devices have Mac address randomization.
+So no Mac. Addresses are changed
+approximately once in 24 h, depending on the device device's Mac addresses.
+or just, they change every day
+for the purpose of making sure that someone's not able to track the device.
+So, like Trudy's tracking the device from the office or from
+the Starbucks, she can't be able to track the device. If the Mac address changes, however.
+a lot of enterprises turn this off. So if you have, like a work issue, laptop or work issue computer.
+they usually turn this feature off.
+Why do you think that's so
+like? Why do you think they turned this feature off?
+Yeah, one of my colleagues mentioned it makes auditing harder.
+Yeah, it makes investigations harder.
+Makes it a little bit harder.
+like if there's a security incident
+they want to track it back to an IP address or Mac address.
+But if the Mac address changes.
+it can make it much harder to do
+so because of the challenges that a lot of enterprises.
+When they're given at work, computers or work laptops or work phones.
+they turn off the Mac address randomization feature.
+So with this feature off, that means that
+even if your wireless traffic was encrypted.
+someone can still see where the device is.
+So
+in this like, in the worst case, let's say this Trudy right, and Trudy is sitting outside of the office of a van, and Trudy is capturing all that traffic.
+Trudy can.
+3D. Can see when the person comes to work. When they connect to the Wi-fi.
+When they start working, they can see how much traffic, not what traffic, but how much wireless traffic is used
+when they're there, when they're not. When they leave and go to Starbucks. With this
+they now can. They can see they can see where the person's at by tracking the Mac address.
+If Mac address, randomization is turned off
+and a lot of enterprises turn it off for auditing reasons.
+I don't agree with it, but you have to understand the reasoning with it. It take. It makes it one step harder.
+If Mac address randomization is turned on when they're investigating security incidences.
+and we talked about a O. 2 that we're next already
+in wireless networks when they try to connect
+to a network. Here are the steps required in order to connect to a network.
+You do a discovery that's from a beacon, and they try to connect to the Wi-fi network.
+Step 2. They'll try to authenticate your network.
+This step is not used anymore.
+This authentication step is only used for Wep, so it's not used anymore. So these messages are blank messages that goes through
+association association means formally joining the network, so they will associate the network as in joining the network.
+And then they'll do a four-way handshake. This part is the Ao is related to Ao, 2.1 x to actually authenticate to a network.
+So again, when you try to connect to a Wi-fi network, 1st to do a discovery.
+then you do a Wep authentication which is empty because we don't do wep authentication anymore. But it's still in the Protocol
+you do Association, which is just joining network, and then you do the real authentication called the 4 way handshake. So this is when you do the a 0 2 1 x. And such.
+In Wpa there are 2 main ways to connect to a network.
+The 2 ways is called pre-share, key and enterprise. Mode.
+pre-share, key. Psk, pre-share key is the way that you normally connect to a Wi-fi network at home, meaning
+you have one password for everyone who uses the Wi-fi.
+and that's it. There's just a password, no username, just password.
+So you go and you connect to a network.
+And you type in your password, and you're on the network that's
+personal mold or pre-share key mold.
+Then
+this enterprise, mode, enterprise, mode, is essentially using Ao 2.1 X. You can use certificates. You can use username passwords. You can use a radius server whatever.
+So you could have individual login and such.
+That's enterprise world in Wpa version 1, 2, and 3, you can use pre-share, key and enterprise. World
+Wi-fi security protocols.
+So far there has been 4 Wi-fi security protocols. Wep Wpa. 1, 2,
+and currently the latest. It's Wpa. 3. Starting from Wi-fi, 6 Wpa. 3
+is the most secure one. If you're able to use Wpa. 3,
+you should use the Bpa 3
+pre-share keys pre-share keys. In other words, you use one password to block the Wi-fi
+is, of course, not secure, because once you share the password with somebody, they have the password.
+So you share a password with someone. They now have the password. If someone leaves the organization like a disgruntled employee, or whatever they have your password forever.
+Like Trudy, you invite Trudy over to your house to study, even if you
+entered the password for Trudy, so she doesn't see it.
+She can still retrieve a password from a device. So it's not a security measure
+at all to when you share a pre-share key, WEP.
+WEP.
+The original. The original encryption that came with Wi-fi is insecure.
+and the main reason that it's insecure is because it was poorly implemented.
+There was a mistake in the implementation
+that caused it to be insecure.
+Now I also use insecure protocols, but this was like 20 years ago. So it wasn't as big of a deal.
+The problem they had with
+with Wep is that they implemented Rc. 4, encryption and Rc. 4 is broken. So you shouldn't use that anymore, anyway. But the way to implement the Rc. 4 is that with Rc. 4,
+the 1st few bytes of Rc. 4
+cannot be used. Rc. 4 is a stream cipher, meaning it just streams the data as it goes along. The 1st few bytes of Rc. 4 cannot be used, it's insecure.
+and because they used it the 1st few bytes it allowed the whole Wep to be broken.
+So it was a poor implementation of Rc. 4,
+and because of that it was broken immediately. It was broken like very, very quickly
+there. There was a paper about it, and then, just a few months later there was all these crackers that can just break the bep.
+Now remember that back then, this is 20 years ago encryption was done using hardware. So these wireless devices.
+actual chips that perform Rc, 4, encryption and decryption.
+So actual chips, it's not done in software like they are today. They're actual chips that does it like they have an Rc. 4. Chip in the device in order to perform Rc. 4. Encryption decryption.
+So because of that.
+they had to make an improvement right away like immediately, because all wireless encryption was broken already, and so they created i. Triple EAO. 2, 11 I draft.
+which is now called Wpa, or
+later renamed Wpa. One so just to be this is extremely confusing. So listen, listen to me. This is extremely confusing.
+Wpa.
+Is I triple e dot 11 I draft Wpa. 2
+is REAO. 2, 11, I without the draft.
+So the I triple EL. 2, 11. I draft that's called the Bpa.
+One and the R. Triple EL. To the 11 I.
+No draft.
+The finalized version is the Bpa. 2.
+So Wpa. One Wpa. One needed to use the same hardware
+as before. Swep and Bep. Use Rc. 4 stream cipher.
+so they needed to make improvements to the protocol
+in such a way that the hardware can still be reused at the same time. So they had to use Rc. 4,
+because it's a physical, literal, physical chip in that device that does. Rc. 4. Encryption decryption.
+So Wep, Wpa. One improved upon it and made it more secure.
+So they in. They improved the protocol and made it more secure.
+added Ao 2.1 x security to it.
+and it's significantly better. But still.
+Wpa. One was deprecated in 2012.
+Then I/O, 2, 11, I, Wpa 2
+is when they really actually made it secure, and Wpa 2 is when they actually used aes encryption
+on it in order to make sure that that it's secure.
+and Wpa. 2, so far, has been very secure. It's very good. So it's perfectly fine today to use Ao. 2. To use Wpa. 2.
+Except for one thing, except for one thing.
+The one problem with the Bpa 2 is that the strength of the encryption depends on the strength
+of the password.
+So if you choose a weak password that can be broken, then it's easy to break.
+So the pop of the Bpa. 2
+is that someone can do a wireless capture
+of your login to the to the network.
+and then can do an offline brute forcing of the password, so meaning
+meaning Trudy sits outside your house from the van.
+and she captures someone logging into a network.
+Then she can take this wiresharp capture of the login, upload it to a cracker running on aws, or something like that, and can crack the password from it.
+and how hard to crack
+only depends on the password. So if you choose an easy to guess password, it'd be cracked very easily if you choose a hard to guess password. Then it'd be harder to crack. That's it.
+That's the problem with Wpa. 2.
+So the only way to run Wpa 2 well
+is to have a very, very strong password.
+So this is the only flaw of the Bpa. 2.
+If you choose a weak password, it can be brute force. Actually, the problem with Wpa 2 is that the password can be brute force.
+This is the thing that was fixed in Wpa. 3
+in Wpa. 3.
+They've made it such that this is a major improvement for the Bpa. 3 is that
+they can no longer offline brute force. Your password, that is.
+the password is no longer directly tied to the security of the Wi-fi.
+Your password could be anything.
+They won't be able to brute. Force it offline
+in order to brute force your password. They have to actually be online
+and try to put force your password.
+They can't take a wiresharp capture of it. Take it offline and try to brute force it there.
+So that's a major change with Wpa. 3.
+Also in Wpa. 2, they added protected management frames, a 0 2 11 WA. 0 2 11 W.
+Fix this add some protected management frames, specifically, authentication and de-authentication Association and de-association.
+And what that means is that
+remember that authentication and association that's part of coming onto a network as described in this diagram. Here you do authentication, which is a fake authentication for Wep and then association. And then you do your real Ao 2.1 X authentication
+over here.
+One attack that could be done here is that
+because the association and identification frames, because they're not
+protect in any way like, here's the thing. If
+if you were in a real classroom right now.
+like, let's say we're all sitting together in a classroom, I can send out a dissociation frame
+out to the entire network, and it will knock every single person off the Wi-fi just like that
+to say that.
+And these dissociation frames.
+Of course they're not authenticated, and such
+that has recently changed with 802.1 1 w.
+With protected management frames, which includes the authentication frames.
+Some operating systems
+supported. Not all, not all. So it's not fully supported yet, but some devices support it. I don't know. I think you need to upgrade your base station in order to support it. So it's not fully supported
+yet.
+So how can you run your Wi-fi network securely?
+Well, the 1st thing is that
+if you use Ao 2.11, which.
+if you are able to do it, you should run it. You can have a username and password on a radius server. You can have certificate-based authentication
+and such to make it much more secure. Also, if you can, you should be using Wpa. 3. Because in Wpa. 3,
+the security of the wireless network is not solely based on the password.
+Wpa. 2. Which is secure. Appsep. You choose a weak password.
+It can be broken much easier.
+Thank you very much for joining me today. This is the end of the lesson, for today we are skipping the last topic for wireless. The last topic is called Wps Wi-fi protected setup. We're going to skip this topic for this class because we don't have time to fully talk about this topic. It's only 3 slides, but it's a little complex. It'll take like 30 min to talk about it. So I'm going to skip it for this class. So our class ends here
+after we talk about the Bpa 3, meaning, this is the end of the topics for the final exam.
+Let me go over the logistics again one moment while I change my slides.
+So 1st of all, lastly, logistics. Lab 4 Lab 4 was due yesterday Sunday. If you haven't submitted it yet, you still have 6 more days to submit it. So please go ahead and do it. It's really really important. Firewalls is a big percentage of the final exam as well
+before you do. Lab 4. Please make sure you watch the firewall lecture. That's Lesson number 7, and the weekly bonus exercise for the firewall video is due on May first, st that's exercise number 11.
+Reminder that your final exam is next Saturday.
+May 10, th with a starting time between 10 Am. And 12 noon. More information about the final exam will be coming very soon. Sample questions for the final exam will be released tomorrow. I suggest that after released you should budget 2 h per day in order to go over the final exam questions. In other words, you try to do it
+as if you're reading on the exam. And try to work on it. I will then release the answers to the sample questions. Later the following week on Thursday, 2 days before the final exam.
+Thank you very much for joining me today.
+Next week, next Monday will be our final review class.
+I highly encourage you to try to
+complete your studying by then, so the final review will be useful to you. That would be the best way you can handle this.
+Thank you again.
+I wish you a wonderful week. Please enjoy the summer weather, and I'll see you next Monday.
+Thanks, and take care everyone.
+Number for the.
