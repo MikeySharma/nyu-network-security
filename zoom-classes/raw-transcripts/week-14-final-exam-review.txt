@@ -1,0 +1,1061 @@
+Hello, welcome to Cs 6,823 network security. My name is Professor Philip Mack. Today is Monday, May 5, th
+2025. And today is week number 14 of network security. Or, in other words, this is the last class for network security.
+Today we are doing a final review. So no new topics today. But we'll be going over some
+some of the topics for the final exam, and we'll also be talking about what is. And how do you take the final exam as well?
+1st of all, logistics.
+please note that you have one assignment that's open right now. That's homework number one on immersive labs.
+Immersive labs is due after the final exam, but the materials will be on the final exam. So please make sure you go ahead and get all that done, or if, for some reason you can't get it done or submit it, at least you can do is make sure you understand all the topics on immersive labs.
+Your final exam is this, coming? Saturday, May 10, th with a starting time between 10 Am. And 12 noon. You have 2 and a half hours after you start the exam to complete the exam. Also, please make sure you complete your course. Evaluations as well. Course evaluations are very, very important to Nyu and to myself as well.
+Information about the final exam. The final exam will be on this Saturday.
+It will only cover the topics that are
+that are after the midterm. So specifically, it'll cover lesson 6 on.
+On Pki message integrity and Tls. Lesson 7 on IP tables. Firewalls. Lesson 8 on layer 2, security and lesson 9 last week on wireless security. It'll cover all the weekly videos. So videos (891) 011-1213, or actually and 14. That's today, too. And today.
+And the firewall video that was pre-recorded labs number 3
+and 4, and homework number 3 and homework number one, the second half of homework number one.
+the the reading materials, and such
+the exam is 2 and a half hours.
+The Exam. Is open book and open notes.
+but no free Internet and no collaboration. So what does that mean?
+What does that mean? It means that you have your book available. You have your notes available to you. So if you have taken notes in the class, or anything that you think that you especially need, please go ahead and print them out and have them available for you in paper form.
+So for the final exam, you'll have some limited resources that you have available from the exam.
+And you have your paper copies of your book and on your notes that you have printed out.
+Otherwise there's no free Internet. So it's not free browsing, but only to specific sites that you are allowed to do so
+for the final exam. If you get sick.
+don't take the exam. So if for some reason you get sick like you woke up. You're feeling a headache, or whatever. Don't take the exam. Please go ahead and make a doctor's appointment and get a doctor's note for it. Once you have a doctor's note, please submit it to the office of student advocacy, and also let me know as well. Here's the link to student advocacy. But you just Google, it
+also, please be familiar with the student code of conduct that specifically, I want to point out 2 things. 1st of all is plagiarism. Plagiarism is
+copying anything from anywhere
+without any attribution. So in academic plagiarism you cannot copy anything from anywhere. So, for example.
+on the exam, you will have access to Wikipedia. That's 1 of the sites that you can access. So if you need to look up something, you have access to Wikipedia, but
+you are not allowed to copy and paste anything from Wikipedia without giving attribution.
+Actually, you can't copy and paste anything without giving attribution, and this is not just direct text also ideas as well.
+So please make sure of that. You copy and paste from something you give attribution. But in this exam.
+In this exam.
+There are no questions where you copy and paste the answer from someplace. So if it seems like you, just copy the answer from Wikipedia and paste it as your answer to the final exam. I can assure you something is wrong because I don't ask questions that says, Oh, find me the definition from Wikipedia. So be really, really careful
+about that.
+The notes do not have to be handwritten. So many of you you have used like onenote, or whatever to take your notes, just go ahead and print them out, or if you'd like to scribble on the Pdf. Files, for example, you can go and print them out as well, and have available for you on the exam. They do not have to be handwritten.
+even though we'll be using lockdown browser for the final exam. You will have access to Wikipedia, and I'll talk more about that in just one moment.
+Additionally.
+even though you don't have access to Chatgpt and other AI tools, just reminding you that users of Chatgpt and other AI tools are not allowed.
+and would be considered plagiarism in this class. Lastly, any form of collaboration in any form is not allowed as well, so collaboration would include talking to someone on the exam or texting someone on an exam. Or using some shared website on the exam, those would not be allowed either
+for the final exam. We'll be using the respond. This lockdown browser plus monitor.
+It's software that runs on your computer.
+And it takes over your screen, your webcam
+and your and your sound on your computer.
+So essentially, it allows the monitoring of your environment during the time that you take the exam.
+it requires admin rights to be installed, and Linux is not supported. If this doesn't work for you.
+For some reason. Please reach out to me and let me know before the exam, so we can schedule an alternative means specifically, we'll schedule a time where we can take over zoom instead. So please let me know so and let me know what times you're available, so we can schedule the time as well.
+Okay.
+Only approved resources will be allowed on the exam. So
+the resources that will be included on the exam will be the course slides.
+and there's an error here. The videos are not available. You cannot watch the videos on the final exam. The course slides, the reading materials
+textbook.
+That is a textbook, a physical copy of the textbook.
+Your own notes are printed out from, you know the printer
+man. If there's any tool questions, you get the man page for them. So you have access to like the flags and such meaning. For example.
+IP tables.
+I'm telling you that Iv tables will be on the final exam. You don't need to memorize the flags.
+You don't need to memorize the flags, so you have the man, Page. You'll have the flags. You'll have a reference, so you don't need to memorize it. You have it for reference
+with that said by now you should have them completely memorized.
+You should, because you've done so much of it, you should completely know it by heart.
+So you don't even need it. But you will have available for any tool related questions, you will have it available
+like IP tables.
+You have access to Wikipedia. So if you forget some sort of small concept, you can access Wikipedia and look it up. So, for example, there might be a question on art, for example. And let's say you just forgot how art works. You can look up the Wikipedia article during the exam. And you'll have access to that.
+You will also have access to grapescope as well, so you can access grapescope and look at your own, your own submitted materials for reference. If you need to do that
+also, please note that.
+Please note that the respond is locked down, browser plus monitor.
+We'll be recording your session for review as well.
+and it also has some detection and some flag capabilities as well.
+For example, it will listen for voices in the recording, and it'll flag sections for review.
+So you must take the exam in a quiet place.
+Please let your housemates know that you are taking an exam. Do not talk loudly, do not allow them to come into your room, and such.
+because if there are any voices or other sounds I heard, it will be flagged, and I will be forced to review them.
+So please don't do that, so please find some place that your housemates, roommates know that you're taking an exam.
+Keep them out of the place. Ask them to speak very softly in the other room, and such
+electronic devices are not allowed. So you cannot. You may not use another computer or an iphone, or whatever
+during the exam, with the exception, with the exception, when you're accessing great scope.
+When you access gradescope, you need to type in your username and password. So please make sure that you're able to log into gradescope. And you know your username and password
+doing the login screen.
+You may use your phone if you have a passport manager and such.
+Now.
+when that occurs there'll be a flag. So if you use your phone there'll be a flag, and when I review your flag, please make sure that I can see that you have a login screen
+on your window when you are
+looking down or away from the Monitor or away from the computer.
+So I'll be aware that oh, you're just trying to log in, or something like that. So please make sure you do that. Otherwise, please don't touch your phone.
+And also, if there's any other flags from the software, I'll be reviewing them as well. So please make sure that
+there is nothing that I need to be concerned about there
+right now. I have made a item on Brightspace, so you can test Lockdown Browser. So for to make sure that everything works properly.
+So when you go to Brightspace and you go to quizzes
+over here. You go to quizzes. You get a window that doesn't look exactly like this, but it looks something like this, and you have a quiz, and the quiz's name is practice for the final.
+and it also tells you that it requires responders. Lockdown, browser plasma cam.
+and you go ahead and click into it to test your system, to make sure that works.
+I'm going to go into preview mode here.
+So when
+when you go in. You get a set of instructions that you should review before you start the exam
+and look at it very carefully, with all the instructions for the exam.
+And then at the bottom of the exam. It doesn't show. Here.
+You will get a button over here that says
+Download respondus lockdown browser, and then begin.
+So once you hit that it will open the respondents. Lockdown browser, it will open a new window.
+and then it'll go through a series of checks on your computer before you can begin the exam. It'll go through things such as
+checking that your webcam is working, checking, that I can see everything checking can hear.
+It will also require some information from you as well, including looking and seeing what's on your desk and such before it continues. So I would like you to go ahead and just try this out to make sure that you know exactly what will occur before you go to the final exam.
+And then, once you start, it will load the lockdown browser, and you'll be able to. Well, you won't be able to access anything. Aside from the allowed resources from there.
+Once you start.
+you get you begin the exam, the exam. Please note that there's a timer on top. It will say 2 and a half hours, and at the end of the timer the exam will just submit.
+You'll also get links to the references that you'll be. You'll have available during the exam.
+So, for example, you can access greatscope, Wikipedia, IP tables.
+and we have the Pdf. Files for our course lesson files as well for your reference, and I put in everything that I can think of from our course that you should be able to have access to. So you can go through these just to make sure that you can see and reveal what's available to you for the final exam and such, and also the reading materials will be available for you as well. So you have everything here, from the content of the course
+for you to peruse in case you need to review something. I even
+I'm going to include the sample, final questions and the sample final answers for you as well for it.
+Now, just as a reminder.
+there is nothing on the final. That was going to be a copy and paste from somewhere. So if you, if you're trying to copy and paste from one thing to another thing as the answer, there's something wrong here.
+It would not have that.
+So you get all of these resources available to you on the final exam, and if you need. So you can go to Wikipedia to
+look up some stuff. You can go to gradescope to look at your exams and such, and then afterwards
+please submit the quiz.
+You must submit this quiz for you to be able to access the final exam on Saturday, meaning.
+I require you to test your browser before you go ahead and take the final exam on Saturday, just to make sure that everything is working perfectly for you.
+So please go ahead and do this in the next few days to make sure that everything works well for the very few people who this doesn't work.
+and this pretty much will only occur if you don't have your own laptop like you use a company computer, you don't have your own computer to work.
+Or you're using really old operating system like windows. 7.
+Then please let me know, and we can schedule an alternative means which usually probably means that doing it over. Zoom.
+If you have any questions or concerns. Please, of course, reach out to me at any time to let me know.
+Please note that I'm not conducting exercises this week.
+Exercises are to inform your next class, and there's no next class.
+So exercise a exercise A is, if you haven't yet. I'd like you to go into Nyu Albert, and provide feedback for this and all your other classes. I know we did this last week, but if you haven't yet, let me just give you 1 min to go ahead and just find where to do it and start your course evaluation. So let me go ahead and set a timer for 1 min while you go and find where you need to submit your course, Eval, if you haven't done it yet.
+Okay, perfect. So I'm going to review some some of the topics here
+first, st Diffie Hellman.
+for the final exam. You don't need to do any diffie. How many calculations! So no calculations on the final exam.
+But but you need to understand how it works.
+And Diffie Hellman is really, really, really amazing. It's really amazing. Because here on the left side, you have, Alice, and on the right side you have Bob, and Alice is sending these public key values.
+Gn capital A to Bob, and Bob is returning back the public key value B
+to Alice, and from there they can calculate. Key K,
+both sides can calculate. Kk, and the amazing thing here is that you have, Trudy, remember, in this class Trudy is always
+looking, and Trudy can see all these values A, GN. And B.
+And yet Judy can still not figure out what Kk. Is right by looking, by viewing.
+she is not able to see what these values are, but but
+if she's able to modify the values, then she can exercise. B, which of these values
+need to be protected and in which way to the values exchanged
+need to be encrypted or just signed. So these are really, this is 2 questions here. Question one is which values need to be protected. And why? And 2 very similar question, do the values exchanged. That's the GNA. And B. Need to be encrypted or just signed.
+Let me set a timer here for 1 min. I'm not collecting these. But just let me know what your thoughts on this are.
+Okay, what do you think?
+What wires need to be protected?
+And in what way?
+Yeah. GNA. And B, they need to be signed.
+They need to be signed.
+Do they need to be encrypted?
+Gn, a. And B. Do they need to be encrypted should they be encrypted.
+No, no, they don't need to be encrypted.
+Why not?
+Why does GNA. And B.
+Not need to be encrypted.
+Please go ahead, Amber.
+So. Can you hear me.
+Yes.
+Oh, yeah. So from my understanding. Like you said earlier. Trudy can see it, but as long as she can't modify it, then she cannot conduct like any sort of attack. So when you
+so they need to be protected. Gn, a and B, they need to be protected in the way that they are assigned, that, like both sides of like, whoever is communicating can verify that these values are
+are valid, but in terms of encryption. That's not necessary, because, like, it's okay. If
+Trudy can see it, she just can't modify it. Is that correct?
+This is perfect. Thank you. So our colleague mentioned perfectly that GNA. And B
+only needs to be protected from modification, because, just by viewing it.
+2D. Cannot figure out what A and B are, just by viewing G and A and B,
+and the only way that Trudy can take advantage of this is that she performs an attacker in the middle attack a ITMA. ITA.
+And in order to do so she needs to be modifying the values.
+So therefore, Gn, A and B only need to be signed. They don't need to be encrypted.
+Now, how about other values here.
+What about small A and small B.
+Do they need to be protected?
+Well, I guess it depends on how you view it. They aren't exchanged. They're not shared, but these are the private keys. These are the private keys.
+So if the if lowercase A and lowercase B are lost.
+either one of them are lost.
+Then Trudy could figure out what key chaos
+so usually lowercase A and lowercase B, the secret keys are protected the same way that other secret keys are protected.
+Typically today, they need to be in a Tpm trusted processor module in a CPU. In order to make sure that even if the operating system was hacked that they can't easily access these keys. So they're not protected, not in the network security way, but they need to be protected as well.
+How does 3D. Perform an attack in the middle attack in it?
+Oh, question, question, what about these small values? Can Trudy just brute force it. Yes, absolutely. So in this example, these values are too small.
+they're too small. Diffie Hammond. Values should be at minimum 2 0 4 8 bits in size in order for them not to be brute force. These values are just just too tiny.
+But how does how does Trudy perform an attack or the middle attack.
+Trudy essentially inserts herself in between the conversation. So here in this diagram it shows that Alice is talking to Bob. But
+Alice is really talking to treaty.
+so Trudy is the attacker in the middle. And so Alice is actually talking to Trudy, pretending to be Bob.
+and then Trudy goes ahead and pretends to be Alice, and then talks to Bob and generates another session. So Trudy is essentially generating 2 sessions, one to Alice and one to Bob, in order to be the attacker in the middle. This is how Trudy can be in the middle of a diffie-hellman exchange right
+making 2 conversations there.
+This is the reason why that these values absolutely need to be signed. They are signed to prevent this type of attack.
+and
+the whole Tls process which we're going to get into in a moment is to prevent this scenario, like the whole Tls. The whole point of it
+is to prevent this from happening.
+This exact scenario.
+What is the difference between encryption and hashing? Encryption is where you take something. You turn it into ciphertext.
+and then with this, with a key, you're able to get it back completely.
+However.
+hashing is not. Hashing is a 1-way digest meaning you take something. I think we use an example. War and peace.
+You take war and peace, and you take a hash of it. Let's say you take an Md. 5 hash, you get a 128 bit representation of it.
+of war and peace.
+And then
+you take the book and you change one character in the entire book.
+You change one character. You took an Md. 5 hash of it again, you get a completely different
+120 bit 128 bit hash of it.
+That's a hash. So a hash is a 1-way function. You cannot go backwards of a hash
+playback attack.
+What is a playback attack? Well, with many of these encryption algorithms
+just because you have signed something
+or you did. An Hmac. Or something doesn't mean that
+it can't be replayed, because once you sign something, it's signed forever
+over here. It says Mac. Mac, that's called. That stands for message authentication code. But
+really it's an Hmac. This is trying to say Hmac here.
+and remember the difference between an Hmac and digital signature.
+Remember the difference between H. Mac integer's integer.
+Anyone remember the difference?
+Yeah, one is symmetric and one is asymmetric, which one is digital signatures.
+Yeah, digital signatures is asymmetric digital signatures asymmetric. They use pki.
+they are. They use topic certificates.
+And then hmac is symmetric, which means it's the same key to encrypt and decrypt
+in this example. Here they're using an Hmac. So it's a symmetric key. But it doesn't matter at all whatsoever.
+So in this scenario, actually.
+you have to explain this scenario to me because I never, never understood this slide. I'm going to have to update the slide in the future. So
+Alice is transferring 1 million dollars from Bill to Trudy or whatever, and sending it to the bank.
+Judy goes ahead and records the conversation and replays it.
+and she sends the same message over to Bob again, and then the money gets transferred again.
+whatever it's a replay attack.
+So when something is digitally signed.
+they get the jury signed forever. So
+like a like a website, Tls certificate.
+once something is signed, it's signed forever. You can't unsign it. So once a website certificate is signed by the Ca.
+it's forever signed by the Ca, it.
+you can't unsign it. That's why there are certificate, verification lists, crls, and other methods. In order to say, Look, this certificate is no longer good. It's being revoked.
+So that's the problem here. One of the ways to defend against this is use, announce, announce, stands for number used only once.
+I don't know how that translates to nouns, but noun stands for number used only once.
+and it's a live check.
+So here's an example.
+Alice is talking to Trudy.
+Alice says, Hello! I'm Alice.
+Alice is talking to Bob. Alice talks to Bob and says, Hello, I'm Alice, Bob says, use this random number R.
+And then Alice encrypts R with the key between Alice and Bob.
+So now Bob knows that Alice is alive. So that's what announce does announce is a alive checker
+announce makes sure that the person you're talking to now
+really is the person you're talking to. Now you're not. It's not a replay of some earlier message.
+How do you generate a digital signature?
+A digital signature is a hash of a message encrypted using the private key.
+This is a definition you have to memorize if you don't know it yet.
+So let's say you have this message. And this message could be an email message, or it could be a certificate.
+You take this message in email.
+you took a hash of it.
+you get some sort of hash, then you encrypt using the private key.
+and therefore now you have a message plus a digital signature to validate the digital signature
+to validate the signature. You use the public certificate
+using the public certificate, you can decrypt.
+That is your signature. You get the hash back.
+Then you generate the hash again and validate the hash.
+and you therefore you validated the digit. Inger.
+If what I just said was not completely clear to you.
+Please go back to Lesson 6, the 1st one after the midterm exam. In which we go over this in lots of details. If what I just said was not very clear to you.
+Exercise C. What is the difference between an Hmac and digital integer? Explain what each one is?
+I jumped ahead of myself. We already did this one
+well. A Hmac. Is a Hmac. And a digital signature are pretty much the same.
+Digit integer uses an asymmetric key
+and the Hvac uses asymmetric key.
+Hmax are much, much faster.
+H. Max are like several orders of magnitude faster.
+because it's a basic Xor in order to get the Hvac digital signature requires
+typically requires Rsa or Dss encryption, and it takes a very, very long time as compared to an Hmac.
+Pki.
+Let me go ahead and share, share my browser one moment, want to share my screen.
+Does someone have a favorite website?
+I already went to citibank.com.
+So here I have citibank.com city dot com. I go ahead and I click on the lock. Icon.
+I go to more in
+more information. Oh, you don't see the screen. One moment. If I share my screen again.
+I'm at more information. You see, information about the website. It says the connection is encrypted with Tls. Elliptical, curved Hellman, Rsa. With Aes. 256 Gcm. Sha. 384, 256 bit keys. Tls. Version 1.2
+I go and hit view certificate.
+I get this screen over here and I see the certificates. This is the certificate for city.com, and it has the subject information.
+This subject, information has a subject, common name, this subject common name
+we don't care about anymore. Now, you might find online. They may talk about it, and they may talk about how important this is and such. But they're wrong. It's outdated right? Anything that says that this is needed is outdated
+right now. The subject common name is not used anymore. They switched it to this subject alternative name over here.
+and the subject alternative name has all the websites that will work with the certificate.
+And so it's city.com ccsicity dot com, and so on.
+But you notice that this certificate
+doesn't need to be the same domain. So Cm works for city.com.
+and it works for citibank.co.uk, and it works for whatever this is
+stuff over here. So it works for multiple websites. It doesn't have to be one specific website.
+We see the issuer. The issuer is, did you cert evrc 2. So this is an ev cert, even though you can't tell. It's an ev cert, but it's an ev cert, because the Ca is an Evca.
+Here the Fidelity date is between November 6, th 2024 to December 2025.
+You see the Rsa. Keys, the Rsa. Key. Here's the E value. And here's the N value.
+We see the signature algorithm. So this is the digital signature algorithm uses Sha-two 156 with Rsa.
+we have fingerprints, which is a fancy way of saying, hash
+basic constraints, certificate authority, is there? Certificate authority? No, it's not certificate authority.
+And then this whole certificate. This file.
+Is signed by the Ca.
+what does sign? By the Ca means. Again, it is a hash of this file encrypted, using the private key of the Ca.
+so the browser can validate the certificate by using the public search and verifying digital signature.
+So here we have the Ca, the Ca is issued by the user. Ev, Rsa, Ca, G, 2,
+no, that's the subject. Excuse me, this is the subject. The issuer is Digister global route G, 2.
+Whereas between this day and this date. Here's the N and E value.
+And here is the basic constraint. Says, it is a Ca, so okay, it's a Ca.
+the public key value. Here's an Nne. Value. The browser will use this value here to validate
+the city.com certificate. It uses this public key
+to validate the digital signature for city.com.
+Then it goes ahead and does it one more time. So the issue is, did you search global root g, 2,
+here is the Gster Global D 2. You see that the subject and the issuer are the same. So it issued itself. It's a self-signed certificate, is it valid? Yes, it's valid. Here's the Nne values.
+and it takes these N and E values to validate the C, the intermediary Ca, digital certificate.
+And then it goes and double checks to make sure that this is in the certificate root store.
+You can check it manually by going to settings, going to certificates somewhere
+certificates, and then it will verify that
+digic global route G. 2 is here.
+Did you cert
+global root? G. 2. So here it is. So it is trusted by my web browser. Therefore
+it is trusted by you.
+So that is the certificate chain of trust.
+and it usually has a website certificate, an intermediary, and a root. Ca.
+the purpose of a Ca is to bind an indentity or a subject to a particular identity.
+So, for example, I was looking at the digital certificate 4.
+citibank.com.
+So what the Ca's purpose is to say this certificate is for city.com.
+That is the saying, city.com has this certificate.
+and here are the keys associated with it.
+That's the purpose of Ca, and that's why you pay the Ca some money to issue the certificates.
+Here's an x 509, v. 3. Certificate. Exactly what we look for. Here's what it looks like in chrome
+exercise. D, how is the certificate for www.google.com validated by the browser.
+What are some of the criteria that a browser uses to validate the certificate?
+Here's 2 questions. Let me go ahead and set a timer for 2 min for these 2 questions.
+So please go ahead and try to answer these 2 questions.
+Okay, second question is, what are some criteria that the browser uses to validate the certificate?
+So the 1st question question one.
+I'll answer that because it's pretty lengthy to write how to certificate for www.google.com.
+is it? How is it validated by the browser?
+Well, it's a lot of steps, but it's the steps that we went over where they check the certificate, they check the various fields of it, check the digits, enter, and goes up the chain and checks that it's on the Browser certificate store?
+Question 2.
+What are some criterias that a browser uses to validate a certificate?
+Do you have any of the Criterias? We went over it. Do you recall
+the digital signatures? Right? Certificate, verification list? Yes, we didn't talk about it. But yes, that's correct.
+The subject alternative. Name, yes, subject alternative name is
+the URL. Excuse me. The domains are allowed to be used by the certificate.
+the expiration date. Yes, the date from and date to absolutely.
+It also does things such as checking that the certificate goes to a root of trust trusted by your browser.
+and it checks that the values are wow
+valid, that is, the dates are valid, and also that the keys aren't too small, and such
+checks the verdality period. Right? That's the from. And to
+so. Yes, those are all perfect, right? There's 1 more one really really important one that no one has mentioned. So far.
+basic constraints, basic constraints is whether it's a Ca or not. A. Ca, this is very important, because attackers will try to use a certificate that's not a Ca to issue certificates. So, for example.
+you see the last certificate here was www.city.com as we just discussed.
+Well, what if they use www.city.com to issue another certificate.
+Wow! What would that happen?
+Well, technically, there's nothing stopping it
+right? There's just certificates. The only thing stopping it from happening
+is this, the Ca certificate authority. No.
+So if city.com actually issues a certificate.
+the browser checks the next one and sees, wait a minute. It's not a Ca, it's not supposed to be issuing certificates
+and then stop it.
+This has actually happened in the past.
+which is why there's now a required field for basic constraints.
+How do you get a certificate issued?
+Well, the simple answer is that you go and pay somebody
+right? So you go to Verisign Dual Trust. If you want a website certificate. You pay them a few bucks. It varies between 0 and a thousand dollars a year, and they give you a certificate. They do some business checks. They do some checks of some sort.
+and they charge you some money.
+There's no real standard on who can become a Ca, they have the browser form has some guidelines, but
+they yeah at the same time, they don't have the same Cas on it. So if you compare the Ca list
+for
+Google, Microsoft, Apple, and so on. You know, you see that they have different trusted Cas on it. So they're all different from each other.
+Also, please note that multiple certificates can be issued for the same subject. That is, for example, www.city.com can get more than one Ca to issue them a certificate. They can go to raresign dual trust. Let's encrypt whatever they can get certificates from everybody
+if they want to. They can get a thousand certificates if they wanted to. There is no limit
+certificate validation. When a browser checks a certificate, what does it look for? We have just discussed this. It checks
+it, checks the subject, name. It checks the fidelity date, it checks. The certificate has been a vote, it checks. If this certificate is a Ca or not a Ca, it checks the signature, it checks other items as well, such as how strong the keys are, whether the keys are strong enough or not
+perfect for secrecy. Very important topic perfect for secrecy is the technical term for saying that if you get hacked, if the server get hacked, whether your past traffic will be encrypted will stay encrypted or not.
+Example.
+Example.
+I go shopping on amazon.com.
+and tomorrow amazon.com gets hacked.
+Will my today's session be protected or not, and there is one heating.
+One key thing that you can tell
+whether today's session will be encrypted or not.
+If tomorrow amazon.com is hacked.
+What is this key thing, this one major thing that you can tell.
+So today I go shopping on amazon.com tomorrow.
+Amazonka's hat, their private keys got lost.
+Will my data from today be encrypted or not?
+Stay encrypted or not?
+What is the one key factor that determines it?
+So today I'm shopping on Amazon.
+and it's being encrypted by Tls.
+But tomorrow amazon.com get hacked and they'd lose their private keys.
+The main factor is whether my session today used an infemoral key exchange or not.
+Aka.
+Did it use the Fee Helman exchange or not.
+because if it used a diffie-hellman exchange.
+Then, even if amazon.com gets hacked tomorrow, they won't see my traffic from today.
+but go over an example in a moment.
+Tls. TLS
+works on top of Tcp, so there's IP layer 3 Tcp. Layer 4, and then there's Tls, which is
+on top of layer 4 and Tls has
+Tls has 4 different types of records, handshake protocol, which we talked about for many hours change, type, perspective
+and then application data.
+Here is the Tls version, 1.2 up to version 1.2 handshake the 10 step process. Here's a client. Hello! Where the initial information is sent, such as the version. It supports the cipher suites and supports client random number session id. If it's trying to resume, and so on.
+Then step 2. We have the server. Hello! The server. Hello, is where the server chooses specifications that it accepts
+3. The server sends over the certificates that just as we saw on Firefox a moment ago.
+4. The server sends over its key exchange. If it's an infemoral Key Exchange, it's an informal key exchange.
+Aka Diffie Hellman.
+It'll send over its side of the family exchange. Here.
+step 5. All done. It's an empty message.
+Step 6 client key exchange. This is where the client sends over its side of the key exchange. So if they're using the Hyman, it will send over the B value. At this point
+change cyberspec, which is no word for saying I'm ready to start encryption. Now, next message is encrypted.
+finished message finishedmessage has a hash of all, probably handshake messages, so handshake messages are messages one to 6, but not 7
+has a hash of it. And since it's after the change type, respect message, it's encrypted.
+Step 9 change type respect. That means the server finds everything to be fine. It's ready to start encryption. Now, that's what change type respect means. It means that I'm ready to start encryption. Let's start encryption. Step. 10 finish message has a hash of all prior handshake messages. That's steps 1, 2, 3, 4, 5, 6, and 8, not 7 and 9.
+However, the finished message is after a change hyperspect message. So it's also encrypted as well.
+So that's the Trs 10 step handshake.
+If you did not understand what I mean. Please go ahead and watch the second video
+after the midterm exam, where we go over this many, many times. So if you do not understand this, what I just went through. Please make sure you review it. This is a very, very important topic for the final exam
+exercise. E, explain the following diagram in detail. Let me set a timer here for 1 min.
+This is a tis version, 1.2 abbreviate handshake.
+This is where most Tls connections look like. When you open a connection.
+then the browser tries to make a second or continuously connection. So generally you go to a website.
+The 1st connection is a full handshake, and then the subsequent ones are
+resumptions, and the resumption will have the client. Hello will have a session. Id.
+If the server accepts the session. Id. It will just go to server. Hello, change type perspective, and that's it.
+And then, if a client is okay with it, it'll have change, hyperspect and finish.
+That's it.
+Okay, exercise F, explain where all the keys are exchanged in the following cipher suite.
+The surface V is Tls d. Defy human femoral Rsa. Aes. 128 Gcm. Sha. 256.
+So this is a Tls version 1.2 and below cipher suite
+and the keys I'm asking for is the Rsa. N. And EN. And D. Values differman, a gn B lowercase, A and lowercase B. Where are these values exchanged?
+We have done this exercise in the past. So let me just give you 1 min to think about it.
+Actually, let's have a quick break right now. So I'm going to set the timer. I might add another
+2 min to a timer, and I'll be right back.
+Okay, so where are the keys exchanged?
+Here's the Rsa and an E. Rsa and an E values.
+Where are the Rsa and an E values exchanged?
+Well, I guess it depends on how you say, the N. And E values
+in different classes and different references. They may call different things in our class.
+We use it to refer to the public key.
+and I know it's kind of weird right.
+But record the public key. So N and E. Value is the public key for us. So
+where are the Rsa. Public keys exchanged.
+So the Nne. Values which which we call the public keys are exchanged in step 3. As part of the certificate.
+How about the N. And D value, which in this class we refer to as the private keys.
+Right? They're never exchanged. They're saved in the server, and then never never change.
+How about the Diffie-hellman values? Diffie-hellman values a G and n, where are they exchanged here?
+Yeah.
+The exchange in step 4.
+And how about the different. How many B values?
+Okay.
+in step 6. Right? And how about a Diffie-hellman lowercase, A and lowercase B values which we call them the private keys for diffie-hellman.
+Yet they're never exchanged. They're never exchanged. They're saved in the server just for that session. And when the session ends.
+it's it's gone.
+Does this cipher speed. Next question.
+does the cipher speed have the property of perfect forward secrecy?
+M.
+Remember what perfect for secrecy means? It means that I do my Amazon shopping today.
+Tomorrow.
+amazon.com gets hacked and truly recorded. All my messages can truly see my traffic.
+and the answer is, yes, it does have the property of perfect for secrecy, meaning Trudy cannot see my traffic.
+Why, why can't Trudy see my traffic technically?
+Why can't she see my traffic.
+even though she has a private key.
+Yeah, because Trudy still doesn't have the filming keys.
+So tomorrow, tomorrow Amazon dot comcast hat and they lost a private shirt private key. They lost it.
+But yeah, just because they have. She has a private key. Now she can't go back and
+break my diffie-hellman exchange, because the keys are gone already
+like the keys A and B. They're used for that session, and they're discarded afterwards.
+So even if she has the private keys, the Rsa. Private keys. It doesn't matter. She can't see
+the values from today, even if you've recorded the session.
+because my session is protected by the diffie-hellman values, not by the Rsa. Values. The Rsa. Values was the sole purpose of exchanging these keys.
+This only used for exchanging keys, exchanging in a secure manner, not for encrypting the data.
+So if a key was compromised, the session, the active session
+where the differ-hellman keys are being used
+could be compromised at that specific moment.
+So if you're talking to amazon.com, and while you have the session open amazon.com gets hacked. The session then
+could be compromise as well now.
+But for past sessions it won't be compromised.
+because if that has a property of perfect for secrecy.
+they're actually protected by the different values.
+and you can't access that after the session.
+What about future sessions? So okay.
+amazon.com gets hacked tomorrow, and then the next day
+you're shopping on amazon.com.
+Can the attacker?
+Your session can truly see your traffic?
+Okay? So scenario is amazon.com gets hacked today.
+Tomorrow you're shopping on amazon.com.
+Can the attacker see your traffic?
+I guess. Maybe let me make this more specific.
+amazon.com gets hacked today, and they didn't know
+they didn't know it yet, so they're still using the same keys. They didn't change their keys yet.
+And then the next day you go shopping@amazon.com can Amazon. See your traffic, how? Why.
+let's look at this chart one more time.
+So in this scenario, here, in this scenario, the keys
+in the Server Key exchange is the different hellman values.
+A G and N are being shared in step 4.
+And these values are, as we mentioned before, they're digitally signed.
+They don't even need to be encrypted. They only need to be digitally signed.
+And then over here on Step 6,
+we have the Diffingham value. B.
+This b-value is actually not signed here, but it's protected using the finish message over
+here. So it's actually protected. It's actually protected by steps
+8 and steps 10. So they're both protected.
+So let me just make a note here is protected in steps 8 and 10,
+so they're both protected here.
+So the thing is, they're not encrypted.
+So now let's say, let's say Amazon has been hacked.
+Amazon lost their private key.
+Trudy is now watching the conversation right. Trudy is always watching the conversation.
+Trudy's watching the conversation, and she sees these values.
+Can she decrypt your traffic?
+It's very tricky.
+Actually, no right. So treaty gets hacked. Excuse me, amazon.com gets hacked.
+Judy has the keys. She still can't see the traffic by looking at the session question. Comment. Go ahead.
+Oh, I was going to say no, because even though she can as you drew that line so Trudy can see like where you drew the line. Like all those things, she still can't see also I need to go back into my notes, but it was lowercase A and lowercase B.
+She still can't see those.
+Right. She can't see those, and also she can't figure out what keyk is, either.
+because just by knowing HEN. And B. You don't know what key K. Is.
+So even even if Amazon lost its keys, Trudy can't see the values
+for K. Like she by seeing a GN. And B. She still can't figure out what K. Is.
+so she can't still hack the session by looking at it.
+But it's because the free hellman is used.
+Trudy cannot see the session
+by looking at it, even if she stole the Rsa. Private keys. But but but but but but but but but but but
+remember what you need to do
+in order to break a session with Diffie Hellman.
+So in order to break a session with Diffie, Hellman
+truly has to be an attacker in the middle, an active attacker in the middle. So let me replace this diagram with this diagram. So instead of
+Alice and Bob, using this diffie-hellman, you imagine it like this.
+Imagine it like this, that now Trudy becomes the attacker in the middle, and Trudy is setting up 2 different sessions between Alice
+and Trudy and Trudy and Bob.
+So imagine this. This is the exact same scenario as we're talking about here. If Trudy does this by being an attacker in the middle.
+then Judy can break the Tls connection.
+So by using diffie-hellman, Trudy can't just break the session directly. Anyways.
+Trudy has to be an active
+attacker in the middle in order to do so
+in order to break the session.
+even if you stole the keys.
+Now this is very easy we talked about. I don't know how many ways to do it
+already in this class. So you go to Starbucks and choose at Starbucks.
+and she can be the attacker in the middle just like that. And then we talked about Dns poisoning, Arpcache, poisoning, Dhcp. Attacks, Arp attacks, Icmp redirects which we did not talk about. But it's another way to become an attack in the middle Bgp. Lots and lots of ways
+for Trudy to be the attack in the middle
+when there is an infamral diffy. Helmen.
+just by stealing the the Rsa keys is not enough.
+She has to be an active attacker in the middle
+in order to break the connection.
+So like this, she has to be the attacker in the middle between 2 Tls sessions.
+in order to see the Keys
+and Trudy, because Trudy has the
+Rsa private keys. Trudy is able to modify the finished messages and everything perfectly, because
+once you have the private key you can generate this stuff as you need.
+So Trudy is able to generate new values for everything and be the attacker in the middle.
+So yeah.
+the only way that Trudy can, for example, here generate the finished messages, generate the finished messages here, and so on.
+is by having the private key.
+So to summarize what we're saying here.
+If amazon.com gets hacked tomorrow, Amazon
+can't see my traffic from today
+because it's protected by Diffie Hellman.
+But then, if someone uses Amazon afterwards. After Trudy gets the private keys, the sessions are still protected.
+except unless Alice does an active attacker in the middle attack, that is.
+Trudy is actively in the middle of the connection.
+Trudy cannot see the values. If she wasn't, if she's just recording it, and such she has to
+the flee, do something to do it.
+This could be being an active attacker in the middle
+by being in the middle of your coffee shop session, or
+now that Trudy has the keys. Trudy can just set up a fake amazon.com website that won't throw any errors on your web Browser.
+But the thing is. The important thing I'm trying to note here is that she has to be
+in order to see the data
+after she swooped the keys, because
+they're using the free Hammond here.
+Next exercise next, this is different.
+So here
+we have Tls, Rsa. Aes. 120 Gcm. Shot 56. Note here that we are no longer using Diffie-hellman.
+You're no longer using the free Hammond
+exercise.
+Where
+are these keys exchanged? The Rsan and E values the Rsan and d values diffie Howman, agn, B. Lowercase A and lowercase. B,
+let me set a timer here for 1 min and then let me get your solutions.
+Okay, so the R is so. First, st the Diffie-hellmans are not used
+at all, because this was the fulfillment.
+Therefore what happens in Step 4 over here?
+Oh, excuse me step 3. The Rsa and an E cap. Values are exchanged as part of the public search.
+What happens to step 4?
+Nothing happens in step 4. It's an empty blank message.
+There's still a message. It's just blank. It's just not being used.
+And then step 6.
+The client Key Exchange was exchanged here in step 6
+step 6.
+It's not that thing. Something is exchanged on step 6.
+Yeah. The pre-master secret which we call K. Kind of.
+So the premaster secret is exchanged in Step 6.
+The premaster secret. And how is the premaster? Secret encrypted are protected.
+It's encrypted using the server's public key.
+It's encrypted using the server's public key.
+So essentially the premaster secret is the key used to derive the Aes and Hmac key.
+So premaster secret, which we call K. Previously in the class.
+The pre-master secret is used to derive the Aes plus H. Mac Key and
+the server. The client just generated it just created one and sent it over.
+and so both sides after step 6
+will have the pre-master secret, and they can generate the Aes and Hmac key.
+After this, only after step 6.
+Would it have this information?
+So same question here as before.
+does this cipher suite TOSR. SAAE. S. 128 Gcm. Sha. To 56
+have the property of perfect forward secrecy.
+It doesn't. No, it does not have perfect forward secrecy. What does that mean?
+Well, remember, Trudy is always looking at this conversation.
+Trudy's reading this conversation, and let's say, today she can't read this conversation. She doesn't. It's all encrypted.
+But then tomorrow Amazon gets hacked by Judy and it loses its private key.
+Trudy can come back in time and read today's conversation.
+and now that she has the private key. She can go and decrypt this, and she gets the premaster secret.
+and from there she can decrypt everything
+she can, deduction of everything, and hop off future conversations.
+Can Trudy decrypt future conversations as well.
+So
+amazon.com gets hacked today. Lost a key. Amazon didn't know they'd lost the key yet keeps using it.
+Judy can decrypt all those conversations
+irrespectively. No attacker in the middle required.
+because, remember, Trudy can just look at it and decrypt it just like that.
+no different helmet, in a way, while in the previous scenario.
+where the previous scenario we had Diffie Hellman involved here, Trudy
+cannot figure out what the premaster secret is
+until she gets until she actively breaks Diffrey Hellman, which she can't do unless she's an active attacker in the middle.
+So that's the great thing about the Fahamen.
+It makes it even harder.
+Even after Trudy gets the private key. She can't just wholeheartedly decrypt. Everything
+truding still needs to be an active attacker in the middle, while if they don't have an informal key exchange.
+that is, they're not using diffie-hellman. Essentially.
+They can simply just decrypt it at any time.
+because the whole key is protected using the Rsa private key
+updates to Trs version 1.3.
+So 1.3, about 20% of the web is using Trs version 1.3 is better in many ways. Aside from
+being faster, it's also more secure in in the way that
+the required defaults are all secure.
+So one important thing to note here is that tails version 1.3 has condensed the
+exchanges to fewer exchanges.
+So here at step, one step one. The client Hello is sent. However, this client, Hello not only sends this cipher suite, it also sends its
+keys as well. So the
+client-sided keys are shared immediately in Step One.
+There are actually today there are 6 different cipher suites that are supported in Trs version 1.3, so if the client supports all 6, they will send over 6 different, if necessary, up to 6 different
+key exchanges. Then the server would choose one, the server would send the server Hello, would choose a cipher suite
+and send its side of the key exchange as well.
+Then send certificate signature of all the prior information and a finished message.
+And then, lastly, there's a finished message, and then immediately it gets the next Http request. So in much shorter faster, but generally in Tls version 1.3, all the defaults are secure
+additionally, because Trs version 1.3 is not supported by most appliances on the Internet.
+Tis version 1.3 is implemented as the extension.
+So when you look at this is just like homework number 3.
+When you look at it.
+You, the client Hello might say it only supports up to tis version 1.2
+in order to see whether it supports version 1.3, you have to go to extensions. So you look at the extension
+to see with their support. Trs version 1.3.
+Why not?
+So that's lesson 6 on message integrity, Pki and Tls.
+Now we're going to the next topic for review, which is firewalls here
+at this time. You should have watched the firewall video already
+and done. Lab 4, Lab 4 is closed yet. So I hope you've done it already. But if you haven't.
+if you're watching this recording, please watch the recording and then come back to here.
+Firewalls, definitions. Please make sure you know the basic definitions. I'm not testing you on it, but it's something that you should know. If you get like a job interview, or something like that
+about security. You should know these definitions very, not very well.
+Proxy and application gateways.
+proxy and application gateways.
+So most enterprises.
+most workplaces have various proxies. Email proxies. Ftp proxies. Web proxies are extremely common, and they're important because they help protect the user
+by having a proxy. So for example, if user goes to a malicious website
+and a website has, like malicious Javascript or malicious files. The web proxy scans the stuff in transit
+and then can stop the user from downloading it. So proxies are extremely important, and proxies
+also can look into encrypted conversations as well.
+Proxies can look into encryption conversation as well.
+How exercise? G, actually, I see
+if Trudy was using a company-issued computer.
+How can the web gateway.
+We even capture encrypted traffic 2.
+If Alice was using her own, her own computer.
+how can encrypted traffic be captured if it is possible?
+There's 2 questions. Let me set a timer here for 2 min, and then let me hear your thoughts about it.
+All right. We already have the answer already.
+So let's say we have Alice and Alice has a company issued computer company issued Laptop.
+Well, Company, issued Laptop.
+It's Gonna have the Company Ca, trust it on the computer.
+All the web browsers are loaded on the computer.
+Have the company Ca already trusted.
+So then when she goes to a web proxy
+like she goes to facebook.com.
+The web proxy would just generate on the fly, generate a facebook.com certificate, send it off to Alice.
+Alice would do the checks, and sees that it came from a trusted Ca and accepts it.
+and that's it.
+And then from there
+the web gateway is essentially becoming the attacker in the middle, and can see the traffic.
+How can Alice tell that this is happening like, how can Alice check that? This is occurring?
+Wow!
+I think you have half the answer.
+So else we need to check the certificate
+and then compare with something else like, because at the her her company. Ca, could be anything
+her company Ca, could be anything.
+So before we saw the Ca.
+here, let's see, let me pull this up.
+We see the Ca, is, did you start global roots? G 2.
+But you don't know if
+you don't know if the company Ca is called Digicer Global Route G. 2, you.
+You don't know. I mean, probably not. But technically.
+the company Ca could call itself Digicer global route. G, 2.
+So just seeing this is not enough.
+It's not enough like probably not like most companies would name the Ca digic global route G, 2.
+But to really check you have to check the certificate.
+especially check the fingerprints. For example.
+like you check the fingerprint, and the fingerprint is a is just a hash. So it's a sha-two 156 hash.
+You check the hash to another computer. So
+Alice will go to facebook.com on her personal computer
+and then on a work computer and then checks the hash.
+because, yeah, one way you can check is whether the company name is on the certificate.
+But they don't have to be. They can make it anything they want. And if her company decide to name her. Ca, digicer, global root g. 2, then that's it.
+So it's not enough. You have to check.
+You have to check the fingerprint for the certificate, not her work computer.
+And how about for a personal computer? What can they do?
+Can the company see her encrypted traffic with a personal computer.
+Yeah, there might be several ways right? One way
+could be, as our colleague just mentioned in the chat that
+her computer might be forced to use a proxy anyway.
+and her computer will get an error message.
+But if the user goes ahead and proceeds regardless of the error message. Then the company can see the data.
+So yeah, another way to do it.
+It's a technique called Ssl strip that doesn't work today on modern browsers. Ssl strip tries to downgrade the connection to a local connection. So, for example, Ssl strip will try to take this Https facebook.com
+and downgrade it to Http.
+But modern browsers don't allow for any downgrading, so that wouldn't work
+another way would be to have install a profile on her computer.
+So what? How that works is that she might connect to the local Wi-fi on her work, and then the company. It'll pop a message saying.
+Oh, you have to accept this profile in order to access the web. And this profile will configure a Ca on our computer. This is how bring your own devices work on companies.
+and the computer will be configured to use a Ca, and therefore the company can see the traffic
+IP tables, IP tables, IP tables for us for this class there are 3 different chains.
+There's an input chain, output chain and forward chain.
+You don't need to know the other chains for the exam.
+So for the exam, you only need to know input output and forward.
+You do not need to know anything like natting, for example, or the other ones.
+So your rules, if we're doing on the final exam will be things that you've already seen, such as input output forward log
+limit.
+I believe that's everything that, you know.
+input, if the packets are destined to the firewall
+output is for packets that are coming from the firewall.
+So input, and output, they usually come together
+because most Tcp connections are two-way conversations.
+And therefore you have an input. You have an output
+and then forward applies to all packages that are going through the firewall.
+So Defi was acting like a network base, a network-based firewall.
+And typically there are 2 firewall, 2 forward rules associated with April.
+If it's going through the firewall.
+So the way to think about it is input and output
+the IP tables is acting like a
+host-based firewall like a firewall on your desktop computer.
+Everything's input output.
+And then the firewall could be a network-based firewall. That is a firewall that's on the network.
+And that uses the forward chain.
+So IP tables can act as both a host-based firewall
+and a network-based firewall at the same time.
+Here's some discussion about the some of the rules for it, but we're not going to go over it because you should know these already. You'll have a reference to these on the final exam. But
+you should know these already. Let's just jump ahead and go to some examples here. Exercise H.
+Exercise H.
+Let me make this a little bigger exercise. H.
+All right. Excise. H. Says both firewalls need to send Syslog messages
+to Tcp. 6, 5, 1, 4 to the SIM
+at IP. 1 0 dot. 10 dot 1, 1, 1, 1 dot, 10.
+So while I'm trying to do this first, st I need to understand the question.
+The way I like to do it is
+to draw a picture. So here let me look again.
+Both firewalls, and there are 2 firewalls here.
+Firewall, one to Firewall, 2 need to send Syslog messages, which is on Tcp, 65.4
+to the seam
+at IP, 10 dot 10 dot 1 1 dot 10.
+Okay, so here's the seam over here.
+So the interior firewall needs to send Syslog messages to this team. Okay, so here's 1 row
+and then the other firewall. The exterior firewall here
+also needs to send messages to his team, so
+it'll send this message. It'll go through this firewall.
+and it goes to this team.
+So we have these rules over here.
+So now that I have a visual understanding of these rules are.
+let me go ahead and write the rules.
+So we have 2 firewalls, and let me write the rules for the interior, firewall
+and the exterior firewall cool.
+Wait before we write any rules.
+What do we need to do first? st Always.
+The. Oh, sorry. Yeah. The default. Policies.
+The default party. You always have
+a default policy. If you do not have a default policy, you will lose 25% of the score
+right away.
+You need a default policy.
+Now, whether your default policy is assem all or drop all.
+Wow!
+That's fine. You still need a default policy.
+99% of the time, its default policy of drop.
+So IP tables dash, p input, drop.
+input, output and forward.
+The default policy can be placed anywhere.
+but you usually would put it in the front.
+You always pretty much, always put it in the front.
+Why?
+Because the firewall rules are read from top to bottom.
+So let's say, let's say the firewall's booting up right? So the firewall just boot it up.
+Its table is open, except all because that's the default when you don't specify anything.
+So then the 1st thing that it reads in while the firewall is loading is the default drop policy. So it automatically drops everything, and then it reads the rest of the rows.
+If you put a default policy at the end.
+then your firewall is essentially all open
+while it's reading, the firewall flows, and then, until it gets to the end, does it apply the default policy? So this is why the default policy is placed on front
+of the firewall rules. So while it's still loading
+for the milliseconds, it's still loading.
+The default is drop everything.
+I hope that makes sense.
+So let's see the interior firewall. Let's write a rule to allow the seam to access the internal network.
+Well, so it goes from the firewall to the SIM. So we do. An IP tables dash a output
+output because it's going out from the firewall to the seam.
+Now, what parameters do we have? Well, let's see, we have the protocol. Tcp, we have the
+well, what do we have?
+We have the out interface dash. O, that's name interface. That's ethernet 0.
+Okay, we have, what do we have? Source? IP, dash, S
+is 10 dot 10 dot, 1, 1, 1 dot 2.
+What else do we have?
+We have destination. Port D port is 6, 5, 1, 3, 6, 5, 1, 4, that Jsep.
+well, let's also make this dayful, because if you get this question on the final exam.
+it will be asked to be stateful. So let's make it stateful.
+Dash m contract.
+That's like, dash, model module contract, dash ct, state new establish.
+Okay, I think that's everything.
+If I missed anything, let me know.
+Yeah. Destination. IP, very good source. IP, destination. IP
+is 10 dot 1 0 dot 1 1 dot, 10 good catch.
+Thank you for that.
+And then the port numbers 6, 5, 1, 4 here.
+when they don't specify the source of destination port. It's destination port.
+It's destination points.
+You can also put related here as well.
+But it doesn't matter if you do or not.
+Related is only only for the protocols that require more than one port to work like. Ftp.
+Ftp. Runs on 2 ports simultaneously.
+That's what related is, for otherwise you don't need related, but it doesn't hurt to add it. It doesn't hurt to add it. In this case you don't need it because it doesn't do anything, but I don't care. You're not going to lose points. It doesn't matter
+about this.
+Okay?
+Well, now, we need the counter rule into the counter room.
+So the counter law.
+Well, one way to do it is just to reverse everything. So here I'm going to copy and paste.
+copy and paste everything here, and then dash a output, input instead of output.
+and then dash, p dash! OI do! Dash! I ethernet 0. This dash s goes to dash, d
+this dash d goes to dash. S.
+This dash d port goes to dash S. Port.
+dash, Jsf, dash, M. Contract, City State, new established.
+Okay, there we go. That's it.
+all right.
+What?
+Oh!
+Question, comment go ahead.
+Okay. So the 1st line we have, it's basically what we are saying is internal firewall trying to
+send message to that same, which is also the internal network. Right?
+So why are we seeing output there? I'm a little confused. Yeah, I just.
+So this is in the context of the firewall.
+Okay, the firewall.
+This is the firewall here.
+If it's originating from the firewall.
+because here in this question the firewall is sending Syslog messages.
+Okay, this log is kind of like a diagnostic.
+Information.
+So the firewall is sending its logs to the theme.
+It's leaving the firewall. The firewall is creating these messages and sending it.
+Therefore it uses output.
+Okay, got it. Yeah, so it's okay, with reference to the context with the firewall, it's output.
+And when the reverse is input. Okay, yeah, got it.
+Thank you.
+So then let's say, let's look at this one here.
+This firewall is also sending messages to Dasim.
+So let me make message. Write the rules for that.
+and they're very similar. So let me just copy and paste here and start over from here.
+So iptables dash a output. Dash. Ptcp, okay, dash, O
+Ethernet. 0. Yes. Dash, O ethernet, 0 dash source IP. Is 1030.
+Dash 1, 1, 1 dot, 2. Okay. Destination. IP is 1011 one dot. 10 deport. Yes, yes. So everything's the same
+here. Everything's good.
+Okay?
+So I just copy and pasted it, and then just made some more some modifications.
+And then I did another one. Iptables dash O, I'm just going to do the opposite dash, a input
+dash. Ptcp, dash o becomes dash, I dash, s becomes dash, d dash, d becomes dash, s.
+dash, d port becomes dash, s port, dash, j dash, ct state new, and this established.
+so I have 4 other rules already.
+Anything else am I done?
+We also need to add another rule on the interior rule, a forward rule, because this
+traffic is passing through the firewall as well.
+So we need one more rule here.
+We need one more rule traffic passing from the exterior firewall through this firewall to the scene
+just to note the firewalls. They don't have the same Ips.
+This one's on the 10.3 0 network. So it's 10.3 0. This one's on the
+this one's not 10 dot 10. So they're not the same IP
+address. Oh, maybe I made a mistake here. Oh, yeah, yeah, I just saw it, maybe. No, no, no, this is correct. No, no, no, all correct.
+all correct.
+So yes, it looks good.
+So this is 10 dot 30 is 10 dot 10,
+so I need 2 more firewall rules forward.
+and the forward is to allow this traffic to go from this firewall to this firewall.
+So IP tables. Dash a forward.
+Okay and dash protocol. Tcp.
+Let's see, Dash.
+O, that's essentially dash I in interface the in interfaces.
+It's coming in through Ethernet. One is going out interface through Ethernet. 0 source IP. Is
+10 dot 30 dot, 1 1 dot, 2 destination IP. Is
+1011, 1, 1 dot, 10,
+10 dot, 10 dot, 1, 1 1 dot, 10.
+Destination point is 6 5 1 4,
+dash Jsep. Contract, new established copy and paste and numb them with that.
+Now I need the counter roll.
+The counter row can be like this, copy and paste.
+and then let's go and change the values iptable dash f forward! Dash a dash! I ethernet 0. So that's I/O,
+this dash! O becomes dash I this dash s becomes dash, d dash, d becomes dash S,
+the port becomes S. Port, dash, J. Of sub dash, m contract, dash, dash, ct, state established.
+Okay, that's it.
+That's everything.
+Was this clear.
+If this was not clear to you, please go ahead and try some more
+sample final questions which has numerous problems that are very similar to that.
+and you'll probably see one very similar to it
+for the final exam as well.
+So this is something that you should be comfortable with, and should be able to do as well. It's similar to the last question on the lab
+assignment
+which has questions similar to this. So that's the the level of understanding that you want to be able to have.
+And it does take a little bit of practice in order to get there.
+Okay, we'll do one more example.
+So this is a stateful firewall, and I guess, even though it didn't mention it.
+these rules are all stateful.
+When you're using a stick or any firewall. There should be 2 roles.
+There should be 2 rules, right, one for one direction and one for the other direction.
+And here you have it.
+Now there's some shortcuts that you can do as well, because another way to do it.
+Another way to do it is just to allow established connections
+just allow established connections. So, for example, here, this example, this rule.
+this rule basically says, allow established connections.
+So instead of a rule like this.
+you can also do it a different way.
+You can make it much simpler and just say, iptables dash a input, dash, JA. Sep dash.
+Let me make it.
+I hope you can see making it so small.
+G. Let me move it like this.
+So this is the same as dash, M. Dash, M. Contract, dash, ct, state establish.
+and this is the same as the above.
+so you can do it that way as well.
+And what this line means is that
+you just accept any established connection.
+So you don't need to write out the line every time you can. Just say.
+Look, if you have a new connection.
+If you have a new connection that's created.
+Then just allow it to continue. That's what this line does, says it just accepts the connection. Excuse me, accepts the established connection.
+This is the way that the book teaches it, which is great.
+I talk about it this way only for you to understand it. But after you understand this, you can just use this method.
+This is how firewalls work. Essentially so for those of you who work in firewalls, you know that you only write one rule.
+You only write one row, just the row, the new row, and it's just presumed that once you have a new connection, you can allow it to continue.
+and that's perfectly fine to do this on the final. It'll make things simpler as well. So essentially, you just write this rule 3 times one for input
+one for output and one for
+1, 4 forward. And you're done. And that's it.
+So another way to do this is simply just
+put one for input one for output and one for forward.
+And now you have a rule that allows any established connection
+just like that, and you don't need to be concerned about writing 2 rows. You just have to write one rule for each.
+This is how a normal enterprise will work.
+So a normal enterprise. You would have rules like this.
+So let's try this method for the next question.
+So let me just copy and paste the default policy just in case we don't forget it. You don't have to write it twice on the exam. You just have to write it once.
+but I'm put it here just in case. All right. So what's this next question?
+Next question says.
+and this is a programming, though, will be about 5, 10 min after the schedule. I want to finish
+this slide. At least all Http traffic.
+That's Tcp 4, 4, 3
+must be initiated from the 10 dot, 10 dot, 1 1 1 dot 0 network.
+So that's this network over here to the Internet
+must go through the Http proxy gateway. Which is this? So well? This question is saying that any web traffic has to go through the proxy.
+Any traffic has to go through. The proxy doesn't make sense, and only the proxy
+is allowed to go to the Internet.
+Only the proxy is allowed to go to Internet. So let me draw what this is.
+Let me draw. What's this? It's the proxy.
+It's going here through this firewall do this firewall.
+and to the Internet at to whatever site there is.
+Alright. So let me implement these rules. There are 2 firewalls. There's an interior firewall and exterior firewall.
+So we have iptables. Dash a well.
+input output forward. What is this?
+I see one of our colleagues is very fast, so it's a forward.
+Okay? And we have the source. Ips
+10 dot, 10 dot, 1, 1 dot 2 0. Because that's the gateway.
+The destination IP is, wow!
+What is it?
+I don't know. Let me leave it blank for now.
+Okay, then, we have the protocol.
+Dash, p tcp, dash, dash! D port is 4, 4, 3.
+Let me put. Make a staple, dash, M. Contract, dash, dash, CT. States new establish.
+Actually, we don't even need a snap. It's just new
+dash. J. Sep. Because establish is already over here
+all the way over here as well, and then well,
+source destination. I can also add the in and out interface as well. So dash in. Interface is
+ethernet 0 dash out interfaces Ethernet. One source IP. Is this.
+and the only question here is, what is the destination? IP the destination. IP could be
+anything. And so one way to write that would be
+0 dot 0 dot 0 dot 0 slash 0,
+or you can just omit the whole thing.
+So when you want to specify anything or nothing, you can specify it like that. But this is the same as not
+using at all, because that's just don't. If you don't specify it like this.
+then the same thing as specifying anything but but this
+we don't want to allow traffic to go here to this network.
+We don't want to allow traffic into this network, because that's not what the rule says. It just says
+Http traffic initiated from the net 10 dot 10 dot 1 1 dot 0 network
+must go to Http proxy when it goes to Internet.
+So actually, it's saying, don't allow it into this, or it doesn't specify at all. So that means
+drop right. If it doesn't specify it, then you drop it.
+So how do you make sure it doesn't go to this network over here on the yellow?
+Yeah, you can add a denial.
+So here you can do iptables dash a forward dash. D
+10 dot 20 dot 11 dot 0
+slash 24 j, drop right? You can do that.
+That's 1 way to do it.
+Another way to do it would be just to put it into your role with juice, not destination.
+Dash d 10 dot 20 dot, 1 1 1, 1 dot 0 slash, 24.
+So from here you're saying.
+dash source, destination is not destination. 10 dot 20 dot, 1 1 dot 0 slash 24.
+And this weird way that I'm writing. Not
+that's the that's the Upan, too.
+way. So it's different per operating system. So don't you don't need to know exactly how to do it. Right? So if you decide to do like
+this, for example, out that's acceptable as well, because it's
+this way of saying not this operating system specific.
+But, in other words, what happened here is that you're saying it can go anywhere except this.
+Dmz. Jean, so you can't go here.
+But you can go anyplace else.
+Ann.
+That's it.
+There's no counter rule, because the counter rule is being handled by this rule over here. So that's it.
+You're done.
+Oh, wait one more row.
+The exterior firewall so well they stir a firewall.
+IP tables dash a forward dash. I in interface is ethernet 0 out interface is Ethernet. One
+source IP is 10 dot 10 dot 1 1 dot 20 destination. IP, the Internet. So maybe I just don't specify at all
+dash, protocol, Tcp, dash d port is 4, 4, 3,
+dash m contract, dash, city, state, new dash, J. Accept. Let me just copy and paste here.
+and that's it. I don't even need accountable, because that's being taken care of over here as well.
+We have one more, but this one you can do by yourself, so you can go ahead and try this. This is a question on the sample final exam. So sample final questions I handed out. So on Thursday. I'm gonna give you the answer to this. So please try this yourself, and then compare the answers. And actually, for all the questions, please please make an effort to try to do it yourself
+before you look at the answer key that I'll give out later this week. That's the best way to study.
+Thank you all for joining me today. Please note that your final exam will be on this Saturday, with a starting time between 10 Am. To 12 noon, 2 and a half hours after you start
+right now you have one assignment open. That's homework number one on immersive labs. Please make sure you get that done that will be on the final exam.
+The final exam will cover all the topics after the midterm exam. So specifically, that's lessons 6, 7, 8, and 9, the weekly videos 8, 9, 1011, 1213, 14. That's this week, plus the Firewall labs 3 and 4, homeworks, 3, and homework number one.
+including the reading materials. It's open book, but no free Internet access. If you get sick, don't take the exam. If you have work to do.
+don't take the exam. If you're on call, don't take the exam right. Let me know. Share your documentation with me, and ask for in a different time on the same day.
+Please be familiar with this during code of conduct. Specifically, plagiarism and collaboration, plagiarism is copying something from anywhere, anyone without attribution.
+Also, if you use Chat, Gpt or other AI tools that's considered plagiarism as well. That's not allowed
+collaboration. You're not allowed to work with anyone on the final exam.
+The final exam will be using the respondents, lockdown browser plus monitor. It requires software to be run on your computer. It's
+requires administrative privileges and a modern operating system to run. It does not support Linux and some older operating systems like
+windows. 7, for example.
+if responders, Lockdown Browser doesn't work, please let me know, and we'll do it over. Zoom.
+Please note that only approved resources are allowed on the final exam. So that's the course slides in. Pdf format the reading materials. A physical copy of your textbook and physical copy of your notes. So if you have any notes, print them out and have them available for you, I will give you access to any manual pages if needed, for tools, Wikipedia.
+and there's no free Internet access.
+Please make sure that you take the exam on a quiet place, no voices, no loud noises, or anything like that. If any noises or voices are heard during the exam, it will be flagged, and I'll be forced to review them, which
+I would not be happy with. But
+then, if any voices are heard, you will get a 0 on the exam.
+so please make sure that if you have roommates, or whatever.
+get them out of the room, close the door, make sure they don't come in. Make sure they don't speak loudly during the exam.
+Lastly, I have a practice quiz on Brightspace. You're required to go and test out the lockdown browser to make sure it works. You must do this
+before the exam will be available to you. So please go ahead and do this before Saturday, or else you will not be able to access the exam.
+So please go ahead and just do that right away. If you have any issues, please let me know.
+Thank you very much for joining me with me today, and for this entire semester
+it has been a really good pleasure
+to be your professor for this class. Please
+find me on Linkedin. I'll be glad to connect with you, and you can always let me know how you're doing with the class and such.
+and for those of you who are in this class, whether you're part of cyber fellows or not. Please go ahead and join the cyber fellows, Linkedin Group as well
+to be some colleagues. One thing about this class, which is very unique.
+very unique, is that you have colleagues from all over the place, right? We have seesaws in this class.
+and you have cisos. You have cios. You have people from all over the spectrum of work in cybersecurity, and it we have people, not in it. We have students who are just getting their masters. So we have people from everywhere. So this is a really really good group, too.
+Get connected with again. Thank you for being a part of this class.
+I had a very enjoyable semester, and I hope you will, too.
+I want to wish you lastly, good luck on the final exam. Please, target to finish your studying before, so you can get some good rest before the final exam. Please don't study to the last minute. Please budget your time to finish before then, and just get a good night's rest.
+Of course you have any questions. Please do reach out to me, and I'll do my best to answer you in a timely manner.
+Thank you very much again, and I wish you all a wonderful rest of your week.
+Take care, everyone, bye.
+Thank you.
