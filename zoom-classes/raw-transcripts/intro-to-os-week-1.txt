@@ -1,0 +1,348 @@
+Everyone welcome to the summer cyber fellows operating system class.
+I'm aspen Olmsted and I've been teaching this class since the beginning of cyber fellows.
+so. And this started as a summer class. So it fits really well into our 12 week, which is a little smaller or shorter than the fall and spring.
+So I'm just going to dive in here, and I share these slides in my Sunday announcement. I will send you an announcement every Sunday just to keep us on track. But I'll cover everything that we'll do this semester here, and then I'll open it up for questions at the end.
+This is recorded so you can always get go back to this at any point.
+All right. So the course content. We have a textbook. I don't care which version of the tandembaum operating system book you have. But you want one to read
+often you're gonna read the sections that match up to what I'm talking about to drill in a little bit deeper.
+but you can get a used copy of something that's older. A few versions back is fine, too.
+We have a bunch of recorded lectures.
+We have quizzes, and I'll drill into the quizzes a little bit more. But you can take the quizzes as many times you like. Each time you get a random set of 5 questions.
+Some of them are hard, they're not. They're multiple choice questions, but they take you 1015 min apiece because you've got some work to work out. So there are problems that you will solve. And you know you need a piece of paper and a pencil typically
+or excel. And whatever, however, you want to do it. But you're going to work through some detailed implementation of the material we're talking about now. Everything you need to answer that question is part of the quiz. Sometimes students feel like they don't have enough background information, but it's all in the quiz.
+I'm willing to answer one of each type. There's a discussion board up in Brightspace where you can post the question, and your answers that you have, and I'll work one out if I haven't done so earlier.
+The goal is a learning. It's not really an assessment. It's just an additional learning to think about these from another perspective.
+We have 4 discussion prompts.
+The discussion. Prompts are really just a way to get you to interact
+with your peers. They're very easy little questions. As long as you respond to the prompt and your 2 peers 2 different peers.
+you'll get full credit.
+We have programming labs, and I'll talk more about those programming labs. But we have 2 tas or cas, this semester course assistants whose whole job is to help you with these programming labs.
+And then the last component is the research paper.
+And again, we'll drill into this a lot. We'll talk about it tonight. And then our next webinar. In 2 weeks
+we're going to drill into deep detail in this research paper. But the idea is for you to get another perspective on the material by trying to solve a problem related to how I define operating systems.
+Which I'll define it many times for you. But I'll do it here, which is a layer of abstraction between hardware, or it could be a lower layer of the operating system and software. So often I will encourage you to pick a domain you exist in. So maybe you work in banking, or maybe you work in
+higher Ed, or you work in government, or or whatever it is, and think about problems, you have specific to that domain and ways. You may be able to improve
+the situation by adding some layer of abstraction there, and we'll again. We'll drill into that in great detail in 2 weeks.
+Alright, all work is due August 10.th
+I'm not saying that saying, Don't do anything to August 10, th but I'm saying that's a cutoff date.
+so that the exception to the scaffolding, we will have a little extra scaffolding. After. That August 10th date. Alright, I will drill in here, so quizzes
+all quizzes, are open book open resource.
+right? The idea is for you to think about the material a little closer.
+You have unlimited takes, and each take is randomized, meaning. If I go and take it again, I'll probably see one or 2 questions the same, but 3 of the 5 will probably be different. That's just a random number.
+But the idea is you, you're thinking about this material. You're working on it. And you're learning from from doing these quizzes.
+It's an implied implementation from the textbook and the lectures. And again, I'm willing to help with one of each type, and after I go through these slides I'll go through our Brightspace course a little bit, and I'll show you where that discussion thread is.
+we have 4 discussion prompts. They're in weeks 2, 4, 6, and 8. And to get full credit, you need to respond to the prompt, and 2 peers.
+and I say I'll grade twice over the semester. I might do more. But basically I wait a little while. So, for example, in week 2. I'm not going to grade right away. I will wait till probably week, 4 or 5. So enough people have participated. I will warn you I'm about to grade them, and then I'll grade them. That doesn't mean you missed points. If you didn't do it yet. It just means you won't have those points showing for a little while. So I typically will do that, and then I'll do it again. After the cutoff at the end of the semester, or after that August 10th date.
+This is this is something that stresses students out a lot. So I don't know why, but I will warn you many times, but you still can get credit. Yeah, go ahead, Tim. You can just unmute yourself.
+Hi, Professor, the discussions is that weekly 4 prompts a week and a respond to 2 peers a week, or is that over? The course of the semester.
+Over the course of the semester. So it's just week 2 week, 4 week, 6 and week 8.
+Okay. So 4 of my own prompts and then take the time to respond to 2 others.
+and anything else is gravy.
+Yeah, so 2 for each of the 4. So you need to respond to 8 peers, basically over the semester.
+Understood. Thank you.
+Yep.
+and programming labs. Now these are done in C,
+most general purpose. Operating systems are written in C, so windows, or Linux or Mac are written in C. So the idea in an operating system course is for you to learn some C. We'll think about that a little bit this week. But this is again where the 2 cas go ahead, Adele, you can unmute yourself.
+Yes, thank you, Professor. I was just on the programming labs like I reviewed on the Brightspace. And there is documentation, obviously over the discussions and the quizzes and the content. But there is nothing on the programming labs other than a link to gradescope.
+I will show you where all that is after we go through the slides. Thank you.
+Thank you. Yeah.
+All right. So you're going to upload your as it was just said, you're going to upload your solutions to gradescope grade scope essentially, is a system that spins up docker sessions, and so you'll upload your code, your C file, and I'll go through one of these documents and show you how you know what it's called. It's very important. You name your file the proper name, because what I do is I then copy that file. I compile it.
+I'm using the gnu C compiler, and then I run it with some test cases, and then you'll get the results. So it takes 30 seconds, 45 seconds after you upload to gradescope to get those results, and then I will synchronize those grades once a week or so back to Brightspace. So if you've got it up in gradescope.
+you always have access to that source code. It keeps every version you've uploaded. You can revert to a previous version, and you shouldn't worry. Once you get your points there, they will come over.
+and all of you should have been added to grade scope. I think I did it today or yesterday synced again. But if anyone isn't. If someone somehow comes in late. Sometimes people come after the ad drop. Just let me know, and I'll get you in there and just send me an email.
+All right. So the 1st week you're going to write 2 simple
+see programs. I'm just gonna check the chat. Someone did some of the chat.
+someone asked, Where do you find the grade scope, link? I will show all that after we're done with this slides.
+There's a question, and I'll come back to that question in a second. All right. So,
+there are 2 simple C programs you write this 1st week. One's like a hello world and the other is a program where you pass on the command line a year and you tell whether it's a leap year or not. The idea is just to make sure you can compile and test these. So there's a question in the chat. Does it have to be the gnu C compiler?
+Well, so in theory you all get the benefit of ant. CC. What I mean by that is, Antscc is a standard C, so any C compiler that's ant CC. Should be fine, it should work, it still should be compiled by gnu. But
+I, if you have an issue that could be something, it's i i will send in week 3. I start sending you some recordings of me doing it on. And I'll show you tonight. There's an online free
+C compiler. So you can just do it in a if you're on a chromebook you can do it in your web, Browser. Remind me if I don't get there. But I'll after I go through Brightspace I'll show you that.
+You can upload as many times you want. You can do it at 5 in the morning, if you want to. You know it's 24 by 7. You have access, and it tells you immediately. Now, I've used these programs.
+I don't know how many years we've had this course. But certainly a thousand students have come through this course and use these labs. So they're pretty good in
+making sure your codes. Okay, so often, if you're not getting a result, you expect it could be. You're misinterpreting the problem, and I'll show you a few gotchas there, but you can always join one of the Cas sessions. They passed out a slack channel. There's a discussion board. I'll show you up there where you can check
+Oh, and then, after this week, oops.
+I'm gonna go into that. Okay, so
+here's some options for installing Gnusi again. You don't have to. An Ncc. Is fine, but you can install a Linux. Vm, there's a system called online. Gdb, I use it all the time for small stuff. I will show you that you don't have to install anything. You just have to point your browser there, and you can compile on C. Ancc. With Gcc gnu c compiler.
+or there's a way to install Gnusee compiler in windows if you want to.
+you can just google it. The directions change all the time I used to share those directions, and they change all the time. But if you Google it and make sure your directions are
+pretty recent.
+There's also lots of online resources. Some simple things is
+the onlinegdb.com has a C for beginners. You all have these slides. Remember, it's into this morning's announcement, W. 3 schools also has some stuff, and I also referenced. The Nyu Library has O'reilly. It used to be called safari online, I think I still call it that. But it's O'reilly Online platform that has many books. There's lots of C books in there. If you want more C
+learning material for free.
+And then, after this 1st week, you're going to have 4 different labs that we do over 4 weeks. These are more detailed. I will send in my Sunday announcement, a video I made. I made them like a year ago, where I just walked through writing the 1st function in each of these labs. You write functions. So the 1st one we'll do is a CPU scheduling where we think about how a CPU will schedule multiple processes.
+And you'll write some of these algorithms, and then we do several others. We'll do memory. One week we do virtual memory management one week and disk scheduling.
+You're gonna submit a single file with the functions implementations, and I'll show you that documentation in a few minutes.
+But you should test it offline. You should. What I mean by offline is in your own right, whether you're doing it in a browser and online Gdb. Or your own canoe C compiler locally, you should write your own mainc file. If you don't know what a mainc file is, you will learn this week.
+and there's a file called Oslabs dot H, which is a header file that has the function definitions. And again, I will. When we get to CPU, I will send you a recording next week in my Sunday announcement that walks you through doing the 1st part of that.
+I'm just checking the chat.
+I think it's just folks talking okay.
+alright. And here's a sample. Main.ci call it a driver file, because it calls the function. So you'll see in the documentation, for when we get to this, and you'll see that I write this with you in in the recording I'll share next Sunday.
+But one of the things you're going to write is this handle process, arrival, preemptive scheduling.
+And basically, there's data structures in C that we will use. And here's an example process where you can set up a little test for yourself. These are the test cases that are published.
+But you can refer back to this later on.
+and then you'll see. I do this again in my video. I will send next Sunday. But you can build little support functions like, here's a support function that sets up these structures and see where here I'm just passing in a pointer to a data structure. Don't worry if that doesn't make sense yet, and a bunch of integers that are the process values, and I can set it up again. I'll come back to this a little bit in a second. All right.
+I think I'll take a I'm gonna pause here and then go into Brightspace.
+Let me come over here alright. If you go to content
+minimize this window here all right on this content window.
+If you scroll down. There are links to all of the programming assignments. So here are the 1st 2.
+Don't ask me why I shared the Linkedin Link. I shared them on Linkedin years ago, and I just cut and paste. They're shorter. It's annoying them. So here's the 1st 2 programs you're going to write this week you're going to write a hello world.
+and the file needs to be named Hello, Dot, C, and
+you'll write a leap year program, and I have a sample execution here
+where on the command line, you would pass it like 1896,
+and the output is 1896 was a leap year. And here's an example where I pass it.
+1897. And it says, 1897 was not a leap year. And you're gonna call. This program is leap year. Dot c
+Now.
+cat Gpt can do a great job of writing this or Gemini. I'm sure the point of this is for you to think about. C.
+So you know
+there's nothing I can do to stop people who want to have chat, gpt, do it, but try to do it yourself. I've got some links here. I'm going to open another page.
+This is that online Gdb.
+and you can create projects. I will do this in the video. I said next week for the CPU lab. But here
+I can choose my programming language. I can just choose C.
+And it wrote, Hello, world for me here. But
+You know I can say welcome to the OS class, whatever.
+and then I can run. I can debug up here.
+and you can see the output down here.
+So this is a nice, simple way to get access to a C compiler. This is the Gnu C compiler.
+And it's there. Okay, so we've got the
+documentation. I'm going to go to the CPU one
+again. I will send a video next week where I do the 1st of these functions. But just a little bit of an overview
+in each of these labs, you're going to create a data structure.
+A struct in C is, oh.
+it's sort of like a record in Python
+or a class in Java where you don't have any methods. There's no behavior, only state only variables. So this PCB has a bunch of integers that represent a process.
+And in this documentation I go through and I describe everything.
+There's often a null case. So we define a null. PCB, as all zeros.
+And then there's 3 algorithms you're going to write priority-based preemptive scheduling shortest remaining time. Next preemptive scheduling and round Robin scheduling.
+and I have a link here for the OS. Labs header file we'll look at in a second, and you're going to name your file. CPU, C,
+and I'm going to go ahead and click on this oslabs. Dot h file.
+I want to click on it.
+This is an in C, we have an inclusion file that gives us all of the data structures and the signatures of our methods.
+This one files used for all those 4 weeks of labs, the CPU, the memory, the virtual memory, and the disk scheduling. So this same file will be used. But you can come in here and you can cut and paste the signatures out. I will do that in my video next week. But I just want you to know it's there.
+There's also a bunch of test cases, and the link is here.
+So if you're trying in grade scope, if
+you don't get credit, and it says you failed. Test case 2. You can go to this link, and it will open up all the test cases.
+and you can see for each test case.
+the values. So there's input and output values. And these are these data structure values. So this is a current process is running. We've got a new process again. We'll get to all that next week.
+Alright.
+And so that's that's our 1st one. There's 1 on disk, scheduling memory, allocation, and virtual memory. So this is right on that overview. It's a little confusing in Brightspace. I can also open it, and I can get to the syllabus. We'll come back to that syllabus in a few minutes. All right. I'm going to go back to my slides
+if anyone's in chat, and I probably missing it. I think I lost the little thing. Oh, there it is!
+Let's see.
+Yep. Someone shared another online c compiler. Alright.
+all right. So a big part of this course is the labs, and again, you have 2 Cas course assistants that will have office hours each week. They'll be up in the Zoom calendar and you can just join and ask questions. The goal is for you to think about
+the ways that we solve problems in general purpose computing.
+You're also going to do a research paper. And this is less general purpose. This is more specific.
+And the goal here is to get you to think about operating systems from a different perspective.
+Alright,
+and so I always have this slide, which is why a research project in paper, and for me a master's degree is about contributing solutions to society's problems. Right? You all decided to get a Master's degree. It's a little bit different than a bachelor's degree in a bachelor's degree. You learn a lot of competencies in a Master's degree. You want to take those competencies and marry them with your life experience and then try to solve problems.
+You're all in a master's of science and Ms, which is all about using the scientific method to prove your solution.
+So we'll use the scientific method, this semester, we'll hypothesize the solution. We'll then go and see how other people try to solve the solution. We'll modify our hypothesis. We'll then test that solution, and then we'll disseminate. Okay, if you were getting an Ma, some of you already have mas typically in a masters of arts, you use discussion to persuade your solution more. It's a lot more discussion here. It's more about
+producing evidence.
+And I've heard from a lot of Ms students that research is the most rewarding part of the degree
+and our our creditors require it. So we're cae with the Nsa. And I originally did all that paperwork, and when we did. I use this courses, students, research papers to show that our students are doing research
+different than academia. And you know, big industry. They have research departments. But you know I worked in industry for many years, and often I had a problem to solve, and I had a very short window of time to solve that problem, I had to look around and see how other people solved it. Come up with the best possible solution, and then implement that solution pretty rapidly.
+In academia we tend to do things much slower. We've defined the problem, we hypothesize the solution. We see how others solve that problem. We modify our hypothesis. We test our hypothesis. Then we disseminate.
+Now, all of you are cyber security students. I think sometimes other students get in here. But I think all of you are cyber fellow students
+and cybersecurity problems are very good operating system problems, right
+when we're thinking about operating systems, we're thinking about host security often.
+But these these 3
+parts of the triad confidentiality. We want information to only be available to those who should see that information. This is a big concern of operating systems.
+Integrity data should be correct and and should be kept correct. Right? We don't want people tinkering
+with things in our operating system and changing our data, whether intentionally or unintentionally. And availability, right operating systems provide lots of services and those services should be available when needed. So we need to scale. Often we need redundancy.
+that sort of thing alright.
+And so based on what you've learned so far in this class, I want you to ask yourself these questions, what is an operating system?
+What do future operating systems look like?
+And then I always throw this out. There is salesforce and operating system. And
+we haven't got very far in this class. But in the next 4 weeks you're gonna or 5 weeks, you're gonna look at algorithms and data structures used in traditional operating systems.
+and I would argue that operating systems will become more vertical, market or domain specific in the future. And so my definition of that 1st bullet is an operating system is a layer of abstraction
+between the software. We want to write to solve domain specific problems. Right? So in higher Ed, we've got lots of systems you use. You use Albert, to register for classes.
+You use bright state space for learning management in the classes. We use grade scope. We use these specific systems. And often we don't. Wanna when we're writing these business systems or these domain specific systems, we shouldn't worry about the hardware. I'm starting to age, I think, with my examples. But when I was young and a programmer
+we had to. Every time one of our customers got a printer, I'd have to open up the printer manual in the back of the printer manual were all the escape sequences for that printer, and I put that into the code.
+Right along came windows 3, 1, and Microsoft added a layer of abstraction to the operating system called printer drivers.
+It was pretty revolutionary. It doesn't feel like it today. But the idea was as a programmer who's focusing on a domain. All I need to do is call the windows Api to print.
+The vendor who made the printer needs to provide a driver. And now it all just works right, and customers can buy whatever printer they want.
+I just print to the windows, Api, and everything's good. So that's that layer of abstraction between the software, that domain specific software and the hardware. And this is true of lots of things. So in our labs we're going to think about cpus, right? I don't. How many CPU cores do you have in your machines. I don't know. I don't even know how many I have. I think I have 8 in mine here.
+or 10 or something. I have no idea my phone right? I don't want to know. I want, I want to be able to write software that solves a business problem and have a layer of abstraction. Take care of that for me.
+And that's what I'm thinking about. That's what an operating system is. And I think future operating systems are going to start to think about specific kinds of hardware or tasks that need to be done and provide that layer of abstraction? Right? So whether that's credit card processing, why does everyone in the world have to do their own credit card processing? I know nowadays we have lots of companies that provide Apis, but there's a lot of redundancy. Still, like payment screens and things like this are just
+lots and lots of redundancy, and it could be a layer of abstraction.
+And I put salesforce there because years ago Salesforce was a Crm company
+and that was their 1st product. And the CEO said, we're no longer a Crm company, we're platforms as a service company or a platform company. And if you look in and at their Crm product today, you can develop software and it does a lot of things we're going to do in the labs.
+It manages processes, it can do workflow scheduling. In fact, it has several workflow scheduling. It does memory management. It does all the database, storage, file system, storage. All the things we'll think about in this class are in this platform as a service.
+And it's pretty specific, because there's objects related to sales. And so I think, in the future. And that's an operating system that's written in Java, whereas I said, all the general purpose, like windows, and Mac and Linux are written in C.
+So I think in the future we'll have operating systems that are more specific to what we're trying to solve. We see that a little bit with Internet of things, right? Internet of things have operating systems. They're not general purpose. Typically, they tend to be very specific to what you're trying to do in that embedded system or
+device.
+Alright, now, you all have unique domain experiences right? Don't throw them away right? Try to leverage that experience. So I've I've done this kind of thing in courses, for I don't know a dozen years or 15 years or so, and I once had a student who worked in the water industry.
+and she came to my office and said, I don't know anything. I don't know anything about cybersecurity. There's nothing I know in my life experience that's useful here. What can I do? My paper on?
+And in some countries like Amsterdam, they have whole cybersecurity teams to defend the water system right? We don't want polluted water. We don't want our cities flooded. And here this person knew so much about water that I'll never understand. I don't know how the water industry works right. And that's my point. Here is you've got domain experience that no one else understands or very few people understand.
+embrace that and marry it with the things we talk about in the course to try to solve a problem there. Right? So whether that's financial and banking or government, or technology, or education, or retail or manufacturing, or whatever it is, there's problems, there's technical problems. There's often hardware or very specific algorithms that you don't want to have to reproduce. If you're building software for that domain.
+And so think about that layer of abstraction in solving that problem.
+Now, often the hardest part of research is not figuring out what to do. It's limiting the scope
+right? This is just a single extended abstract. We'll talk a lot about what an extended abstract is in 2 weeks.
+But basically it's a 2 page. I triple E paper.
+It looks just like an I triple a paper. It's just smaller now. 2 pages don't get too excited in. I triple a format that's about 900 words per page. So it's a lot longer than a normal double spaced margin paper.
+But it's very doable. And this is your flag in the sand, and you can iterate over this work later on. I've had many students take their work from this class and extend it and send it off to a conference
+timing wise. There's often, at the end of this semester an opportunity to present remotely at a conference for free. So if you're interested in getting that kind of experience. You can prepare your work sometimes you may have to be a little ahead of us, but I'll give you plenty of warning, but you can combine several extended abstracts to get what we call a conference paper size, or you can combine several conference papers to form a journal paper
+and then group work. You're allowed to do group work. But everyone has to be the primary author on a paper.
+right? Everyone has to be a principal investigator. So you can collaborate with other students where each student is a secondary author on the other students work. This means you're going to have things in common. Maybe your problem domains in common, but either your problem should be different or your solution should be different, or something's different, right. Some of the sections of the paper may be exactly the same, but you're being transparent. You're on each other's papers as secondary authors, and we'll talk more about what that means. In 2 weeks.
+I guess we'll talk about it now. I forgot the slides here. So in computer science or cybersecurity, or it research papers, we follow a formula where the 1st author is the principal investigator.
+then secondary authors come next. You can have many in this course. Try to keep it to 3 or less
+just for convenience sake. And then the supervising author is often the last person. So your professor or research supervisor would be the person on the right, the person on the left of the list is the they own the intellectual property.
+They're the principal investigator. You own all own your intellectual properties, this semester. So because you are not transferring it to Nyu. You're not transferring it to anyone. It's yours. So you can take this work and keep working on it
+all right. So in your paper you're going to have these sections again. We're going to drill into this quite a bit in 2 weeks.
+but you'll have an introduction
+to sort of introduce your problem to talk about why it's it's difficult to solve. Why hasn't it been solved before? You'll have a related research section which is very formulaic. And basically it is about talking about what other people have done to solve this problem. Now, it may be in the same domain. Or maybe you're moving solutions across domains, and I'll talk more about that. But an example is my dissertation work was in web service transactions.
+Often in my related research, I'd be citing database work, because at the time web service transactions were quite new. But database world was quite mature, and there were solutions in the database world that I wanted to take and move to web transaction world.
+You'll have a motivating example. This is a very concrete scenario, if you will of someone having the problem you're solving.
+and then you'll have your hypothesis and empirical evidence. Everyone needs to gather some evidence. I'll talk more about the how do you gather evidence? I don't remember if I have a slide here or not, but we'll talk about it tonight, and we'll drill into that in 2 weeks.
+and then your conclusions and future work. Where would you go next? And then references
+again? We'll drill into all these sections in 2 weeks.
+and then you're going to put it in. I triple EI have the template here. You can do it in Microsoft word, or you can do it in Latex. Do not learn Latex for this course, but that we have overleaf is an online Latex editor. But you also get free access to Microsoft word.
+I'm saying Microsoft word or or latex, because there's lots of advanced features that you you want to use when you're writing a paper that aren't in things like Google Docs. Yeah, go ahead, Tim. You can unmute yourself.
+Thank you, do we? Do we have to submit it for final consideration, and ie. Conference format, or we can just do it as a as a word document, and the appropriate, with the appropriate sections.
+So you'll this. There's a template at this link that for work, for Microsoft words. You download that template and I will upload some sample student papers in Microsoft word format also. So you just follow the template. But you you're keeping it in word.
+But you're so you're expecting it in that that kind of landscape format.
+Yep, yep, and it's easy to do, because the template does it all for you.
+Okay. Thank you.
+Yep.
+and that same templates used for extended abstracts which we're doing, which is 2 page or longer papers, like a conference paper, is 6 page or a journal paper is 10 to 12 pages. So I like the reason I do this is, it gets you ready. Some of you may do a project as part of your master's. A project is the size of a conference paper.
+and I've had typically in each cohort there's 1 or 2 students I'll work with during their time in cyber fells, and they produce several papers, often journal size papers, because some people like it. Some people don't right. So all of us will do an extended abstract this semester just as 2 pages. But it's easy to keep going with this format.
+Alright.
+we're gonna use a a peer review system. I say, it's new. It's not new anymore. I guess it's called peerceptive.
+It uses we use scaffolding to assist you in the process.
+The idea is
+you know sometimes you don't understand what the heck I'm talking about, and if you learn through this process of seeing what your peers did. That's great. I have had students say I didn't understand this step until I saw what my peers did. And I say, great! You understand this step, so as long as you're participating.
+you'll get full credit in the scaffolding and participating means.
+Submitting and doing your peer reviews.
+the dates are synchronous, meaning you need to do them with everyone else. Or peer review doesn't work. So all of the dates I'll show you in a second what they are, but all the submission dates are Sunday nights. Peer Review is due by the following Wednesday.
+There's questions up there. So when you go into to do? Peer review. You just answer the question. You you look through what they submitted. Sometimes it's very simple. Sometimes you're just submitting a couple sentences, and then you're reviewing your peers. Couple sentences.
+but part of your grade is the review, so please do the review. It's a big part of the learning process.
+I have the rubric for the final paper and presentation, the syllabus. But as long as you're participating and you follow the advice you'll get full credit
+all right? So these are the dates, this semester we start in week 4,
+and you just start out. Very simple. You're going to choose a domain. And again, in 2 weeks. We're going to talk about this some more. But a domain is something like it could be horizontal or vertical. A horizontal domain could be like cloud computing or internet of things.
+That's horizontal, vertical could be higher education or banking and finance or government whatever. So you're just picking a domain and citing 3 papers that relate to that domain.
+This is my way to force everyone to do literature review.
+So I'll take a second to talk about literature review.
+Literature review is what we call it. When you go out to Google scholar or semantic scholar, and you just start typing in some keywords. You say.
+you know I'm interested in Web Service transactions, and you see what comes back. And in the papers you read the abstract, and if you like it. You can read the conclusion if you don't move on right. An abstract, just a 250 word or less
+standalone little summary of a paper, and the idea is you're not reading lots of papers. You're just looking at lots of papers, helping yourself refine
+what you're what you're looking at now, everyone should start literature review soon.
+just, you know, spend 15 min a day going to Google scholar and looking.
+There are tools nowadays, and I'm not going to tell you not to use those tools, but things like deep research, where, if you've got a problem and you send it off, it will cite lots of places
+in your related research. They need to be peer reviewed papers. These are conference papers or journal papers, but often deep research will pull some of these back for you. They'll also pull githubs and stuff, and you can find where people have tried to solve the problem and
+maybe didn't, or, you know, didn't, didn't finish, or whatever you can use those resources. But remember, you want to find 3 peer review papers at some point.
+So that's week 4. You're going to say I'm going to do cloud computing. And here's 3 citations week 5. You're going to define your specific problem and hypothesis, and how it differs from current solutions. And what I mean by that differs from current solutions is, maybe you've got a specific use case
+that wasn't solved right? And you're gonna make it a little bit better for your use case.
+And so that's what I mean. So or maybe you're taking a solution and
+porting it between different domains, right? As I said from, I did web services and and I pulled stuff from the database world
+and then week 6. You're gonna come up with a sample way you're gonna measure. And so I say, a metric in a chart, it doesn't have to be could be a table, but the idea is sometimes I say it over and over again, and people still want to do what's called a
+Yeah. My brain went South, where you just are sampling other people's work like there's a term for it. But my brain's not working. Sorry, but you're going to come up with your own solution to a problem and not just summarize other people's solutions to problems. Okay.
+checking on the chat.
+So yeah, this is sort of mock data to come up with. What do you expect it to look like? You're not held to it, but the idea is just to get you to think about measuring.
+So I'll stop here before I go on to the next 3 and talk about measuring, and we'll talk about it a lot in 2 weeks. But you need to realize you don't really need to think about this too much until later, as we get closer to Week 6. But the 4 ways that people tend to measure
+evidence is one is simulation.
+Now I'm a programmer. I was a programmer professionally before I went back and got my Phd. I still, code every day, I think about programming. So I tend to do simulation. You're not writing production code. You're writing enough code to test
+right? So a hundred or 200 lines of code. In your language of choice
+you can have chat, Gpt, write that code for you as long as you understand what it wrote, and it's doing what you want right? You you can build a simulation that way. Often decomposition is your friend right again back to the hardest part of research is what not to do. So an example is, I have 2 sophomore students. I'm working with so young kids that are like 19. And we're trying to do. Brownfield secure software development. And I wanted them to build models from code.
+But that's too much work. Right? So what they're going to do is, they're going to find partitions in an application. And so we took our original goal of To reverse engineer and make activity diagrams, perhaps. And we said, okay, we're not going to make activity diagrams. We're just going to make. We're going to identify the partitions. Right? It's a step in the process
+and decomposition decomposition. Just try something smaller. Right? So a part of the ultimate goal is often easier to figure out how you'll measure. So simulation is one
+another is modeling. So if I can model the way something's done today and my proposal, I can show it's better somehow. Maybe there's less layers. Maybe there's less messages passed so a model could be like a Uml model, a Bpmn model, some sort of mathematical model, a threat model. I think you've all taken ISP, probably, and you learned stride and dread and attack trees.
+Right, there's all kinds of threat models out there, or Microsoft data flows right? You couldn't use a threat model, all right. So the 1st one's simulation, the next one's modeling.
+The 3rd would be
+scanning right? So maybe you've got some sort of scanner that's finding vulnerabilities like Vega. And a system has these vulnerabilities before your solution and after your solution. It does not right sort of a Boolean measure. So simulation, modeling, scanning. And the last one is open data sources.
+Students. This class love to use open data sources. I could never do it. I don't know how you would do it. But if you're welcome to do it, if you can gather evidence that way, so that's more of a data sciencey kind of solution where you're finding data. Maybe there's data out there lines of code or something. And you're discovering
+something from that data, right? So there's 4 different ways. People gather evidence, and you want to be able to present
+somehow how you're improving the situation for at least a use case doesn't have to be all use cases. But it can be a very specific use case of the problem.
+All right. So that's the 1st 3. And then we don't do any peer review for a little while till week 9, and we start writing our paper. So we do related research, very formulaic. I'll tell you how to do it where you have to pick your 3 peer reviewed papers by week, 9, and then week 10. You do your introduction, and then week 11 is your empirical evidence. And these are all drafts of your paper. So after those 3 submissions, you'll have one of your 2 pages basically done.
+And peer reviewed. And you'll you can improve it. And you've seen what other people are doing, and then, week 12, you'll do a presentation
+around 10 to 12 min. We're going to record that presentation, and you'll have your 2 page paper. Yep, go ahead, Adele.
+Thank you, Professor, so on on the rubric I know we talked about, at least for as far as the full score, like having at least 5, I believe, more than 5. It said the references, and I know you're talking about, and I know in them it said at least 3 peer reviewed papers. Does that mean? In order to achieve that, we should have a minimum of let's just say, 6 references.
+Don't worry about too much. As long as you've got 3 we'll talk about where you can use non peer reviewed things.
+Okay.
+In 2 weeks. But so, for example, in your introduction, you could cite the New York Times to show why this problem is important. But as long as you've got 3 you're fine. The rubric is just sort of a, you know. Give you a sense of where you can aim for, but as long as you're participating and everyone's, this is a creative project.
+Perfect. Thank you. Yeah.
+And I'm going to kill your name, so tell me how to say it, and it's Raghav Vedra. Is that right? Go ahead.
+Oh, yes. Can you hear me? Okay.
+Yep, yep, absolutely.
+Yeah. Yeah. Thanks, Professor. So I have a question about this.
+the topic problem domain, right? Does it have to be related to operating systems, or like.
+Well, the domain doesn't have to be related to operating systems, because all domains use operating systems.
+Okay.
+And then.
+So it's.
+And and remember my wider view of what an operating system is. It's a layer of abstraction between, if I so like. Let's say you choose arts management.
+And you want to build a piece of software for arts management. There's probably I'm not an artist, but there's probably some tool hardware or algorithm, or something that people would want to have access to without having to reinvent that wheel right? Maybe it's you know, there's some sort of
+stencil tool or something that no, that's that's not included. And you could build a layer of abstraction that
+you know, solve that problem better than we do today. If that makes sense.
+Right? Right? Yeah, it does. So basically.
+The layer of abstraction is between the operating system and the problem domain, right? Not the hardware instructions and the problem domain. Right? I just want to make sure, because the based on my initial reading.
+the operating system is an abstraction between the instructions, hardware instructions and the user right?
+So I'm
+thinking, it is the layer of abstraction as we speak is between the operating system and
+the user problem domain basically.
+Yeah, there's many. There's many layers in an operating system. So yeah, and the very lowest layer. It's it's producing machine instructions or compilers are producing machine instructions, or it's talking to the I/O ports of hardware. So but think about you're expanding on the operating system to provide additional functionality for your domain.
+Got it? Yeah, thank you.
+There's a question, is there code for perceptive to join the course? No, I will add everyone before we get to week 4. So in 2 weeks we're going to do our next webinar before then. I'll add everyone up there. People come and go a little bit still, and it's easier for me to just add everyone.
+So I'll take care of it. Don't stress on that part.
+Okay?
+See?
+Okay.
+Oops.
+All right.
+so here's an example hypothesis. It's starting to get stale. I've used this one so many times, but you've all probably bought a ticket from ticketmaster. It's a horrible experience, right. It's but it's like it's sort of like our CPU scheduling, which we haven't got to yet. But you'll get there in 2 weeks where we're trying to schedule a transaction
+right?
+And so I have a hypothesis, maybe dividing a transaction into 2 categories for scheduling those things that need to be synchronous, and those things that can be asynchronous will reduce deadlocks. We'll talk about what are deadlocks.
+or maybe increase availability. Right? That's part of that triad availability. And maybe I want higher concurrency. Right? Part of availability is ensuring everyone who's trying to use a service gets access. It's not just about that malicious user. And so
+again, you're not going to try to solve many problems. You're gonna be very specific and pick one. The current solution is ticketmaster will replicate application servers right? And so my my hypothesis is maybe a different way of actually running transactions through would be useful for applications different from from this redundancy, and my metric could be a measure of concurrent users in the 2 solutions.
+Right? So maybe I'm testing until I get an error message. Now, you don't have a lab to test this. You're just going to do it in a consistent way on my notebook. Right? I'll write some code in Java or Python or something, and and I'll just run it and see what happens. And I'll show you. We've got some discussion sections if you need help thinking about tools.
+There's tools out there to help you run simulation or tools that help you with modeling or
+tools out there for scanning. I'm not good for tools for open data, but we can talk about it. And then later, I can do iterations right? This is my flag in the stand. But I can think about how this hypothesis solution can be generalized or applied to other domains.
+Alright. So I'm gonna jump back into bright space and show you a few more things, and then we'll just do remaining questions. But on June 8th I had it originally June 1st in the syllabus, but I moved it to June 8, th and that's what I showed
+and shared with you today. Oh, I guess it isn't up here. No, I guess I why did I think I need to do that. But we'll meet again on June 8.th So in 2 weeks, and next Sunday I'm going to share an announcement again which will have more help for the labs. I'll walk through that CPU, that 1st one of the functions
+actually let me go back to that document. So I'm gonna stop this here and go back to CPU scheduling.
+This might just be the test cases. Yeah.
+again, don't worry about this till next week. But for each of these 3 you're going to write
+a function here, handle process, arrival.
+lots of documentation and test cases and then completion. I will write this 1st one for you. I'll do it up in the online. Gdb, and I'll share that. And I'll do that each week. So there's 5 or 6. You're writing functions. I'll do one for you. So it sort of irons out issues. You then have the the course assistance, have office hours that you can go to and get additional help. We also have a discussion. So I'm going to show you that part.
+So over here in discussions.
+I will post in the next couple days some sample papers from the past and Presentations.
+I've got a thread for grading. Whenever I update a grade I'll post it in there. So you know that I've updated grades. So, for instance, I said the discussion grades, I won't do right away. I'll let you know in these webinars when I'll do it. But I'll also post what I've done it. So if you have any doubts, you can always go here.
+If you've got questions for the course assistants.
+you can come here and post, or you can use their slack channel.
+Here's the quiz question. So this is, if you have a quiz question that you don't understand. Post the quiz question and all of your answers, and I'll work it out. The one of each type.
+Okay, I've got a general class question section.
+And then we've got these 4 discussions. Many of you've already done it the 1st one those are in line. Okay?
+Alright, I think that's I'm gonna stop sharing. Then I'll just
+open it up for any remaining questions.
+Think there's something in chat.
+There's a question with the slide deck and future ones be available on Brightspace. I will always share them in the announcement. So in this morning's announcement, which you can, I'll go back here and show you
+screen
+Under the announcements, Tab, are all the announcements. I think most of you get these via email,
+so I think the tas will post here. So there's a 1 from the Tas about the slack channel they often will post about their hours. I will post on Sundays. I try to just do one a week, because I want you to really pay attention to it. So I don't want to do too many. Once in a blue moon, if I screw up or something, and I have to correct something. I'll post in here. But you can always get back to announcements, and in here is a link to the slides, and I'll always do that.
+Go ahead, Rockefendra.
+Tell me how to see your name.
+If I screw it.
+Yeah, that's correct. Raghu Indra.
+Okay.
+Yeah, thank you. But I you can. You can call me Raghu as well. That's a short for short. Okay? So.
+Tweak.
+The question is about business.
+you said multiple items are allowed for the quizzes. Right
+it like, is, is it? How the scoring is done on the quizzes. Is it best of multiple attempts, or is it averaged across multiple attempts.
+Your last one. People hate that. I do that, but I like I like that. It's sort of like you. You. My hope is you'll do a quiz and go. Oh, I need to go do some research on this these 2 questions. And so you're going back and preparing instead of brute forcing. Just keep trying. And so I just take whatever your last attempt is.
+Oh, got it! Thank you.
+Yep.
+there's several in the threat in the chat. People should check it out. There's several people shared other online compilers. So lots of options.
+any other questions.
+Are there? One more question. Sorry are there any opportunities for extra points? If we want to cover for last points?
+Some courses allow it. So yeah.
+Yeah, not really. And it's pretty easy. As long as you do all of the research scaffolding.
+it's pretty easy to get an a. Because you can get full credit on the labs because you can submit a million times. You can get full credit on the quizzes, because I'll help you, and you can submit a million times, and the discussion is really just doing it. So it's pretty easy to get an a in this class as long as you're just keeping with it. And not missing this, the Peer Review dates.
+Got it. Thank you.
+Yep!
+Go ahead, Rosa.
+Hi, Professor, I was wondering if there's a specific format that we should use. When it comes to reference on the discussion board.
+Oh, no, it's anything, anything's fine. I I would like you to use. I triple a but it doesn't matter.
+Awesome. Thank you.
+Any other questions.
+Okay, well, thank you all. I know this is a holiday weekend. So sorry. Hopefully, you're not working tomorrow, and but
+enjoy if you have it off, enjoy if you, if you have to work too sorry, have a good night. Everyone.
